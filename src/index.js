@@ -19,7 +19,7 @@ app.keyWindow.setRootViewController(rootVC);
 
 function render() {
   // var mountNode = document.getElementById('app');
-  ReactDOM.render(<App frame={rootVC.view.frame} />, rootVC.view);
+  ReactDOM.render(<App frame={rootVC.view.frame} />, rootVC);
 }
 
 render();

@@ -3,17 +3,18 @@ import React from 'react';
 
 class View extends React.Component {
   render() {
-    const { backgroundColor, children, frame } = this.props;
+    const {
+      backgroundColor,
+      children,
+      frame,
+      layer,
+    } = this.props;
 
     return (
       <ui-view
         backgroundColor={backgroundColor}
-        frame={{
-          x: 0,
-          y: 0,
-          width: frame.width,
-          height: frame.height,
-        }}
+        frame={frame}
+        layer={layer}
       >
         {children}
       </ui-view>

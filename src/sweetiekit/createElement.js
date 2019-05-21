@@ -1,7 +1,14 @@
 const SweetieKit = Require('std:sweetiekit.node');
 
-import { UIControlState } from './enums';
+import { UIControlState, UIControlEvents } from './enums';
 import colors from './colors';
+import {
+  viewAttrs,
+  viewDefaults,
+  layerDefaults,
+  layerAttrs,
+} from './properties';
+
 
 const {
   UIViewController,
@@ -10,48 +17,56 @@ const {
   UIButton,
 } = SweetieKit;
 
+function set(el, props, attr, def) {
+  if (el && props) {
+    if (props[attr]) {
+      el[attr] = props[attr];
+    } else if (def) {
+      el[attr] = def;
+    }
+  }
+}
+
+function setViewBaseProps(el, props) {
+  el.translatesAutoresizingMaskIntoConstraints = false;
+  viewAttrs.forEach(a => set(el, props, a, viewDefaults[a]));
+  if (props.layer) {
+    layerAttrs.forEach(a => set(el.layer, props.layer, a, layerDefaults[a]));
+  }
+}
+
 export const viewController = (props) => {
   return new UIViewController();
 };
 
 export const view = (props) => {
-  let el;
+  const el = new UIView();
 
-  if (props.frame) {
-    el = new UIView(props.frame);
-  } else {
-    el = new UIView();
-  }
-
-  if (props.backgroundColor) {
-    el.backgroundColor = props.backgroundColor;
-  } else {
-    el.backgroundColor = colors.white;
-  }
+  setViewBaseProps(el, props);
 
   return el;
 };
 
 export const label = (props) => {
   const el = new UILabel();
-  if (props.text) {
-    el.text = text;
-  }
+
+  setViewBaseProps(el, props);
+
+  el.text = props.text || '';
   el.sizeToFit();
+
   return el;
 };
 
 export const button = (props) => {
-  let el;
+  const el = new UIButton();
 
-  if (props.frame) {
-    el = new UIButton(props.frame);
-  } else {
-    el = new UIButton();
-  }
+  setViewBaseProps(el, props);
 
-  if (props.title) {
-    el.setTitleForState(props.title, UIControlState.normal);
+  el.setTitleForState(props.title || '', UIControlState.normal);
+  el.setTitleColorForState(props.titleColor || colors.black, UIControlState.normal);
+  if (props.target) {
+    el.addTarget(props.target[0], UIControlEvents.touchUpInside[1]);
   }
 
   return el;

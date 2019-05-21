@@ -1,33 +1,57 @@
 import React from 'react';
 
-import { View, Button, Text } from './sweetiekit/components';
+import MainView from './MainView';
+import ThemeToggle from './ThemeToggle';
 
-import colors from './sweetiekit/colors';
+import * as colors from './sweetiekit/colors';
+import ThemeContext from './context';
 
-class MyView extends React.Component {
-  render() {
-    const { frame } = this.props;
+const themes = {
+  dark: {
+    view: {
+      backgroundColor: colors.fitbodDarkGrey,
+    },
+    button: {
+      backgroundColor: colors.fitbodPink,
+      titleColor: colors.fitbodDarkGrey,
+    },
+  },
+  light: {
+    view: {
+      backgroundColor: colors.fitbodPink,
+    },
+    button: {
+      backgroundColor: colors.fitbodLightGrey,
+      titleColor: colors.fitbodDarkGrey,
+    },
+  },
+};
 
-    return (
-      <View
-        backgroundColor={colors.fitbodPink}
-        frame={frame}
-      />
-    )
-  }
-}
 
 class App extends React.Component {
   state = {
-    clicks: 0,
+    theme: 'dark',
+  };
+
+  handleButtonClick = () => {
+    const { theme } = this.state;
+    this.setState({ theme: theme === 'dark' ? 'light' : 'dark' });
   };
 
   render() {
-    const { clicks } = this.state;
+    const { theme } = this.state;
     const { frame } = this.props;
 
     return (
-      <MyView frame={frame} />
+      <ThemeContext.Provider value={themes[theme]}>
+        <MainView frame={frame} theme={theme}>
+          <ThemeToggle
+            frame={{ x: 12, y: 60, width: frame.width - 24, height: 50 }}
+            onClick={this.handleButtonClick}
+            theme={theme}
+          />
+        </MainView>
+      </ThemeContext.Provider>
     );
   }
 }

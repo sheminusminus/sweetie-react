@@ -3,17 +3,23 @@ import React from 'react';
 
 class Button extends React.Component {
   render() {
-    const { children, frame } = this.props;
+    const {
+      backgroundColor,
+      frame,
+      layer,
+      target,
+      title,
+      titleColor,
+    } = this.props;
 
     return (
       <ui-button
-        frame={{
-          x: 0,
-          y: 0,
-          width: frame.width,
-          height: frame.height,
-        }}
-        title={children}
+        backgroundColor={backgroundColor}
+        frame={frame}
+        layer={layer}
+        target={target}
+        title={title}
+        titleColor={titleColor}
       />
     )
   }

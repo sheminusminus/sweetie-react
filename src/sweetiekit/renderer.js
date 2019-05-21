@@ -2,6 +2,7 @@ import ReactReconciler from 'react-reconciler';
 const SweetieKit = Require('std:sweetiekit.node');
 
 import * as createElement from './createElement';
+import * as enums from './enums';
 
 const {
   UILabel,
@@ -86,8 +87,10 @@ const hostConfig = {
         }
 
         view.addTarget(fn, events);
-      } else if (type === 'ui-image') {
-        console.log(attr, otherProps[attr], type, view);
+      } else if (attr === 'title') {
+        view.title = otherProps[attr];
+      } else {
+        view[attr] = otherProps[attr];
       }
     });
   },
@@ -142,7 +145,7 @@ const hostConfig = {
 
   isPrimaryRenderer: true,
   scheduleDeferredCallback() {},
-  cancelDeferredCallback: "",
+  cancelDeferredCallback() {},
 
   // -------------------
   //     Mutation
@@ -170,6 +173,11 @@ const hostConfig = {
           });
           view.__ourVeryHackCacheOfEventListeners = [ update[key] ];
           view.addTarget(update[key][0], update[key][1]);
+        } else if (key === 'title' && view.setTitleForState) {
+          view.setTitleForState(update[key], enums.UIControlState.normal);
+        } else if (key === 'layer' && view.layer) {
+          const layerProps = update[key];
+          Object.keys(layerProps).forEach(p => view.layer[p] = layerProps[p]);
         } else {
           view[key] = update[key];
         }

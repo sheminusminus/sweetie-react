@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Button } from './sweetiekit/components';
 import { UIControlEvents } from "./sweetiekit/enums";
-import colors from './sweetiekit/colors';
+import * as colors from './sweetiekit/colors';
 
 import withTheme from './withTheme';
 
@@ -17,8 +17,13 @@ class ThemeToggle extends React.Component {
         frame={frame}
         layer={{
           cornerRadius: frame.height / 2,
+          shadowColor: theme.button.shadowColor,
+          shadowRadius: 12,
+          shadowOffset: { width: 0, height: 8 },
+          shadowOpacity: theme.button.shadowOpacity,
         }}
         title="TOGGLE THEME"
+        titleColor={theme.button.titleColor}
         target={[onClick, UIControlEvents.touchUpInside]}
       />
     );

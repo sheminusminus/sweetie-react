@@ -175,6 +175,8 @@ const hostConfig = {
           view.addTarget(update[key][0], update[key][1]);
         } else if (key === 'title' && view.setTitleForState) {
           view.setTitleForState(update[key], enums.UIControlState.normal);
+        } else if (key === 'titleColor' && view.setTitleColorForState) {
+          view.setTitleColorForState(update[key], enums.UIControlState.normal);
         } else if (key === 'layer' && view.layer) {
           const layerProps = update[key];
           Object.keys(layerProps).forEach(p => view.layer[p] = layerProps[p]);

@@ -1,10 +1,14 @@
 import React from 'react';
+const SweetieKit = Require('std:sweetiekit.node');
+
+const { UIFont } = SweetieKit;
 
 import { Button } from './sweetiekit/components';
 import { UIControlEvents } from "./sweetiekit/enums";
-import * as colors from './sweetiekit/colors';
 
 import withTheme from './withTheme';
+
+const btnFont = new UIFont('Lato-Black', 17);
 
 
 class ThemeToggle extends React.Component {
@@ -24,6 +28,9 @@ class ThemeToggle extends React.Component {
         }}
         title="TOGGLE THEME"
         titleColor={theme.button.titleColor}
+        titleLabel={{
+          font: btnFont,
+        }}
         target={[onClick, UIControlEvents.touchUpInside]}
       />
     );

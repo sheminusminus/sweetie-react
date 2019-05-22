@@ -2,6 +2,7 @@ import React from 'react';
 
 import MainView from './MainView';
 import ThemeToggle from './ThemeToggle';
+import Title from './Title';
 
 import * as colors from './sweetiekit/colors';
 import ThemeContext from './context';
@@ -17,6 +18,9 @@ const themes = {
       shadowColor: colors.black,
       shadowOpacity: 0.8,
     },
+    title: {
+      color: colors.fitbodLightGrey,
+    },
   },
   light: {
     view: {
@@ -27,6 +31,9 @@ const themes = {
       titleColor: colors.white,
       shadowColor: colors.fitbodDarkGrey,
       shadowOpacity: 1,
+    },
+    title: {
+      color: colors.white,
     },
   },
 };
@@ -49,6 +56,15 @@ class App extends React.Component {
     return (
       <ThemeContext.Provider value={themes[theme]}>
         <MainView frame={frame} theme={theme}>
+          <Title frame={{
+            x: 12,
+            y: 90,
+            width: frame.width - 24,
+            height: 20,
+          }}>
+            WELCOME
+          </Title>
+
           <ThemeToggle
             frame={{
               x: 12,

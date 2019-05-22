@@ -3,15 +3,10 @@ const SweetieKit = Require('std:sweetiekit.node');
 
 import ReactDOM from './sweetiekit/renderer';
 
-const {
-  UIApplication,
-  UILabel,
-  UIView,
-  UIViewController,
-} = SweetieKit;
-
 import App from './App';
 
+
+const { UIApplication, UIViewController } = SweetieKit;
 
 const app = new UIApplication();
 const rootVC = new UIViewController();

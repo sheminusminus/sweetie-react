@@ -2,8 +2,6 @@ import React from 'react';
 
 import { View } from './sweetiekit/components';
 
-import colors from './sweetiekit/colors';
-
 import withTheme from './withTheme';
 
 

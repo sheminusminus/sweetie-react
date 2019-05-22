@@ -3,10 +3,10 @@ import React from 'react';
 
 class Text extends React.Component {
   render() {
-    const { children } = this.props;
+    const { children, font, textColor } = this.props;
 
     return (
-      <text>
+      <text font={font} textColor={textColor}>
         {children}
       </text>
     )

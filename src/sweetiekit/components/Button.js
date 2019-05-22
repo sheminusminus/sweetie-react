@@ -10,6 +10,7 @@ class Button extends React.Component {
       target,
       title,
       titleColor,
+      titleLabel,
     } = this.props;
 
     return (
@@ -20,6 +21,7 @@ class Button extends React.Component {
         target={target}
         title={title}
         titleColor={titleColor}
+        titleLabel={titleLabel}
       />
     )
   }

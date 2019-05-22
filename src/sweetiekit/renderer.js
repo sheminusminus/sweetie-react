@@ -89,7 +89,7 @@ const hostConfig = {
         view.addTarget(fn, events);
       } else if (attr === 'title') {
         view.title = otherProps[attr];
-      } else {
+      } else if (otherProps[attr]) {
         view[attr] = otherProps[attr];
       }
     });
@@ -180,6 +180,9 @@ const hostConfig = {
         } else if (key === 'layer' && view.layer) {
           const layerProps = update[key];
           Object.keys(layerProps).forEach(p => view.layer[p] = layerProps[p]);
+        } else if (key === 'titleLabel' && view.titleLabel) {
+          const labelProps = update[key];
+          Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);
         } else {
           view[key] = update[key];
         }

@@ -3,9 +3,9 @@ const SweetieKit = Require('std:sweetiekit.node');
 
 const { UIFont } = SweetieKit;
 
-import { NSTextAlignment } from './sweetiekit/enums';
-import { clear } from './sweetiekit/colors';
-import { Label } from './sweetiekit/components';
+import { NSTextAlignment } from '../sweetiekit/enums';
+import { clear } from '../sweetiekit/colors';
+import { Label } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
 

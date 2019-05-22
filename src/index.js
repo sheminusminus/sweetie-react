@@ -3,7 +3,7 @@ const SweetieKit = Require('std:sweetiekit.node');
 
 import ReactDOM from './sweetiekit/renderer';
 
-import App from './App';
+import App from './demo/App';
 
 
 const { UIApplication, UIViewController } = SweetieKit;
@@ -19,5 +19,5 @@ function render() {
 
 render();
 if (module.hot) {
-  module.hot.accept('./App', () => { render(); });
+  module.hot.accept('./demo/App', () => { render(); });
 }

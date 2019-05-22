@@ -1,10 +1,11 @@
 import React from 'react';
 
+import * as colors from '../sweetiekit/colors';
+
 import MainView from './MainView';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
 
-import * as colors from './sweetiekit/colors';
 import ThemeContext from './context';
 
 const themes = {

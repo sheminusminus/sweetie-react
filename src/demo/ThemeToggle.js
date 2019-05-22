@@ -4,9 +4,10 @@ const SweetieKit = Require('std:sweetiekit.node');
 const { UIFont } = SweetieKit;
 
 import { Button } from '../sweetiekit/components';
-import { UIControlEvents } from "../sweetiekit/enums";
 
 import withTheme from './withTheme';
+
+const { UIControlEvents } = global.SweetieKitEnums;
 
 const btnFont = new UIFont('Lato-Black', 17);
 

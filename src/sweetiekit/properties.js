@@ -1,5 +1,6 @@
 import colors from "./colors";
-import { NSTextAlignment } from "./enums";
+
+const { UIControlState, UIControlEvents, NSTextAlignment } = global.SweetieKitEnums;
 
 export const viewAttrs = ['frame', 'backgroundColor'];
 export const viewDefaults = {

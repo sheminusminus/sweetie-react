@@ -1,6 +1,5 @@
 const SweetieKit = Require('std:sweetiekit.node');
 
-import { UIControlState, UIControlEvents } from './enums';
 import colors from './colors';
 import {
   viewAttrs,
@@ -11,13 +10,14 @@ import {
   textViewDefaults,
 } from './properties';
 
-
 const {
   UIViewController,
   UILabel,
   UIView,
   UIButton,
 } = SweetieKit;
+
+const { UIControlState, UIControlEvents } = global.SweetieKitEnums;
 
 function set(el, props, attr, def) {
   if (el && props) {
@@ -62,6 +62,7 @@ export const label = (props) => {
   el.sizeToFit();
 
   setViewBaseProps(el, props);
+  setTextViewBaseProps(el, props);
 
   return el;
 };

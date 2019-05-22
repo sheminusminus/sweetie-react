@@ -48,15 +48,6 @@ const hostConfig = {
       default:
         return createElement.defaultType();
     }
-    // let [prefix, ...rest] = type.split('-');
-    // prefix = prefix.toUpperCase();
-    // rest = rest.reduce((str, word) => {
-    //   const next = word[0].toUpperCase() + word.substring(1);
-    //   return `${str}${next}`;
-    // }, '');
-    // const component = `${prefix}${rest}`;
-    //
-    // return new SweetieKit[component]();
   },
 
   appendInitialChild(parentInstance, child) {

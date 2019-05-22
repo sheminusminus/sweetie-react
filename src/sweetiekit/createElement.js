@@ -21,7 +21,7 @@ const {
 
 function set(el, props, attr, def) {
   if (el && props) {
-    if (props[attr] && props[attr] !== undefined) {
+    if (props[attr] !== undefined) {
       el[attr] = props[attr];
     } else if (def) {
       el[attr] = def;

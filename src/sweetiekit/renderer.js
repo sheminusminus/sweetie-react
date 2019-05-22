@@ -51,11 +51,12 @@ const hostConfig = {
   },
 
   appendInitialChild(parentInstance, child) {
-    // parentInstance.appendChild(child)
     if (parentInstance.addSubview) {
       parentInstance.addSubview(child);
     } else if (parentInstance.view && parentInstance.view.addSubview) {
       parentInstance.view.addSubview(child);
+    } else if (parentInstance.present && child.present) {
+      parentInstance.present(child, true, () => {});
     }
   },
 
@@ -193,6 +194,8 @@ const hostConfig = {
       parentInstance.addSubview(child);
     } else if (parentInstance.view && parentInstance.view.addSubview) {
       parentInstance.view.addSubview(child);
+    } else if (parentInstance.present && child.present) {
+      parentInstance.present(child, true, () => {});
     }
   },
 
@@ -202,6 +205,8 @@ const hostConfig = {
       container.addSubview(child);
     } else if (container.view && container.view.addSubview) {
       container.view.addSubview(child);
+    } else if (container.present && child.present) {
+      container.present(child, true, () => {});
     }
   },
 
@@ -217,6 +222,8 @@ const hostConfig = {
     console.log('removeChild');
     if (child.removeFromSuperview) {
       child.removeFromSuperview();
+    } else if (child.dismiss) {
+      child.dismiss(true, () => {});
     }
   },
 
@@ -224,6 +231,8 @@ const hostConfig = {
     console.log('removeChildFromContainer');
     if (child.removeFromSuperview) {
       child.removeFromSuperview();
+    } else if (child.dismiss) {
+      child.dismiss(true, () => {});
     }
   }
 };

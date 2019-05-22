@@ -23,7 +23,15 @@ const config = {
     ]
   },
   devServer: {
-    contentBase: './dist'
+    host: '0.0.0.0',//your ip address
+    contentBase: './dist',
+    headers: {'Access-Control-Allow-Origin': '*'},
+    historyApiFallback: {
+      index: 'http://localhost:8080/index.html'
+    },
+    allowedHosts: [
+      '.shawwn.com'
+    ],
   }
 }
 

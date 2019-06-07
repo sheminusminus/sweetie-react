@@ -93,4 +93,4 @@ export const button = (props) => {
   return el;
 };
 
-export const defaultType = () => undefined;
+export const defaultType = () => document.createElement('div');

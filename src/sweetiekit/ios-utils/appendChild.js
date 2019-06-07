@@ -1,6 +1,9 @@
 export default (parent, child) => {
-  if (child instanceof Text) {
+  if (parent instanceof HTMLElement) {
+    parent.appendChild(child);
+  } else if (child instanceof Text) {
     child.sweetiekitParent = parent;
+    console.log('sweetiekitParent', child.sweetiekitParent, { parent, child });
     parent.text = child.value;
   } else if (parent.addSubview) {
     parent.addSubview(child);

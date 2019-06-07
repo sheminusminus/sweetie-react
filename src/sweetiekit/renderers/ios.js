@@ -53,23 +53,25 @@ const hostConfig = {
     hostContext
   ) {
     const { children, ...otherProps } = props;
-    Object.keys(otherProps).forEach(attr => {
-      if (attr === 'target') {
-        const [fn, events] = otherProps[attr];
+    if (view) {
+      Object.keys(otherProps).forEach(attr => {
+        if (attr === 'target') {
+          const [fn, events] = otherProps[attr];
 
-        if (view.__ourVeryHackCacheOfEventListeners) {
-          view.__ourVeryHackCacheOfEventListeners.push([fn, events]);
-        } else {
-          view.__ourVeryHackCacheOfEventListeners = [[fn, events]];
+          if (view.__ourVeryHackCacheOfEventListeners) {
+            view.__ourVeryHackCacheOfEventListeners.push([fn, events]);
+          } else {
+            view.__ourVeryHackCacheOfEventListeners = [[fn, events]];
+          }
+
+          view.addTarget(fn, events);
+        } else if (attr === 'title') {
+          view.title = otherProps[attr];
+        } else if (otherProps[attr]) {
+          view[attr] = otherProps[attr];
         }
-
-        view.addTarget(fn, events);
-      } else if (attr === 'title') {
-        view.title = otherProps[attr];
-      } else if (otherProps[attr]) {
-        view[attr] = otherProps[attr];
-      }
-    });
+      });
+    }
   },
 
   prepareUpdate(

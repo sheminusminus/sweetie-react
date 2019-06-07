@@ -3,7 +3,8 @@ const SweetieKit = Require('std:sweetiekit.node');
 
 const { UIFont } = SweetieKit;
 
-import { colors } from '../sweetiekit/common-utils';
+import { colors, getThemeProp } from '../sweetiekit/common-utils';
+
 import { Label } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
@@ -17,13 +18,15 @@ class Title extends React.Component {
   render() {
     const { children, frame, theme } = this.props;
 
+    const textColor = getThemeProp(theme, 'title', 'color') || colors.black;
+
     return (
       <Label
         backgroundColor={colors.clear}
         font={font}
         frame={frame}
         textAlignment={NSTextAlignment.center}
-        textColor={theme.title.color}
+        textColor={textColor}
       >
         {children}
       </Label>

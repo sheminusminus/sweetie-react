@@ -63,7 +63,7 @@ class App extends React.Component {
             width: frame.width - 24,
             height: 20,
           }}>
-            {theme === 'dark' ? 'DARK THEME!' : 'LIGHT THEME@@@'}
+            {theme === 'dark' ? 'DARK THEME!' : 'LIGHT THEME!'}
           </Title>
 
           <ThemeToggle

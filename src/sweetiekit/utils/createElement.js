@@ -1,6 +1,6 @@
 const SweetieKit = Require('std:sweetiekit.node');
 
-import colors from './colors';
+import * as colors from './colors';
 import {
   viewAttrs,
   viewDefaults,

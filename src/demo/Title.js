@@ -3,7 +3,7 @@ const SweetieKit = Require('std:sweetiekit.node');
 
 const { UIFont } = SweetieKit;
 
-import { clear } from '../sweetiekit/colors';
+import { colors } from '../sweetiekit/utils';
 import { Label } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
@@ -19,7 +19,7 @@ class Title extends React.Component {
 
     return (
       <Label
-        backgroundColor={clear}
+        backgroundColor={colors.clear}
         font={font}
         frame={frame}
         textAlignment={NSTextAlignment.center}

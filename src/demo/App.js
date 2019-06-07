@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as colors from '../sweetiekit/colors';
+import { colors } from '../sweetiekit/utils';
 
 import MainView from './MainView';
 import ThemeToggle from './ThemeToggle';
@@ -11,26 +11,26 @@ import ThemeContext from './context';
 const themes = {
   dark: {
     view: {
-      backgroundColor: colors.fitbodDarkGrey,
+      backgroundColor: colors.darkGrey,
     },
     button: {
-      backgroundColor: colors.fitbodPink,
-      titleColor: colors.fitbodDarkGrey,
+      backgroundColor: colors.pink,
+      titleColor: colors.darkGrey,
       shadowColor: colors.black,
       shadowOpacity: 0.8,
     },
     title: {
-      color: colors.fitbodLightGrey,
+      color: colors.lightGrey,
     },
   },
   light: {
     view: {
-      backgroundColor: colors.fitbodPink,
+      backgroundColor: colors.pink,
     },
     button: {
-      backgroundColor: colors.fitbodLightGrey,
+      backgroundColor: colors.lightGrey,
       titleColor: colors.white,
-      shadowColor: colors.fitbodDarkGrey,
+      shadowColor: colors.darkGrey,
       shadowOpacity: 1,
     },
     title: {

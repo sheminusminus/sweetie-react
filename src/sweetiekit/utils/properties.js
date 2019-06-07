@@ -1,4 +1,4 @@
-import colors from "./colors";
+import * as colors from "./colors";
 
 const { UIControlState, UIControlEvents, NSTextAlignment } = global.SweetieKitEnums;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 const SweetieKit = Require('std:sweetiekit.node');
 
-import ReactDOM from './sweetiekit/renderer';
+import { iOSRenderer, WebRenderer } from './sweetiekit/renderers';
 
 import App from './demo/App';
 
@@ -13,8 +13,11 @@ const rootVC = new UIViewController();
 app.keyWindow.setRootViewController(rootVC);
 
 function render() {
-  // var mountNode = document.getElementById('app');
-  ReactDOM.render(<App frame={rootVC.view.frame} />, rootVC);
+  if (global.__PLATFORM__ === 'ios') {
+    iOSRenderer.render(<App frame={rootVC.view.frame} />, rootVC);
+  } else {
+    WebRenderer.render(<App frame={rootVC.view.frame} />, rootVC);
+  }
 }
 
 render();

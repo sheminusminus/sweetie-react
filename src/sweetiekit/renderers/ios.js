@@ -5,7 +5,7 @@ import {
   createElement,
   createInstance,
   removeChild,
-} from '../utils';
+} from '../ios-utils';
 
 
 const hostConfig = {

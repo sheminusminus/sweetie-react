@@ -5,7 +5,7 @@ import {
   createElement,
   createInstance,
   removeChild,
-} from '../utils';
+} from '../web-utils';
 
 
 const hostConfig = {

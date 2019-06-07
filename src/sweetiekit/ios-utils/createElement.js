@@ -1,6 +1,7 @@
 const SweetieKit = Require('std:sweetiekit.node');
+const enums = Require('../enums');
 
-import * as colors from './colors';
+import { colors } from '../common-utils';
 import {
   viewAttrs,
   viewDefaults,
@@ -17,7 +18,7 @@ const {
   UIButton,
 } = SweetieKit;
 
-const { UIControlState, UIControlEvents } = global.SweetieKitEnums;
+const { UIControlState, UIControlEvents } = enums;
 
 function set(el, props, attr, def) {
   if (el && props) {

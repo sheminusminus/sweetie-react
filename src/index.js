@@ -1,7 +1,7 @@
 import React from 'react';
 const SweetieKit = Require('std:sweetiekit.node');
 
-import { iOSRenderer, WebRenderer } from './sweetiekit/renderers';
+import { iOSRenderer } from './sweetiekit/renderers';
 
 import App from './demo/App';
 
@@ -16,7 +16,7 @@ function render() {
   if (global.__PLATFORM__ === 'ios') {
     iOSRenderer.render(<App frame={rootVC.view.frame} />, rootVC);
   } else {
-    WebRenderer.render(<App frame={rootVC.view.frame} />, rootVC);
+    // WebRenderer.render(<App frame={rootVC.view.frame} />, rootVC);
   }
 }
 

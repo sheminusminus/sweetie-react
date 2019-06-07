@@ -3,7 +3,7 @@ const SweetieKit = Require('std:sweetiekit.node');
 
 const { UIFont } = SweetieKit;
 
-import { colors } from '../sweetiekit/utils';
+import { colors } from '../sweetiekit/common-utils';
 import { Label } from '../sweetiekit/components';
 
 import withTheme from './withTheme';

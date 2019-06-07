@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { colors } from '../sweetiekit/utils';
+import { colors } from '../sweetiekit/common-utils';
 
 import MainView from './MainView';
 import ThemeToggle from './ThemeToggle';

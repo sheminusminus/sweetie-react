@@ -8,9 +8,9 @@ import { Label } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
 
-const { NSTextAlignment } = global.SweetieKitEnums;
+const { NSTextAlignment = {} } = global.SweetieKitEnums;
 
-const font = new UIFont('Lato-Bold', 17);
+const font = UIFont ? new UIFont('Lato-Bold', 17) : {};
 
 
 class Title extends React.Component {

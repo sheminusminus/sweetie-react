@@ -57,13 +57,13 @@ const hostConfig = {
       if (attr === 'target') {
         const [fn, events] = otherProps[attr];
 
-        if (view.__ourVeryHackCacheOfEventListeners) {
-          view.__ourVeryHackCacheOfEventListeners.push([fn, events]);
-        } else {
-          view.__ourVeryHackCacheOfEventListeners = [[fn, events]];
-        }
+        // if (view.__ourVeryHackCacheOfEventListeners) {
+        //   view.__ourVeryHackCacheOfEventListeners.push([fn, events]);
+        // } else {
+        //   view.__ourVeryHackCacheOfEventListeners = [[fn, events]];
+        // }
 
-        view.addTarget(fn, events);
+        // view.addTarget(fn, events);
       } else if (attr === 'title') {
         view.title = otherProps[attr];
       } else if (otherProps[attr]) {
@@ -115,7 +115,7 @@ const hostConfig = {
     hostContext,
     internalInstanceHandle
   ) {
-    return createElement.label({ text });
+    return document.createTextNode(text);
   },
 
   now: Date.now,
@@ -145,11 +145,11 @@ const hostConfig = {
     updatePayload.forEach(update => {
       Object.keys(update).forEach(key => {
         if (key === 'target') {
-          view.__ourVeryHackCacheOfEventListeners.forEach(pair => { // To prevent leak
-            view.removeTarget(pair[0], pair[1]);
-          });
-          view.__ourVeryHackCacheOfEventListeners = [ update[key] ];
-          view.addTarget(update[key][0], update[key][1]);
+          // view.__ourVeryHackCacheOfEventListeners.forEach(pair => { // To prevent leak
+          //   view.removeTarget(pair[0], pair[1]);
+          // });
+          // view.__ourVeryHackCacheOfEventListeners = [ update[key] ];
+          // view.addTarget(update[key][0], update[key][1]);
         } else if (key === 'title' && view.setTitleForState) {
           view.setTitleForState(update[key], SweetieKitEnums.UIControlState.normal);
         } else if (key === 'titleColor' && view.setTitleColorForState) {

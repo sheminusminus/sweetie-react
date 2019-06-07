@@ -1,23 +1,35 @@
 import React from 'react';
+
+if (typeof Require === 'undefined') {
+  global.Require = function (str) {
+    console.log('Require', str);
+  };
+}
+
 const SweetieKit = Require('std:sweetiekit.node');
 
-import { iOSRenderer } from './sweetiekit/renderers';
+import loadRenderer from './sweetiekit/renderers';
 
 import App from './demo/App';
 
-
-const { UIApplication, UIViewController } = SweetieKit;
-
-const app = new UIApplication();
-const rootVC = new UIViewController();
-app.keyWindow.setRootViewController(rootVC);
-
 function render() {
-  if (global.__PLATFORM__ === 'ios') {
-    iOSRenderer.render(<App frame={rootVC.view.frame} />, rootVC);
-  } else {
-    // WebRenderer.render(<App frame={rootVC.view.frame} />, rootVC);
-  }
+  loadRenderer(global.__PLATFORM__).then((module) => {
+    const { render: Render } = module.default;
+
+    if (global.__PLATFORM__ === 'ios') {
+      const { UIApplication, UIViewController } = SweetieKit;
+
+      const app = new UIApplication();
+      const rootVC = new UIViewController();
+      app.keyWindow.setRootViewController(rootVC);
+
+      Render(<App frame={rootVC.view.frame} />, rootVC);
+    } else {
+      const root = document.getElementById('app');
+      console.log(root);
+      Render(<App frame={{ x: 0, y: 0, width: 100, height: 100 }} />, root);
+    }
+  });
 }
 
 render();

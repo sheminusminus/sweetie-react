@@ -1,5 +1,7 @@
-import iOSRenderer from './ios';
-// import WebRenderer from './web';
-
-
-export { iOSRenderer };
+export default (platform) => {
+  if (platform === 'ios') {
+    return import('./ios');
+  } else {
+    return import('./web');
+  }
+};

@@ -1,4 +1,14 @@
 import React from 'react';
+if (!global.SweetieKitEnums) {
+  global.SweetieKitEnums = {};
+}
+if (typeof Require === 'undefined') {
+  global.Require = function (str) {
+    console.log('Require', str);
+    return {};
+  };
+}
+
 const SweetieKit = Require('std:sweetiekit.node');
 
 const { UIFont } = SweetieKit;
@@ -7,9 +17,9 @@ import { Button } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
 
-const { UIControlEvents } = global.SweetieKitEnums;
+const { UIControlEvents = {} } = global.SweetieKitEnums;
 
-const btnFont = new UIFont('Lato-Black', 17);
+const btnFont = UIFont !== undefined ? new UIFont('Lato-Black', 17) : {};
 
 
 class ThemeToggle extends React.Component {

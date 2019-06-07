@@ -1,6 +1,8 @@
 import React from 'react';
 
 
+const platform = global.__PLATFORM__;
+
 class Button extends React.Component {
   render() {
     const {
@@ -13,7 +15,7 @@ class Button extends React.Component {
       titleLabel,
     } = this.props;
 
-    return (
+    return platform === 'ios' ? (
       <ui-button
         backgroundColor={backgroundColor}
         frame={frame}
@@ -23,6 +25,18 @@ class Button extends React.Component {
         titleColor={titleColor}
         titleLabel={titleLabel}
       />
+    ) : (
+      <ui-button
+        backgroundColor={backgroundColor}
+        frame={frame}
+        layer={layer}
+        target={target}
+        title={title}
+        titleColor={titleColor}
+        titleLabel={titleLabel}
+      >
+        {title}
+      </ui-button>
     )
   }
 }

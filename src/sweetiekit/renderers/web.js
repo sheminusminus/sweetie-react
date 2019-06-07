@@ -57,13 +57,13 @@ const hostConfig = {
       if (attr === 'target') {
         const [fn, events] = otherProps[attr];
 
-        // if (view.__ourVeryHackCacheOfEventListeners) {
-        //   view.__ourVeryHackCacheOfEventListeners.push([fn, events]);
-        // } else {
-        //   view.__ourVeryHackCacheOfEventListeners = [[fn, events]];
-        // }
+        if (view.__ourVeryHackCacheOfEventListeners) {
+          view.__ourVeryHackCacheOfEventListeners.push(fn);
+        } else {
+          view.__ourVeryHackCacheOfEventListeners = [fn];
+        }
 
-        // view.addTarget(fn, events);
+        view.addEventListener('click', fn);
       } else if (attr === 'title') {
         view.title = otherProps[attr];
       } else if (otherProps[attr]) {
@@ -145,11 +145,11 @@ const hostConfig = {
     updatePayload.forEach(update => {
       Object.keys(update).forEach(key => {
         if (key === 'target') {
-          // view.__ourVeryHackCacheOfEventListeners.forEach(pair => { // To prevent leak
-          //   view.removeTarget(pair[0], pair[1]);
-          // });
-          // view.__ourVeryHackCacheOfEventListeners = [ update[key] ];
-          // view.addTarget(update[key][0], update[key][1]);
+          view.__ourVeryHackCacheOfEventListeners.forEach(fn => { // To prevent leak
+            view.removeEventListener('click', fn);
+          });
+          view.__ourVeryHackCacheOfEventListeners = [ update[key][0] ];
+          view.addEventListener('click', update[key][0]);
         } else if (key === 'title' && view.setTitleForState) {
           view.setTitleForState(update[key], SweetieKitEnums.UIControlState.normal);
         } else if (key === 'titleColor' && view.setTitleColorForState) {
@@ -171,7 +171,7 @@ const hostConfig = {
   },
 
   commitTextUpdate(textInstance, oldText, newText) {
-    textInstance.text = newText;
+    textInstance.textContent = newText;
   },
 
   appendChild(parentInstance, child) {

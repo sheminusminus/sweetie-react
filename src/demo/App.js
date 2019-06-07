@@ -63,7 +63,7 @@ class App extends React.Component {
             width: frame.width - 24,
             height: 20,
           }}>
-            WELCOME
+            WELCOME :)
           </Title>
 
           <ThemeToggle

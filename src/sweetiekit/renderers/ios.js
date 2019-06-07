@@ -91,7 +91,7 @@ const hostConfig = {
     for (let key of propKeys) {
       if (
         // text children are already handled
-        key !== 'children' &&
+        //key !== 'children' &&
         oldProps[key] !== newProps[key]
       ) {
         payload.push({ [key]: newProps[key] })
@@ -115,7 +115,7 @@ const hostConfig = {
     hostContext,
     internalInstanceHandle
   ) {
-    return createElement.label({ text });
+    return document.createTextNode(text);
   },
 
   now: Date.now,
@@ -171,7 +171,10 @@ const hostConfig = {
   },
 
   commitTextUpdate(textInstance, oldText, newText) {
-    textInstance.text = newText;
+    textInstance.value = newText;
+    if (textInstance.sweetiekitParent) {
+      textInstance.sweetiekitParent.text = newText;
+    }
   },
 
   appendChild(parentInstance, child) {

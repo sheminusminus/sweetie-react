@@ -59,7 +59,12 @@ export const label = (props) => {
   const el = new UILabel();
 
   el.translatesAutoresizingMaskIntoConstraints = false;
-  el.text = props.children || '';
+  if (typeof props.text === 'string') {
+    el.text = props.text;
+  }
+  if (typeof props.children === 'string') {
+    el.text = props.children;
+  }
   el.sizeToFit();
 
   setViewBaseProps(el, props);

@@ -39,7 +39,11 @@ const themes = {
   },
 };
 
+function annotation(target) {
+  target.annotated = true;
+}
 
+@annotation
 class App extends React.Component {
   state = {
     theme: 'dark',

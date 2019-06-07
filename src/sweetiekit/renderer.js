@@ -1,24 +1,34 @@
 import ReactReconciler from 'react-reconciler';
 
-import * as createElement from './createElement';
+import {
+  appendChild,
+  createElement,
+  createInstance,
+  removeChild,
+} from './utils';
+
 
 const hostConfig = {
   getRootHostContext(rootContainerInstance) {
+    console.log('TODO: getRootHostContext');
     return {}
   },
 
   getChildHostContext(parentHostContext, type, rootContainerInstance) {
+    console.log('TODO: getChildHostContext');
     return {};
   },
 
   getPublicInstance(instance) {
-    console.log('getPublicInstance');
+    console.log('TODO: getPublicInstance');
   },
 
   prepareForCommit(containerInfo) {
+    console.log('TODO: prepareForCommit');
   },
 
   resetAfterCommit(containerInfo) {
+    console.log('TODO: resetAfterCommit');
   },
 
   createInstance(
@@ -28,28 +38,11 @@ const hostConfig = {
     hostContext,
     internalInstanceHandle
   ) {
-    switch (type) {
-      case 'ui-view-controller':
-        return createElement.viewController(props);
-      case 'ui-view':
-        return createElement.view(props);
-      case 'ui-button':
-        return createElement.button(props);
-      case 'ui-label':
-        return createElement.label(props);
-      default:
-        return createElement.defaultType();
-    }
+    return createInstance(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
   },
 
   appendInitialChild(parentInstance, child) {
-    if (parentInstance.addSubview) {
-      parentInstance.addSubview(child);
-    } else if (parentInstance.view && parentInstance.view.addSubview) {
-      parentInstance.view.addSubview(child);
-    } else if (parentInstance.present && child.present) {
-      parentInstance.present(child, true, () => {});
-    }
+    appendChild(parentInstance, child);
   },
 
   finalizeInitialChildren(
@@ -182,24 +175,11 @@ const hostConfig = {
   },
 
   appendChild(parentInstance, child) {
-    if (parentInstance.addSubview) {
-      parentInstance.addSubview(child);
-    } else if (parentInstance.view && parentInstance.view.addSubview) {
-      parentInstance.view.addSubview(child);
-    } else if (parentInstance.present && child.present) {
-      parentInstance.present(child, true, () => {});
-    }
+    appendChild(parentInstance, child);
   },
 
   appendChildToContainer(container, child) {
-    console.log(container, child);
-    if (container.addSubview) {
-      container.addSubview(child);
-    } else if (container.view && container.view.addSubview) {
-      container.view.addSubview(child);
-    } else if (container.present && child.present) {
-      container.present(child, true, () => {});
-    }
+    appendChild(container, child);
   },
 
   insertBefore(parentInstance, child, beforeChild) {
@@ -211,21 +191,11 @@ const hostConfig = {
   },
 
   removeChild(parentInstance, child) {
-    console.log('removeChild');
-    if (child.removeFromSuperview) {
-      child.removeFromSuperview();
-    } else if (child.dismiss) {
-      child.dismiss(true, () => {});
-    }
+    removeChild(parentInstance, child);
   },
 
   removeChildFromContainer(container, child) {
-    console.log('removeChildFromContainer');
-    if (child.removeFromSuperview) {
-      child.removeFromSuperview();
-    } else if (child.dismiss) {
-      child.dismiss(true, () => {});
-    }
+    removeChild(container, child);
   }
 };
 

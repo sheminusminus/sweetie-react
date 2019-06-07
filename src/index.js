@@ -35,7 +35,7 @@ function render() {
 
         app = new UIApplication();
         rootVC = new UIViewController();
-        app.keyWindow.setRootViewController(rootVC);
+        app.keyWindow.rootViewController.pushViewController(rootVC);
 
         Render(<App frame={rootVC.view.frame} />, rootVC);
       } else {

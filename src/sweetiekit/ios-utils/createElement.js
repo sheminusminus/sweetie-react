@@ -59,6 +59,7 @@ export const label = (props) => {
   const el = new UILabel();
 
   el.translatesAutoresizingMaskIntoConstraints = false;
+  el.numberOfLines = 0;
   if (typeof props.text === 'string') {
     el.text = props.text;
   }

@@ -3,6 +3,7 @@ import React from 'react';
 import { colors } from '../sweetiekit/utils';
 
 import MainView from './MainView';
+import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
 
@@ -50,6 +51,10 @@ class App extends React.Component {
     this.setState({ theme: theme === 'dark' ? 'light' : 'dark' });
   };
 
+  handleFieldChange = (evt) => {
+    console.log(evt);
+  };
+
   render() {
     const { theme } = this.state;
     const { frame } = this.props;
@@ -57,12 +62,14 @@ class App extends React.Component {
     return (
       <ThemeContext.Provider value={themes[theme]}>
         <MainView frame={frame} theme={theme}>
-          <Title frame={{
-            x: 12,
-            y: 90,
-            width: frame.width - 24,
-            height: 20,
-          }}>
+          <Title
+            frame={{
+              x: 12,
+              y: 90,
+              width: frame.width - 24,
+              height: 20,
+            }}
+          >
             WELCOME
           </Title>
 
@@ -75,6 +82,17 @@ class App extends React.Component {
             }}
             onClick={this.handleButtonClick}
             theme={theme}
+          />
+
+          <NameBox
+            frame={{
+              x: 12,
+              y: (frame.height - 50) / 2 - 120,
+              width: frame.width - 24,
+              height: 50,
+            }}
+            onChange={this.handleFieldChange}
+            value="Emily"
           />
         </MainView>
       </ThemeContext.Provider>

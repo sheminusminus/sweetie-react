@@ -1,42 +1,32 @@
 import React from 'react';
 const SweetieKit = Require('std:sweetiekit.node');
 
-const { UIFont, UIKit } = SweetieKit;
+const { UIKit } = SweetieKit;
 
-import { Button } from '../sweetiekit/components';
-
-import withTheme from './withTheme';
+import { TextField } from '../sweetiekit/components';
+import { colors } from '../sweetiekit/utils';
 
 
 const { UIControlEvents } = UIKit;
 
-const btnFont = new UIFont('Lato-Black', 17);
-
-class ThemeToggle extends React.Component {
+class NameBox extends React.Component {
   render() {
-    const { frame, onClick, theme } = this.props;
+    const { frame, onChange, value } = this.props;
 
     return (
-      <Button
-        backgroundColor={theme.button.backgroundColor}
+      <TextField
+        backgroundColor={colors.white}
         frame={frame}
         layer={{
-          cornerRadius: frame.height / 2,
-          shadowColor: theme.button.shadowColor,
-          shadowRadius: 12,
-          shadowOffset: { width: 0, height: 8 },
-          shadowOpacity: theme.button.shadowOpacity,
+          cornerRadius: 4,
         }}
-        title="TOGGLE THEME"
-        titleColor={theme.button.titleColor}
-        titleLabel={{
-          font: btnFont,
-        }}
-        target={[onClick, UIControlEvents.touchUpInside]}
+        placeholder="Your name"
+        target={[onChange, UIControlEvents.valueChanged]}
+        text={value}
       />
     );
   }
 }
 
 
-export default withTheme(ThemeToggle);
+export default NameBox;

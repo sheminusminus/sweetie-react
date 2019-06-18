@@ -15,9 +15,12 @@ const {
   UILabel,
   UIView,
   UIButton,
+  UITextField,
+  UIScrollView,
+  UIKit,
 } = SweetieKit;
 
-const { UIControlState, UIControlEvents } = global.SweetieKitEnums;
+const { UIControlState } = UIKit;
 
 function set(el, props, attr, def) {
   if (el && props) {
@@ -45,7 +48,7 @@ export const viewController = (props) => {
 };
 
 export const view = (props) => {
-  const el = new UIView();
+  const el = UIView();
 
   el.translatesAutoresizingMaskIntoConstraints = false;
 
@@ -55,7 +58,7 @@ export const view = (props) => {
 };
 
 export const label = (props) => {
-  const el = new UILabel();
+  const el = UILabel();
 
   el.translatesAutoresizingMaskIntoConstraints = false;
   el.text = props.children || '';
@@ -68,7 +71,7 @@ export const label = (props) => {
 };
 
 export const button = (props) => {
-  const el = new UIButton();
+  const el = UIButton();
 
   el.translatesAutoresizingMaskIntoConstraints = false;
 
@@ -77,7 +80,7 @@ export const button = (props) => {
   el.setTitleForState(props.title || '', UIControlState.normal);
   el.setTitleColorForState(props.titleColor || colors.black, UIControlState.normal);
   if (props.target) {
-    el.addTarget(props.target[0], UIControlEvents.touchUpInside[1]);
+    el.addTarget(props.target[0], props.target[1]);
   }
   if (props.titleLabel) {
     setTextViewBaseProps(el.titleLabel, props.titleLabel);
@@ -85,5 +88,32 @@ export const button = (props) => {
 
   return el;
 };
+
+export const textField = (props) => {
+  const el = UITextField();
+
+  el.translatesAutoresizingMaskIntoConstraints = false;
+
+  setViewBaseProps(el, props);
+
+  el.text = props.text || '';
+
+  if (props.target) {
+    el.addTarget(props.target[0], props.target[1]);
+  }
+
+  return el;
+};
+
+export const scrollView = (props) => {
+  const el = UIScrollView();
+
+  el.translatesAutoresizingMaskIntoConstraints = false;
+
+  setViewBaseProps(el, props);
+
+  return el;
+};
+
 
 export const defaultType = () => undefined;

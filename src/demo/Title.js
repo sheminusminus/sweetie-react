@@ -1,14 +1,14 @@
 import React from 'react';
 const SweetieKit = Require('std:sweetiekit.node');
 
-const { UIFont } = SweetieKit;
+const { UIFont, UIKit } = SweetieKit;
 
 import { colors } from '../sweetiekit/utils';
 import { Label } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
 
-const { NSTextAlignment } = global.SweetieKitEnums;
+const { NSTextAlignment } = UIKit;
 
 const font = new UIFont('Lato-Bold', 17);
 

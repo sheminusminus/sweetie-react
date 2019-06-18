@@ -17,7 +17,7 @@ class TextField extends React.Component {
         frame={frame}
         layer={layer}
         target={target}
-        title={text}
+        text={text}
       />
     )
   }

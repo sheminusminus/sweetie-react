@@ -5,10 +5,9 @@ class ScrollView extends React.Component {
   render() {
     const {
       backgroundColor,
+      children,
       frame,
       layer,
-      target,
-      text,
     } = this.props;
 
     return (
@@ -16,9 +15,9 @@ class ScrollView extends React.Component {
         backgroundColor={backgroundColor}
         frame={frame}
         layer={layer}
-        target={target}
-        title={text}
-      />
+      >
+        {children}
+      </ui-scroll-view>
     )
   }
 }

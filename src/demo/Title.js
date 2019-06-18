@@ -8,7 +8,7 @@ import { Label } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
 
-const { NSTextAlignment } = UIKit;
+const { NSTextAlignment } = global.SweetieKitEnums;
 
 const font = new UIFont('Lato-Bold', 17);
 

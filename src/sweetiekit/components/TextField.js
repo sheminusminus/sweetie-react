@@ -7,6 +7,7 @@ class TextField extends React.Component {
       backgroundColor,
       frame,
       layer,
+      placeholder,
       target,
       text,
     } = this.props;
@@ -16,6 +17,7 @@ class TextField extends React.Component {
         backgroundColor={backgroundColor}
         frame={frame}
         layer={layer}
+        placeholder={placeholder}
         target={target}
         text={text}
       />

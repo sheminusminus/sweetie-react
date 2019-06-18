@@ -97,6 +97,7 @@ export const textField = (props) => {
   setViewBaseProps(el, props);
 
   el.text = props.text || '';
+  el.placeholder = props.placeholder || '';
 
   if (props.target) {
     el.addTarget(props.target[0], props.target[1]);

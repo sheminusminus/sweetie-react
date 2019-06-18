@@ -57,10 +57,10 @@ const hostConfig = {
       if (attr === 'target') {
         const [fn, events] = otherProps[attr];
 
-        if (view.__ourVeryHackCacheOfEventListeners) {
-          view.__ourVeryHackCacheOfEventListeners.push([fn, events]);
+        if (view.__eventListeners) {
+          view.__eventListeners.push([fn, events]);
         } else {
-          view.__ourVeryHackCacheOfEventListeners = [[fn, events]];
+          view.__eventListeners = [[fn, events]];
         }
 
         view.addTarget(fn, events);
@@ -144,11 +144,12 @@ const hostConfig = {
   ) {
     updatePayload.forEach(update => {
       Object.keys(update).forEach(key => {
-        if (key === 'target') {
-          view.__ourVeryHackCacheOfEventListeners.forEach(pair => { // To prevent leak
+        if (key === 'target' && view.addTarget) {
+          // for now we only allow one target per view
+          view.__eventListeners.forEach(pair => { // To prevent leak
             view.removeTarget(pair[0], pair[1]);
           });
-          view.__ourVeryHackCacheOfEventListeners = [ update[key] ];
+          view.__eventListeners = [ update[key] ];
           view.addTarget(update[key][0], update[key][1]);
         } else if (key === 'title' && view.setTitleForState) {
           view.setTitleForState(update[key], SweetieKitEnums.UIControlState.normal);

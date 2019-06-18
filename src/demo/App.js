@@ -92,7 +92,7 @@ class App extends React.Component {
               height: 50,
             }}
             onChange={this.handleFieldChange}
-            value="Emily"
+            value="Em"
           />
         </MainView>
       </ThemeContext.Provider>

@@ -6,6 +6,7 @@ import MainView from './MainView';
 import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
+import ViewController from '../sweetiekit/components/ViewController';
 
 import ThemeContext from './context';
 
@@ -44,6 +45,7 @@ const themes = {
 class App extends React.Component {
   state = {
     theme: 'dark',
+    hasChildController: false,
   };
 
   handleButtonClick = () => {
@@ -55,9 +57,33 @@ class App extends React.Component {
     console.log(evt);
   };
 
+  toggleHasChild = () => {
+    const { hasChildController } = this.state;
+    this.setState({ hasChildController: !hasChildController });
+  };
+
   render() {
-    const { theme } = this.state;
+    const { hasChildController, theme } = this.state;
     const { frame } = this.props;
+
+    if (hasChildController) {
+      return (
+        <ViewController>
+          <MainView frame={frame} theme={theme}>
+            <Title
+              frame={{
+                x: 12,
+                y: 90,
+                width: frame.width - 24,
+                height: 20,
+              }}
+            >
+              WELCOME
+            </Title>
+          </MainView>
+        </ViewController>
+      );
+    }
 
     return (
       <ThemeContext.Provider value={themes[theme]}>
@@ -81,6 +107,17 @@ class App extends React.Component {
               height: 50,
             }}
             onClick={this.handleButtonClick}
+            theme={theme}
+          />
+
+          <ThemeToggle
+            frame={{
+              x: 12,
+              y: ((frame.height - 50) / 2) + 100,
+              width: frame.width - 24,
+              height: 50,
+            }}
+            onClick={this.toggleHasChild}
             theme={theme}
           />
 

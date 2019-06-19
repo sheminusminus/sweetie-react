@@ -4,7 +4,7 @@ export default (parent, child) => {
   } else if (parent.popViewController) {
     // TODO: pop to child view controller
     parent.popViewController();
-  } else if (child.dismiss) {
-    child.dismiss(true, () => {});
+  } else if (child.dismissViewControllerAnimatedCompletion) {
+    child.dismissViewControllerAnimatedCompletion(true, () => {});
   }
 };

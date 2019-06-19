@@ -63,7 +63,7 @@ const hostConfig = {
           view.__eventListeners = [[fn, events]];
         }
 
-        view.addTarget(fn, events);
+        view.addTargetActionForControlEvents(fn, events);
       } else if (attr === 'title') {
         view.title = otherProps[attr];
       } else if (otherProps[attr]) {
@@ -144,13 +144,13 @@ const hostConfig = {
   ) {
     updatePayload.forEach(update => {
       Object.keys(update).forEach(key => {
-        if (key === 'target' && view.addTarget) {
+        if (key === 'target' && view.addTargetActionForControlEvents) {
           // for now we only allow one target per view
           view.__eventListeners.forEach(pair => { // To prevent leak
-            view.removeTarget(pair[0], pair[1]);
+            view.removeTargetActionForControlEvents(pair[0], pair[1]);
           });
           view.__eventListeners = [ update[key] ];
-          view.addTarget(update[key][0], update[key][1]);
+          view.addTargetActionForControlEvents(update[key][0], update[key][1]);
         } else if (key === 'title' && view.setTitleForState) {
           view.setTitleForState(update[key], SweetieKitEnums.UIControlState.normal);
         } else if (key === 'titleColor' && view.setTitleColorForState) {

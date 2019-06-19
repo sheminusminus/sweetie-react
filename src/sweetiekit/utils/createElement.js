@@ -80,7 +80,7 @@ export const button = (props) => {
   el.setTitleForState(props.title || '', UIControlState.normal);
   el.setTitleColorForState(props.titleColor || colors.black, UIControlState.normal);
   if (props.target) {
-    el.addTarget(props.target[0], props.target[1]);
+    el.addTargetActionForControlEvents(props.target[0], props.target[1]);
   }
   if (props.titleLabel) {
     setTextViewBaseProps(el.titleLabel, props.titleLabel);
@@ -100,7 +100,7 @@ export const textField = (props) => {
   el.placeholder = props.placeholder || '';
 
   if (props.target) {
-    el.addTarget(props.target[0], props.target[1]);
+    el.addTargetActionForControlEvents(props.target[0], props.target[1]);
   }
 
   return el;

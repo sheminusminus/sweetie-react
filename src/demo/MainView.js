@@ -1,17 +1,22 @@
 import React from 'react';
 
+import { colors } from '../sweetiekit/utils';
+
 import { View } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
 
 
-class MyView extends React.Component {
+class MainView extends React.Component {
   render() {
-    const { children, frame, theme } = this.props;
+    const { children, frame, theme = {} } = this.props;
+
+    const { view = {} } = theme;
+    const { backgroundColor = colors.pink } = view;
 
     return (
       <View
-        backgroundColor={theme.view.backgroundColor}
+        backgroundColor={backgroundColor}
         frame={frame}
       >
         {children}
@@ -21,4 +26,4 @@ class MyView extends React.Component {
 }
 
 
-export default withTheme(MyView);
+export default withTheme(MainView);

@@ -9,8 +9,8 @@ import App from './demo/App';
 const { UIApplication, UIViewController } = SweetieKit;
 
 const app = new UIApplication();
-const rootVC = new UIViewController();
-app.keyWindow.setRootViewController(rootVC);
+const rootVC = UIViewController();
+app.keyWindow.rootViewController = rootVC;
 
 function render() {
   // var mountNode = document.getElementById('app');

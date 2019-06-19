@@ -3,8 +3,8 @@ export default (parent, child) => {
     parent.addSubview(child);
   } else if (parent.view && parent.view.addSubview && child.addSubview) {
     parent.view.addSubview(child);
-  } else if (parent.present && child.present) {
-    parent.present(child, true, () => {});
+  } else if (parent.presentViewControllerAnimatedCompletion && child.presentViewControllerAnimatedCompletion) {
+    parent.presentViewControllerAnimatedCompletion(child, true, () => {});
   } else if (parent.pushViewController && child.present) {
     parent.pushViewController(child);
   }

@@ -7,8 +7,10 @@ import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
 import ViewController from '../sweetiekit/components/ViewController';
+import TapGestureRecognizer from '../sweetiekit/components/TapGestureRecognizer';
 
 import ThemeContext from './context';
+
 
 const themes = {
   dark: {
@@ -80,6 +82,10 @@ class App extends React.Component {
             >
               WELCOME
             </Title>
+
+            <TapGestureRecognizer
+              target={this.toggleHasChild}
+            />
           </MainView>
         </ViewController>
       );

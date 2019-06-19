@@ -4,6 +4,7 @@ import {
   appendChild,
   createElement,
   createInstance,
+  is,
   removeChild,
 } from './utils';
 
@@ -54,7 +55,7 @@ const hostConfig = {
   ) {
     const { children, ...otherProps } = props;
     Object.keys(otherProps).forEach(attr => {
-      if (attr === 'target') {
+      if (attr === 'target' && is.view(view)) {
         const [fn, events] = otherProps[attr];
 
         if (view.__eventListeners) {
@@ -64,6 +65,19 @@ const hostConfig = {
         }
 
         view.addTargetActionForControlEvents(fn, events);
+      } else if (attr === 'target' && is.tapRecognizer(view)) {
+        const fn = otherProps[attr];
+        const handle = view.addTargetAction(fn);
+        const obj = {
+          handle,
+          fn,
+        };
+
+        if (view.__eventListeners) {
+          view.__eventListeners.push(obj);
+        } else {
+          view.__eventListeners = [obj];
+        }
       } else if (attr === 'title') {
         view.title = otherProps[attr];
       } else if (otherProps[attr]) {
@@ -144,13 +158,23 @@ const hostConfig = {
   ) {
     updatePayload.forEach(update => {
       Object.keys(update).forEach(key => {
-        if (key === 'target' && view.addTargetActionForControlEvents) {
+        if (key === 'target' && is.view(view)) {
           // for now we only allow one target per view
           view.__eventListeners.forEach(pair => { // To prevent leak
             view.removeTargetActionForControlEvents(pair[0], pair[1]);
           });
           view.__eventListeners = [ update[key] ];
           view.addTargetActionForControlEvents(update[key][0], update[key][1]);
+        } else if (key === 'target' && is.tapRecognizer(view)) {
+          if (view.__eventListeners) {
+            // for now we only allow one target per recognizer
+            view.__eventListeners.forEach(({ handle }) => {
+              view.removeTargetAction(handle);
+            });
+            const fn = update[key];
+            const handle = view.addTargetAction(fn);
+            view.__eventListeners = [{ fn, handle }];
+          }
         } else if (key === 'title' && view.setTitleForState) {
           view.setTitleForState(update[key], SweetieKitEnums.UIControlState.normal);
         } else if (key === 'titleColor' && view.setTitleColorForState) {

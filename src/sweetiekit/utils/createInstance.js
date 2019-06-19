@@ -20,6 +20,8 @@ const createInstance = (
       return createElement.textField(props);
     case 'ui-scroll-view':
       return createElement.scrollView(props);
+    case 'ui-tap-gesture-recognizer':
+      return createElement.tapGestureRecognizer(props);
     default:
       return createElement.defaultType();
   }

@@ -15,6 +15,7 @@ const {
   UILabel,
   UIView,
   UIButton,
+  UITapGestureRecognizer,
   UITextField,
   UIScrollView,
   UIKit,
@@ -112,6 +113,16 @@ export const scrollView = (props) => {
   el.translatesAutoresizingMaskIntoConstraints = false;
 
   setViewBaseProps(el, props);
+
+  return el;
+};
+
+export const tapGestureRecognizer = (props) => {
+  const el = UITapGestureRecognizer();
+
+  if (props.target) {
+    el.addTarget(props.target);
+  }
 
   return el;
 };

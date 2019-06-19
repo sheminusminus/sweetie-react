@@ -1,11 +1,16 @@
+import * as is from './is';
+
+
 export default (parent, child) => {
-  if (parent.addSubview && child.addSubview) {
+  if (is.view(parent) && is.view(child)) {
     parent.addSubview(child);
-  } else if (parent.view && parent.view.addSubview && child.addSubview) {
+  } else if (parent && is.view(parent.view) && is.view(child)) {
     parent.view.addSubview(child);
-  } else if (parent.presentViewControllerAnimatedCompletion && child.presentViewControllerAnimatedCompletion) {
+  } else if (is.viewController(parent) && is.viewController(child)) {
     parent.presentViewControllerAnimatedCompletion(child, true, () => {});
-  } else if (parent.pushViewController && child.present) {
+  } else if (is.navController(parent) && is.viewController(child)) {
     parent.pushViewController(child);
+  } else if (is.view(parent) && is.tapRecognizer(child)) {
+    parent.addGestureRecognizer(child);
   }
 };

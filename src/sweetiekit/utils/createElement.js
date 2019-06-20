@@ -113,9 +113,5 @@ export const tapGestureRecognizer = (props) => {
   return UITapGestureRecognizer();
 };
 
-export const navController = (props) => {
-  return UINavigationController();
-};
-
 
 export const defaultType = () => undefined;

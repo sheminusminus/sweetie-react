@@ -16,8 +16,6 @@ const createInstance = (
       return createElement.button(props);
     case 'ui-label':
       return createElement.label(props);
-    case 'ui-navigation-controller':
-      return createElement.navController(props);
     case 'ui-text-field':
       return createElement.textField(props);
     case 'ui-scroll-view':

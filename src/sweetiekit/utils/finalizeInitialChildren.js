@@ -35,8 +35,6 @@ export default (
       };
     } else if (attr === propKeys.title) {
       view.title = val;
-    } else if (is.navController(view) && attr === propKeys.viewControllers) {
-      view.setViewControllers(val, true);
     } else if (otherProps[attr]) {
       view[attr] = val;
     }

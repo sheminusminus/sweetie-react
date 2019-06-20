@@ -6,7 +6,7 @@ import MainView from './MainView';
 import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
-import { NavigationController, ViewController, TapGestureRecognizer } from '../sweetiekit/components';
+import { ViewController, TapGestureRecognizer } from '../sweetiekit/components';
 
 import ThemeContext from './context';
 
@@ -68,7 +68,7 @@ class App extends React.Component {
     const { frame } = this.props;
 
     if (hasChildController) {
-      const viewControllers = [
+      return (
         <ViewController key="view-controller-0">
           <MainView frame={frame} theme={theme}>
             <Title
@@ -86,30 +86,7 @@ class App extends React.Component {
               target={this.toggleHasChild}
             />
           </MainView>
-        </ViewController>,
-      ];
-
-      return (
-        <NavigationController>
-          <ViewController key="view-controller-0">
-            <MainView frame={frame} theme={theme}>
-              <Title
-                frame={{
-                  x: 12,
-                  y: 90,
-                  width: frame.width - 24,
-                  height: 20,
-                }}
-              >
-                WELCOME
-              </Title>
-
-              <TapGestureRecognizer
-                target={this.toggleHasChild}
-              />
-            </MainView>
-          </ViewController>
-        </NavigationController>
+        </ViewController>
       );
     }
 

@@ -55,8 +55,6 @@ export default (
       } else if (key === propKeys.titleLabel && view.titleLabel) {
         const labelProps = val;
         Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);
-      } else if (is.navController(view) && key === propKeys.viewControllers) {
-        view.setViewControllers(val, true);
       } else {
         view[key] = val;
       }

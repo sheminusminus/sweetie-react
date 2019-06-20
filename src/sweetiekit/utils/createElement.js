@@ -19,6 +19,7 @@ const {
   UITextField,
   UIScrollView,
   UIImageView,
+  UISwitch,
 } = SweetieKit;
 
 function set(el, props, attr, def) {
@@ -121,6 +122,16 @@ export const imageView = (props) => {
   el.translatesAutoresizingMaskIntoConstraints = false;
 
   setViewBaseProps(el, rest);
+
+  return el;
+};
+
+export const uiSwitch = (props) => {
+  const el = UISwitch();
+
+  el.translatesAutoresizingMaskIntoConstraints = false;
+
+  setViewBaseProps(el, props);
 
   return el;
 };

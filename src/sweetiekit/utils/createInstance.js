@@ -34,6 +34,8 @@ const createView = (
       return createElement.scrollView(props);
     case types.textField:
       return createElement.textField(props);
+    case types.uiSwitch:
+      return createElement.uiSwitch(props);
     default:
       return createElement.view(props);
   }

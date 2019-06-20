@@ -8,7 +8,7 @@ import MainView from './MainView';
 import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
-import { ImageView, ViewController, TapGestureRecognizer } from '../sweetiekit/components';
+import { ImageView, ViewController, TapGestureRecognizer, Switch } from '../sweetiekit/components';
 
 import ThemeContext from './context';
 
@@ -69,6 +69,10 @@ class App extends React.Component {
   toggleHasChild = () => {
     const { hasChildController } = this.state;
     this.setState({ hasChildController: !hasChildController });
+  };
+
+  handleSwitchChange = (evt) => {
+    console.log('switch changed', evt);
   };
 
   render() {
@@ -157,6 +161,16 @@ class App extends React.Component {
             }}
             onChange={this.handleFieldChange}
             value="Em"
+          />
+
+          <Switch
+            frame={{
+              x: 12,
+              y: ((frame.height - 50) / 2) + 160,
+              width: frame.width - 24,
+              height: 50,
+            }}
+            target={[this.handleSwitchChange, UIControlEventValueChanged]}
           />
         </MainView>
       </ThemeContext.Provider>

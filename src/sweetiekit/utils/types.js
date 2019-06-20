@@ -6,6 +6,7 @@ export const scrollView = 'ui-scroll-view';
 export const textField = 'ui-text-field';
 export const control = 'ui-control';
 export const button = 'ui-button';
+export const uiSwitch = 'ui-switch';
 
 export const gestureRecognizer = 'ui-gesture-recognizer';
 export const tapGestureRecognizer = 'ui-tap-gesture-recognizer';

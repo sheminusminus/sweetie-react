@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/build/main.e38c5771.js",
+    "runtime~main.js": "/build/bundle.1289045d.js",
+    "build/2.cbd343f7.js": "/build/2.cbd343f7.js",
+    "index.html": "/index.html",
+    "precache-manifest.c59a54205bcbf21e1c2d86c991841b9a.js": "/precache-manifest.c59a54205bcbf21e1c2d86c991841b9a.js",
+    "service-worker.js": "/service-worker.js"
+  }
+}

@@ -97,10 +97,6 @@ export const textField = (props) => {
   el.text = props.text || '';
   el.placeholder = props.placeholder || '';
 
-  if (props.target) {
-    el.addTargetActionForControlEvents(props.target[0], props.target[1]);
-  }
-
   return el;
 };
 
@@ -115,13 +111,7 @@ export const scrollView = (props) => {
 };
 
 export const tapGestureRecognizer = (props) => {
-  const el = UITapGestureRecognizer();
-
-  if (props.target) {
-    el.addTarget(props.target);
-  }
-
-  return el;
+  return UITapGestureRecognizer();
 };
 
 

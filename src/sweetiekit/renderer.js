@@ -43,11 +43,7 @@ const hostConfig = {
     hostContext,
     internalInstanceHandle
   ) {
-    const instance = createInstance(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
-    if (instance && instance.selfAddress && props.target) {
-      listeners[instance.selfAddress] = props.target;
-    }
-    return instance;
+    return createInstance(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
   },
 
   appendInitialChild(parentInstance, child) {
@@ -62,7 +58,6 @@ const hostConfig = {
     hostContext
   ) {
     listeners = finalizeInitialChildren(view, type, props, rootContainerInstance, hostContext, listeners);
-    console.log(listeners);
   },
 
   prepareUpdate(
@@ -118,7 +113,6 @@ const hostConfig = {
     internalInstanceHandle
   ) {
     listeners = commitUpdate(view, updatePayload, type, oldProps, newProps, internalInstanceHandle);
-    console.log(listeners);
   },
 
   resetTextContent(domElement) {},
@@ -144,11 +138,11 @@ const hostConfig = {
   },
 
   removeChild(parentInstance, child) {
-    removeChild(parentInstance, child);
+    listeners = removeChild(parentInstance, child, listeners);
   },
 
   removeChildFromContainer(container, child) {
-    removeChild(container, child);
+    listeners = removeChild(container, child, listeners);
   }
 };
 

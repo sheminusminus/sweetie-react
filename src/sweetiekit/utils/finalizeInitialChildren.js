@@ -1,4 +1,3 @@
-import * as is from './is';
 import * as propKeys from './propKeys';
 import * as types from './types';
 
@@ -11,42 +10,58 @@ export default (
   hostContext,
   listeners,
 ) => {
-  const { children, ...otherProps } = props;
+  const { baseTypes, children, type: viewType, ...otherProps } = props;
 
   const newListeners = { ...listeners };
+
+  const baseTypesIsArray = Array.isArray(baseTypes);
 
   Object.keys(otherProps).forEach(attr => {
     const val = otherProps[attr];
 
-    if (
-      attr === propKeys.target
-      && Array.isArray(props.baseTypes)
-      && props.baseTypes.includes(types.control)
-    ) {
-      const [fn, events] = val;
+    switch (attr) {
+      case propKeys.target:
+        if (baseTypesIsArray) {
+          if (baseTypes.includes(types.control)) {
+            const [fn, events] = val;
 
-      newListeners[view.selfAddress] = val;
+            newListeners[view.selfAddress] = val;
 
-      view.addTargetActionForControlEvents(fn, events);
-    } else if (attr === propKeys.target && is.tapRecognizer(view)) {
-      const handle = view.addTargetAction(val);
+            view.addTargetActionForControlEvents(fn, events);
+          } else if (baseTypes.includes(types.gestureRecognizer)) {
+            const handle = view.addTargetAction(val);
 
-      newListeners[view.selfAddress] = {
-        handle,
-        fn: val,
-      };
-    } else if (attr === propKeys.title) {
-      view.title = val;
-    } else if (props.type === types.imageView && attr === propKeys.image) {
-      if (val) view.image = val;
-    } else if (
-      attr === propKeys.layer
-      && Array.isArray(props.baseTypes)
-      && props.baseTypes.includes(types.view)
-    ) {
-      Object.keys(val).forEach(p => view.layer[p] = val[p]);
-    } else if (otherProps[attr]) {
-      view[attr] = val;
+            newListeners[view.selfAddress] = {
+              handle,
+              fn: val,
+            };
+          }
+        }
+        break;
+
+      case propKeys.title:
+        view.title = val;
+        break;
+
+      case propKeys.image:
+        if (val) view.image = val;
+        break;
+
+      case propKeys.layer:
+        if (baseTypesIsArray) {
+          if (baseTypes.includes(types.view)) {
+            Object.keys(val).forEach(p => view.layer[p] = val[p]);
+          }
+        }
+        break;
+
+      case propKeys.text:
+        view.text = val;
+        break;
+
+      default:
+        view[attr] = val;
+        break;
     }
   });
 

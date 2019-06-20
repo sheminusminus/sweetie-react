@@ -54,6 +54,7 @@ const themes = {
 class App extends React.Component {
   state = {
     theme: 'dark',
+    name: '',
     hasChildController: false,
   };
 
@@ -76,7 +77,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { hasChildController, theme } = this.state;
+    const { hasChildController, name, theme } = this.state;
     const { frame } = this.props;
 
     if (hasChildController) {
@@ -160,7 +161,7 @@ class App extends React.Component {
               height: 50,
             }}
             onChange={this.handleFieldChange}
-            value="Em"
+            value={name}
           />
 
           <Slider

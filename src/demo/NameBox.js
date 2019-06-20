@@ -16,7 +16,7 @@ class NameBox extends React.Component {
           cornerRadius: 4,
         }}
         placeholder="Your name"
-        target={[onChange, UIControlEventValueChanged]}
+        target={[onChange, UIControlEventAllEditingEvents]}
         text={value}
       />
     );

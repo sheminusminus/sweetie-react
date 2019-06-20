@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  styleguideDir: 'docs',
   components: 'src/sweetiekit/components/**/component.js',
   getComponentPathLine(componentPath) {
     const dir = path.dirname(componentPath);

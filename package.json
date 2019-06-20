@@ -11,7 +11,7 @@
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production",
     "start": "webpack-dev-server --hot --mode development",
-    "styleguide": "npx styleguidist build"
+    "docs": "npx styleguidist build"
   },
   "dependencies": {
     "react": "^16.8.6",

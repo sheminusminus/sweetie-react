@@ -9,10 +9,12 @@ class ViewController extends React.Component {
       children,
       baseTypes,
       type,
+      ...rest
     } = this.props;
 
     return (
       <ui-view-controller
+        {...rest}
         baseType={baseTypes || [viewController]}
         type={type || viewController}
       >

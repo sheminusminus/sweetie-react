@@ -8,7 +8,6 @@ import View from './View';
 class ImageView extends React.Component {
   render() {
     const {
-      image,
       children,
       ...rest
     } = this.props;
@@ -16,7 +15,6 @@ class ImageView extends React.Component {
     return (
       <View
         {...rest}
-        image={image}
         type={imageView}
       >
         {children}

@@ -8,17 +8,13 @@ import View from './View';
 class ScrollView extends React.Component {
   render() {
     const {
-      backgroundColor,
       children,
-      frame,
-      layer,
+      ...rest
     } = this.props;
 
     return (
       <View
-        backgroundColor={backgroundColor}
-        frame={frame}
-        layer={layer}
+        {...rest}
         type={scrollView}
       >
         {children}

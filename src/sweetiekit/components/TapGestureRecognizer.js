@@ -8,12 +8,13 @@ import GestureRecognizer from './GestureRecognizer';
 class TapGestureRecognizer extends React.Component {
   render() {
     const {
-      target,
+      children,
+      ...rest
     } = this.props;
 
     return (
       <GestureRecognizer
-        target={target}
+        {...rest}
         type={tapGestureRecognizer}
       />
     )

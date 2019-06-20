@@ -8,21 +8,13 @@ import View from './View';
 class Label extends React.Component {
   render() {
     const {
-      backgroundColor,
       children,
-      font,
-      frame,
-      textAlignment,
-      textColor,
+      ...rest
     } = this.props;
 
     return (
       <View
-        backgroundColor={backgroundColor}
-        font={font}
-        frame={frame}
-        textAlignment={textAlignment}
-        textColor={textColor}
+        {...rest}
         type={label}
       >
         {children}

@@ -8,24 +8,13 @@ import Control from './Control';
 class Button extends React.Component {
   render() {
     const {
-      backgroundColor,
-      frame,
-      layer,
-      target,
-      title,
-      titleColor,
-      titleLabel,
+      children,
+      ...rest
     } = this.props;
 
     return (
       <Control
-        backgroundColor={backgroundColor}
-        frame={frame}
-        layer={layer}
-        target={target}
-        title={title}
-        titleColor={titleColor}
-        titleLabel={titleLabel}
+        {...rest}
         type={button}
       />
     )

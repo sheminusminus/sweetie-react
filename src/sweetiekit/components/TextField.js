@@ -8,22 +8,13 @@ import Control from './Control';
 class TextField extends React.Component {
   render() {
     const {
-      backgroundColor,
-      frame,
-      layer,
-      placeholder,
-      target,
-      text,
+      children,
+      ...rest
     } = this.props;
 
     return (
       <Control
-        backgroundColor={backgroundColor}
-        frame={frame}
-        layer={layer}
-        placeholder={placeholder}
-        target={target}
-        text={text}
+        {...rest}
         type={textField}
       />
     )

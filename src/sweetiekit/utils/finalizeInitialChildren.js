@@ -17,10 +17,11 @@ export default (
   Object.keys(otherProps).forEach(attr => {
     const val = otherProps[attr];
 
-    if (attr === propKeys.target && (
-      is.view(view)
-      || is.textField(view)
-    )) {
+    if (
+      attr === propKeys.target
+      && Array.isArray(props.baseTypes)
+      && props.baseTypes.includes('ui-control')
+    ) {
       const [fn, events] = val;
 
       newListeners[view.selfAddress] = val;
@@ -35,6 +36,10 @@ export default (
       };
     } else if (attr === propKeys.title) {
       view.title = val;
+    } else if (is.imageView(view) && attr === propKeys.image) {
+      if (val) view.image = val;
+    } else if (attr === propKeys.layer && props.baseType === 'view') {
+      Object.keys(val).forEach(p => view.layer[p] = val[p]);
     } else if (otherProps[attr]) {
       view[attr] = val;
     }

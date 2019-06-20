@@ -55,6 +55,8 @@ export default (
       } else if (key === propKeys.titleLabel && view.titleLabel) {
         const labelProps = val;
         Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);
+      } else if (is.imageView(view) && key === propKeys.image) {
+        if (val) view.image = val;
       } else {
         view[key] = val;
       }

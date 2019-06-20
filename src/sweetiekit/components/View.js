@@ -4,17 +4,17 @@ import React from 'react';
 class View extends React.Component {
   render() {
     const {
-      backgroundColor,
+      baseTypes,
       children,
-      frame,
-      layer,
+      type,
+      ...rest
     } = this.props;
 
     return (
       <ui-view
-        backgroundColor={backgroundColor}
-        frame={frame}
-        layer={layer}
+        {...rest}
+        baseTypes={baseTypes || ['ui-view']}
+        type={type || 'ui-view'}
       >
         {children}
       </ui-view>

@@ -1,3 +1,5 @@
+const SweetieKit = Require('std:sweetiekit.node');
+
 import React from 'react';
 
 import { colors } from '../sweetiekit/utils';
@@ -6,10 +8,16 @@ import MainView from './MainView';
 import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
-import { ViewController, TapGestureRecognizer } from '../sweetiekit/components';
+import { ImageView, ViewController, TapGestureRecognizer } from '../sweetiekit/components';
 
 import ThemeContext from './context';
 
+
+const {
+  UIImage,
+} = SweetieKit;
+
+const image = UIImage('logo');
 
 const themes = {
   dark: {
@@ -81,6 +89,20 @@ class App extends React.Component {
             >
               WELCOME
             </Title>
+
+            <ImageView
+              backgroundColor={colors.medGrey}
+              frame={{
+                x: 12,
+                y: 130,
+                width: frame.width - 24,
+                height: frame.width - 24,
+              }}
+              image={image}
+              layer={{
+                cornerRadius: 12,
+              }}
+            />
 
             <TapGestureRecognizer
               target={this.toggleHasChild}

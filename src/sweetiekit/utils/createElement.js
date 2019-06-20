@@ -18,7 +18,7 @@ const {
   UITapGestureRecognizer,
   UITextField,
   UIScrollView,
-  UINavigationController,
+  UIImageView,
 } = SweetieKit;
 
 function set(el, props, attr, def) {
@@ -111,6 +111,18 @@ export const scrollView = (props) => {
 
 export const tapGestureRecognizer = (props) => {
   return UITapGestureRecognizer();
+};
+
+export const imageView = (props) => {
+  const { image, ...rest } = props;
+
+  const el = UIImageView();
+
+  el.translatesAutoresizingMaskIntoConstraints = false;
+
+  setViewBaseProps(el, rest);
+
+  return el;
 };
 
 

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Control from './Control';
+
 
 class Button extends React.Component {
   render() {
@@ -14,7 +16,7 @@ class Button extends React.Component {
     } = this.props;
 
     return (
-      <ui-button
+      <Control
         backgroundColor={backgroundColor}
         frame={frame}
         layer={layer}
@@ -22,6 +24,7 @@ class Button extends React.Component {
         title={title}
         titleColor={titleColor}
         titleLabel={titleLabel}
+        type="ui-button"
       />
     )
   }

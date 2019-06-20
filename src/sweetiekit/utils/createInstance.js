@@ -1,19 +1,35 @@
 import * as createElement from './createElement';
 
+const createView = (
+  type,
+  props,
+  rootContainerInstance,
+  hostContext,
+  internalInstanceHandle,
+) => {
+  console.log('creating', props.type);
+  switch (props.type) {
+    case 'ui-button':
+      return createElement.button(props);
+    case 'ui-image-view':
+      return createElement.imageView(props);
+    default:
+      return createElement.view(props);
+  }
+};
+
 const createInstance = (
   type,
-    props,
-    rootContainerInstance,
-    hostContext,
-    internalInstanceHandle
+  props,
+  rootContainerInstance,
+  hostContext,
+  internalInstanceHandle,
 ) => {
   switch (type) {
     case 'ui-view-controller':
       return createElement.viewController(props);
     case 'ui-view':
-      return createElement.view(props);
-    case 'ui-button':
-      return createElement.button(props);
+      return createView(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
     case 'ui-label':
       return createElement.label(props);
     case 'ui-text-field':

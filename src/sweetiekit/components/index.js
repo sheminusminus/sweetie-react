@@ -1,4 +1,5 @@
 export { default as Button } from './Button';
+export { default as ImageView } from './ImageView';
 export { default as Label } from './Label';
 export { default as ScrollView } from './ScrollView';
 export { default as TapGestureRecognizer } from './TapGestureRecognizer';

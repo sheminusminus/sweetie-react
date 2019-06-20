@@ -5,6 +5,8 @@ export default (parent, child, beforeChild) => {
   if (is.view(parent)) {
     if (is.view(child) && is.view(beforeChild)) {
       parent.insertSubviewBelowSubview(child, beforeChild);
+    } else if (is.view(child)) {
+      parent.addSubview(child);
     }
   } else if (parent && is.view(parent.view)) {
     if (is.view(child) && is.view(beforeChild)) {

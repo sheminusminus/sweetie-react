@@ -2,6 +2,7 @@ export { default as Button } from './Button';
 export { default as ImageView } from './ImageView';
 export { default as Label } from './Label';
 export { default as ScrollView } from './ScrollView';
+export { default as Slider } from './Slider';
 export { default as Switch } from './Switch';
 export { default as TapGestureRecognizer } from './TapGestureRecognizer';
 export { default as Text } from './Text';

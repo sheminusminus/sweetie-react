@@ -8,7 +8,7 @@ import MainView from './MainView';
 import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
-import { ImageView, ViewController, TapGestureRecognizer, Switch } from '../sweetiekit/components';
+import { ImageView, ViewController, TapGestureRecognizer, Slider, Switch } from '../sweetiekit/components';
 
 import ThemeContext from './context';
 
@@ -163,7 +163,7 @@ class App extends React.Component {
             value="Em"
           />
 
-          <Switch
+          <Slider
             frame={{
               x: 12,
               y: ((frame.height - 50) / 2) + 160,

@@ -36,6 +36,8 @@ const createView = (
       return createElement.textField(props);
     case types.uiSwitch:
       return createElement.uiSwitch(props);
+    case types.slider:
+      return createElement.slider(props);
     default:
       return createElement.view(props);
   }

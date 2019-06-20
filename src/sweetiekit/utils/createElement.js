@@ -20,6 +20,7 @@ const {
   UIScrollView,
   UIImageView,
   UISwitch,
+  UISlider,
 } = SweetieKit;
 
 function set(el, props, attr, def) {
@@ -128,6 +129,16 @@ export const imageView = (props) => {
 
 export const uiSwitch = (props) => {
   const el = UISwitch();
+
+  el.translatesAutoresizingMaskIntoConstraints = false;
+
+  setViewBaseProps(el, props);
+
+  return el;
+};
+
+export const slider = (props) => {
+  const el = UISlider();
 
   el.translatesAutoresizingMaskIntoConstraints = false;
 

@@ -1,3 +1,6 @@
+import * as props from './propKeys';
+
+
 export default (
   domElement,
   type,
@@ -17,7 +20,7 @@ export default (
   for (let key of propKeys) {
     if (
       // text children are already handled
-      key !== 'children' &&
+      key !== props.children &&
       oldProps[key] !== newProps[key]
     ) {
       payload.push({ [key]: newProps[key] })

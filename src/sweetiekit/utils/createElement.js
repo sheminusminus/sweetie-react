@@ -77,9 +77,7 @@ export const button = (props) => {
 
   el.setTitleForState(props.title || '', UIControlStateNormal);
   el.setTitleColorForState(props.titleColor || colors.black, UIControlStateNormal);
-  if (props.target) {
-    el.addTargetActionForControlEvents(props.target[0], props.target[1]);
-  }
+
   if (props.titleLabel) {
     setTextViewBaseProps(el.titleLabel, props.titleLabel);
   }

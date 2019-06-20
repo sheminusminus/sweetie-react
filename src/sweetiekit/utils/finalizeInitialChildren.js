@@ -1,4 +1,5 @@
 import * as is from './is';
+import * as propKeys from './propKeys';
 
 
 export default (
@@ -14,13 +15,16 @@ export default (
   const newListeners = { ...listeners };
 
   Object.keys(otherProps).forEach(attr => {
-    if (attr === 'target' && is.view(view)) {
+    if (attr === propKeys.target && (
+      is.view(view)
+      || is.textField(view)
+    )) {
       const [fn, events] = otherProps[attr];
 
       newListeners[view.selfAddress] = otherProps[attr];
 
       view.addTargetActionForControlEvents(fn, events);
-    } else if (attr === 'target' && is.tapRecognizer(view)) {
+    } else if (attr === propKeys.target && is.tapRecognizer(view)) {
       const fn = otherProps[attr];
 
       const handle = view.addTargetAction(fn);
@@ -29,7 +33,7 @@ export default (
         handle,
         fn,
       };
-    } else if (attr === 'title') {
+    } else if (attr === propKeys.title) {
       view.title = otherProps[attr];
     } else if (otherProps[attr]) {
       view[attr] = otherProps[attr];

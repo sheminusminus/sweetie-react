@@ -1,10 +1,11 @@
 import * as createElement from './createElement';
 import * as colors from './colors';
 import * as is from './is';
+import * as propKeys from './propKeys';
 import * as properties from './properties';
 
 
-export { colors, createElement, is, properties };
+export { colors, createElement, is, propKeys, properties };
 export { default as appendChild } from './appendChild';
 export { default as commitUpdate } from './commitUpdate';
 export { default as createInstance } from './createInstance';

@@ -1,4 +1,5 @@
 import * as is from './is';
+import * as propKeys from './propKeys';
 
 
 export default (
@@ -14,7 +15,10 @@ export default (
 
   updatePayload.forEach(update => {
     Object.keys(update).forEach(key => {
-      if (key === 'target' && is.view(view)) {
+      if (key === propKeys.target && (
+        is.view(view)
+        || is.textField(view)
+      )) {
         // for now we only allow one target per view
         const existingListener = newListeners[view.selfAddress];
 
@@ -25,7 +29,7 @@ export default (
         newListeners[view.selfAddress] = update[key];
 
         view.addTargetActionForControlEvents(update[key][0], update[key][1]);
-      } else if (key === 'target' && is.tapRecognizer(view)) {
+      } else if (key === propKeys.target && is.tapRecognizer(view)) {
         if (view.__eventListeners) {
           // for now we only allow one target per recognizer
           const existingListener = newListeners[view.selfAddress];
@@ -42,14 +46,14 @@ export default (
             handle,
           };
         }
-      } else if (key === 'title' && view.setTitleForState) {
+      } else if (key === propKeys.title && view.setTitleForState) {
         view.setTitleForState(update[key], UIControlStateNormal);
-      } else if (key === 'titleColor' && view.setTitleColorForState) {
+      } else if (key === propKeys.titleColor && view.setTitleColorForState) {
         view.setTitleColorForState(update[key], UIControlStateNormal);
-      } else if (key === 'layer' && view.layer) {
+      } else if (key === propKeys.layer && view.layer) {
         const layerProps = update[key];
         Object.keys(layerProps).forEach(p => view.layer[p] = layerProps[p]);
-      } else if (key === 'titleLabel' && view.titleLabel) {
+      } else if (key === propKeys.titleLabel && view.titleLabel) {
         const labelProps = update[key];
         Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);
       } else {

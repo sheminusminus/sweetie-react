@@ -6,8 +6,8 @@ export default (parent, child, listeners) => {
 
   if (is.view(child)) {
     child.removeFromSuperview();
-  } else if (is.navController(parent)) {
-    // TODO: pop to child view controller
+  } else if (is.navController(parent) && is.viewController(child)) {
+    parent.popToViewController(child);
     parent.popViewController();
   } else if (is.viewController(child)) {
     child.dismissViewControllerAnimatedCompletion(true, () => {});

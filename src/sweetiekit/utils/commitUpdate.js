@@ -15,6 +15,8 @@ export default (
 
   updatePayload.forEach(update => {
     Object.keys(update).forEach(key => {
+      const val = update[key];
+
       if (key === propKeys.target && (
         is.view(view)
         || is.textField(view)
@@ -26,38 +28,37 @@ export default (
           view.removeTargetActionForControlEvents(existingListener[1]);
         }
 
-        newListeners[view.selfAddress] = update[key];
+        newListeners[view.selfAddress] = val;
 
-        view.addTargetActionForControlEvents(update[key][0], update[key][1]);
+        view.addTargetActionForControlEvents(val[0], val[1]);
       } else if (key === propKeys.target && is.tapRecognizer(view)) {
-        if (view.__eventListeners) {
-          // for now we only allow one target per recognizer
-          const existingListener = newListeners[view.selfAddress];
+        // for now we only allow one target per recognizer
+        const existingListener = newListeners[view.selfAddress];
 
-          if (existingListener && existingListener.handle) {
-            view.removeTargetAction(existingListener.handle);
-          }
-
-          const fn = update[key];
-          const handle = view.addTargetAction(fn);
-
-          newListeners[view.selfAddress] = {
-            fn,
-            handle,
-          };
+        if (existingListener && existingListener.handle) {
+          view.removeTargetAction(existingListener.handle);
         }
+
+        const handle = view.addTargetAction(val);
+
+        newListeners[view.selfAddress] = {
+          fn: val,
+          handle,
+        };
       } else if (key === propKeys.title && view.setTitleForState) {
-        view.setTitleForState(update[key], UIControlStateNormal);
+        view.setTitleForState(val, UIControlStateNormal);
       } else if (key === propKeys.titleColor && view.setTitleColorForState) {
-        view.setTitleColorForState(update[key], UIControlStateNormal);
+        view.setTitleColorForState(val, UIControlStateNormal);
       } else if (key === propKeys.layer && view.layer) {
-        const layerProps = update[key];
+        const layerProps = val;
         Object.keys(layerProps).forEach(p => view.layer[p] = layerProps[p]);
       } else if (key === propKeys.titleLabel && view.titleLabel) {
-        const labelProps = update[key];
+        const labelProps = val;
         Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);
+      } else if (is.navController(view) && key === propKeys.viewControllers) {
+        view.setViewControllers(val, true);
       } else {
-        view[key] = update[key];
+        view[key] = val;
       }
     });
   });

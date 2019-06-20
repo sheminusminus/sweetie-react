@@ -15,28 +15,30 @@ export default (
   const newListeners = { ...listeners };
 
   Object.keys(otherProps).forEach(attr => {
+    const val = otherProps[attr];
+
     if (attr === propKeys.target && (
       is.view(view)
       || is.textField(view)
     )) {
-      const [fn, events] = otherProps[attr];
+      const [fn, events] = val;
 
-      newListeners[view.selfAddress] = otherProps[attr];
+      newListeners[view.selfAddress] = val;
 
       view.addTargetActionForControlEvents(fn, events);
     } else if (attr === propKeys.target && is.tapRecognizer(view)) {
-      const fn = otherProps[attr];
-
-      const handle = view.addTargetAction(fn);
+      const handle = view.addTargetAction(val);
 
       newListeners[view.selfAddress] = {
         handle,
-        fn,
+        fn: val,
       };
     } else if (attr === propKeys.title) {
-      view.title = otherProps[attr];
+      view.title = val;
+    } else if (is.navController(view) && attr === propKeys.viewControllers) {
+      view.setViewControllers(val, true);
     } else if (otherProps[attr]) {
-      view[attr] = otherProps[attr];
+      view[attr] = val;
     }
   });
 

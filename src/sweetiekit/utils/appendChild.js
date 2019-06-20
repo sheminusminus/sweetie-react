@@ -9,7 +9,7 @@ export default (parent, child) => {
   } else if (is.viewController(parent) && is.viewController(child)) {
     parent.presentViewControllerAnimatedCompletion(child, true, () => {});
   } else if (is.navController(parent) && is.viewController(child)) {
-    parent.pushViewController(child);
+    parent.pushViewController(child, true);
   } else if (is.view(parent) && is.tapRecognizer(child)) {
     parent.addGestureRecognizer(child);
   }

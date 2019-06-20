@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { slider } from '../utils/types';
+import { slider } from '../../utils/types';
 
-import Control from './Control';
+import Control from '../Control';
 
 
 class Slider extends React.Component {

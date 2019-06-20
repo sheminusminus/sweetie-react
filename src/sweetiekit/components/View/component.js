@@ -1,9 +1,13 @@
+// @flow
+
 import React from 'react';
 
-import { view } from '../utils/types';
+import { view } from '../../utils/types';
+
+import type { ViewProps } from './types';
 
 
-class View extends React.Component {
+class View extends React.Component<ViewProps> {
   render() {
     const {
       baseTypes,

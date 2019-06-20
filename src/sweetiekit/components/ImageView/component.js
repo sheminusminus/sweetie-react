@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { imageView } from '../utils/types';
+import { imageView } from '../../utils/types';
 
-import View from './View';
+import View from '../View';
 
 
 class ImageView extends React.Component {

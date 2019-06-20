@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { gestureRecognizer } from '../utils/types';
+import { gestureRecognizer } from '../../utils/types';
 
 
 class GestureRecognizer extends React.Component {

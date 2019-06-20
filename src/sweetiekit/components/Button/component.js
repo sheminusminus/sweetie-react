@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { button } from '../utils/types';
+import { button } from '../../utils/types';
 
-import Control from './Control';
+import Control from '../Control';
 
 
 class Button extends React.Component {

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { label } from '../utils/types';
+import { scrollView } from '../../utils/types';
 
-import View from './View';
+import View from '../View';
 
 
-class Label extends React.Component {
+class ScrollView extends React.Component {
   render() {
     const {
       children,
@@ -15,7 +15,7 @@ class Label extends React.Component {
     return (
       <View
         {...rest}
-        type={label}
+        type={scrollView}
       >
         {children}
       </View>
@@ -24,4 +24,4 @@ class Label extends React.Component {
 }
 
 
-export default Label;
+export default ScrollView;

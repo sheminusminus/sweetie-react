@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { viewController } from '../utils/types';
+import { viewController } from '../../utils/types';
 
 
 class ViewController extends React.Component {

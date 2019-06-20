@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { control, view } from '../utils/types';
+import { control, view } from '../../utils/types';
 
-import View from './View';
+import View from '../View';
 
 
 class Control extends React.Component {

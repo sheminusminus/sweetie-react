@@ -6,6 +6,7 @@ import {
   createElement,
   createInstance,
   finalizeInitialChildren,
+  insertBefore,
   prepareUpdate,
   removeChild,
 } from './utils';
@@ -127,7 +128,7 @@ const hostConfig = {
   },
 
   insertBefore(parentInstance, child, beforeChild) {
-    console.log('insertBefore');
+    insertBefore(parentInstance, child, beforeChild);
   },
 
   insertInContainerBefore(container, child, beforeChild) {

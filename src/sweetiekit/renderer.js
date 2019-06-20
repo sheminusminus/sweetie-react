@@ -2,9 +2,11 @@ import ReactReconciler from 'react-reconciler';
 
 import {
   appendChild,
+  commitUpdate,
   createElement,
   createInstance,
-  is,
+  finalizeInitialChildren,
+  prepareUpdate,
   removeChild,
 } from './utils';
 
@@ -12,7 +14,7 @@ import {
 const hostConfig = {
   getRootHostContext(rootContainerInstance) {
     console.log('TODO: getRootHostContext');
-    return {}
+    return {};
   },
 
   getChildHostContext(parentHostContext, type, rootContainerInstance) {
@@ -52,37 +54,7 @@ const hostConfig = {
     rootContainerInstance,
     hostContext
   ) {
-    const { children, ...otherProps } = props;
-    Object.keys(otherProps).forEach(attr => {
-      if (attr === 'target' && is.view(view)) {
-        const [fn, events] = otherProps[attr];
-
-        if (view.__eventListeners) {
-          view.__eventListeners.push([fn, events]);
-        } else {
-          view.__eventListeners = [[fn, events]];
-        }
-
-        view.addTargetActionForControlEvents(fn, events);
-      } else if (attr === 'target' && is.tapRecognizer(view)) {
-        const fn = otherProps[attr];
-        const handle = view.addTargetAction(fn);
-        const obj = {
-          handle,
-          fn,
-        };
-
-        if (view.__eventListeners) {
-          view.__eventListeners.push(obj);
-        } else {
-          view.__eventListeners = [obj];
-        }
-      } else if (attr === 'title') {
-        view.title = otherProps[attr];
-      } else if (otherProps[attr]) {
-        view[attr] = otherProps[attr];
-      }
-    });
+    finalizeInitialChildren(view, type, props, rootContainerInstance, hostContext);
   },
 
   prepareUpdate(
@@ -93,25 +65,7 @@ const hostConfig = {
     rootContainerInstance,
     hostContext
   ) {
-    const propKeys = new Set(
-      Object.keys(newProps).concat(
-        Object.keys(oldProps)
-      )
-    ).values();
-
-    const payload = [];
-
-    for (let key of propKeys) {
-      if (
-        // text children are already handled
-        key !== 'children' &&
-        oldProps[key] !== newProps[key]
-      ) {
-        payload.push({ [key]: newProps[key] })
-      }
-    }
-
-    return payload;
+    return prepareUpdate(domElement, type, oldProps, newProps, rootContainerInstance, hostContext);
   },
 
   shouldSetTextContent(type, props) {
@@ -155,44 +109,10 @@ const hostConfig = {
     newProps,
     internalInstanceHandle
   ) {
-    updatePayload.forEach(update => {
-      Object.keys(update).forEach(key => {
-        if (key === 'target' && is.view(view)) {
-          // for now we only allow one target per view
-          view.__eventListeners.forEach(pair => { // To prevent leak
-            view.removeTargetActionForControlEvents(pair[1]);
-          });
-          view.__eventListeners = [ update[key] ];
-          view.addTargetActionForControlEvents(update[key][0], update[key][1]);
-        } else if (key === 'target' && is.tapRecognizer(view)) {
-          if (view.__eventListeners) {
-            // for now we only allow one target per recognizer
-            view.__eventListeners.forEach(({ handle }) => {
-              view.removeTargetAction(handle);
-            });
-            const fn = update[key];
-            const handle = view.addTargetAction(fn);
-            view.__eventListeners = [{ fn, handle }];
-          }
-        } else if (key === 'title' && view.setTitleForState) {
-          view.setTitleForState(update[key], UIControlStateNormal);
-        } else if (key === 'titleColor' && view.setTitleColorForState) {
-          view.setTitleColorForState(update[key], UIControlStateNormal);
-        } else if (key === 'layer' && view.layer) {
-          const layerProps = update[key];
-          Object.keys(layerProps).forEach(p => view.layer[p] = layerProps[p]);
-        } else if (key === 'titleLabel' && view.titleLabel) {
-          const labelProps = update[key];
-          Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);
-        } else {
-          view[key] = update[key];
-        }
-      });
-    });
+    commitUpdate(view, updatePayload, type, oldProps, newProps, internalInstanceHandle);
   },
 
-  resetTextContent(domElement) {
-  },
+  resetTextContent(domElement) {},
 
   commitTextUpdate(textInstance, oldText, newText) {
     textInstance.text = newText;

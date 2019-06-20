@@ -1,20 +1,19 @@
+// @flow
+
 import React from 'react';
+
+import type { GestureRecognizerProps } from '../sharedTypes';
 
 import { tapGestureRecognizer } from '../../utils/types';
 
 import GestureRecognizer from '../GestureRecognizer';
 
 
-class TapGestureRecognizer extends React.Component {
+class TapGestureRecognizer extends React.Component<GestureRecognizerProps> {
   render() {
-    const {
-      children,
-      ...rest
-    } = this.props;
-
     return (
       <GestureRecognizer
-        {...rest}
+        {...this.props}
         type={tapGestureRecognizer}
       />
     )

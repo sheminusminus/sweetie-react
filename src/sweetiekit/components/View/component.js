@@ -4,7 +4,7 @@ import React from 'react';
 
 import { view } from '../../utils/types';
 
-import type { ViewProps } from './types';
+import type { ViewProps } from '../sharedTypes';
 
 
 class View extends React.Component<ViewProps> {

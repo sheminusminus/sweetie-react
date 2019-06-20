@@ -1,11 +1,15 @@
+// @flow
+
 import React from 'react';
+
+import type { ControlProps } from '../sharedTypes';
 
 import { uiSwitch } from '../../utils/types';
 
 import Control from '../Control';
 
 
-class Switch extends React.Component {
+class Switch extends React.Component<ControlProps> {
   render() {
     const {
       children,

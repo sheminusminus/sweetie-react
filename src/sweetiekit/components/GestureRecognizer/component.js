@@ -1,9 +1,13 @@
+// @flow
+
 import React from 'react';
+
+import type { BaseProps } from '../sharedTypes';
 
 import { gestureRecognizer } from '../../utils/types';
 
 
-class GestureRecognizer extends React.Component {
+class GestureRecognizer extends React.Component<BaseProps> {
   render() {
     const {
       baseTypes,

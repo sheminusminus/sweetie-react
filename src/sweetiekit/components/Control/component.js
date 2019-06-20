@@ -1,11 +1,15 @@
+// @flow
+
 import React from 'react';
+
+import type { ControlProps } from '../sharedTypes';
 
 import { control, view } from '../../utils/types';
 
 import View from '../View';
 
 
-class Control extends React.Component {
+class Control extends React.Component<ControlProps> {
   render() {
     const {
       baseTypes,

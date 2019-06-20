@@ -1,11 +1,15 @@
+// @flow
+
 import React from 'react';
+
+import type { ViewProps } from '../sharedTypes';
 
 import { scrollView } from '../../utils/types';
 
 import View from '../View';
 
 
-class ScrollView extends React.Component {
+class ScrollView extends React.Component<ViewProps> {
   render() {
     const {
       children,

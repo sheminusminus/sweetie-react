@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  title: 'SweetieKit React',
   styleguideDir: 'docs',
   components: 'src/sweetiekit/components/**/component.js',
   getComponentPathLine(componentPath) {

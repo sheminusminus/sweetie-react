@@ -12,6 +12,8 @@ import {
 } from './utils';
 
 
+let listeners = {};
+
 const hostConfig = {
   getRootHostContext(rootContainerInstance) {
     console.log('TODO: getRootHostContext');
@@ -41,7 +43,11 @@ const hostConfig = {
     hostContext,
     internalInstanceHandle
   ) {
-    return createInstance(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
+    const instance = createInstance(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
+    if (instance && instance.selfAddress && props.target) {
+      listeners[instance.selfAddress] = props.target;
+    }
+    return instance;
   },
 
   appendInitialChild(parentInstance, child) {
@@ -55,7 +61,8 @@ const hostConfig = {
     rootContainerInstance,
     hostContext
   ) {
-    finalizeInitialChildren(view, type, props, rootContainerInstance, hostContext);
+    listeners = finalizeInitialChildren(view, type, props, rootContainerInstance, hostContext, listeners);
+    console.log(listeners);
   },
 
   prepareUpdate(
@@ -110,7 +117,8 @@ const hostConfig = {
     newProps,
     internalInstanceHandle
   ) {
-    commitUpdate(view, updatePayload, type, oldProps, newProps, internalInstanceHandle);
+    listeners = commitUpdate(view, updatePayload, type, oldProps, newProps, internalInstanceHandle);
+    console.log(listeners);
   },
 
   resetTextContent(domElement) {},

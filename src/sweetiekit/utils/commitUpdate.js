@@ -8,25 +8,39 @@ export default (
   oldProps,
   newProps,
   internalInstanceHandle,
+  listeners,
 ) => {
+  const newListeners = { ...listeners };
+
   updatePayload.forEach(update => {
     Object.keys(update).forEach(key => {
       if (key === 'target' && is.view(view)) {
         // for now we only allow one target per view
-        view.__eventListeners.forEach(pair => { // To prevent leak
-          view.removeTargetActionForControlEvents(pair[1]);
-        });
-        view.__eventListeners = [ update[key] ];
+        const existingListener = newListeners[view.selfAddress];
+
+        if (Array.isArray(existingListener)) {
+          view.removeTargetActionForControlEvents(existingListener[1]);
+        }
+
+        newListeners[view.selfAddress] = update[key];
+
         view.addTargetActionForControlEvents(update[key][0], update[key][1]);
       } else if (key === 'target' && is.tapRecognizer(view)) {
         if (view.__eventListeners) {
           // for now we only allow one target per recognizer
-          view.__eventListeners.forEach(({ handle }) => {
-            view.removeTargetAction(handle);
-          });
+          const existingListener = newListeners[view.selfAddress];
+
+          if (existingListener && existingListener.handle) {
+            view.removeTargetAction(existingListener.handle);
+          }
+
           const fn = update[key];
           const handle = view.addTargetAction(fn);
-          view.__eventListeners = [{ fn, handle }];
+
+          newListeners[view.selfAddress] = {
+            fn,
+            handle,
+          };
         }
       } else if (key === 'title' && view.setTitleForState) {
         view.setTitleForState(update[key], UIControlStateNormal);
@@ -43,4 +57,6 @@ export default (
       }
     });
   });
+
+  return newListeners;
 };

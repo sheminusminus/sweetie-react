@@ -16,8 +16,7 @@ const hostConfig = {
   },
 
   getChildHostContext(parentHostContext, type, rootContainerInstance) {
-    console.log('TODO: getChildHostContext');
-    return {};
+    return parentHostContext;
   },
 
   getPublicInstance(instance) {
@@ -161,7 +160,7 @@ const hostConfig = {
         if (key === 'target' && is.view(view)) {
           // for now we only allow one target per view
           view.__eventListeners.forEach(pair => { // To prevent leak
-            view.removeTargetActionForControlEvents(pair[0], pair[1]);
+            view.removeTargetActionForControlEvents(pair[1]);
           });
           view.__eventListeners = [ update[key] ];
           view.addTargetActionForControlEvents(update[key][0], update[key][1]);
@@ -176,9 +175,9 @@ const hostConfig = {
             view.__eventListeners = [{ fn, handle }];
           }
         } else if (key === 'title' && view.setTitleForState) {
-          view.setTitleForState(update[key], SweetieKitEnums.UIControlState.normal);
+          view.setTitleForState(update[key], UIControlStateNormal);
         } else if (key === 'titleColor' && view.setTitleColorForState) {
-          view.setTitleColorForState(update[key], SweetieKitEnums.UIControlState.normal);
+          view.setTitleColorForState(update[key], UIControlStateNormal);
         } else if (key === 'layer' && view.layer) {
           const layerProps = update[key];
           Object.keys(layerProps).forEach(p => view.layer[p] = layerProps[p]);

@@ -18,10 +18,7 @@ const {
   UITapGestureRecognizer,
   UITextField,
   UIScrollView,
-  UIKit,
 } = SweetieKit;
-
-const { UIControlState } = UIKit;
 
 function set(el, props, attr, def) {
   if (el && props) {
@@ -78,8 +75,8 @@ export const button = (props) => {
 
   setViewBaseProps(el, props);
 
-  el.setTitleForState(props.title || '', UIControlState.normal);
-  el.setTitleColorForState(props.titleColor || colors.black, UIControlState.normal);
+  el.setTitleForState(props.title || '', UIControlStateNormal);
+  el.setTitleColorForState(props.titleColor || colors.black, UIControlStateNormal);
   if (props.target) {
     el.addTargetActionForControlEvents(props.target[0], props.target[1]);
   }

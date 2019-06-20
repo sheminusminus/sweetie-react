@@ -2,12 +2,18 @@
 
 import React from 'react';
 
-import type { ViewControllerProps } from '../sharedTypes';
-
-import { viewController } from '../../utils/types';
-
+type ViewControllerProps = {
+  baseTypes?: string[],
+  children?: any,
+  type?: string,
+};
 
 class ViewController extends React.Component<ViewControllerProps> {
+  static defaultProps: ViewControllerProps = {
+    baseTypes: ['ui-view-controller'],
+    type: 'ui-view-controller',
+  };
+
   render() {
     const {
       children,
@@ -19,14 +25,13 @@ class ViewController extends React.Component<ViewControllerProps> {
     return (
       <ui-view-controller
         {...rest}
-        baseType={baseTypes || [viewController]}
-        type={type || viewController}
+        baseType={baseTypes}
+        type={type}
       >
         {children}
       </ui-view-controller>
     )
   }
 }
-
 
 export default ViewController;

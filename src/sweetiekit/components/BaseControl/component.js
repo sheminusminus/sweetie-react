@@ -2,12 +2,13 @@
 
 import React from 'react';
 
-import Control from '../Control';
+import View from '../View';
 
 import type { Color, Frame, Layer, TargetTuple } from '../sharedTypes';
 
-type ButtonProps = {
+type ControlProps = {
   backgroundColor?: Color,
+  baseTypes?: string[],
   children?: any,
   frame?: Frame,
   layer?: Layer,
@@ -15,28 +16,30 @@ type ButtonProps = {
   type?: string,
 };
 
-/**
- * Renders a Control.
- */
-class Button extends React.Component<ButtonProps> {
-  static defaultProps: ButtonProps = {
-    type: 'ui-button',
+class BaseControl extends React.Component<ControlProps> {
+  static defaultProps: ControlProps = {
+    baseTypes: ['ui-control', 'ui-view'],
+    type: 'ui-control',
   };
 
   render() {
     const {
+      baseTypes,
       children,
       type,
       ...rest
     } = this.props;
 
     return (
-      <Control
+      <View
         {...rest}
+        baseTypes={baseTypes}
         type={type}
-      />
+      >
+        {children}
+      </View>
     )
   }
 }
 
-export default Button;
+export default BaseControl;

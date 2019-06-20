@@ -2,12 +2,28 @@
 
 import React from 'react';
 
-import { view } from '../../utils/types';
+import BaseView from '../BaseView';
 
-import type { ViewProps } from '../sharedTypes';
+import type { Color, Frame, Layer } from '../sharedTypes';
 
+type ViewProps = {
+  baseTypes?: string[],
+  children?: any,
+  type?: string,
+  backgroundColor?: Color,
+  frame?: Frame,
+  layer?: Layer,
+};
 
+/**
+ * View
+ */
 class View extends React.Component<ViewProps> {
+  static defaultProps: ViewProps = {
+    baseTypes: ['ui-view'],
+    type: 'ui-view',
+  };
+
   render() {
     const {
       baseTypes,
@@ -17,16 +33,15 @@ class View extends React.Component<ViewProps> {
     } = this.props;
 
     return (
-      <ui-view
+      <BaseView
         {...rest}
-        baseTypes={baseTypes || [view]}
-        type={type || view}
+        baseTypes={baseTypes || [type]}
+        type={type}
       >
         {children}
-      </ui-view>
+      </BaseView>
     )
   }
 }
-
 
 export default View;

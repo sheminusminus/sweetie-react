@@ -2,14 +2,12 @@
 
 import React from 'react';
 
-import BaseGestureRecognizer from '../BaseGestureRecognizer';
-
 type GestureRecognizerProps = {
   baseTypes?: string[],
   type?: string,
 };
 
-class GestureRecognizer extends React.Component<GestureRecognizerProps> {
+class BaseGestureRecognizer extends React.Component<GestureRecognizerProps> {
   static defaultProps: GestureRecognizerProps = {
     baseTypes: ['ui-gesture-recognizer'],
     type: 'ui-gesture-recognizer',
@@ -23,7 +21,7 @@ class GestureRecognizer extends React.Component<GestureRecognizerProps> {
     } = this.props;
 
     return (
-      <BaseGestureRecognizer
+      <ui-gesture-recognizer
         {...rest}
         baseTypes={baseTypes}
         type={type}
@@ -32,4 +30,4 @@ class GestureRecognizer extends React.Component<GestureRecognizerProps> {
   }
 }
 
-export default GestureRecognizer;
+export default BaseGestureRecognizer;

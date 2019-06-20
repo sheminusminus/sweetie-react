@@ -2,28 +2,36 @@
 
 import React from 'react';
 
-import type { ControlProps } from '../sharedTypes';
-
-import { slider } from '../../utils/types';
-
 import Control from '../Control';
 
+import type { Color, Frame, Layer, TargetTuple } from '../sharedTypes';
 
-class Slider extends React.Component<ControlProps> {
+type SliderProps = {
+  backgroundColor?: Color,
+  frame?: Frame,
+  layer?: Layer,
+  target?: TargetTuple,
+  type?: string,
+};
+
+class Slider extends React.Component<SliderProps> {
+  static defaultProps: SliderProps = {
+    type: 'ui-slider',
+  };
+
   render() {
     const {
-      children,
+      type,
       ...rest
     } = this.props;
 
     return (
       <Control
         {...rest}
-        type={slider}
+        type={type}
       />
     )
   }
 }
-
 
 export default Slider;

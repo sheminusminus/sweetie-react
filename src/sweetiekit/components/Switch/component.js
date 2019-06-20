@@ -2,28 +2,36 @@
 
 import React from 'react';
 
-import type { ControlProps } from '../sharedTypes';
-
-import { uiSwitch } from '../../utils/types';
-
 import Control from '../Control';
 
+import type { Color, Frame, Layer, TargetTuple } from '../sharedTypes';
 
-class Switch extends React.Component<ControlProps> {
+type SwitchProps = {
+  backgroundColor?: Color,
+  frame?: Frame,
+  layer?: Layer,
+  target?: TargetTuple,
+  type?: string,
+};
+
+class Switch extends React.Component<SwitchProps> {
+  static defaultProps: SwitchProps = {
+    type: 'ui-switch',
+  };
+
   render() {
     const {
-      children,
+      type,
       ...rest
     } = this.props;
 
     return (
       <Control
         {...rest}
-        type={uiSwitch}
+        type={type}
       />
     )
   }
 }
-
 
 export default Switch;

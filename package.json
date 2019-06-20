@@ -10,7 +10,8 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production",
-    "start": "webpack-dev-server --hot --mode development"
+    "start": "webpack-dev-server --hot --mode development",
+    "styleguide": "npx styleguidist build"
   },
   "dependencies": {
     "react": "^16.8.6",
@@ -27,6 +28,7 @@
     "babel-loader": "^8.0.5",
     "flow-bin": "^0.102.0-rc",
     "react-hot-loader": "^4.8.2",
+    "react-styleguidist": "^9.1.8",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"

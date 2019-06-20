@@ -2,39 +2,44 @@
 
 import React from 'react';
 
-import View from '../View';
-
 import type { Color, Frame, Layer } from '../sharedTypes';
 
-type ScrollViewProps = {
+type ViewProps = {
+  baseTypes?: string[],
   children?: any,
+  type?: string,
   backgroundColor?: Color,
   frame?: Frame,
   layer?: Layer,
-  type?: string,
 };
 
-class ScrollView extends React.Component<ScrollViewProps> {
-  static defaultProps: ScrollViewProps = {
-    type: 'ui-scroll-view',
+/**
+ * View
+ */
+class BaseView extends React.Component<ViewProps> {
+  static defaultProps: ViewProps = {
+    baseTypes: ['ui-view'],
+    type: 'ui-view',
   };
 
   render() {
     const {
+      baseTypes,
       children,
       type,
       ...rest
     } = this.props;
 
     return (
-      <View
+      <ui-view
         {...rest}
+        baseTypes={baseTypes || [type]}
         type={type}
       >
         {children}
-      </View>
+      </ui-view>
     )
   }
 }
 
-export default ScrollView;
+export default BaseView;

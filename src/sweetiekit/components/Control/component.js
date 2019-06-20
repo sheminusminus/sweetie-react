@@ -2,14 +2,26 @@
 
 import React from 'react';
 
-import type { ControlProps } from '../sharedTypes';
+import BaseControl from '../BaseControl';
 
-import { control, view } from '../../utils/types';
+import type { Color, Frame, Layer, TargetTuple } from '../sharedTypes';
 
-import View from '../View';
-
+type ControlProps = {
+  backgroundColor?: Color,
+  baseTypes?: string[],
+  children?: any,
+  frame?: Frame,
+  layer?: Layer,
+  target?: TargetTuple,
+  type?: string,
+};
 
 class Control extends React.Component<ControlProps> {
+  static defaultProps: ControlProps = {
+    baseTypes: ['ui-control', 'ui-view'],
+    type: 'ui-control',
+  };
+
   render() {
     const {
       baseTypes,
@@ -19,16 +31,15 @@ class Control extends React.Component<ControlProps> {
     } = this.props;
 
     return (
-      <View
+      <BaseControl
         {...rest}
-        baseTypes={baseTypes || [control, view]}
-        type={type || control}
+        baseTypes={baseTypes}
+        type={type}
       >
         {children}
-      </View>
+      </BaseControl>
     )
   }
 }
-
 
 export default Control;

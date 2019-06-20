@@ -2,7 +2,7 @@ import * as colors from "./colors";
 
 export const viewAttrs = ['frame', 'backgroundColor'];
 export const viewDefaults = {
-  backgroundColor: colors.white,
+  backgroundColor: colors.clear,
 };
 
 export const textViewAttrs = [...viewAttrs, 'font', 'textAlignment'];

@@ -13,6 +13,12 @@ const createView = (
       return createElement.button(props);
     case 'ui-image-view':
       return createElement.imageView(props);
+    case 'ui-label':
+      return createElement.label(props);
+    case 'ui-scroll-view':
+      return createElement.scrollView(props);
+    case 'ui-text-field':
+      return createElement.textField(props);
     default:
       return createElement.view(props);
   }
@@ -30,12 +36,6 @@ const createInstance = (
       return createElement.viewController(props);
     case 'ui-view':
       return createView(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
-    case 'ui-label':
-      return createElement.label(props);
-    case 'ui-text-field':
-      return createElement.textField(props);
-    case 'ui-scroll-view':
-      return createElement.scrollView(props);
     case 'ui-tap-gesture-recognizer':
       return createElement.tapGestureRecognizer(props);
     default:

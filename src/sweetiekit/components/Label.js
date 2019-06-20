@@ -1,5 +1,7 @@
 import React from 'react';
 
+import View from './View';
+
 
 class Label extends React.Component {
   render() {
@@ -13,17 +15,19 @@ class Label extends React.Component {
     } = this.props;
 
     return (
-      <ui-label
+      <View
         backgroundColor={backgroundColor}
         font={font}
         frame={frame}
         textAlignment={textAlignment}
         textColor={textColor}
+        type="ui-label"
       >
         {children}
-      </ui-label>
+      </View>
     )
   }
 }
+
 
 export default Label;

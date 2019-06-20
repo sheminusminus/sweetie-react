@@ -36,9 +36,13 @@ export default (
       };
     } else if (attr === propKeys.title) {
       view.title = val;
-    } else if (is.imageView(view) && attr === propKeys.image) {
+    } else if (props.type === 'ui-image-view' && attr === propKeys.image) {
       if (val) view.image = val;
-    } else if (attr === propKeys.layer && props.baseType === 'view') {
+    } else if (
+      attr === propKeys.layer
+      && Array.isArray(props.baseTypes)
+      && props.baseTypes.includes('ui-view')
+    ) {
       Object.keys(val).forEach(p => view.layer[p] = val[p]);
     } else if (otherProps[attr]) {
       view[attr] = val;

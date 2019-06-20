@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Control from './Control';
+
 
 class TextField extends React.Component {
   render() {
@@ -13,13 +15,14 @@ class TextField extends React.Component {
     } = this.props;
 
     return (
-      <ui-text-field
+      <Control
         backgroundColor={backgroundColor}
         frame={frame}
         layer={layer}
         placeholder={placeholder}
         target={target}
         text={text}
+        type="ui-text-field"
       />
     )
   }

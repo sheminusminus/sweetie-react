@@ -17,10 +17,11 @@ export default (
     Object.keys(update).forEach(key => {
       const val = update[key];
 
-      if (key === propKeys.target && (
-        is.view(view)
-        || is.textField(view)
-      )) {
+      if (
+        key === propKeys.target
+        && Array.isArray(newProps.baseTypes)
+        && newProps.baseTypes.includes('ui-control')
+      ) {
         // for now we only allow one target per view
         const existingListener = newListeners[view.selfAddress];
 
@@ -55,7 +56,7 @@ export default (
       } else if (key === propKeys.titleLabel && view.titleLabel) {
         const labelProps = val;
         Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);
-      } else if (is.imageView(view) && key === propKeys.image) {
+      } else if (newProps.type === 'ui-image-view' && key === propKeys.image) {
         if (val) view.image = val;
       } else {
         view[key] = val;

@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import type { TextFieldProps } from './types';
+import type { TextFieldProps } from '../sharedTypes';
 
 import { textField } from '../../utils/types';
 

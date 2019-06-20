@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import type { LabelProps } from './types';
+import type { LabelProps } from '../sharedTypes';
 
 import { label } from '../../utils/types';
 

@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import type { ImageViewProps } from './types';
+import type { ImageViewProps } from '../sharedTypes';
 
 import { imageView } from '../../utils/types';
 

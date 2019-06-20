@@ -26,9 +26,28 @@ export type BaseViewProps = {
   layer?: Object,
 };
 
-export type ViewProps = BaseProps & ChildrenProps & BaseViewProps;
+export type ImageViewBaseProps = {
+  image?: any,
+};
 
+export type LabelBaseProps = {
+  font?: any,
+  text?: string,
+  textAlignment?: any,
+  textColor?: Color,
+};
+
+export type TextFieldBaseProps = {
+  font?: any,
+  numberOfLines?: number,
+  text?: string,
+};
+
+export type ViewProps = BaseProps & ChildrenProps & BaseViewProps;
+export type ImageViewProps = ViewProps & ImageViewBaseProps;
+export type LabelProps = ViewProps & LabelBaseProps;
 export type ControlProps = ViewProps & TargetEventProps;
+export type TextFieldProps = ViewProps & TextFieldBaseProps;
 
 export type GestureRecognizerProps = BaseProps & TargetFunctionProps;
 

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { imageView } from '../utils/types';
+
 import View from './View';
 
 
@@ -15,7 +17,7 @@ class ImageView extends React.Component {
       <View
         {...rest}
         image={image}
-        type="ui-image-view"
+        type={imageView}
       >
         {children}
       </View>

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { button } from '../utils/types';
+
 import Control from './Control';
 
 
@@ -24,7 +26,7 @@ class Button extends React.Component {
         title={title}
         titleColor={titleColor}
         titleLabel={titleLabel}
-        type="ui-button"
+        type={button}
       />
     )
   }

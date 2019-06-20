@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { textField } from '../utils/types';
+
 import Control from './Control';
 
 
@@ -22,7 +24,7 @@ class TextField extends React.Component {
         placeholder={placeholder}
         target={target}
         text={text}
-        type="ui-text-field"
+        type={textField}
       />
     )
   }

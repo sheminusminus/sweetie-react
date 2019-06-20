@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { scrollView } from '../utils/types';
+
 import View from './View';
 
 
@@ -17,7 +19,7 @@ class ScrollView extends React.Component {
         backgroundColor={backgroundColor}
         frame={frame}
         layer={layer}
-        type="ui-scroll-view"
+        type={scrollView}
       >
         {children}
       </View>

@@ -1,5 +1,6 @@
 import * as is from './is';
 import * as propKeys from './propKeys';
+import * as types from './types';
 
 
 export default (
@@ -20,7 +21,7 @@ export default (
     if (
       attr === propKeys.target
       && Array.isArray(props.baseTypes)
-      && props.baseTypes.includes('ui-control')
+      && props.baseTypes.includes(types.control)
     ) {
       const [fn, events] = val;
 
@@ -36,12 +37,12 @@ export default (
       };
     } else if (attr === propKeys.title) {
       view.title = val;
-    } else if (props.type === 'ui-image-view' && attr === propKeys.image) {
+    } else if (props.type === types.imageView && attr === propKeys.image) {
       if (val) view.image = val;
     } else if (
       attr === propKeys.layer
       && Array.isArray(props.baseTypes)
-      && props.baseTypes.includes('ui-view')
+      && props.baseTypes.includes(types.view)
     ) {
       Object.keys(val).forEach(p => view.layer[p] = val[p]);
     } else if (otherProps[attr]) {

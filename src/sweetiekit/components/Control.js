@@ -1,11 +1,14 @@
 import React from 'react';
 
+import { control, view } from '../utils/types';
+
 import View from './View';
 
 
 class Control extends React.Component {
   render() {
     const {
+      baseTypes,
       children,
       type,
       ...rest
@@ -14,8 +17,8 @@ class Control extends React.Component {
     return (
       <View
         {...rest}
-        baseTypes={['ui-control', 'ui-view']}
-        type={type || 'ui-control'}
+        baseTypes={baseTypes || [control, view]}
+        type={type || control}
       >
         {children}
       </View>

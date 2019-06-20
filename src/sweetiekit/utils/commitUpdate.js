@@ -1,5 +1,5 @@
-import * as is from './is';
 import * as propKeys from './propKeys';
+import * as types from './types';
 
 
 export default (
@@ -20,7 +20,7 @@ export default (
       if (
         key === propKeys.target
         && Array.isArray(newProps.baseTypes)
-        && newProps.baseTypes.includes('ui-control')
+        && newProps.baseTypes.includes(types.control)
       ) {
         // for now we only allow one target per view
         const existingListener = newListeners[view.selfAddress];
@@ -32,7 +32,11 @@ export default (
         newListeners[view.selfAddress] = val;
 
         view.addTargetActionForControlEvents(val[0], val[1]);
-      } else if (key === propKeys.target && is.tapRecognizer(view)) {
+      } else if (
+        key === propKeys.target
+        && Array.isArray(newProps.baseTypes)
+        && newProps.baseTypes.includes(types.gestureRecognizer)
+      ) {
         // for now we only allow one target per recognizer
         const existingListener = newListeners[view.selfAddress];
 
@@ -56,7 +60,7 @@ export default (
       } else if (key === propKeys.titleLabel && view.titleLabel) {
         const labelProps = val;
         Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);
-      } else if (newProps.type === 'ui-image-view' && key === propKeys.image) {
+      } else if (newProps.type === types.imageView && key === propKeys.image) {
         if (val) view.image = val;
       } else {
         view[key] = val;

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { view } from '../utils/types';
+
 
 class View extends React.Component {
   render() {
@@ -13,8 +15,8 @@ class View extends React.Component {
     return (
       <ui-view
         {...rest}
-        baseTypes={baseTypes || ['ui-view']}
-        type={type || 'ui-view'}
+        baseTypes={baseTypes || [view]}
+        type={type || view}
       >
         {children}
       </ui-view>

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { types } from '../../utils';
+
 /**
  * Internal component that renders a ui-view-controller
  * @see https://developer.apple.com/documentation/uikit/uiviewcontroller?language=swift
@@ -16,9 +18,9 @@ class BaseViewController extends React.Component {
   };
 
   static defaultProps = {
-    baseTypes: ['ui-view-controller'],
+    baseTypes: [types.viewController],
     children: undefined,
-    type: 'ui-view-controller',
+    type: types.viewController,
   };
 
   render() {

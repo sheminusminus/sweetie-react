@@ -8,7 +8,7 @@ import MainView from './MainView';
 import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
-import { ImageView, ViewController, TapGestureRecognizer, Slider, Switch } from '../sweetiekit/components';
+import { ImageView, ViewController, TapGestureRecognizer, Slider, SegmentedControl } from '../sweetiekit/components';
 
 import ThemeContext from './context';
 
@@ -82,6 +82,10 @@ class App extends React.Component {
     } else {
       this.setState({ sliderValue: 0 });
     }
+  };
+
+  handleSegmentChanged = (sender) => {
+    console.log(sender.selectedSegmentIndex);
   };
 
   render() {
@@ -172,16 +176,20 @@ class App extends React.Component {
             value={name}
           />
 
-          <Slider
-            continuous={false}
+          <SegmentedControl
             frame={{
               x: 12,
-              y: ((frame.height - 50) / 2) + 160,
+              y: ((frame.height - 50) / 2) + 180,
               width: frame.width - 24,
               height: 50,
             }}
-            target={[this.handleSliderChange, UIControlEventValueChanged]}
-            value={sliderValue}
+            items={[
+              { title: 'Segment A' },
+              { title: 'Segment B' },
+              { title: 'Segment C' },
+            ]}
+            target={[this.handleSegmentChanged, UIControlEventValueChanged]}
+            tintColor={colors.pink}
           />
         </MainView>
       </ThemeContext.Provider>

@@ -32,12 +32,14 @@ const createView = (
       return createElement.label(props);
     case types.scrollView:
       return createElement.scrollView(props);
+    case types.segmentedControl:
+      return createElement.segmentedControl(props);
+    case types.slider:
+      return createElement.slider(props);
     case types.textField:
       return createElement.textField(props);
     case types.uiSwitch:
       return createElement.uiSwitch(props);
-    case types.slider:
-      return createElement.slider(props);
     default:
       return createElement.view(props);
   }

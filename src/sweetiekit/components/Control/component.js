@@ -1,38 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors } from '../../utils';
+import { colors, propTypes, types } from '../../utils';
 
 import BaseControl from '../BaseControl';
 
 class Control extends React.Component {
   static propTypes = {
-    backgroundColor: PropTypes.shape({
-      red: PropTypes.number.isRequired,
-      green: PropTypes.number.isRequired,
-      blue: PropTypes.number.isRequired,
-      alpha: PropTypes.number,
-    }),
+    backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
-    frame: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-      width: PropTypes.number.isRequired,
-      height: PropTypes.number.isRequired,
-    }),
-    layer: PropTypes.shape(),
-    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),
+    frame: propTypes.frameProp,
+    layer: propTypes.layerProp,
+    target: propTypes.targetActionEventsProp,
     type: PropTypes.string,
   };
 
   static defaultProps = {
-    baseTypes: ['ui-control', 'ui-view'],
+    baseTypes: [types.control, types.view],
     backgroundColor: colors.clear,
     children: undefined,
     frame: undefined,
     layer: undefined,
     target: undefined,
-    type: 'ui-control',
+    type: types.control,
   };
 
   render() {

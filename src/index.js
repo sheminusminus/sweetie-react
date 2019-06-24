@@ -22,5 +22,5 @@ function render() {
 
 render();
 if (module.hot) {
-  module.hot.accept('./kitDemo/index.js', () => { render(); });
+  module.hot.accept('./demo/App.js', () => { render(); });
 }

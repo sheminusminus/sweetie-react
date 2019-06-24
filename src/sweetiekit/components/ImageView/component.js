@@ -1,28 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors } from '../../utils';
+import { colors, propTypes, types } from '../../utils';
 
 import View from '../View';
 
 class ImageView extends React.Component {
   static propTypes = {
-    backgroundColor: PropTypes.shape({
-      red: PropTypes.number.isRequired,
-      green: PropTypes.number.isRequired,
-      blue: PropTypes.number.isRequired,
-      alpha: PropTypes.number,
-    }),
+    backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
-    frame: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-      width: PropTypes.number.isRequired,
-      height: PropTypes.number.isRequired,
-    }),
+    frame: propTypes.frameProp,
     image: PropTypes.any,
-    layer: PropTypes.shape(),
-    type: PropTypes.string,
+    layer: propTypes.layerProp,
   };
 
   static defaultProps = {
@@ -31,20 +20,18 @@ class ImageView extends React.Component {
     frame: undefined,
     image: undefined,
     layer: undefined,
-    type: 'ui-image-view',
   };
 
   render() {
     const {
       children,
-      type,
       ...rest
     } = this.props;
 
     return (
       <View
         {...rest}
-        type={type}
+        type={types.imageView}
       >
         {children}
       </View>

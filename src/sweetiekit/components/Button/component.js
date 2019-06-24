@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors } from '../../utils';
+import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
 
@@ -11,33 +11,17 @@ import Control from '../Control';
  */
 class Button extends React.Component {
   /**
-   * @type {{backgroundColor: Color, children: *, type: string, layer: Layer, frame: Frame, target: Target}}
+   * @type {{backgroundColor: Color, children: *, type: string, layer: Layer, frame: Frame, target: Target, title: string, titleColor: Color, titleLabel: Object}}
    */
   static propTypes = {
-    backgroundColor: PropTypes.shape({
-      red: PropTypes.number.isRequired,
-      green: PropTypes.number.isRequired,
-      blue: PropTypes.number.isRequired,
-      alpha: PropTypes.number,
-    }),
+    backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
-    frame: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-      width: PropTypes.number.isRequired,
-      height: PropTypes.number.isRequired,
-    }),
-    layer: PropTypes.shape(),
-    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),
+    frame: propTypes.frameProp,
+    layer:propTypes.layerProp,
+    target: propTypes.targetActionEventsProp,
     title: PropTypes.string,
-    titleColor: PropTypes.shape({
-      red: PropTypes.number.isRequired,
-      green: PropTypes.number.isRequired,
-      blue: PropTypes.number.isRequired,
-      alpha: PropTypes.number,
-    }),
+    titleColor: propTypes.colorProp,
     titleLabel: PropTypes.any,
-    type: PropTypes.string,
   };
 
   static defaultProps = {
@@ -49,20 +33,18 @@ class Button extends React.Component {
     title: 'Press Me',
     titleColor: colors.black,
     titleLabel: undefined,
-    type: 'ui-button',
   };
 
   render() {
     const {
       children,
-      type,
       ...rest
     } = this.props;
 
     return (
       <Control
         {...rest}
-        type={type}
+        type={types.button}
       />
     )
   }

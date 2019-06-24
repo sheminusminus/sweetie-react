@@ -5,27 +5,32 @@ import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
 
-class Slider extends React.Component {
+/**
+ * Renders a Control of type ui-segmented-control.
+ * @see https://developer.apple.com/documentation/uikit/uisegmentedcontrol?language=swift
+ */
+class SegmentedControl extends React.Component {
+  /**
+   * @type {{backgroundColor: Color, children: *, layer: Layer, frame: Frame, target: Target}}
+   */
   static propTypes = {
     backgroundColor: propTypes.colorProp,
-    continuous: PropTypes.bool,
-    currentThumbImage: PropTypes.any,
+    children: PropTypes.any,
     frame: propTypes.frameProp,
+    items: propTypes.segmentItemsProp,
     layer: propTypes.layerProp,
     target: propTypes.targetActionEventsProp,
-    thumbTintColor: propTypes.colorProp,
-    value: PropTypes.number,
+    tintColor: propTypes.colorProp,
   };
 
   static defaultProps = {
     backgroundColor: colors.clear,
-    continuous: false,
-    currentThumbImage: undefined,
+    children: undefined,
     frame: undefined,
+    items: [],
     layer: undefined,
     target: undefined,
-    thumbTintColor: undefined,
-    value: 0,
+    tintColor: undefined,
   };
 
   render() {
@@ -37,10 +42,10 @@ class Slider extends React.Component {
     return (
       <Control
         {...rest}
-        type={types.slider}
+        type={types.segmentedControl}
       />
     )
   }
 }
 
-export default Slider;
+export default SegmentedControl;

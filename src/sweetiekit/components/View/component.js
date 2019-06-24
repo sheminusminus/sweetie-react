@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors } from '../../utils';
+import { colors, propTypes, types } from '../../utils';
 
 import BaseView from '../BaseView';
 
@@ -10,31 +10,21 @@ import BaseView from '../BaseView';
  */
 class View extends React.Component {
   static propTypes = {
-    backgroundColor: PropTypes.shape({
-      red: PropTypes.number.isRequired,
-      green: PropTypes.number.isRequired,
-      blue: PropTypes.number.isRequired,
-      alpha: PropTypes.number,
-    }),
+    backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
-    frame: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-      width: PropTypes.number.isRequired,
-      height: PropTypes.number.isRequired,
-    }),
-    layer: PropTypes.shape(),
+    frame: propTypes.frameProp,
+    layer: propTypes.layerProp,
     type: PropTypes.string,
   };
 
   static defaultProps = {
     backgroundColor: colors.white,
-    baseTypes: ['ui-view'],
+    baseTypes: [types.view],
     children: undefined,
     frame: undefined,
     layer: undefined,
-    type: 'ui-view',
+    type: types.view,
   };
 
   render() {
@@ -48,7 +38,7 @@ class View extends React.Component {
     return (
       <BaseView
         {...rest}
-        baseTypes={baseTypes || [type]}
+        baseTypes={baseTypes}
         type={type}
       >
         {children}

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { types } from '../../utils';
+
 import BaseViewController from '../BaseViewController';
 
 class ViewController extends React.Component {
@@ -11,9 +13,9 @@ class ViewController extends React.Component {
   };
 
   static defaultProps = {
-    baseTypes: ['ui-view-controller'],
+    baseTypes: [types.viewController],
     children: undefined,
-    type: 'ui-view-controller',
+    type: types.viewController,
   };
 
   render() {

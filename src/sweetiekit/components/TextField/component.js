@@ -1,30 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors } from '../../utils';
+import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
 
 class TextField extends React.Component {
   static propTypes = {
-    backgroundColor: PropTypes.shape({
-      red: PropTypes.number.isRequired,
-      green: PropTypes.number.isRequired,
-      blue: PropTypes.number.isRequired,
-      alpha: PropTypes.number,
-    }),
+    backgroundColor: propTypes.colorProp,
     font: PropTypes.any,
-    frame: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-      width: PropTypes.number.isRequired,
-      height: PropTypes.number.isRequired,
-    }),
-    layer: PropTypes.shape(),
+    frame: propTypes.frameProp,
+    layer: propTypes.layerProp,
     numberOfLines: PropTypes.number,
-    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),
+    target: propTypes.targetActionEventsProp,
     text: PropTypes.string,
-    type: PropTypes.string,
   };
 
   static defaultProps = {
@@ -34,19 +23,18 @@ class TextField extends React.Component {
     numberOfLines: 1,
     target: undefined,
     text: '',
-    type: 'ui-text-field',
   };
 
   render() {
     const {
-      type,
+      children,
       ...rest
     } = this.props;
 
     return (
       <Control
         {...rest}
-        type={type}
+        type={types.textField}
       />
     )
   }

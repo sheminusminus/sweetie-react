@@ -1,28 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors } from '../../utils';
+import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
 
 class Switch extends React.Component {
   static propTypes = {
-    backgroundColor: PropTypes.shape({
-      red: PropTypes.number.isRequired,
-      green: PropTypes.number.isRequired,
-      blue: PropTypes.number.isRequired,
-      alpha: PropTypes.number,
-    }),
-    frame: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-      width: PropTypes.number.isRequired,
-      height: PropTypes.number.isRequired,
-    }),
-    layer: PropTypes.shape(),
+    backgroundColor: propTypes.colorProp,
+    frame: propTypes.frameProp,
+    layer: propTypes.layerProp,
     on: PropTypes.bool,
-    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),
-    type: PropTypes.string,
+    onTintColor: propTypes.colorProp,
+    target: propTypes.targetActionEventsProp,
   };
 
   static defaultProps = {
@@ -30,20 +20,20 @@ class Switch extends React.Component {
     frame: undefined,
     layer: undefined,
     on: false,
+    onTintColor: undefined,
     target: undefined,
-    type: 'ui-switch',
   };
 
   render() {
     const {
-      type,
+      children,
       ...rest
     } = this.props;
 
     return (
       <Control
         {...rest}
-        type={type}
+        type={types.uiSwitch}
       />
     )
   }

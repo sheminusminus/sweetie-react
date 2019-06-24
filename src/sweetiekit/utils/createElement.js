@@ -11,16 +11,17 @@ import {
 } from './properties';
 
 const {
-  UIViewController,
-  UILabel,
-  UIView,
   UIButton,
+  UIImageView,
+  UILabel,
+  UIScrollView,
+  UISegmentedControl,
+  UISlider,
+  UISwitch,
   UITapGestureRecognizer,
   UITextField,
-  UIScrollView,
-  UIImageView,
-  UISwitch,
-  UISlider,
+  UIView,
+  UIViewController,
 } = SweetieKit;
 
 function set(el, props, attr, def) {
@@ -139,6 +140,31 @@ export const uiSwitch = (props) => {
 
 export const slider = (props) => {
   const el = UISlider();
+
+  el.translatesAutoresizingMaskIntoConstraints = false;
+
+  setViewBaseProps(el, props);
+
+  return el;
+};
+
+export const segmentedControl = (props) => {
+  let el = UISegmentedControl();
+
+  if (props.items && props.items.length) {
+    if (typeof props.items[0].title === 'string') {
+      const titles = props.items.map(item => item.title || '');
+      el = el.initWithItems(titles);
+    } else if (typeof props.items[0].image) {
+      const images = props.items.map(item => item.image);
+      el = el.initWithItems(images);
+    }
+    props.items.forEach((item, idx) => {
+      if (item.enabled !== undefined) {
+        el.setEnabledForSegmentAtIndex(item.enabled, idx);
+      }
+    });
+  }
 
   el.translatesAutoresizingMaskIntoConstraints = false;
 

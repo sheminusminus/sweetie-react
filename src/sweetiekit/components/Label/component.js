@@ -39,6 +39,7 @@ class Label extends React.Component {
     frame: undefined,
     layer: undefined,
     text: '',
+    textAlignment: NSTextAlignmentLeft,
     type: 'ui-label',
   };
 

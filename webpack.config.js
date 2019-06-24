@@ -32,7 +32,12 @@ const config = {
     allowedHosts: [
       '.shawwn.com'
     ],
-  }
-}
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      NSTextAlignmentLeft: JSON.stringify(0),
+    }),
+  ],
+};
 
 module.exports = config;

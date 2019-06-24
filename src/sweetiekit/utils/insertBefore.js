@@ -14,6 +14,8 @@ export default (parent, child, beforeChild) => {
       parent.insertSubviewBelowSubview(child, beforeChild);
     } else if (is.view(child)) {
       parent.addSubview(child);
+    } else if (is.tapRecognizer(child)) {
+      view.addGestureRecognizer(child);
     }
   } else if (parent && is.view(parent.view)) {
     if (is.view(child) && is.view(beforeChild)) {

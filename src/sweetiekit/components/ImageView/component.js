@@ -10,7 +10,7 @@ class ImageView extends React.Component {
     backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
     frame: propTypes.frameProp,
-    image: PropTypes.any,
+    image: PropTypes.instanceOf(UIImage),
     layer: propTypes.layerProp,
   };
 

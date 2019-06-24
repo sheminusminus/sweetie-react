@@ -1,9 +1,6 @@
 import * as is from './is';
 
-
-export default (parent, child, listeners) => {
-  let removed = true;
-
+export default (parent, child) => {
   if (is.tabBarController(parent) && is.viewController(child)) {
     const ctrls = Array.from(parent.viewControllers || []);
     const idx = ctrls.indexOf(child);
@@ -24,15 +21,5 @@ export default (parent, child, listeners) => {
     child.removeFromSuperview();
   } else if (is.viewController(child)) {
     child.dismissViewControllerAnimatedCompletion(true, () => {});
-  } else {
-    removed = false;
   }
-
-  if (removed) {
-    const newListeners = { ...listeners };
-    delete newListeners[child.selfAddress];
-    return newListeners;
-  }
-
-  return listeners;
 };

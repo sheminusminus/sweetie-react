@@ -1,5 +1,6 @@
 export { default as BaseView } from './BaseView';
 export { default as Button } from './Button';
+export { default as Image } from './Image';
 export { default as ImageView } from './ImageView';
 export { default as Label } from './Label';
 export { default as ScrollView } from './ScrollView';

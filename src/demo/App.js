@@ -3,21 +3,23 @@ const SweetieKit = Require('std:sweetiekit.node');
 import React from 'react';
 
 import { colors } from '../sweetiekit/utils';
+import { UIKit } from '../sweetiekit/enums';
 
 import MainView from './MainView';
 import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
-import { ImageView, ViewController, TapGestureRecognizer, TabBarController, TabBarItem } from '../sweetiekit/components';
+import { Image, ImageView, ViewController, TapGestureRecognizer, TabBarController, TabBarItem, SegmentedControl } from '../sweetiekit/components';
 
 import ThemeContext from './context';
 
+const { UIControlEvents } = UIKit;
 
 const {
   UIImage,
 } = SweetieKit;
 
-const image = UIImage('logo');
+const image = Image('logo');
 
 const themes = {
   dark: {
@@ -60,7 +62,7 @@ class App extends React.Component {
     hasChildController: false,
     sliderValue: 0,
     selectedSegmentIndex: 1,
-    tabIndex: 1,
+    tabIndex: 0,
   };
 
   handleButtonClick = () => {
@@ -98,7 +100,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { hasChildController, name, theme, tabIndex } = this.state;
+    const { hasChildController, name, theme, tabIndex, selectedSegmentIndex } = this.state;
     const { frame } = this.props;
 
     if (hasChildController) {
@@ -152,6 +154,22 @@ class App extends React.Component {
               >
                 WELCOME
               </Title>
+
+              <SegmentedControl
+                frame={{
+                  x: 12,
+                  y: 140,
+                  width: frame.width - 24,
+                  height: 20,
+                }}
+                items={[
+                  { title: 'Item A' },
+                  { title: 'Item B' },
+                  { title: 'Item C' },
+                ]}
+                selectedSegmentIndex={selectedSegmentIndex}
+                target={[this.handleSegmentChanged, UIControlEvents.valueChanged]}
+              />
 
               <TapGestureRecognizer
                 target={this.toggleHasChild}

@@ -138,11 +138,11 @@ const hostConfig = {
   },
 
   removeChild(parentInstance, child) {
-    listeners = removeChild(parentInstance, child, listeners);
+    removeChild(parentInstance, child);
   },
 
   removeChildFromContainer(container, child) {
-    listeners = removeChild(container, child, listeners);
+    removeChild(container, child);
   }
 };
 

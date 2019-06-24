@@ -11,4 +11,36 @@ module.exports = {
     parts.pop();
     return `import { ${componentName} } from '${parts.join('/')}';`;
   },
+  webpackConfig: {
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          loader: 'babel-loader',
+          options: {
+            plugins: [
+              '@babel/plugin-proposal-class-properties'
+            ],
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  "modules": false
+                }
+              ],
+              "@babel/preset-react"
+            ],
+            babelrc: false,
+          },
+          exclude: [/node_modules/],
+        }
+      ]
+    },
+    resolve: {
+      extensions: [
+        '.js',
+        '.jsx'
+      ]
+    },
+  },
 };

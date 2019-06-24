@@ -17,7 +17,9 @@ const {
   UIScrollView,
   UISegmentedControl,
   UISlider,
+  UIStackView,
   UISwitch,
+  UITabBarController,
   UITapGestureRecognizer,
   UITextField,
   UIView,
@@ -171,6 +173,20 @@ export const segmentedControl = (props) => {
   setViewBaseProps(el, props);
 
   return el;
+};
+
+export const stackView = (props) => {
+  const el = UIStackView();
+
+  el.translatesAutoresizingMaskIntoConstraints = false;
+
+  setViewBaseProps(el, props);
+
+  return el;
+};
+
+export const tabBarController = (props) => {
+  return UITabBarController();
 };
 
 

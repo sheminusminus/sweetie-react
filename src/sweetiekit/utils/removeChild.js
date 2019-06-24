@@ -4,7 +4,9 @@ import * as is from './is';
 export default (parent, child, listeners) => {
   let removed = true;
 
-  if (is.view(child)) {
+  if (is.stackView(parent) && is.view(child)) {
+    parent.removeArrangedSubview(child);
+  } if (is.view(child)) {
     child.removeFromSuperview();
   } else if (is.viewController(child)) {
     child.dismissViewControllerAnimatedCompletion(true, () => {});

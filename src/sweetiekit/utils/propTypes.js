@@ -9,10 +9,7 @@ export const colorProp = (props, propName, componentName) => {
     } else {
       const { red, green, blue } = propVal;
       if (
-        !red
-        || !green
-        || !blue
-        || typeof red !== 'number'
+        typeof red !== 'number'
         || typeof green !== 'number'
         || typeof blue !== 'number') {
         return new Error(`${propName} in ${compName} expected properties red, green, and blue to be numbers`);
@@ -34,11 +31,7 @@ export const frameProp = (props, propName, componentName) => {
     } else {
       const { x, y, width, height } = propVal;
       if (
-        !x
-        || !y
-        || !width
-        || !height
-        || typeof x !== 'number'
+        typeof x !== 'number'
         || typeof y !== 'number'
         || typeof width !== 'number'
         || typeof height !== 'number'
@@ -60,6 +53,7 @@ export const layerProp = (props, propName, componentName) => {
     'shadowColor',
     'shadowOpacity',
     'shadowOffset',
+    'shadowRadius',
   ];
 
   const propVal = props[propName];

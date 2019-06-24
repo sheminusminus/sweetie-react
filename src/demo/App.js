@@ -8,7 +8,7 @@ import MainView from './MainView';
 import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
-import { ImageView, ViewController, TapGestureRecognizer, Slider, SegmentedControl } from '../sweetiekit/components';
+import { ImageView, ViewController, TapGestureRecognizer, TabBarController } from '../sweetiekit/components';
 
 import ThemeContext from './context';
 
@@ -96,38 +96,40 @@ class App extends React.Component {
 
     if (hasChildController) {
       return (
-        <ViewController key="view-controller-0">
-          <MainView frame={frame} theme={theme}>
-            <Title
-              frame={{
-                x: 12,
-                y: 90,
-                width: frame.width - 24,
-                height: 20,
-              }}
-            >
-              WELCOME
-            </Title>
+        <TabBarController>
+          <ViewController key="view-controller-0">
+            <MainView frame={frame} theme={theme}>
+              <Title
+                frame={{
+                  x: 12,
+                  y: 90,
+                  width: frame.width - 24,
+                  height: 20,
+                }}
+              >
+                WELCOME
+              </Title>
 
-            <ImageView
-              backgroundColor={colors.medGrey}
-              frame={{
-                x: 12,
-                y: 130,
-                width: frame.width - 24,
-                height: frame.width - 24,
-              }}
-              image={image}
-              layer={{
-                cornerRadius: 12,
-              }}
-            />
+              <ImageView
+                backgroundColor={colors.medGrey}
+                frame={{
+                  x: 12,
+                  y: 130,
+                  width: frame.width - 24,
+                  height: frame.width - 24,
+                }}
+                image={image}
+                layer={{
+                  cornerRadius: 12,
+                }}
+              />
 
-            <TapGestureRecognizer
-              target={this.toggleHasChild}
-            />
-          </MainView>
-        </ViewController>
+              <TapGestureRecognizer
+                target={this.toggleHasChild}
+              />
+            </MainView>
+          </ViewController>
+        </TabBarController>
       );
     }
 
@@ -176,23 +178,6 @@ class App extends React.Component {
             }}
             onChange={this.handleFieldChange}
             value={name}
-          />
-
-          <SegmentedControl
-            frame={{
-              x: 12,
-              y: ((frame.height - 50) / 2) + 180,
-              width: frame.width - 24,
-              height: 50,
-            }}
-            items={[
-              { title: 'Segment A' },
-              { title: 'Segment B' },
-              { title: 'Segment C' },
-            ]}
-            selectedSegmentIndex={selectedSegmentIndex}
-            target={[this.handleSegmentChanged, UIControlEventValueChanged]}
-            tintColor={colors.pink}
           />
         </MainView>
       </ThemeContext.Provider>

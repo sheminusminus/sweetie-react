@@ -11,6 +11,8 @@ const createViewController = (
   switch (props.type) {
     case types.viewController:
       return createElement.viewController(props);
+    case types.tabBarController:
+      return createElement.tabBarController(props);
     default:
       return createElement.viewController(props);
   }
@@ -36,6 +38,8 @@ const createView = (
       return createElement.segmentedControl(props);
     case types.slider:
       return createElement.slider(props);
+    case types.stackView:
+      return createElement.stackView(props);
     case types.textField:
       return createElement.textField(props);
     case types.uiSwitch:

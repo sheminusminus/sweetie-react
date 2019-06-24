@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Internal component that renders a ui-view-controller
+ * @see https://developer.apple.com/documentation/uikit/uiviewcontroller?language=swift
+ */
 class BaseViewController extends React.Component {
+  /**
+   * @type {{children: *, baseTypes: string[], type: string}}
+   */
   static propTypes = {
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,

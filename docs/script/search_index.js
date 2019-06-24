@@ -1,1442 +1,1370 @@
 window.esdocSearchIndex = [
   [
-    "sweetie-react/src/demo/app.js~app",
-    "class/src/demo/App.js~App.html",
-    "<span>App</span> <span class=\"search-result-import-path\">sweetie-react/src/demo/App.js</span>",
+    "sweetie-react/sweetiekit/components/basecontrol/component.js~basecontrol",
+    "class/sweetiekit/components/BaseControl/component.js~BaseControl.html",
+    "<span>BaseControl</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/BaseControl/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/basecontrol/component.js~basecontrol",
-    "class/src/sweetiekit/components/BaseControl/component.js~BaseControl.html",
-    "<span>BaseControl</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/BaseControl/component.js</span>",
+    "sweetie-react/sweetiekit/components/basegesturerecognizer/component.js~basegesturerecognizer",
+    "class/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.html",
+    "<span>BaseGestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/BaseGestureRecognizer/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/basegesturerecognizer/component.js~basegesturerecognizer",
-    "class/src/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.html",
-    "<span>BaseGestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/BaseGestureRecognizer/component.js</span>",
+    "sweetie-react/sweetiekit/components/baseview/component.js~baseview",
+    "class/sweetiekit/components/BaseView/component.js~BaseView.html",
+    "<span>BaseView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/BaseView/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/baseview/component.js~baseview",
-    "class/src/sweetiekit/components/BaseView/component.js~BaseView.html",
-    "<span>BaseView</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/BaseView/component.js</span>",
+    "sweetie-react/sweetiekit/components/baseviewcontroller/component.js~baseviewcontroller",
+    "class/sweetiekit/components/BaseViewController/component.js~BaseViewController.html",
+    "<span>BaseViewController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/BaseViewController/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/baseviewcontroller/component.js~baseviewcontroller",
-    "class/src/sweetiekit/components/BaseViewController/component.js~BaseViewController.html",
-    "<span>BaseViewController</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/BaseViewController/component.js</span>",
+    "sweetie-react/sweetiekit/components/button/component.js~button",
+    "class/sweetiekit/components/Button/component.js~Button.html",
+    "<span>Button</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/Button/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/button/component.js~button",
-    "class/src/sweetiekit/components/Button/component.js~Button.html",
-    "<span>Button</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/Button/component.js</span>",
+    "sweetie-react/sweetiekit/components/control/component.js~control",
+    "class/sweetiekit/components/Control/component.js~Control.html",
+    "<span>Control</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/Control/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/control/component.js~control",
-    "class/src/sweetiekit/components/Control/component.js~Control.html",
-    "<span>Control</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/Control/component.js</span>",
+    "sweetie-react/sweetiekit/components/gesturerecognizer/component.js~gesturerecognizer",
+    "class/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.html",
+    "<span>GestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/GestureRecognizer/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/gesturerecognizer/component.js~gesturerecognizer",
-    "class/src/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.html",
-    "<span>GestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/GestureRecognizer/component.js</span>",
+    "sweetie-react/sweetiekit/components/imageview/component.js~imageview",
+    "class/sweetiekit/components/ImageView/component.js~ImageView.html",
+    "<span>ImageView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/ImageView/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/imageview/component.js~imageview",
-    "class/src/sweetiekit/components/ImageView/component.js~ImageView.html",
-    "<span>ImageView</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/ImageView/component.js</span>",
+    "sweetie-react/sweetiekit/components/label/component.js~label",
+    "class/sweetiekit/components/Label/component.js~Label.html",
+    "<span>Label</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/Label/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/label/component.js~label",
-    "class/src/sweetiekit/components/Label/component.js~Label.html",
-    "<span>Label</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/Label/component.js</span>",
+    "sweetie-react/sweetiekit/components/scrollview/component.js~scrollview",
+    "class/sweetiekit/components/ScrollView/component.js~ScrollView.html",
+    "<span>ScrollView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/ScrollView/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/demo/namebox.js~namebox",
-    "class/src/demo/NameBox.js~NameBox.html",
-    "<span>NameBox</span> <span class=\"search-result-import-path\">sweetie-react/src/demo/NameBox.js</span>",
+    "sweetie-react/sweetiekit/components/slider/component.js~slider",
+    "class/sweetiekit/components/Slider/component.js~Slider.html",
+    "<span>Slider</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/Slider/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/scrollview/component.js~scrollview",
-    "class/src/sweetiekit/components/ScrollView/component.js~ScrollView.html",
-    "<span>ScrollView</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/ScrollView/component.js</span>",
+    "sweetie-react/sweetiekit/components/switch/component.js~switch",
+    "class/sweetiekit/components/Switch/component.js~Switch.html",
+    "<span>Switch</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/Switch/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/slider/component.js~slider",
-    "class/src/sweetiekit/components/Slider/component.js~Slider.html",
-    "<span>Slider</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/Slider/component.js</span>",
+    "sweetie-react/sweetiekit/components/tapgesturerecognizer/component.js~tapgesturerecognizer",
+    "class/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.html",
+    "<span>TapGestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/TapGestureRecognizer/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/switch/component.js~switch",
-    "class/src/sweetiekit/components/Switch/component.js~Switch.html",
-    "<span>Switch</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/Switch/component.js</span>",
+    "sweetie-react/sweetiekit/components/text.js~text",
+    "class/sweetiekit/components/Text.js~Text.html",
+    "<span>Text</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/Text.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/tapgesturerecognizer/component.js~tapgesturerecognizer",
-    "class/src/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.html",
-    "<span>TapGestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/TapGestureRecognizer/component.js</span>",
+    "sweetie-react/sweetiekit/components/textfield/component.js~textfield",
+    "class/sweetiekit/components/TextField/component.js~TextField.html",
+    "<span>TextField</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/TextField/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/text.js~text",
-    "class/src/sweetiekit/components/Text.js~Text.html",
-    "<span>Text</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/Text.js</span>",
+    "sweetie-react/sweetiekit/components/view/component.js~view",
+    "class/sweetiekit/components/View/component.js~View.html",
+    "<span>View</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/View/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/textfield/component.js~textfield",
-    "class/src/sweetiekit/components/TextField/component.js~TextField.html",
-    "<span>TextField</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/TextField/component.js</span>",
+    "sweetie-react/sweetiekit/components/viewcontroller/component.js~viewcontroller",
+    "class/sweetiekit/components/ViewController/component.js~ViewController.html",
+    "<span>ViewController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/ViewController/component.js</span>",
     "class"
   ],
   [
-    "sweetie-react/src/sweetiekit/components/view/component.js~view",
-    "class/src/sweetiekit/components/View/component.js~View.html",
-    "<span>View</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/View/component.js</span>",
-    "class"
-  ],
-  [
-    "sweetie-react/src/sweetiekit/components/viewcontroller/component.js~viewcontroller",
-    "class/src/sweetiekit/components/ViewController/component.js~ViewController.html",
-    "<span>ViewController</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/components/ViewController/component.js</span>",
-    "class"
-  ],
-  [
-    "sweetie-react/src/sweetiekit/utils/appendchild.js~appendchild",
+    "sweetie-react/sweetiekit/utils/appendchild.js~appendchild",
     "function/index.html#static-function-appendChild",
-    "<span>appendChild</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/appendChild.js</span>",
+    "<span>appendChild</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/appendChild.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/colors.js~black",
+    "sweetie-react/sweetiekit/utils/colors.js~black",
     "variable/index.html#static-variable-black",
-    "<span>black</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/colors.js</span>",
+    "<span>black</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/colors.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~button",
+    "sweetie-react/sweetiekit/utils/createelement.js~button",
     "function/index.html#static-function-button",
-    "<span>button</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>button</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~button",
+    "sweetie-react/sweetiekit/utils/types.js~button",
     "variable/index.html#static-variable-button",
-    "<span>button</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>button</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/propkeys.js~children",
+    "sweetie-react/sweetiekit/utils/propkeys.js~children",
     "variable/index.html#static-variable-children",
-    "<span>children</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/propKeys.js</span>",
+    "<span>children</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/colors.js~clear",
+    "sweetie-react/sweetiekit/utils/colors.js~clear",
     "variable/index.html#static-variable-clear",
-    "<span>clear</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/colors.js</span>",
+    "<span>clear</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/colors.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/commitupdate.js~commitupdate",
+    "sweetie-react/sweetiekit/utils/commitupdate.js~commitupdate",
     "function/index.html#static-function-commitUpdate",
-    "<span>commitUpdate</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/commitUpdate.js</span>",
+    "<span>commitUpdate</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/commitUpdate.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~control",
+    "sweetie-react/sweetiekit/utils/types.js~control",
     "variable/index.html#static-variable-control",
-    "<span>control</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>control</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createinstance.js~createinstance",
+    "sweetie-react/sweetiekit/utils/createinstance.js~createinstance",
     "function/index.html#static-function-createInstance",
-    "<span>createInstance</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createInstance.js</span>",
+    "<span>createInstance</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createInstance.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/colors.js~darkgrey",
+    "sweetie-react/sweetiekit/utils/colors.js~darkgrey",
     "variable/index.html#static-variable-darkGrey",
-    "<span>darkGrey</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/colors.js</span>",
+    "<span>darkGrey</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/colors.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~defaulttype",
+    "sweetie-react/sweetiekit/utils/createelement.js~defaulttype",
     "function/index.html#static-function-defaultType",
-    "<span>defaultType</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>defaultType</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/finalizeinitialchildren.js~finalizeinitialchildren",
+    "sweetie-react/sweetiekit/utils/finalizeinitialchildren.js~finalizeinitialchildren",
     "function/index.html#static-function-finalizeInitialChildren",
-    "<span>finalizeInitialChildren</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/finalizeInitialChildren.js</span>",
+    "<span>finalizeInitialChildren</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/finalizeInitialChildren.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~gesturerecognizer",
+    "sweetie-react/sweetiekit/utils/types.js~gesturerecognizer",
     "variable/index.html#static-variable-gestureRecognizer",
-    "<span>gestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>gestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/propkeys.js~image",
+    "sweetie-react/sweetiekit/utils/propkeys.js~image",
     "variable/index.html#static-variable-image",
-    "<span>image</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/propKeys.js</span>",
+    "<span>image</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~imageview",
+    "sweetie-react/sweetiekit/utils/createelement.js~imageview",
     "function/index.html#static-function-imageView",
-    "<span>imageView</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>imageView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/is.js~imageview",
+    "sweetie-react/sweetiekit/utils/is.js~imageview",
     "function/index.html#static-function-imageView",
-    "<span>imageView</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/is.js</span>",
+    "<span>imageView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/is.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~imageview",
+    "sweetie-react/sweetiekit/utils/types.js~imageview",
     "variable/index.html#static-variable-imageView",
-    "<span>imageView</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>imageView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/insertbefore.js~insertbefore",
+    "sweetie-react/sweetiekit/utils/insertbefore.js~insertbefore",
     "function/index.html#static-function-insertBefore",
-    "<span>insertBefore</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/insertBefore.js</span>",
+    "<span>insertBefore</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/insertBefore.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~label",
+    "sweetie-react/sweetiekit/utils/createelement.js~label",
     "function/index.html#static-function-label",
-    "<span>label</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>label</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~label",
+    "sweetie-react/sweetiekit/utils/types.js~label",
     "variable/index.html#static-variable-label",
-    "<span>label</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>label</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/propkeys.js~layer",
+    "sweetie-react/sweetiekit/utils/propkeys.js~layer",
     "variable/index.html#static-variable-layer",
-    "<span>layer</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/propKeys.js</span>",
+    "<span>layer</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/properties.js~layerattrs",
+    "sweetie-react/sweetiekit/utils/properties.js~layerattrs",
     "variable/index.html#static-variable-layerAttrs",
-    "<span>layerAttrs</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/properties.js</span>",
+    "<span>layerAttrs</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/properties.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/properties.js~layerdefaults",
+    "sweetie-react/sweetiekit/utils/properties.js~layerdefaults",
     "variable/index.html#static-variable-layerDefaults",
-    "<span>layerDefaults</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/properties.js</span>",
+    "<span>layerDefaults</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/properties.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/colors.js~lightgrey",
+    "sweetie-react/sweetiekit/utils/colors.js~lightgrey",
     "variable/index.html#static-variable-lightGrey",
-    "<span>lightGrey</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/colors.js</span>",
+    "<span>lightGrey</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/colors.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/colors.js~medgrey",
+    "sweetie-react/sweetiekit/utils/colors.js~medgrey",
     "variable/index.html#static-variable-medGrey",
-    "<span>medGrey</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/colors.js</span>",
+    "<span>medGrey</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/colors.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/is.js~navcontroller",
+    "sweetie-react/sweetiekit/utils/is.js~navcontroller",
     "function/index.html#static-function-navController",
-    "<span>navController</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/is.js</span>",
+    "<span>navController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/is.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/colors.js~pink",
+    "sweetie-react/sweetiekit/utils/colors.js~pink",
     "variable/index.html#static-variable-pink",
-    "<span>pink</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/colors.js</span>",
+    "<span>pink</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/colors.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/prepareupdate.js~prepareupdate",
+    "sweetie-react/sweetiekit/utils/prepareupdate.js~prepareupdate",
     "function/index.html#static-function-prepareUpdate",
-    "<span>prepareUpdate</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/prepareUpdate.js</span>",
+    "<span>prepareUpdate</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/prepareUpdate.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/removechild.js~removechild",
+    "sweetie-react/sweetiekit/utils/removechild.js~removechild",
     "function/index.html#static-function-removeChild",
-    "<span>removeChild</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/removeChild.js</span>",
+    "<span>removeChild</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/removeChild.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~scrollview",
+    "sweetie-react/sweetiekit/utils/createelement.js~scrollview",
     "function/index.html#static-function-scrollView",
-    "<span>scrollView</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>scrollView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~scrollview",
+    "sweetie-react/sweetiekit/utils/types.js~scrollview",
     "variable/index.html#static-variable-scrollView",
-    "<span>scrollView</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>scrollView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~slider",
+    "sweetie-react/sweetiekit/utils/createelement.js~slider",
     "function/index.html#static-function-slider",
-    "<span>slider</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>slider</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~slider",
+    "sweetie-react/sweetiekit/utils/types.js~slider",
     "variable/index.html#static-variable-slider",
-    "<span>slider</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>slider</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~tapgesturerecognizer",
+    "sweetie-react/sweetiekit/utils/createelement.js~tapgesturerecognizer",
     "function/index.html#static-function-tapGestureRecognizer",
-    "<span>tapGestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>tapGestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~tapgesturerecognizer",
+    "sweetie-react/sweetiekit/utils/types.js~tapgesturerecognizer",
     "variable/index.html#static-variable-tapGestureRecognizer",
-    "<span>tapGestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>tapGestureRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/is.js~taprecognizer",
+    "sweetie-react/sweetiekit/utils/is.js~taprecognizer",
     "function/index.html#static-function-tapRecognizer",
-    "<span>tapRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/is.js</span>",
+    "<span>tapRecognizer</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/is.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/propkeys.js~target",
+    "sweetie-react/sweetiekit/utils/propkeys.js~target",
     "variable/index.html#static-variable-target",
-    "<span>target</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/propKeys.js</span>",
+    "<span>target</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/propkeys.js~text",
+    "sweetie-react/sweetiekit/utils/propkeys.js~text",
     "variable/index.html#static-variable-text",
-    "<span>text</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/propKeys.js</span>",
+    "<span>text</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~textfield",
+    "sweetie-react/sweetiekit/utils/createelement.js~textfield",
     "function/index.html#static-function-textField",
-    "<span>textField</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>textField</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/is.js~textfield",
+    "sweetie-react/sweetiekit/utils/is.js~textfield",
     "function/index.html#static-function-textField",
-    "<span>textField</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/is.js</span>",
+    "<span>textField</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/is.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~textfield",
+    "sweetie-react/sweetiekit/utils/types.js~textfield",
     "variable/index.html#static-variable-textField",
-    "<span>textField</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>textField</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/properties.js~textviewattrs",
+    "sweetie-react/sweetiekit/utils/properties.js~textviewattrs",
     "variable/index.html#static-variable-textViewAttrs",
-    "<span>textViewAttrs</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/properties.js</span>",
+    "<span>textViewAttrs</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/properties.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/properties.js~textviewdefaults",
+    "sweetie-react/sweetiekit/utils/properties.js~textviewdefaults",
     "variable/index.html#static-variable-textViewDefaults",
-    "<span>textViewDefaults</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/properties.js</span>",
+    "<span>textViewDefaults</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/properties.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/propkeys.js~title",
+    "sweetie-react/sweetiekit/utils/propkeys.js~title",
     "variable/index.html#static-variable-title",
-    "<span>title</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/propKeys.js</span>",
+    "<span>title</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/propkeys.js~titlecolor",
+    "sweetie-react/sweetiekit/utils/propkeys.js~titlecolor",
     "variable/index.html#static-variable-titleColor",
-    "<span>titleColor</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/propKeys.js</span>",
+    "<span>titleColor</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/propkeys.js~titlelabel",
+    "sweetie-react/sweetiekit/utils/propkeys.js~titlelabel",
     "variable/index.html#static-variable-titleLabel",
-    "<span>titleLabel</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/propKeys.js</span>",
+    "<span>titleLabel</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~uiswitch",
+    "sweetie-react/sweetiekit/utils/createelement.js~uiswitch",
     "function/index.html#static-function-uiSwitch",
-    "<span>uiSwitch</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>uiSwitch</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~uiswitch",
+    "sweetie-react/sweetiekit/utils/types.js~uiswitch",
     "variable/index.html#static-variable-uiSwitch",
-    "<span>uiSwitch</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>uiSwitch</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~view",
+    "sweetie-react/sweetiekit/utils/createelement.js~view",
     "function/index.html#static-function-view",
-    "<span>view</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>view</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/is.js~view",
+    "sweetie-react/sweetiekit/utils/is.js~view",
     "function/index.html#static-function-view",
-    "<span>view</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/is.js</span>",
+    "<span>view</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/is.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~view",
+    "sweetie-react/sweetiekit/utils/types.js~view",
     "variable/index.html#static-variable-view",
-    "<span>view</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>view</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/properties.js~viewattrs",
+    "sweetie-react/sweetiekit/utils/properties.js~viewattrs",
     "variable/index.html#static-variable-viewAttrs",
-    "<span>viewAttrs</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/properties.js</span>",
+    "<span>viewAttrs</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/properties.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/createelement.js~viewcontroller",
+    "sweetie-react/sweetiekit/utils/createelement.js~viewcontroller",
     "function/index.html#static-function-viewController",
-    "<span>viewController</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/createElement.js</span>",
+    "<span>viewController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/is.js~viewcontroller",
+    "sweetie-react/sweetiekit/utils/is.js~viewcontroller",
     "function/index.html#static-function-viewController",
-    "<span>viewController</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/is.js</span>",
+    "<span>viewController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/is.js</span>",
     "function"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/types.js~viewcontroller",
+    "sweetie-react/sweetiekit/utils/types.js~viewcontroller",
     "variable/index.html#static-variable-viewController",
-    "<span>viewController</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/types.js</span>",
+    "<span>viewController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/properties.js~viewdefaults",
+    "sweetie-react/sweetiekit/utils/properties.js~viewdefaults",
     "variable/index.html#static-variable-viewDefaults",
-    "<span>viewDefaults</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/properties.js</span>",
+    "<span>viewDefaults</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/properties.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/sweetiekit/utils/colors.js~white",
+    "sweetie-react/sweetiekit/utils/colors.js~white",
     "variable/index.html#static-variable-white",
-    "<span>white</span> <span class=\"search-result-import-path\">sweetie-react/src/sweetiekit/utils/colors.js</span>",
+    "<span>white</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/colors.js</span>",
     "variable"
   ],
   [
-    "sweetie-react/src/demo/withtheme.js~withtheme",
-    "function/index.html#static-function-withTheme",
-    "<span>withTheme</span> <span class=\"search-result-import-path\">sweetie-react/src/demo/withTheme.js</span>",
-    "function"
-  ],
-  [
-    "src/.external-ecmascript.js~array",
+    "sweetiekit/.external-ecmascript.js~array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
-    "src/.external-ecmascript.js~Array",
+    "sweetiekit/.external-ecmascript.js~Array",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~arraybuffer",
+    "sweetiekit/.external-ecmascript.js~arraybuffer",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
-    "src/.external-ecmascript.js~ArrayBuffer",
+    "sweetiekit/.external-ecmascript.js~ArrayBuffer",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~boolean",
+    "sweetiekit/.external-ecmascript.js~boolean",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-    "src/.external-ecmascript.js~Boolean",
+    "sweetiekit/.external-ecmascript.js~Boolean",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~dataview",
+    "sweetiekit/.external-ecmascript.js~dataview",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
-    "src/.external-ecmascript.js~DataView",
+    "sweetiekit/.external-ecmascript.js~DataView",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~date",
+    "sweetiekit/.external-ecmascript.js~date",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
-    "src/.external-ecmascript.js~Date",
+    "sweetiekit/.external-ecmascript.js~Date",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~error",
+    "sweetiekit/.external-ecmascript.js~error",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
-    "src/.external-ecmascript.js~Error",
+    "sweetiekit/.external-ecmascript.js~Error",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~evalerror",
+    "sweetiekit/.external-ecmascript.js~evalerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
-    "src/.external-ecmascript.js~EvalError",
+    "sweetiekit/.external-ecmascript.js~EvalError",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~float32array",
+    "sweetiekit/.external-ecmascript.js~float32array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
-    "src/.external-ecmascript.js~Float32Array",
+    "sweetiekit/.external-ecmascript.js~Float32Array",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~float64array",
+    "sweetiekit/.external-ecmascript.js~float64array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
-    "src/.external-ecmascript.js~Float64Array",
+    "sweetiekit/.external-ecmascript.js~Float64Array",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~function",
+    "sweetiekit/.external-ecmascript.js~function",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-    "src/.external-ecmascript.js~Function",
+    "sweetiekit/.external-ecmascript.js~Function",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~generator",
+    "sweetiekit/.external-ecmascript.js~generator",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
-    "src/.external-ecmascript.js~Generator",
+    "sweetiekit/.external-ecmascript.js~Generator",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~generatorfunction",
+    "sweetiekit/.external-ecmascript.js~generatorfunction",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
-    "src/.external-ecmascript.js~GeneratorFunction",
+    "sweetiekit/.external-ecmascript.js~GeneratorFunction",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~infinity",
+    "sweetiekit/.external-ecmascript.js~infinity",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
-    "src/.external-ecmascript.js~Infinity",
+    "sweetiekit/.external-ecmascript.js~Infinity",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~int16array",
+    "sweetiekit/.external-ecmascript.js~int16array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
-    "src/.external-ecmascript.js~Int16Array",
+    "sweetiekit/.external-ecmascript.js~Int16Array",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~int32array",
+    "sweetiekit/.external-ecmascript.js~int32array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
-    "src/.external-ecmascript.js~Int32Array",
+    "sweetiekit/.external-ecmascript.js~Int32Array",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~int8array",
+    "sweetiekit/.external-ecmascript.js~int8array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
-    "src/.external-ecmascript.js~Int8Array",
+    "sweetiekit/.external-ecmascript.js~Int8Array",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~internalerror",
+    "sweetiekit/.external-ecmascript.js~internalerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
-    "src/.external-ecmascript.js~InternalError",
+    "sweetiekit/.external-ecmascript.js~InternalError",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~json",
+    "sweetiekit/.external-ecmascript.js~json",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
-    "src/.external-ecmascript.js~JSON",
+    "sweetiekit/.external-ecmascript.js~JSON",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~map",
+    "sweetiekit/.external-ecmascript.js~map",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
-    "src/.external-ecmascript.js~Map",
+    "sweetiekit/.external-ecmascript.js~Map",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~nan",
+    "sweetiekit/.external-ecmascript.js~nan",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
-    "src/.external-ecmascript.js~NaN",
+    "sweetiekit/.external-ecmascript.js~NaN",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~number",
+    "sweetiekit/.external-ecmascript.js~number",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-    "src/.external-ecmascript.js~Number",
+    "sweetiekit/.external-ecmascript.js~Number",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~object",
+    "sweetiekit/.external-ecmascript.js~object",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-    "src/.external-ecmascript.js~Object",
+    "sweetiekit/.external-ecmascript.js~Object",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~promise",
+    "sweetiekit/.external-ecmascript.js~promise",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
-    "src/.external-ecmascript.js~Promise",
+    "sweetiekit/.external-ecmascript.js~Promise",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~proxy",
+    "sweetiekit/.external-ecmascript.js~proxy",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
-    "src/.external-ecmascript.js~Proxy",
+    "sweetiekit/.external-ecmascript.js~Proxy",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~rangeerror",
+    "sweetiekit/.external-ecmascript.js~rangeerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
-    "src/.external-ecmascript.js~RangeError",
+    "sweetiekit/.external-ecmascript.js~RangeError",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~referenceerror",
+    "sweetiekit/.external-ecmascript.js~referenceerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
-    "src/.external-ecmascript.js~ReferenceError",
+    "sweetiekit/.external-ecmascript.js~ReferenceError",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~reflect",
+    "sweetiekit/.external-ecmascript.js~reflect",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
-    "src/.external-ecmascript.js~Reflect",
+    "sweetiekit/.external-ecmascript.js~Reflect",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~regexp",
+    "sweetiekit/.external-ecmascript.js~regexp",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
-    "src/.external-ecmascript.js~RegExp",
+    "sweetiekit/.external-ecmascript.js~RegExp",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~set",
+    "sweetiekit/.external-ecmascript.js~set",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
-    "src/.external-ecmascript.js~Set",
+    "sweetiekit/.external-ecmascript.js~Set",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~string",
+    "sweetiekit/.external-ecmascript.js~string",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-    "src/.external-ecmascript.js~String",
+    "sweetiekit/.external-ecmascript.js~String",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~symbol",
+    "sweetiekit/.external-ecmascript.js~symbol",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
-    "src/.external-ecmascript.js~Symbol",
+    "sweetiekit/.external-ecmascript.js~Symbol",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~syntaxerror",
+    "sweetiekit/.external-ecmascript.js~syntaxerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
-    "src/.external-ecmascript.js~SyntaxError",
+    "sweetiekit/.external-ecmascript.js~SyntaxError",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~typeerror",
+    "sweetiekit/.external-ecmascript.js~typeerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
-    "src/.external-ecmascript.js~TypeError",
+    "sweetiekit/.external-ecmascript.js~TypeError",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~urierror",
+    "sweetiekit/.external-ecmascript.js~urierror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
-    "src/.external-ecmascript.js~URIError",
+    "sweetiekit/.external-ecmascript.js~URIError",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~uint16array",
+    "sweetiekit/.external-ecmascript.js~uint16array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
-    "src/.external-ecmascript.js~Uint16Array",
+    "sweetiekit/.external-ecmascript.js~Uint16Array",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~uint32array",
+    "sweetiekit/.external-ecmascript.js~uint32array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
-    "src/.external-ecmascript.js~Uint32Array",
+    "sweetiekit/.external-ecmascript.js~Uint32Array",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~uint8array",
+    "sweetiekit/.external-ecmascript.js~uint8array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
-    "src/.external-ecmascript.js~Uint8Array",
+    "sweetiekit/.external-ecmascript.js~Uint8Array",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~uint8clampedarray",
+    "sweetiekit/.external-ecmascript.js~uint8clampedarray",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
-    "src/.external-ecmascript.js~Uint8ClampedArray",
+    "sweetiekit/.external-ecmascript.js~Uint8ClampedArray",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~weakmap",
+    "sweetiekit/.external-ecmascript.js~weakmap",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
-    "src/.external-ecmascript.js~WeakMap",
+    "sweetiekit/.external-ecmascript.js~WeakMap",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~weakset",
+    "sweetiekit/.external-ecmascript.js~weakset",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
-    "src/.external-ecmascript.js~WeakSet",
+    "sweetiekit/.external-ecmascript.js~WeakSet",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~boolean",
+    "sweetiekit/.external-ecmascript.js~boolean",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-    "src/.external-ecmascript.js~boolean",
+    "sweetiekit/.external-ecmascript.js~boolean",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~function",
+    "sweetiekit/.external-ecmascript.js~function",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-    "src/.external-ecmascript.js~function",
+    "sweetiekit/.external-ecmascript.js~function",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~null",
+    "sweetiekit/.external-ecmascript.js~null",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
-    "src/.external-ecmascript.js~null",
+    "sweetiekit/.external-ecmascript.js~null",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~number",
+    "sweetiekit/.external-ecmascript.js~number",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-    "src/.external-ecmascript.js~number",
+    "sweetiekit/.external-ecmascript.js~number",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~object",
+    "sweetiekit/.external-ecmascript.js~object",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-    "src/.external-ecmascript.js~object",
+    "sweetiekit/.external-ecmascript.js~object",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~string",
+    "sweetiekit/.external-ecmascript.js~string",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-    "src/.external-ecmascript.js~string",
+    "sweetiekit/.external-ecmascript.js~string",
     "external"
   ],
   [
-    "src/.external-ecmascript.js~undefined",
+    "sweetiekit/.external-ecmascript.js~undefined",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
-    "src/.external-ecmascript.js~undefined",
+    "sweetiekit/.external-ecmascript.js~undefined",
     "external"
   ],
   [
-    "src/demo/app.js",
-    "file/src/demo/App.js.html",
-    "src/demo/App.js",
+    "sweetiekit/components/basecontrol/component.js",
+    "file/sweetiekit/components/BaseControl/component.js.html",
+    "sweetiekit/components/BaseControl/component.js",
     "file"
   ],
   [
-    "src/demo/app.js~app#handlebuttonclick",
-    "class/src/demo/App.js~App.html#instance-member-handleButtonClick",
-    "src/demo/App.js~App#handleButtonClick",
-    "member"
-  ],
-  [
-    "src/demo/app.js~app#handlefieldchange",
-    "class/src/demo/App.js~App.html#instance-member-handleFieldChange",
-    "src/demo/App.js~App#handleFieldChange",
-    "member"
-  ],
-  [
-    "src/demo/app.js~app#handlesliderchange",
-    "class/src/demo/App.js~App.html#instance-member-handleSliderChange",
-    "src/demo/App.js~App#handleSliderChange",
-    "member"
-  ],
-  [
-    "src/demo/app.js~app#render",
-    "class/src/demo/App.js~App.html#instance-method-render",
-    "src/demo/App.js~App#render",
+    "sweetiekit/components/basecontrol/component.js~basecontrol#render",
+    "class/sweetiekit/components/BaseControl/component.js~BaseControl.html#instance-method-render",
+    "sweetiekit/components/BaseControl/component.js~BaseControl#render",
     "method"
   ],
   [
-    "src/demo/app.js~app#state",
-    "class/src/demo/App.js~App.html#instance-member-state",
-    "src/demo/App.js~App#state",
+    "sweetiekit/components/basecontrol/component.js~basecontrol.defaultprops",
+    "class/sweetiekit/components/BaseControl/component.js~BaseControl.html#static-member-defaultProps",
+    "sweetiekit/components/BaseControl/component.js~BaseControl.defaultProps",
     "member"
   ],
   [
-    "src/demo/app.js~app#togglehaschild",
-    "class/src/demo/App.js~App.html#instance-member-toggleHasChild",
-    "src/demo/App.js~App#toggleHasChild",
+    "sweetiekit/components/basecontrol/component.js~basecontrol.proptypes",
+    "class/sweetiekit/components/BaseControl/component.js~BaseControl.html#static-member-propTypes",
+    "sweetiekit/components/BaseControl/component.js~BaseControl.propTypes",
     "member"
   ],
   [
-    "src/demo/mainview.js",
-    "file/src/demo/MainView.js.html",
-    "src/demo/MainView.js",
+    "sweetiekit/components/basecontrol/index.js",
+    "file/sweetiekit/components/BaseControl/index.js.html",
+    "sweetiekit/components/BaseControl/index.js",
     "file"
   ],
   [
-    "src/demo/namebox.js",
-    "file/src/demo/NameBox.js.html",
-    "src/demo/NameBox.js",
+    "sweetiekit/components/basegesturerecognizer/component.js",
+    "file/sweetiekit/components/BaseGestureRecognizer/component.js.html",
+    "sweetiekit/components/BaseGestureRecognizer/component.js",
     "file"
   ],
   [
-    "src/demo/namebox.js~namebox#render",
-    "class/src/demo/NameBox.js~NameBox.html#instance-method-render",
-    "src/demo/NameBox.js~NameBox#render",
+    "sweetiekit/components/basegesturerecognizer/component.js~basegesturerecognizer#render",
+    "class/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.html#instance-method-render",
+    "sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer#render",
     "method"
   ],
   [
-    "src/demo/themetoggle.js",
-    "file/src/demo/ThemeToggle.js.html",
-    "src/demo/ThemeToggle.js",
+    "sweetiekit/components/basegesturerecognizer/component.js~basegesturerecognizer.defaultprops",
+    "class/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.html#static-member-defaultProps",
+    "sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.defaultProps",
+    "member"
+  ],
+  [
+    "sweetiekit/components/basegesturerecognizer/component.js~basegesturerecognizer.proptypes",
+    "class/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.html#static-member-propTypes",
+    "sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.propTypes",
+    "member"
+  ],
+  [
+    "sweetiekit/components/basegesturerecognizer/index.js",
+    "file/sweetiekit/components/BaseGestureRecognizer/index.js.html",
+    "sweetiekit/components/BaseGestureRecognizer/index.js",
     "file"
   ],
   [
-    "src/demo/title.js",
-    "file/src/demo/Title.js.html",
-    "src/demo/Title.js",
+    "sweetiekit/components/baseview/component.js",
+    "file/sweetiekit/components/BaseView/component.js.html",
+    "sweetiekit/components/BaseView/component.js",
     "file"
   ],
   [
-    "src/demo/context.js",
-    "file/src/demo/context.js.html",
-    "src/demo/context.js",
-    "file"
-  ],
-  [
-    "src/demo/withtheme.js",
-    "file/src/demo/withTheme.js.html",
-    "src/demo/withTheme.js",
-    "file"
-  ],
-  [
-    "src/index.js",
-    "file/src/index.js.html",
-    "src/index.js",
-    "file"
-  ],
-  [
-    "src/kit/button/button.js",
-    "file/src/kit/Button/Button.js.html",
-    "src/kit/Button/Button.js",
-    "file"
-  ],
-  [
-    "src/kit/button/index.js",
-    "file/src/kit/Button/index.js.html",
-    "src/kit/Button/index.js",
-    "file"
-  ],
-  [
-    "src/kit/index.js",
-    "file/src/kit/index.js.html",
-    "src/kit/index.js",
-    "file"
-  ],
-  [
-    "src/sweetiekit/components/basecontrol/component.js",
-    "file/src/sweetiekit/components/BaseControl/component.js.html",
-    "src/sweetiekit/components/BaseControl/component.js",
-    "file"
-  ],
-  [
-    "src/sweetiekit/components/basecontrol/component.js~basecontrol#render",
-    "class/src/sweetiekit/components/BaseControl/component.js~BaseControl.html#instance-method-render",
-    "src/sweetiekit/components/BaseControl/component.js~BaseControl#render",
+    "sweetiekit/components/baseview/component.js~baseview#render",
+    "class/sweetiekit/components/BaseView/component.js~BaseView.html#instance-method-render",
+    "sweetiekit/components/BaseView/component.js~BaseView#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/basecontrol/component.js~basecontrol.defaultprops",
-    "class/src/sweetiekit/components/BaseControl/component.js~BaseControl.html#static-member-defaultProps",
-    "src/sweetiekit/components/BaseControl/component.js~BaseControl.defaultProps",
+    "sweetiekit/components/baseview/component.js~baseview.defaultprops",
+    "class/sweetiekit/components/BaseView/component.js~BaseView.html#static-member-defaultProps",
+    "sweetiekit/components/BaseView/component.js~BaseView.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/basecontrol/component.js~basecontrol.proptypes",
-    "class/src/sweetiekit/components/BaseControl/component.js~BaseControl.html#static-member-propTypes",
-    "src/sweetiekit/components/BaseControl/component.js~BaseControl.propTypes",
+    "sweetiekit/components/baseview/component.js~baseview.proptypes",
+    "class/sweetiekit/components/BaseView/component.js~BaseView.html#static-member-propTypes",
+    "sweetiekit/components/BaseView/component.js~BaseView.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/basecontrol/index.js",
-    "file/src/sweetiekit/components/BaseControl/index.js.html",
-    "src/sweetiekit/components/BaseControl/index.js",
+    "sweetiekit/components/baseview/index.js",
+    "file/sweetiekit/components/BaseView/index.js.html",
+    "sweetiekit/components/BaseView/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/basegesturerecognizer/component.js",
-    "file/src/sweetiekit/components/BaseGestureRecognizer/component.js.html",
-    "src/sweetiekit/components/BaseGestureRecognizer/component.js",
+    "sweetiekit/components/baseviewcontroller/component.js",
+    "file/sweetiekit/components/BaseViewController/component.js.html",
+    "sweetiekit/components/BaseViewController/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/basegesturerecognizer/component.js~basegesturerecognizer#render",
-    "class/src/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.html#instance-method-render",
-    "src/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer#render",
+    "sweetiekit/components/baseviewcontroller/component.js~baseviewcontroller#render",
+    "class/sweetiekit/components/BaseViewController/component.js~BaseViewController.html#instance-method-render",
+    "sweetiekit/components/BaseViewController/component.js~BaseViewController#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/basegesturerecognizer/component.js~basegesturerecognizer.defaultprops",
-    "class/src/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.html#static-member-defaultProps",
-    "src/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.defaultProps",
+    "sweetiekit/components/baseviewcontroller/component.js~baseviewcontroller.defaultprops",
+    "class/sweetiekit/components/BaseViewController/component.js~BaseViewController.html#static-member-defaultProps",
+    "sweetiekit/components/BaseViewController/component.js~BaseViewController.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/basegesturerecognizer/component.js~basegesturerecognizer.proptypes",
-    "class/src/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.html#static-member-propTypes",
-    "src/sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.propTypes",
+    "sweetiekit/components/baseviewcontroller/component.js~baseviewcontroller.proptypes",
+    "class/sweetiekit/components/BaseViewController/component.js~BaseViewController.html#static-member-propTypes",
+    "sweetiekit/components/BaseViewController/component.js~BaseViewController.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/basegesturerecognizer/index.js",
-    "file/src/sweetiekit/components/BaseGestureRecognizer/index.js.html",
-    "src/sweetiekit/components/BaseGestureRecognizer/index.js",
+    "sweetiekit/components/baseviewcontroller/index.js",
+    "file/sweetiekit/components/BaseViewController/index.js.html",
+    "sweetiekit/components/BaseViewController/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/baseview/component.js",
-    "file/src/sweetiekit/components/BaseView/component.js.html",
-    "src/sweetiekit/components/BaseView/component.js",
+    "sweetiekit/components/button/component.js",
+    "file/sweetiekit/components/Button/component.js.html",
+    "sweetiekit/components/Button/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/baseview/component.js~baseview#render",
-    "class/src/sweetiekit/components/BaseView/component.js~BaseView.html#instance-method-render",
-    "src/sweetiekit/components/BaseView/component.js~BaseView#render",
+    "sweetiekit/components/button/component.js~button#render",
+    "class/sweetiekit/components/Button/component.js~Button.html#instance-method-render",
+    "sweetiekit/components/Button/component.js~Button#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/baseview/component.js~baseview.defaultprops",
-    "class/src/sweetiekit/components/BaseView/component.js~BaseView.html#static-member-defaultProps",
-    "src/sweetiekit/components/BaseView/component.js~BaseView.defaultProps",
+    "sweetiekit/components/button/component.js~button.defaultprops",
+    "class/sweetiekit/components/Button/component.js~Button.html#static-member-defaultProps",
+    "sweetiekit/components/Button/component.js~Button.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/baseview/component.js~baseview.proptypes",
-    "class/src/sweetiekit/components/BaseView/component.js~BaseView.html#static-member-propTypes",
-    "src/sweetiekit/components/BaseView/component.js~BaseView.propTypes",
+    "sweetiekit/components/button/component.js~button.proptypes",
+    "class/sweetiekit/components/Button/component.js~Button.html#static-member-propTypes",
+    "sweetiekit/components/Button/component.js~Button.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/baseview/index.js",
-    "file/src/sweetiekit/components/BaseView/index.js.html",
-    "src/sweetiekit/components/BaseView/index.js",
+    "sweetiekit/components/button/index.js",
+    "file/sweetiekit/components/Button/index.js.html",
+    "sweetiekit/components/Button/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/baseviewcontroller/component.js",
-    "file/src/sweetiekit/components/BaseViewController/component.js.html",
-    "src/sweetiekit/components/BaseViewController/component.js",
+    "sweetiekit/components/control/component.js",
+    "file/sweetiekit/components/Control/component.js.html",
+    "sweetiekit/components/Control/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/baseviewcontroller/component.js~baseviewcontroller#render",
-    "class/src/sweetiekit/components/BaseViewController/component.js~BaseViewController.html#instance-method-render",
-    "src/sweetiekit/components/BaseViewController/component.js~BaseViewController#render",
+    "sweetiekit/components/control/component.js~control#render",
+    "class/sweetiekit/components/Control/component.js~Control.html#instance-method-render",
+    "sweetiekit/components/Control/component.js~Control#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/baseviewcontroller/component.js~baseviewcontroller.defaultprops",
-    "class/src/sweetiekit/components/BaseViewController/component.js~BaseViewController.html#static-member-defaultProps",
-    "src/sweetiekit/components/BaseViewController/component.js~BaseViewController.defaultProps",
+    "sweetiekit/components/control/component.js~control.defaultprops",
+    "class/sweetiekit/components/Control/component.js~Control.html#static-member-defaultProps",
+    "sweetiekit/components/Control/component.js~Control.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/baseviewcontroller/component.js~baseviewcontroller.proptypes",
-    "class/src/sweetiekit/components/BaseViewController/component.js~BaseViewController.html#static-member-propTypes",
-    "src/sweetiekit/components/BaseViewController/component.js~BaseViewController.propTypes",
+    "sweetiekit/components/control/component.js~control.proptypes",
+    "class/sweetiekit/components/Control/component.js~Control.html#static-member-propTypes",
+    "sweetiekit/components/Control/component.js~Control.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/baseviewcontroller/index.js",
-    "file/src/sweetiekit/components/BaseViewController/index.js.html",
-    "src/sweetiekit/components/BaseViewController/index.js",
+    "sweetiekit/components/control/index.js",
+    "file/sweetiekit/components/Control/index.js.html",
+    "sweetiekit/components/Control/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/button/component.js",
-    "file/src/sweetiekit/components/Button/component.js.html",
-    "src/sweetiekit/components/Button/component.js",
+    "sweetiekit/components/gesturerecognizer/component.js",
+    "file/sweetiekit/components/GestureRecognizer/component.js.html",
+    "sweetiekit/components/GestureRecognizer/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/button/component.js~button#render",
-    "class/src/sweetiekit/components/Button/component.js~Button.html#instance-method-render",
-    "src/sweetiekit/components/Button/component.js~Button#render",
+    "sweetiekit/components/gesturerecognizer/component.js~gesturerecognizer#render",
+    "class/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.html#instance-method-render",
+    "sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/button/component.js~button.defaultprops",
-    "class/src/sweetiekit/components/Button/component.js~Button.html#static-member-defaultProps",
-    "src/sweetiekit/components/Button/component.js~Button.defaultProps",
+    "sweetiekit/components/gesturerecognizer/component.js~gesturerecognizer.defaultprops",
+    "class/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.html#static-member-defaultProps",
+    "sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/button/component.js~button.proptypes",
-    "class/src/sweetiekit/components/Button/component.js~Button.html#static-member-propTypes",
-    "src/sweetiekit/components/Button/component.js~Button.propTypes",
+    "sweetiekit/components/gesturerecognizer/component.js~gesturerecognizer.proptypes",
+    "class/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.html#static-member-propTypes",
+    "sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/button/index.js",
-    "file/src/sweetiekit/components/Button/index.js.html",
-    "src/sweetiekit/components/Button/index.js",
+    "sweetiekit/components/gesturerecognizer/index.js",
+    "file/sweetiekit/components/GestureRecognizer/index.js.html",
+    "sweetiekit/components/GestureRecognizer/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/control/component.js",
-    "file/src/sweetiekit/components/Control/component.js.html",
-    "src/sweetiekit/components/Control/component.js",
+    "sweetiekit/components/imageview/component.js",
+    "file/sweetiekit/components/ImageView/component.js.html",
+    "sweetiekit/components/ImageView/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/control/component.js~control#render",
-    "class/src/sweetiekit/components/Control/component.js~Control.html#instance-method-render",
-    "src/sweetiekit/components/Control/component.js~Control#render",
+    "sweetiekit/components/imageview/component.js~imageview#render",
+    "class/sweetiekit/components/ImageView/component.js~ImageView.html#instance-method-render",
+    "sweetiekit/components/ImageView/component.js~ImageView#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/control/component.js~control.defaultprops",
-    "class/src/sweetiekit/components/Control/component.js~Control.html#static-member-defaultProps",
-    "src/sweetiekit/components/Control/component.js~Control.defaultProps",
+    "sweetiekit/components/imageview/component.js~imageview.defaultprops",
+    "class/sweetiekit/components/ImageView/component.js~ImageView.html#static-member-defaultProps",
+    "sweetiekit/components/ImageView/component.js~ImageView.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/control/component.js~control.proptypes",
-    "class/src/sweetiekit/components/Control/component.js~Control.html#static-member-propTypes",
-    "src/sweetiekit/components/Control/component.js~Control.propTypes",
+    "sweetiekit/components/imageview/component.js~imageview.proptypes",
+    "class/sweetiekit/components/ImageView/component.js~ImageView.html#static-member-propTypes",
+    "sweetiekit/components/ImageView/component.js~ImageView.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/control/index.js",
-    "file/src/sweetiekit/components/Control/index.js.html",
-    "src/sweetiekit/components/Control/index.js",
+    "sweetiekit/components/imageview/index.js",
+    "file/sweetiekit/components/ImageView/index.js.html",
+    "sweetiekit/components/ImageView/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/gesturerecognizer/component.js",
-    "file/src/sweetiekit/components/GestureRecognizer/component.js.html",
-    "src/sweetiekit/components/GestureRecognizer/component.js",
+    "sweetiekit/components/label/component.js",
+    "file/sweetiekit/components/Label/component.js.html",
+    "sweetiekit/components/Label/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/gesturerecognizer/component.js~gesturerecognizer#render",
-    "class/src/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.html#instance-method-render",
-    "src/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer#render",
+    "sweetiekit/components/label/component.js~label#render",
+    "class/sweetiekit/components/Label/component.js~Label.html#instance-method-render",
+    "sweetiekit/components/Label/component.js~Label#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/gesturerecognizer/component.js~gesturerecognizer.defaultprops",
-    "class/src/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.html#static-member-defaultProps",
-    "src/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.defaultProps",
+    "sweetiekit/components/label/component.js~label.defaultprops",
+    "class/sweetiekit/components/Label/component.js~Label.html#static-member-defaultProps",
+    "sweetiekit/components/Label/component.js~Label.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/gesturerecognizer/component.js~gesturerecognizer.proptypes",
-    "class/src/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.html#static-member-propTypes",
-    "src/sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.propTypes",
+    "sweetiekit/components/label/component.js~label.proptypes",
+    "class/sweetiekit/components/Label/component.js~Label.html#static-member-propTypes",
+    "sweetiekit/components/Label/component.js~Label.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/gesturerecognizer/index.js",
-    "file/src/sweetiekit/components/GestureRecognizer/index.js.html",
-    "src/sweetiekit/components/GestureRecognizer/index.js",
+    "sweetiekit/components/label/index.js",
+    "file/sweetiekit/components/Label/index.js.html",
+    "sweetiekit/components/Label/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/imageview/component.js",
-    "file/src/sweetiekit/components/ImageView/component.js.html",
-    "src/sweetiekit/components/ImageView/component.js",
+    "sweetiekit/components/scrollview/component.js",
+    "file/sweetiekit/components/ScrollView/component.js.html",
+    "sweetiekit/components/ScrollView/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/imageview/component.js~imageview#render",
-    "class/src/sweetiekit/components/ImageView/component.js~ImageView.html#instance-method-render",
-    "src/sweetiekit/components/ImageView/component.js~ImageView#render",
+    "sweetiekit/components/scrollview/component.js~scrollview#render",
+    "class/sweetiekit/components/ScrollView/component.js~ScrollView.html#instance-method-render",
+    "sweetiekit/components/ScrollView/component.js~ScrollView#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/imageview/component.js~imageview.defaultprops",
-    "class/src/sweetiekit/components/ImageView/component.js~ImageView.html#static-member-defaultProps",
-    "src/sweetiekit/components/ImageView/component.js~ImageView.defaultProps",
+    "sweetiekit/components/scrollview/component.js~scrollview.defaultprops",
+    "class/sweetiekit/components/ScrollView/component.js~ScrollView.html#static-member-defaultProps",
+    "sweetiekit/components/ScrollView/component.js~ScrollView.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/imageview/component.js~imageview.proptypes",
-    "class/src/sweetiekit/components/ImageView/component.js~ImageView.html#static-member-propTypes",
-    "src/sweetiekit/components/ImageView/component.js~ImageView.propTypes",
+    "sweetiekit/components/scrollview/component.js~scrollview.proptypes",
+    "class/sweetiekit/components/ScrollView/component.js~ScrollView.html#static-member-propTypes",
+    "sweetiekit/components/ScrollView/component.js~ScrollView.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/imageview/index.js",
-    "file/src/sweetiekit/components/ImageView/index.js.html",
-    "src/sweetiekit/components/ImageView/index.js",
+    "sweetiekit/components/scrollview/index.js",
+    "file/sweetiekit/components/ScrollView/index.js.html",
+    "sweetiekit/components/ScrollView/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/label/component.js",
-    "file/src/sweetiekit/components/Label/component.js.html",
-    "src/sweetiekit/components/Label/component.js",
+    "sweetiekit/components/slider/component.js",
+    "file/sweetiekit/components/Slider/component.js.html",
+    "sweetiekit/components/Slider/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/label/component.js~label#render",
-    "class/src/sweetiekit/components/Label/component.js~Label.html#instance-method-render",
-    "src/sweetiekit/components/Label/component.js~Label#render",
+    "sweetiekit/components/slider/component.js~slider#render",
+    "class/sweetiekit/components/Slider/component.js~Slider.html#instance-method-render",
+    "sweetiekit/components/Slider/component.js~Slider#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/label/component.js~label.defaultprops",
-    "class/src/sweetiekit/components/Label/component.js~Label.html#static-member-defaultProps",
-    "src/sweetiekit/components/Label/component.js~Label.defaultProps",
+    "sweetiekit/components/slider/component.js~slider.defaultprops",
+    "class/sweetiekit/components/Slider/component.js~Slider.html#static-member-defaultProps",
+    "sweetiekit/components/Slider/component.js~Slider.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/label/component.js~label.proptypes",
-    "class/src/sweetiekit/components/Label/component.js~Label.html#static-member-propTypes",
-    "src/sweetiekit/components/Label/component.js~Label.propTypes",
+    "sweetiekit/components/slider/component.js~slider.proptypes",
+    "class/sweetiekit/components/Slider/component.js~Slider.html#static-member-propTypes",
+    "sweetiekit/components/Slider/component.js~Slider.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/label/index.js",
-    "file/src/sweetiekit/components/Label/index.js.html",
-    "src/sweetiekit/components/Label/index.js",
+    "sweetiekit/components/slider/index.js",
+    "file/sweetiekit/components/Slider/index.js.html",
+    "sweetiekit/components/Slider/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/scrollview/component.js",
-    "file/src/sweetiekit/components/ScrollView/component.js.html",
-    "src/sweetiekit/components/ScrollView/component.js",
+    "sweetiekit/components/switch/component.js",
+    "file/sweetiekit/components/Switch/component.js.html",
+    "sweetiekit/components/Switch/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/scrollview/component.js~scrollview#render",
-    "class/src/sweetiekit/components/ScrollView/component.js~ScrollView.html#instance-method-render",
-    "src/sweetiekit/components/ScrollView/component.js~ScrollView#render",
+    "sweetiekit/components/switch/component.js~switch#render",
+    "class/sweetiekit/components/Switch/component.js~Switch.html#instance-method-render",
+    "sweetiekit/components/Switch/component.js~Switch#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/scrollview/component.js~scrollview.defaultprops",
-    "class/src/sweetiekit/components/ScrollView/component.js~ScrollView.html#static-member-defaultProps",
-    "src/sweetiekit/components/ScrollView/component.js~ScrollView.defaultProps",
+    "sweetiekit/components/switch/component.js~switch.defaultprops",
+    "class/sweetiekit/components/Switch/component.js~Switch.html#static-member-defaultProps",
+    "sweetiekit/components/Switch/component.js~Switch.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/scrollview/component.js~scrollview.proptypes",
-    "class/src/sweetiekit/components/ScrollView/component.js~ScrollView.html#static-member-propTypes",
-    "src/sweetiekit/components/ScrollView/component.js~ScrollView.propTypes",
+    "sweetiekit/components/switch/component.js~switch.proptypes",
+    "class/sweetiekit/components/Switch/component.js~Switch.html#static-member-propTypes",
+    "sweetiekit/components/Switch/component.js~Switch.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/scrollview/index.js",
-    "file/src/sweetiekit/components/ScrollView/index.js.html",
-    "src/sweetiekit/components/ScrollView/index.js",
+    "sweetiekit/components/switch/index.js",
+    "file/sweetiekit/components/Switch/index.js.html",
+    "sweetiekit/components/Switch/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/slider/component.js",
-    "file/src/sweetiekit/components/Slider/component.js.html",
-    "src/sweetiekit/components/Slider/component.js",
+    "sweetiekit/components/tapgesturerecognizer/component.js",
+    "file/sweetiekit/components/TapGestureRecognizer/component.js.html",
+    "sweetiekit/components/TapGestureRecognizer/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/slider/component.js~slider#render",
-    "class/src/sweetiekit/components/Slider/component.js~Slider.html#instance-method-render",
-    "src/sweetiekit/components/Slider/component.js~Slider#render",
+    "sweetiekit/components/tapgesturerecognizer/component.js~tapgesturerecognizer#render",
+    "class/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.html#instance-method-render",
+    "sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/slider/component.js~slider.defaultprops",
-    "class/src/sweetiekit/components/Slider/component.js~Slider.html#static-member-defaultProps",
-    "src/sweetiekit/components/Slider/component.js~Slider.defaultProps",
+    "sweetiekit/components/tapgesturerecognizer/component.js~tapgesturerecognizer.defaultprops",
+    "class/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.html#static-member-defaultProps",
+    "sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/slider/component.js~slider.proptypes",
-    "class/src/sweetiekit/components/Slider/component.js~Slider.html#static-member-propTypes",
-    "src/sweetiekit/components/Slider/component.js~Slider.propTypes",
+    "sweetiekit/components/tapgesturerecognizer/component.js~tapgesturerecognizer.proptypes",
+    "class/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.html#static-member-propTypes",
+    "sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/slider/index.js",
-    "file/src/sweetiekit/components/Slider/index.js.html",
-    "src/sweetiekit/components/Slider/index.js",
+    "sweetiekit/components/tapgesturerecognizer/index.js",
+    "file/sweetiekit/components/TapGestureRecognizer/index.js.html",
+    "sweetiekit/components/TapGestureRecognizer/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/switch/component.js",
-    "file/src/sweetiekit/components/Switch/component.js.html",
-    "src/sweetiekit/components/Switch/component.js",
+    "sweetiekit/components/text.js",
+    "file/sweetiekit/components/Text.js.html",
+    "sweetiekit/components/Text.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/switch/component.js~switch#render",
-    "class/src/sweetiekit/components/Switch/component.js~Switch.html#instance-method-render",
-    "src/sweetiekit/components/Switch/component.js~Switch#render",
+    "sweetiekit/components/text.js~text#render",
+    "class/sweetiekit/components/Text.js~Text.html#instance-method-render",
+    "sweetiekit/components/Text.js~Text#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/switch/component.js~switch.defaultprops",
-    "class/src/sweetiekit/components/Switch/component.js~Switch.html#static-member-defaultProps",
-    "src/sweetiekit/components/Switch/component.js~Switch.defaultProps",
-    "member"
-  ],
-  [
-    "src/sweetiekit/components/switch/component.js~switch.proptypes",
-    "class/src/sweetiekit/components/Switch/component.js~Switch.html#static-member-propTypes",
-    "src/sweetiekit/components/Switch/component.js~Switch.propTypes",
-    "member"
-  ],
-  [
-    "src/sweetiekit/components/switch/index.js",
-    "file/src/sweetiekit/components/Switch/index.js.html",
-    "src/sweetiekit/components/Switch/index.js",
+    "sweetiekit/components/textfield/component.js",
+    "file/sweetiekit/components/TextField/component.js.html",
+    "sweetiekit/components/TextField/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/tapgesturerecognizer/component.js",
-    "file/src/sweetiekit/components/TapGestureRecognizer/component.js.html",
-    "src/sweetiekit/components/TapGestureRecognizer/component.js",
-    "file"
-  ],
-  [
-    "src/sweetiekit/components/tapgesturerecognizer/component.js~tapgesturerecognizer#render",
-    "class/src/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.html#instance-method-render",
-    "src/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer#render",
+    "sweetiekit/components/textfield/component.js~textfield#render",
+    "class/sweetiekit/components/TextField/component.js~TextField.html#instance-method-render",
+    "sweetiekit/components/TextField/component.js~TextField#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/tapgesturerecognizer/component.js~tapgesturerecognizer.defaultprops",
-    "class/src/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.html#static-member-defaultProps",
-    "src/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.defaultProps",
+    "sweetiekit/components/textfield/component.js~textfield.defaultprops",
+    "class/sweetiekit/components/TextField/component.js~TextField.html#static-member-defaultProps",
+    "sweetiekit/components/TextField/component.js~TextField.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/tapgesturerecognizer/component.js~tapgesturerecognizer.proptypes",
-    "class/src/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.html#static-member-propTypes",
-    "src/sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.propTypes",
+    "sweetiekit/components/textfield/component.js~textfield.proptypes",
+    "class/sweetiekit/components/TextField/component.js~TextField.html#static-member-propTypes",
+    "sweetiekit/components/TextField/component.js~TextField.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/tapgesturerecognizer/index.js",
-    "file/src/sweetiekit/components/TapGestureRecognizer/index.js.html",
-    "src/sweetiekit/components/TapGestureRecognizer/index.js",
+    "sweetiekit/components/textfield/index.js",
+    "file/sweetiekit/components/TextField/index.js.html",
+    "sweetiekit/components/TextField/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/text.js",
-    "file/src/sweetiekit/components/Text.js.html",
-    "src/sweetiekit/components/Text.js",
+    "sweetiekit/components/view/component.js",
+    "file/sweetiekit/components/View/component.js.html",
+    "sweetiekit/components/View/component.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/text.js~text#render",
-    "class/src/sweetiekit/components/Text.js~Text.html#instance-method-render",
-    "src/sweetiekit/components/Text.js~Text#render",
+    "sweetiekit/components/view/component.js~view#render",
+    "class/sweetiekit/components/View/component.js~View.html#instance-method-render",
+    "sweetiekit/components/View/component.js~View#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/textfield/component.js",
-    "file/src/sweetiekit/components/TextField/component.js.html",
-    "src/sweetiekit/components/TextField/component.js",
+    "sweetiekit/components/view/component.js~view.defaultprops",
+    "class/sweetiekit/components/View/component.js~View.html#static-member-defaultProps",
+    "sweetiekit/components/View/component.js~View.defaultProps",
+    "member"
+  ],
+  [
+    "sweetiekit/components/view/component.js~view.proptypes",
+    "class/sweetiekit/components/View/component.js~View.html#static-member-propTypes",
+    "sweetiekit/components/View/component.js~View.propTypes",
+    "member"
+  ],
+  [
+    "sweetiekit/components/view/index.js",
+    "file/sweetiekit/components/View/index.js.html",
+    "sweetiekit/components/View/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/textfield/component.js~textfield#render",
-    "class/src/sweetiekit/components/TextField/component.js~TextField.html#instance-method-render",
-    "src/sweetiekit/components/TextField/component.js~TextField#render",
+    "sweetiekit/components/viewcontroller/component.js",
+    "file/sweetiekit/components/ViewController/component.js.html",
+    "sweetiekit/components/ViewController/component.js",
+    "file"
+  ],
+  [
+    "sweetiekit/components/viewcontroller/component.js~viewcontroller#render",
+    "class/sweetiekit/components/ViewController/component.js~ViewController.html#instance-method-render",
+    "sweetiekit/components/ViewController/component.js~ViewController#render",
     "method"
   ],
   [
-    "src/sweetiekit/components/textfield/component.js~textfield.defaultprops",
-    "class/src/sweetiekit/components/TextField/component.js~TextField.html#static-member-defaultProps",
-    "src/sweetiekit/components/TextField/component.js~TextField.defaultProps",
+    "sweetiekit/components/viewcontroller/component.js~viewcontroller.defaultprops",
+    "class/sweetiekit/components/ViewController/component.js~ViewController.html#static-member-defaultProps",
+    "sweetiekit/components/ViewController/component.js~ViewController.defaultProps",
     "member"
   ],
   [
-    "src/sweetiekit/components/textfield/component.js~textfield.proptypes",
-    "class/src/sweetiekit/components/TextField/component.js~TextField.html#static-member-propTypes",
-    "src/sweetiekit/components/TextField/component.js~TextField.propTypes",
+    "sweetiekit/components/viewcontroller/component.js~viewcontroller.proptypes",
+    "class/sweetiekit/components/ViewController/component.js~ViewController.html#static-member-propTypes",
+    "sweetiekit/components/ViewController/component.js~ViewController.propTypes",
     "member"
   ],
   [
-    "src/sweetiekit/components/textfield/index.js",
-    "file/src/sweetiekit/components/TextField/index.js.html",
-    "src/sweetiekit/components/TextField/index.js",
+    "sweetiekit/components/viewcontroller/index.js",
+    "file/sweetiekit/components/ViewController/index.js.html",
+    "sweetiekit/components/ViewController/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/view/component.js",
-    "file/src/sweetiekit/components/View/component.js.html",
-    "src/sweetiekit/components/View/component.js",
+    "sweetiekit/components/index.js",
+    "file/sweetiekit/components/index.js.html",
+    "sweetiekit/components/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/view/component.js~view#render",
-    "class/src/sweetiekit/components/View/component.js~View.html#instance-method-render",
-    "src/sweetiekit/components/View/component.js~View#render",
-    "method"
-  ],
-  [
-    "src/sweetiekit/components/view/component.js~view.defaultprops",
-    "class/src/sweetiekit/components/View/component.js~View.html#static-member-defaultProps",
-    "src/sweetiekit/components/View/component.js~View.defaultProps",
-    "member"
-  ],
-  [
-    "src/sweetiekit/components/view/component.js~view.proptypes",
-    "class/src/sweetiekit/components/View/component.js~View.html#static-member-propTypes",
-    "src/sweetiekit/components/View/component.js~View.propTypes",
-    "member"
-  ],
-  [
-    "src/sweetiekit/components/view/index.js",
-    "file/src/sweetiekit/components/View/index.js.html",
-    "src/sweetiekit/components/View/index.js",
+    "sweetiekit/renderer.js",
+    "file/sweetiekit/renderer.js.html",
+    "sweetiekit/renderer.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/viewcontroller/component.js",
-    "file/src/sweetiekit/components/ViewController/component.js.html",
-    "src/sweetiekit/components/ViewController/component.js",
+    "sweetiekit/types.js",
+    "file/sweetiekit/types.js.html",
+    "sweetiekit/types.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/viewcontroller/component.js~viewcontroller#render",
-    "class/src/sweetiekit/components/ViewController/component.js~ViewController.html#instance-method-render",
-    "src/sweetiekit/components/ViewController/component.js~ViewController#render",
-    "method"
+    "sweetiekit/types.js~color",
+    "typedef/index.html#static-typedef-Color",
+    "sweetiekit/types.js~Color",
+    "typedef"
   ],
   [
-    "src/sweetiekit/components/viewcontroller/component.js~viewcontroller.defaultprops",
-    "class/src/sweetiekit/components/ViewController/component.js~ViewController.html#static-member-defaultProps",
-    "src/sweetiekit/components/ViewController/component.js~ViewController.defaultProps",
-    "member"
+    "sweetiekit/types.js~frame",
+    "typedef/index.html#static-typedef-Frame",
+    "sweetiekit/types.js~Frame",
+    "typedef"
   ],
   [
-    "src/sweetiekit/components/viewcontroller/component.js~viewcontroller.proptypes",
-    "class/src/sweetiekit/components/ViewController/component.js~ViewController.html#static-member-propTypes",
-    "src/sweetiekit/components/ViewController/component.js~ViewController.propTypes",
-    "member"
+    "sweetiekit/types.js~layer",
+    "typedef/index.html#static-typedef-Layer",
+    "sweetiekit/types.js~Layer",
+    "typedef"
   ],
   [
-    "src/sweetiekit/components/viewcontroller/index.js",
-    "file/src/sweetiekit/components/ViewController/index.js.html",
-    "src/sweetiekit/components/ViewController/index.js",
+    "sweetiekit/types.js~nstextalignment",
+    "typedef/index.html#static-typedef-NSTextAlignment",
+    "sweetiekit/types.js~NSTextAlignment",
+    "typedef"
+  ],
+  [
+    "sweetiekit/types.js~size",
+    "typedef/index.html#static-typedef-Size",
+    "sweetiekit/types.js~Size",
+    "typedef"
+  ],
+  [
+    "sweetiekit/types.js~target",
+    "typedef/index.html#static-typedef-Target",
+    "sweetiekit/types.js~Target",
+    "typedef"
+  ],
+  [
+    "sweetiekit/types.js~uicontrolevent",
+    "typedef/index.html#static-typedef-UIControlEvent",
+    "sweetiekit/types.js~UIControlEvent",
+    "typedef"
+  ],
+  [
+    "sweetiekit/types.js~uicontrolstate",
+    "typedef/index.html#static-typedef-UIControlState",
+    "sweetiekit/types.js~UIControlState",
+    "typedef"
+  ],
+  [
+    "sweetiekit/utils/appendchild.js",
+    "file/sweetiekit/utils/appendChild.js.html",
+    "sweetiekit/utils/appendChild.js",
     "file"
   ],
   [
-    "src/sweetiekit/components/index.js",
-    "file/src/sweetiekit/components/index.js.html",
-    "src/sweetiekit/components/index.js",
+    "sweetiekit/utils/colors.js",
+    "file/sweetiekit/utils/colors.js.html",
+    "sweetiekit/utils/colors.js",
     "file"
   ],
   [
-    "src/sweetiekit/renderer.js",
-    "file/src/sweetiekit/renderer.js.html",
-    "src/sweetiekit/renderer.js",
+    "sweetiekit/utils/commitupdate.js",
+    "file/sweetiekit/utils/commitUpdate.js.html",
+    "sweetiekit/utils/commitUpdate.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/appendchild.js",
-    "file/src/sweetiekit/utils/appendChild.js.html",
-    "src/sweetiekit/utils/appendChild.js",
+    "sweetiekit/utils/createelement.js",
+    "file/sweetiekit/utils/createElement.js.html",
+    "sweetiekit/utils/createElement.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/colors.js",
-    "file/src/sweetiekit/utils/colors.js.html",
-    "src/sweetiekit/utils/colors.js",
+    "sweetiekit/utils/createinstance.js",
+    "file/sweetiekit/utils/createInstance.js.html",
+    "sweetiekit/utils/createInstance.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/commitupdate.js",
-    "file/src/sweetiekit/utils/commitUpdate.js.html",
-    "src/sweetiekit/utils/commitUpdate.js",
+    "sweetiekit/utils/finalizeinitialchildren.js",
+    "file/sweetiekit/utils/finalizeInitialChildren.js.html",
+    "sweetiekit/utils/finalizeInitialChildren.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/createelement.js",
-    "file/src/sweetiekit/utils/createElement.js.html",
-    "src/sweetiekit/utils/createElement.js",
+    "sweetiekit/utils/index.js",
+    "file/sweetiekit/utils/index.js.html",
+    "sweetiekit/utils/index.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/createinstance.js",
-    "file/src/sweetiekit/utils/createInstance.js.html",
-    "src/sweetiekit/utils/createInstance.js",
+    "sweetiekit/utils/insertbefore.js",
+    "file/sweetiekit/utils/insertBefore.js.html",
+    "sweetiekit/utils/insertBefore.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/finalizeinitialchildren.js",
-    "file/src/sweetiekit/utils/finalizeInitialChildren.js.html",
-    "src/sweetiekit/utils/finalizeInitialChildren.js",
+    "sweetiekit/utils/is.js",
+    "file/sweetiekit/utils/is.js.html",
+    "sweetiekit/utils/is.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/index.js",
-    "file/src/sweetiekit/utils/index.js.html",
-    "src/sweetiekit/utils/index.js",
+    "sweetiekit/utils/prepareupdate.js",
+    "file/sweetiekit/utils/prepareUpdate.js.html",
+    "sweetiekit/utils/prepareUpdate.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/insertbefore.js",
-    "file/src/sweetiekit/utils/insertBefore.js.html",
-    "src/sweetiekit/utils/insertBefore.js",
+    "sweetiekit/utils/propkeys.js",
+    "file/sweetiekit/utils/propKeys.js.html",
+    "sweetiekit/utils/propKeys.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/is.js",
-    "file/src/sweetiekit/utils/is.js.html",
-    "src/sweetiekit/utils/is.js",
+    "sweetiekit/utils/properties.js",
+    "file/sweetiekit/utils/properties.js.html",
+    "sweetiekit/utils/properties.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/prepareupdate.js",
-    "file/src/sweetiekit/utils/prepareUpdate.js.html",
-    "src/sweetiekit/utils/prepareUpdate.js",
+    "sweetiekit/utils/removechild.js",
+    "file/sweetiekit/utils/removeChild.js.html",
+    "sweetiekit/utils/removeChild.js",
     "file"
   ],
   [
-    "src/sweetiekit/utils/propkeys.js",
-    "file/src/sweetiekit/utils/propKeys.js.html",
-    "src/sweetiekit/utils/propKeys.js",
-    "file"
-  ],
-  [
-    "src/sweetiekit/utils/properties.js",
-    "file/src/sweetiekit/utils/properties.js.html",
-    "src/sweetiekit/utils/properties.js",
-    "file"
-  ],
-  [
-    "src/sweetiekit/utils/removechild.js",
-    "file/src/sweetiekit/utils/removeChild.js.html",
-    "src/sweetiekit/utils/removeChild.js",
-    "file"
-  ],
-  [
-    "src/sweetiekit/utils/types.js",
-    "file/src/sweetiekit/utils/types.js.html",
-    "src/sweetiekit/utils/types.js",
+    "sweetiekit/utils/types.js",
+    "file/sweetiekit/utils/types.js.html",
+    "sweetiekit/utils/types.js",
     "file"
   ]
 ]

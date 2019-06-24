@@ -50,7 +50,6 @@ const themes = {
   },
 };
 
-
 class App extends React.Component {
   state = {
     theme: 'dark',

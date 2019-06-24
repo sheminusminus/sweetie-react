@@ -6,9 +6,13 @@ import { colors } from '../../utils';
 import Control from '../Control';
 
 /**
- * Renders a Control.
+ * Renders a Control of type ui-button.
+ * @see https://developer.apple.com/documentation/uikit/uibutton?language=swift
  */
 class Button extends React.Component {
+  /**
+   * @type {{backgroundColor: Color, children: *, type: string, layer: Layer, frame: Frame, target: Target}}
+   */
   static propTypes = {
     backgroundColor: PropTypes.shape({
       red: PropTypes.number.isRequired,
@@ -28,6 +32,9 @@ class Button extends React.Component {
     type: PropTypes.string,
   };
 
+  /**
+   * @type {{backgroundColor: {red: 1, green: 1, blue: 1, alpha: 1}, children: undefined, type: 'ui-button', layer: undefined, frame: undefined, target: undefined}}
+   */
   static defaultProps = {
     backgroundColor: colors.white,
     children: undefined,

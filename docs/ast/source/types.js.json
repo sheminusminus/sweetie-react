@@ -1,0 +1,450 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 587,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 32,
+      "column": 0
+    }
+  },
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 587,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 32,
+        "column": 0
+      }
+    },
+    "sourceType": "module",
+    "body": [],
+    "directives": [],
+    "leadingComments": null,
+    "innerComments": [
+      {
+        "type": "CommentBlock",
+        "value": "*\n * @typedef {number} NSTextAlignment\n ",
+        "start": 0,
+        "end": 44,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 3,
+            "column": 3
+          }
+        }
+      },
+      {
+        "type": "CommentBlock",
+        "value": "*\n * @typedef {number} UIControlEvent\n ",
+        "start": 46,
+        "end": 89,
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 0
+          },
+          "end": {
+            "line": 7,
+            "column": 3
+          }
+        }
+      },
+      {
+        "type": "CommentBlock",
+        "value": "*\n * @typedef {number} UIControlState\n ",
+        "start": 91,
+        "end": 134,
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 0
+          },
+          "end": {
+            "line": 11,
+            "column": 3
+          }
+        }
+      },
+      {
+        "type": "CommentBlock",
+        "value": "*\n * @typedef {{ borderWidth: number, borderColor: Color, cornerRadius: number, shadowColor: Color, shadowOpacity: number, shadowOffset: Size }} Layer\n ",
+        "start": 136,
+        "end": 292,
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 0
+          },
+          "end": {
+            "line": 15,
+            "column": 3
+          }
+        }
+      },
+      {
+        "type": "CommentBlock",
+        "value": "*\n * @typedef {{ red: number, green: number, blue: number, alpha: ?number }} Color\n ",
+        "start": 294,
+        "end": 382,
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 0
+          },
+          "end": {
+            "line": 19,
+            "column": 3
+          }
+        }
+      },
+      {
+        "type": "CommentBlock",
+        "value": "*\n * @typedef {{ x: number, y: number, width: number, height: number }} Frame\n ",
+        "start": 384,
+        "end": 467,
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 0
+          },
+          "end": {
+            "line": 23,
+            "column": 3
+          }
+        }
+      },
+      {
+        "type": "CommentBlock",
+        "value": "*\n * @typedef {{ width: number, height: number }} Size\n ",
+        "start": 469,
+        "end": 529,
+        "loc": {
+          "start": {
+            "line": 25,
+            "column": 0
+          },
+          "end": {
+            "line": 27,
+            "column": 3
+          }
+        }
+      },
+      {
+        "type": "CommentBlock",
+        "value": "*\n * @typedef {[Function, UIControlEvent]} Target\n ",
+        "start": 531,
+        "end": 586,
+        "loc": {
+          "start": {
+            "line": 29,
+            "column": 0
+          },
+          "end": {
+            "line": 31,
+            "column": 3
+          }
+        }
+      }
+    ]
+  },
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {number} NSTextAlignment\n ",
+      "start": 0,
+      "end": 44,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {number} UIControlEvent\n ",
+      "start": 46,
+      "end": 89,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {number} UIControlState\n ",
+      "start": 91,
+      "end": 134,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {{ borderWidth: number, borderColor: Color, cornerRadius: number, shadowColor: Color, shadowOpacity: number, shadowOffset: Size }} Layer\n ",
+      "start": 136,
+      "end": 292,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 0
+        },
+        "end": {
+          "line": 15,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {{ red: number, green: number, blue: number, alpha: ?number }} Color\n ",
+      "start": 294,
+      "end": 382,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 19,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {{ x: number, y: number, width: number, height: number }} Frame\n ",
+      "start": 384,
+      "end": 467,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 0
+        },
+        "end": {
+          "line": 23,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {{ width: number, height: number }} Size\n ",
+      "start": 469,
+      "end": 529,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 0
+        },
+        "end": {
+          "line": 27,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {[Function, UIControlEvent]} Target\n ",
+      "start": 531,
+      "end": 586,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 0
+        },
+        "end": {
+          "line": 31,
+          "column": 3
+        }
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {number} NSTextAlignment\n ",
+      "start": 0,
+      "end": 44,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {number} UIControlEvent\n ",
+      "start": 46,
+      "end": 89,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {number} UIControlState\n ",
+      "start": 91,
+      "end": 134,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {{ borderWidth: number, borderColor: Color, cornerRadius: number, shadowColor: Color, shadowOpacity: number, shadowOffset: Size }} Layer\n ",
+      "start": 136,
+      "end": 292,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 0
+        },
+        "end": {
+          "line": 15,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {{ red: number, green: number, blue: number, alpha: ?number }} Color\n ",
+      "start": 294,
+      "end": 382,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 19,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {{ x: number, y: number, width: number, height: number }} Frame\n ",
+      "start": 384,
+      "end": 467,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 0
+        },
+        "end": {
+          "line": 23,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {{ width: number, height: number }} Size\n ",
+      "start": 469,
+      "end": 529,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 0
+        },
+        "end": {
+          "line": 27,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * @typedef {[Function, UIControlEvent]} Target\n ",
+      "start": 531,
+      "end": 586,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 0
+        },
+        "end": {
+          "line": 31,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "eof",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 587,
+      "end": 587,
+      "loc": {
+        "start": {
+          "line": 32,
+          "column": 0
+        },
+        "end": {
+          "line": 32,
+          "column": 0
+        }
+      }
+    }
+  ]
+}

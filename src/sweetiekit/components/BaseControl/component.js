@@ -5,7 +5,14 @@ import { colors } from '../../utils';
 
 import View from '../View';
 
+/**
+ * Internal component that renders a View of type ui-control.
+ * @see https://developer.apple.com/documentation/uikit/uicontrol?language=swift
+ */
 class BaseControl extends React.Component {
+  /**
+   * @type {{backgroundColor: Color, children: *, baseTypes: string[], type: string, layer: Layer, frame: Frame, target: Target}}
+   */
   static propTypes = {
     backgroundColor: PropTypes.shape({
       red: PropTypes.number.isRequired,

@@ -1,130 +1,48 @@
 {
-  "coverage": "1.81%",
-  "expectCount": 165,
-  "actualCount": 3,
+  "coverage": "8.95%",
+  "expectCount": 134,
+  "actualCount": 12,
   "files": {
-    "src/demo/App.js": {
-      "expectCount": 11,
-      "actualCount": 0,
-      "undocumentLines": [
-        1,
-        16,
-        20,
-        22,
-        54,
-        55,
-        62,
-        67,
-        75,
-        80,
-        88
-      ]
-    },
-    "src/demo/MainView.js": {
-      "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        10,
-        11
-      ]
-    },
-    "src/demo/NameBox.js": {
-      "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        7,
-        8
-      ]
-    },
-    "src/demo/ThemeToggle.js": {
-      "expectCount": 5,
-      "actualCount": 0,
-      "undocumentLines": [
-        2,
-        4,
-        10,
-        13,
-        14
-      ]
-    },
-    "src/demo/Title.js": {
-      "expectCount": 5,
-      "actualCount": 0,
-      "undocumentLines": [
-        2,
-        4,
-        11,
-        14,
-        15
-      ]
-    },
-    "src/demo/withTheme.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        6
-      ]
-    },
-    "src/index.js": {
-      "expectCount": 5,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        12,
-        14,
-        15,
-        18
-      ]
-    },
-    "src/sweetiekit/components/BaseControl/component.js": {
+    "sweetiekit/components/BaseControl/component.js": {
       "expectCount": 4,
-      "actualCount": 0,
+      "actualCount": 2,
       "undocumentLines": [
-        8,
-        9,
-        29,
-        38
+        36,
+        45
       ]
     },
-    "src/sweetiekit/components/BaseGestureRecognizer/component.js": {
+    "sweetiekit/components/BaseGestureRecognizer/component.js": {
       "expectCount": 4,
-      "actualCount": 0,
+      "actualCount": 2,
       "undocumentLines": [
-        4,
-        5,
-        10,
-        15
+        17,
+        22
       ]
     },
-    "src/sweetiekit/components/BaseView/component.js": {
+    "sweetiekit/components/BaseView/component.js": {
       "expectCount": 4,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        10,
-        29,
-        38
+        33,
+        42
       ]
     },
-    "src/sweetiekit/components/BaseViewController/component.js": {
+    "sweetiekit/components/BaseViewController/component.js": {
       "expectCount": 4,
-      "actualCount": 0,
+      "actualCount": 2,
       "undocumentLines": [
-        4,
-        5,
-        11,
-        17
+        18,
+        24
       ]
     },
-    "src/sweetiekit/components/Button/component.js": {
+    "sweetiekit/components/Button/component.js": {
       "expectCount": 4,
-      "actualCount": 1,
+      "actualCount": 3,
       "undocumentLines": [
-        12,
-        31,
-        40
+        47
       ]
     },
-    "src/sweetiekit/components/Control/component.js": {
+    "sweetiekit/components/Control/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -134,7 +52,7 @@
         38
       ]
     },
-    "src/sweetiekit/components/GestureRecognizer/component.js": {
+    "sweetiekit/components/GestureRecognizer/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -144,7 +62,7 @@
         17
       ]
     },
-    "src/sweetiekit/components/ImageView/component.js": {
+    "sweetiekit/components/ImageView/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -154,7 +72,7 @@
         37
       ]
     },
-    "src/sweetiekit/components/Label/component.js": {
+    "sweetiekit/components/Label/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -164,7 +82,7 @@
         46
       ]
     },
-    "src/sweetiekit/components/ScrollView/component.js": {
+    "sweetiekit/components/ScrollView/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -174,7 +92,7 @@
         35
       ]
     },
-    "src/sweetiekit/components/Slider/component.js": {
+    "sweetiekit/components/Slider/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -184,7 +102,7 @@
         39
       ]
     },
-    "src/sweetiekit/components/Switch/component.js": {
+    "sweetiekit/components/Switch/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -194,7 +112,7 @@
         37
       ]
     },
-    "src/sweetiekit/components/TapGestureRecognizer/component.js": {
+    "sweetiekit/components/TapGestureRecognizer/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -204,7 +122,7 @@
         17
       ]
     },
-    "src/sweetiekit/components/Text.js": {
+    "sweetiekit/components/Text.js": {
       "expectCount": 2,
       "actualCount": 0,
       "undocumentLines": [
@@ -212,7 +130,7 @@
         5
       ]
     },
-    "src/sweetiekit/components/TextField/component.js": {
+    "sweetiekit/components/TextField/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -222,7 +140,7 @@
         40
       ]
     },
-    "src/sweetiekit/components/View/component.js": {
+    "sweetiekit/components/View/component.js": {
       "expectCount": 4,
       "actualCount": 1,
       "undocumentLines": [
@@ -231,7 +149,7 @@
         40
       ]
     },
-    "src/sweetiekit/components/ViewController/component.js": {
+    "sweetiekit/components/ViewController/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -241,7 +159,7 @@
         19
       ]
     },
-    "src/sweetiekit/renderer.js": {
+    "sweetiekit/renderer.js": {
       "expectCount": 3,
       "actualCount": 0,
       "undocumentLines": [
@@ -250,14 +168,14 @@
         149
       ]
     },
-    "src/sweetiekit/utils/appendChild.js": {
+    "sweetiekit/utils/appendChild.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         4
       ]
     },
-    "src/sweetiekit/utils/colors.js": {
+    "sweetiekit/utils/colors.js": {
       "expectCount": 7,
       "actualCount": 0,
       "undocumentLines": [
@@ -270,14 +188,14 @@
         7
       ]
     },
-    "src/sweetiekit/utils/commitUpdate.js": {
+    "sweetiekit/utils/commitUpdate.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         5
       ]
     },
-    "src/sweetiekit/utils/createElement.js": {
+    "sweetiekit/utils/createElement.js": {
       "expectCount": 16,
       "actualCount": 0,
       "undocumentLines": [
@@ -299,7 +217,7 @@
         151
       ]
     },
-    "src/sweetiekit/utils/createInstance.js": {
+    "sweetiekit/utils/createInstance.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
@@ -309,21 +227,21 @@
         61
       ]
     },
-    "src/sweetiekit/utils/finalizeInitialChildren.js": {
+    "sweetiekit/utils/finalizeInitialChildren.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         5
       ]
     },
-    "src/sweetiekit/utils/insertBefore.js": {
+    "sweetiekit/utils/insertBefore.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         4
       ]
     },
-    "src/sweetiekit/utils/is.js": {
+    "sweetiekit/utils/is.js": {
       "expectCount": 6,
       "actualCount": 0,
       "undocumentLines": [
@@ -335,14 +253,14 @@
         6
       ]
     },
-    "src/sweetiekit/utils/prepareUpdate.js": {
+    "sweetiekit/utils/prepareUpdate.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         4
       ]
     },
-    "src/sweetiekit/utils/propKeys.js": {
+    "sweetiekit/utils/propKeys.js": {
       "expectCount": 8,
       "actualCount": 0,
       "undocumentLines": [
@@ -356,7 +274,7 @@
         13
       ]
     },
-    "src/sweetiekit/utils/properties.js": {
+    "sweetiekit/utils/properties.js": {
       "expectCount": 6,
       "actualCount": 0,
       "undocumentLines": [
@@ -368,14 +286,14 @@
         17
       ]
     },
-    "src/sweetiekit/utils/removeChild.js": {
+    "sweetiekit/utils/removeChild.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         4
       ]
     },
-    "src/sweetiekit/utils/types.js": {
+    "sweetiekit/utils/types.js": {
       "expectCount": 12,
       "actualCount": 0,
       "undocumentLines": [

@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "sweetiekit/components/BaseControl/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport View from '../View';\n\n/**\n * Internal component that renders a View of type ui-control.\n * @see https://developer.apple.com/documentation/uikit/uicontrol?language=swift\n */\nclass BaseControl extends React.Component {\n  /**\n   * @type {{backgroundColor: Color, children: *, baseTypes: string[], type: string, layer: Layer, frame: Frame, target: Target}}\n   */\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    baseTypes: ['ui-control', 'ui-view'],\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    type: 'ui-control',\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <View\n        {...rest}\n        baseTypes={baseTypes}\n        type={type}\n      >\n        {children}\n      </View>\n    )\n  }\n}\n\nexport default BaseControl;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport View from '../View';\n\n/**\n * Internal component that renders a View of type ui-control.\n * @see https://developer.apple.com/documentation/uikit/uicontrol?language=swift\n */\nclass BaseControl extends React.Component {\n  /**\n   * @type {{backgroundColor: Color, children: *, baseTypes: string[], type: string, layer: Layer, frame: Frame, target: Target}}\n   */\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    frame: propTypes.frameProp,\n    layer: propTypes.layerProp,\n    target: propTypes.targetActionEventsProp,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    baseTypes: [types.control, types.view],\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    type: types.control,\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <View\n        {...rest}\n        baseTypes={baseTypes}\n        type={type}\n      >\n        {children}\n      </View>\n    )\n  }\n}\n\nexport default BaseControl;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/BaseControl/component.js",
     "access": "public",
@@ -623,7 +623,7 @@
     "longname": "sweetiekit/components/BaseControl/component.js~BaseControl.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 36,
+    "lineNumber": 26,
     "undocument": true,
     "type": {
       "types": [
@@ -642,7 +642,7 @@
     "longname": "sweetiekit/components/BaseControl/component.js~BaseControl#render",
     "access": "public",
     "description": null,
-    "lineNumber": 45,
+    "lineNumber": 35,
     "undocument": true,
     "params": [],
     "return": {
@@ -666,7 +666,7 @@
     "__docId__": 54,
     "kind": "file",
     "name": "sweetiekit/components/BaseGestureRecognizer/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\n/**\n * Internal component that renders a ui-gesture-recognizer.\n * @see https://developer.apple.com/documentation/uikit/uigesturerecognizer?language=swift\n */\nclass BaseGestureRecognizer extends React.Component {\n  /**\n   * @type {{baseTypes: string[], type: string}}\n   */\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: ['ui-gesture-recognizer'],\n    type: 'ui-gesture-recognizer',\n  };\n\n  render() {\n    const {\n      baseTypes,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <ui-gesture-recognizer\n        {...rest}\n        baseTypes={baseTypes}\n        type={type}\n      />\n    )\n  }\n}\n\nexport default BaseGestureRecognizer;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { propTypes, types } from '../../utils';\n\n/**\n * Internal component that renders a ui-gesture-recognizer.\n * @see https://developer.apple.com/documentation/uikit/uigesturerecognizer?language=swift\n */\nclass BaseGestureRecognizer extends React.Component {\n  /**\n   * @type {{baseTypes: string[], type: string}}\n   */\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    target: propTypes.targetActionProp,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: [types.gestureRecognizer],\n    target: undefined,\n    type: types.gestureRecognizer,\n  };\n\n  render() {\n    const {\n      baseTypes,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <ui-gesture-recognizer\n        {...rest}\n        baseTypes={baseTypes}\n        type={type}\n      />\n    )\n  }\n}\n\nexport default BaseGestureRecognizer;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/BaseGestureRecognizer/component.js",
     "access": "public",
@@ -688,7 +688,7 @@
     "see": [
       "https://developer.apple.com/documentation/uikit/uigesturerecognizer?language=swift"
     ],
-    "lineNumber": 8,
+    "lineNumber": 10,
     "interface": false,
     "extends": [
       "react~React.Component"
@@ -703,7 +703,7 @@
     "longname": "sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.propTypes",
     "access": "public",
     "description": "",
-    "lineNumber": 12,
+    "lineNumber": 14,
     "type": {
       "nullable": null,
       "types": [
@@ -722,7 +722,7 @@
     "longname": "sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 17,
+    "lineNumber": 20,
     "undocument": true,
     "type": {
       "types": [
@@ -741,7 +741,7 @@
     "longname": "sweetiekit/components/BaseGestureRecognizer/component.js~BaseGestureRecognizer#render",
     "access": "public",
     "description": null,
-    "lineNumber": 22,
+    "lineNumber": 26,
     "undocument": true,
     "params": [],
     "return": {
@@ -765,7 +765,7 @@
     "__docId__": 60,
     "kind": "file",
     "name": "sweetiekit/components/BaseView/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\n/**\n * Internal component that renders a UIView.\n * @see https://developer.apple.com/documentation/uikit/uiview?language=swift\n */\nclass BaseView extends React.Component {\n  /**\n   * @type {{backgroundColor: Color, children: *, baseTypes: string[], type: string, layer: Layer, frame: Frame}}\n   */\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    baseTypes: ['ui-view'],\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    type: 'ui-view',\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <ui-view\n        {...rest}\n        baseTypes={baseTypes || [type]}\n        type={type}\n      >\n        {children}\n      </ui-view>\n    )\n  }\n}\n\nexport default BaseView;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\n/**\n * Internal component that renders a UIView.\n * @see https://developer.apple.com/documentation/uikit/uiview?language=swift\n */\nclass BaseView extends React.Component {\n  /**\n   * @type {{backgroundColor: Color, children: *, baseTypes: string[], type: string, layer: Layer, frame: Frame}}\n   */\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    frame: propTypes.frameProp,\n    layer: propTypes.layerProp,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    baseTypes: [types.view],\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    type: types.view,\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <ui-view\n        {...rest}\n        baseTypes={baseTypes || [type]}\n        type={type}\n      >\n        {children}\n      </ui-view>\n    )\n  }\n}\n\nexport default BaseView;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/BaseView/component.js",
     "access": "public",
@@ -821,7 +821,7 @@
     "longname": "sweetiekit/components/BaseView/component.js~BaseView.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 33,
+    "lineNumber": 23,
     "undocument": true,
     "type": {
       "types": [
@@ -840,7 +840,7 @@
     "longname": "sweetiekit/components/BaseView/component.js~BaseView#render",
     "access": "public",
     "description": null,
-    "lineNumber": 42,
+    "lineNumber": 32,
     "undocument": true,
     "params": [],
     "return": {
@@ -864,7 +864,7 @@
     "__docId__": 66,
     "kind": "file",
     "name": "sweetiekit/components/BaseViewController/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\n/**\n * Internal component that renders a ui-view-controller\n * @see https://developer.apple.com/documentation/uikit/uiviewcontroller?language=swift\n */\nclass BaseViewController extends React.Component {\n  /**\n   * @type {{children: *, baseTypes: string[], type: string}}\n   */\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: ['ui-view-controller'],\n    children: undefined,\n    type: 'ui-view-controller',\n  };\n\n  render() {\n    const {\n      children,\n      baseTypes,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <ui-view-controller\n        {...rest}\n        baseType={baseTypes}\n        type={type}\n      >\n        {children}\n      </ui-view-controller>\n    )\n  }\n}\n\nexport default BaseViewController;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { types } from '../../utils';\n\n/**\n * Internal component that renders a ui-view-controller\n * @see https://developer.apple.com/documentation/uikit/uiviewcontroller?language=swift\n */\nclass BaseViewController extends React.Component {\n  /**\n   * @type {{children: *, baseTypes: string[], type: string}}\n   */\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: [types.viewController],\n    children: undefined,\n    type: types.viewController,\n  };\n\n  render() {\n    const {\n      children,\n      baseTypes,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <ui-view-controller\n        {...rest}\n        baseType={baseTypes}\n        type={type}\n      >\n        {children}\n      </ui-view-controller>\n    )\n  }\n}\n\nexport default BaseViewController;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/BaseViewController/component.js",
     "access": "public",
@@ -886,7 +886,7 @@
     "see": [
       "https://developer.apple.com/documentation/uikit/uiviewcontroller?language=swift"
     ],
-    "lineNumber": 8,
+    "lineNumber": 10,
     "interface": false,
     "extends": [
       "react~React.Component"
@@ -901,7 +901,7 @@
     "longname": "sweetiekit/components/BaseViewController/component.js~BaseViewController.propTypes",
     "access": "public",
     "description": "",
-    "lineNumber": 12,
+    "lineNumber": 14,
     "type": {
       "nullable": null,
       "types": [
@@ -920,7 +920,7 @@
     "longname": "sweetiekit/components/BaseViewController/component.js~BaseViewController.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 18,
+    "lineNumber": 20,
     "undocument": true,
     "type": {
       "types": [
@@ -939,7 +939,7 @@
     "longname": "sweetiekit/components/BaseViewController/component.js~BaseViewController#render",
     "access": "public",
     "description": null,
-    "lineNumber": 24,
+    "lineNumber": 26,
     "undocument": true,
     "params": [],
     "return": {
@@ -963,7 +963,7 @@
     "__docId__": 72,
     "kind": "file",
     "name": "sweetiekit/components/Button/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport Control from '../Control';\n\n/**\n * Renders a Control of type ui-button.\n * @see https://developer.apple.com/documentation/uikit/uibutton?language=swift\n */\nclass Button extends React.Component {\n  /**\n   * @type {{backgroundColor: Color, children: *, type: string, layer: Layer, frame: Frame, target: Target}}\n   */\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    children: PropTypes.any,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),\n    type: PropTypes.string,\n  };\n\n  /**\n   * @type {{backgroundColor: {red: 1, green: 1, blue: 1, alpha: 1}, children: undefined, type: 'ui-button', layer: undefined, frame: undefined, target: undefined}}\n   */\n  static defaultProps = {\n    backgroundColor: colors.white,\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    target: undefined,\n    type: 'ui-button',\n  };\n\n  render() {\n    const {\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <Control\n        {...rest}\n        type={type}\n      />\n    )\n  }\n}\n\nexport default Button;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport Control from '../Control';\n\n/**\n * Renders a Control of type ui-button.\n * @see https://developer.apple.com/documentation/uikit/uibutton?language=swift\n */\nclass Button extends React.Component {\n  /**\n   * @type {{backgroundColor: Color, children: *, type: string, layer: Layer, frame: Frame, target: Target, title: string, titleColor: Color, titleLabel: Object}}\n   */\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    children: PropTypes.any,\n    frame: propTypes.frameProp,\n    layer:propTypes.layerProp,\n    target: propTypes.targetActionEventsProp,\n    title: PropTypes.string,\n    titleColor: propTypes.colorProp,\n    titleLabel: PropTypes.any,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.white,\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    target: undefined,\n    title: 'Press Me',\n    titleColor: colors.black,\n    titleLabel: undefined,\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <Control\n        {...rest}\n        type={types.button}\n      />\n    )\n  }\n}\n\nexport default Button;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/Button/component.js",
     "access": "public",
@@ -1004,7 +1004,7 @@
     "type": {
       "nullable": null,
       "types": [
-        "{backgroundColor: Color, children: *, type: string, layer: Layer, frame: Frame, target: Target}"
+        "{backgroundColor: Color, children: *, type: string, layer: Layer, frame: Frame, target: Target, title: string, titleColor: Color, titleLabel: Object}"
       ],
       "spread": false,
       "description": null
@@ -1018,15 +1018,13 @@
     "static": true,
     "longname": "sweetiekit/components/Button/component.js~Button.defaultProps",
     "access": "public",
-    "description": "",
-    "lineNumber": 38,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
     "type": {
-      "nullable": null,
       "types": [
-        "{backgroundColor: {red: 1, green: 1, blue: 1, alpha: 1}, children: undefined, type: 'ui-button', layer: undefined, frame: undefined, target: undefined}"
-      ],
-      "spread": false,
-      "description": null
+        "*"
+      ]
     }
   },
   {
@@ -1040,7 +1038,7 @@
     "longname": "sweetiekit/components/Button/component.js~Button#render",
     "access": "public",
     "description": null,
-    "lineNumber": 47,
+    "lineNumber": 38,
     "undocument": true,
     "params": [],
     "return": {
@@ -1064,7 +1062,7 @@
     "__docId__": 78,
     "kind": "file",
     "name": "sweetiekit/components/Control/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport BaseControl from '../BaseControl';\n\nclass Control extends React.Component {\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    children: PropTypes.any,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: ['ui-control', 'ui-view'],\n    backgroundColor: colors.clear,\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    target: undefined,\n    type: 'ui-control',\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <BaseControl\n        {...rest}\n        baseTypes={baseTypes}\n        type={type}\n      >\n        {children}\n      </BaseControl>\n    )\n  }\n}\n\nexport default Control;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport BaseControl from '../BaseControl';\n\nclass Control extends React.Component {\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    children: PropTypes.any,\n    frame: propTypes.frameProp,\n    layer: propTypes.layerProp,\n    target: propTypes.targetActionEventsProp,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: [types.control, types.view],\n    backgroundColor: colors.clear,\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    target: undefined,\n    type: types.control,\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <BaseControl\n        {...rest}\n        baseTypes={baseTypes}\n        type={type}\n      >\n        {children}\n      </BaseControl>\n    )\n  }\n}\n\nexport default Control;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/Control/component.js",
     "access": "public",
@@ -1116,7 +1114,7 @@
     "longname": "sweetiekit/components/Control/component.js~Control.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 28,
+    "lineNumber": 18,
     "undocument": true,
     "type": {
       "types": [
@@ -1135,7 +1133,7 @@
     "longname": "sweetiekit/components/Control/component.js~Control#render",
     "access": "public",
     "description": null,
-    "lineNumber": 38,
+    "lineNumber": 28,
     "undocument": true,
     "params": [],
     "return": {
@@ -1159,7 +1157,7 @@
     "__docId__": 84,
     "kind": "file",
     "name": "sweetiekit/components/GestureRecognizer/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport BaseGestureRecognizer from '../BaseGestureRecognizer';\n\nclass GestureRecognizer extends React.Component {\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: ['ui-gesture-recognizer'],\n    type: 'ui-gesture-recognizer',\n  };\n\n  render() {\n    const {\n      baseTypes,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <BaseGestureRecognizer\n        {...rest}\n        baseTypes={baseTypes}\n        type={type}\n      />\n    )\n  }\n}\n\nexport default GestureRecognizer;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { propTypes, types } from '../../utils';\n\nimport BaseGestureRecognizer from '../BaseGestureRecognizer';\n\nclass GestureRecognizer extends React.Component {\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    target: propTypes.targetActionProp,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: [types.gestureRecognizer],\n    target: undefined,\n    type: types.gestureRecognizer,\n  };\n\n  render() {\n    const {\n      baseTypes,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <BaseGestureRecognizer\n        {...rest}\n        baseTypes={baseTypes}\n        type={type}\n      />\n    )\n  }\n}\n\nexport default GestureRecognizer;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/GestureRecognizer/component.js",
     "access": "public",
@@ -1178,7 +1176,7 @@
     "importPath": "sweetie-react/sweetiekit/components/GestureRecognizer/component.js",
     "importStyle": "GestureRecognizer",
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 8,
     "undocument": true,
     "interface": false,
     "extends": [
@@ -1194,7 +1192,7 @@
     "longname": "sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.propTypes",
     "access": "public",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 9,
     "undocument": true,
     "type": {
       "types": [
@@ -1211,7 +1209,7 @@
     "longname": "sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 12,
+    "lineNumber": 15,
     "undocument": true,
     "type": {
       "types": [
@@ -1230,7 +1228,7 @@
     "longname": "sweetiekit/components/GestureRecognizer/component.js~GestureRecognizer#render",
     "access": "public",
     "description": null,
-    "lineNumber": 17,
+    "lineNumber": 21,
     "undocument": true,
     "params": [],
     "return": {
@@ -1253,8 +1251,103 @@
   {
     "__docId__": 90,
     "kind": "file",
+    "name": "sweetiekit/components/Image.js",
+    "content": "const SweetieKit = Require('std:sweetiekit.node');\n\nconst { UIImage } = SweetieKit;\n\n/**\n * @param {string} name\n * @returns {UIImage}\n */\nexport default function makeImage(name) {\n  return UIImage(name);\n}\n",
+    "static": true,
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/Image.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 91,
+    "kind": "variable",
+    "name": "SweetieKit",
+    "memberof": "sweetiekit/components/Image.js",
+    "static": true,
+    "longname": "sweetiekit/components/Image.js~SweetieKit",
+    "access": "public",
+    "export": false,
+    "importPath": "sweetie-react/sweetiekit/components/Image.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 92,
+    "kind": "variable",
+    "name": "UIImage",
+    "memberof": "sweetiekit/components/Image.js",
+    "static": true,
+    "longname": "sweetiekit/components/Image.js~UIImage",
+    "access": "public",
+    "export": false,
+    "importPath": "sweetie-react/sweetiekit/components/Image.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "function",
+    "name": "makeImage",
+    "memberof": "sweetiekit/components/Image.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/components/Image.js~makeImage",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/components/Image.js",
+    "importStyle": "makeImage",
+    "description": "",
+    "lineNumber": 9,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{UIImage}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "UIImage"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "file",
     "name": "sweetiekit/components/ImageView/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport View from '../View';\n\nclass ImageView extends React.Component {\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    children: PropTypes.any,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    image: PropTypes.any,\n    layer: PropTypes.shape(),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    children: undefined,\n    frame: undefined,\n    image: undefined,\n    layer: undefined,\n    type: 'ui-image-view',\n  };\n\n  render() {\n    const {\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <View\n        {...rest}\n        type={type}\n      >\n        {children}\n      </View>\n    )\n  }\n}\n\nexport default ImageView;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport View from '../View';\n\nclass ImageView extends React.Component {\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    children: PropTypes.any,\n    frame: propTypes.frameProp,\n    image: PropTypes.instanceOf(UIImage),\n    layer: propTypes.layerProp,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    children: undefined,\n    frame: undefined,\n    image: undefined,\n    layer: undefined,\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <View\n        {...rest}\n        type={types.imageView}\n      >\n        {children}\n      </View>\n    )\n  }\n}\n\nexport default ImageView;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/ImageView/component.js",
     "access": "public",
@@ -1262,7 +1355,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 91,
+    "__docId__": 95,
     "kind": "class",
     "name": "ImageView",
     "memberof": "sweetiekit/components/ImageView/component.js",
@@ -1281,7 +1374,7 @@
     ]
   },
   {
-    "__docId__": 92,
+    "__docId__": 96,
     "kind": "member",
     "name": "propTypes",
     "memberof": "sweetiekit/components/ImageView/component.js~ImageView",
@@ -1298,7 +1391,7 @@
     }
   },
   {
-    "__docId__": 93,
+    "__docId__": 97,
     "kind": "member",
     "name": "defaultProps",
     "memberof": "sweetiekit/components/ImageView/component.js~ImageView",
@@ -1306,7 +1399,7 @@
     "longname": "sweetiekit/components/ImageView/component.js~ImageView.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 28,
+    "lineNumber": 17,
     "undocument": true,
     "type": {
       "types": [
@@ -1315,7 +1408,7 @@
     }
   },
   {
-    "__docId__": 94,
+    "__docId__": 98,
     "kind": "method",
     "name": "render",
     "memberof": "sweetiekit/components/ImageView/component.js~ImageView",
@@ -1325,7 +1418,7 @@
     "longname": "sweetiekit/components/ImageView/component.js~ImageView#render",
     "access": "public",
     "description": null,
-    "lineNumber": 37,
+    "lineNumber": 25,
     "undocument": true,
     "params": [],
     "return": {
@@ -1335,7 +1428,7 @@
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 99,
     "kind": "file",
     "name": "sweetiekit/components/ImageView/index.js",
     "content": "import component from './component';\n\n\nexport default component;\n",
@@ -1346,10 +1439,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 96,
+    "__docId__": 100,
     "kind": "file",
     "name": "sweetiekit/components/Label/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport View from '../View';\n\nclass Label extends React.Component {\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    children: PropTypes.any,\n    font: PropTypes.any,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    text: PropTypes.string,\n    textAlignment: PropTypes.any,\n    textColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    text: '',\n    textAlignment: NSTextAlignmentLeft,\n    type: 'ui-label',\n  };\n\n  render() {\n    const {\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <View\n        {...rest}\n        type={type}\n      >\n        {children}\n      </View>\n    )\n  }\n}\n\nexport default Label;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\nimport { UIKit } from '../../enums';\n\nimport View from '../View';\n\nclass Label extends React.Component {\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    children: PropTypes.any,\n    font: PropTypes.any,\n    frame: propTypes.frameProp,\n    layer: propTypes.layerProp,\n    text: PropTypes.string,\n    textAlignment: PropTypes.any,\n    textColor: propTypes.colorProp,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    text: '',\n    textAlignment: UIKit.NSTextAlignment.left,\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <View\n        {...rest}\n        type={types.label}\n      >\n        {children}\n      </View>\n    )\n  }\n}\n\nexport default Label;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/Label/component.js",
     "access": "public",
@@ -1357,7 +1450,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 97,
+    "__docId__": 101,
     "kind": "class",
     "name": "Label",
     "memberof": "sweetiekit/components/Label/component.js",
@@ -1368,7 +1461,7 @@
     "importPath": "sweetie-react/sweetiekit/components/Label/component.js",
     "importStyle": "Label",
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 9,
     "undocument": true,
     "interface": false,
     "extends": [
@@ -1376,7 +1469,7 @@
     ]
   },
   {
-    "__docId__": 98,
+    "__docId__": 102,
     "kind": "member",
     "name": "propTypes",
     "memberof": "sweetiekit/components/Label/component.js~Label",
@@ -1384,7 +1477,7 @@
     "longname": "sweetiekit/components/Label/component.js~Label.propTypes",
     "access": "public",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 10,
     "undocument": true,
     "type": {
       "types": [
@@ -1393,7 +1486,7 @@
     }
   },
   {
-    "__docId__": 99,
+    "__docId__": 103,
     "kind": "member",
     "name": "defaultProps",
     "memberof": "sweetiekit/components/Label/component.js~Label",
@@ -1401,7 +1494,7 @@
     "longname": "sweetiekit/components/Label/component.js~Label.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 36,
+    "lineNumber": 21,
     "undocument": true,
     "type": {
       "types": [
@@ -1410,7 +1503,7 @@
     }
   },
   {
-    "__docId__": 100,
+    "__docId__": 104,
     "kind": "method",
     "name": "render",
     "memberof": "sweetiekit/components/Label/component.js~Label",
@@ -1420,7 +1513,7 @@
     "longname": "sweetiekit/components/Label/component.js~Label#render",
     "access": "public",
     "description": null,
-    "lineNumber": 46,
+    "lineNumber": 30,
     "undocument": true,
     "params": [],
     "return": {
@@ -1430,7 +1523,7 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 105,
     "kind": "file",
     "name": "sweetiekit/components/Label/index.js",
     "content": "import component from './component';\n\n\nexport default component;\n",
@@ -1441,10 +1534,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 102,
+    "__docId__": 106,
     "kind": "file",
     "name": "sweetiekit/components/ScrollView/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport View from '../View';\n\nclass ScrollView extends React.Component {\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    children: PropTypes.any,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    type: 'ui-scroll-view',\n  };\n\n  render() {\n    const {\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <View\n        {...rest}\n        type={type}\n      >\n        {children}\n      </View>\n    )\n  }\n}\n\nexport default ScrollView;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport View from '../View';\n\nclass ScrollView extends React.Component {\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    children: PropTypes.any,\n    frame: propTypes.frameProp,\n    layer: propTypes.layerProp,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <View\n        {...rest}\n        type={types.scrollView}\n      >\n        {children}\n      </View>\n    )\n  }\n}\n\nexport default ScrollView;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/ScrollView/component.js",
     "access": "public",
@@ -1452,7 +1545,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 103,
+    "__docId__": 107,
     "kind": "class",
     "name": "ScrollView",
     "memberof": "sweetiekit/components/ScrollView/component.js",
@@ -1471,7 +1564,7 @@
     ]
   },
   {
-    "__docId__": 104,
+    "__docId__": 108,
     "kind": "member",
     "name": "propTypes",
     "memberof": "sweetiekit/components/ScrollView/component.js~ScrollView",
@@ -1488,12 +1581,111 @@
     }
   },
   {
-    "__docId__": 105,
+    "__docId__": 109,
     "kind": "member",
     "name": "defaultProps",
     "memberof": "sweetiekit/components/ScrollView/component.js~ScrollView",
     "static": true,
     "longname": "sweetiekit/components/ScrollView/component.js~ScrollView.defaultProps",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "method",
+    "name": "render",
+    "memberof": "sweetiekit/components/ScrollView/component.js~ScrollView",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sweetiekit/components/ScrollView/component.js~ScrollView#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "file",
+    "name": "sweetiekit/components/ScrollView/index.js",
+    "content": "import component from './component';\n\n\nexport default component;\n",
+    "static": true,
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/ScrollView/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 112,
+    "kind": "file",
+    "name": "sweetiekit/components/SegmentedControl/component.js",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport Control from '../Control';\n\n/**\n * Renders a Control of type ui-segmented-control.\n * @see https://developer.apple.com/documentation/uikit/uisegmentedcontrol?language=swift\n */\nclass SegmentedControl extends React.Component {\n  /**\n   * @type {{backgroundColor: Color, children: *, layer: Layer, frame: Frame, target: Target}}\n   */\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    children: PropTypes.any,\n    frame: propTypes.frameProp,\n    items: propTypes.segmentItemsProp,\n    layer: propTypes.layerProp,\n    selectedSegmentIndex: PropTypes.number,\n    target: propTypes.targetActionEventsProp,\n    tintColor: propTypes.colorProp,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    children: undefined,\n    frame: undefined,\n    items: [],\n    layer: undefined,\n    target: undefined,\n    selectedSegmentIndex: undefined,\n    tintColor: undefined,\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <Control\n        {...rest}\n        type={types.segmentedControl}\n      />\n    )\n  }\n}\n\nexport default SegmentedControl;\n",
+    "static": true,
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/SegmentedControl/component.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 113,
+    "kind": "class",
+    "name": "SegmentedControl",
+    "memberof": "sweetiekit/components/SegmentedControl/component.js",
+    "static": true,
+    "longname": "sweetiekit/components/SegmentedControl/component.js~SegmentedControl",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/components/SegmentedControl/component.js",
+    "importStyle": "SegmentedControl",
+    "description": "Renders a Control of type ui-segmented-control.",
+    "see": [
+      "https://developer.apple.com/documentation/uikit/uisegmentedcontrol?language=swift"
+    ],
+    "lineNumber": 12,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 114,
+    "kind": "member",
+    "name": "propTypes",
+    "memberof": "sweetiekit/components/SegmentedControl/component.js~SegmentedControl",
+    "static": true,
+    "longname": "sweetiekit/components/SegmentedControl/component.js~SegmentedControl.propTypes",
+    "access": "public",
+    "description": "",
+    "lineNumber": 16,
+    "type": {
+      "nullable": null,
+      "types": [
+        "{backgroundColor: Color, children: *, layer: Layer, frame: Frame, target: Target}"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 115,
+    "kind": "member",
+    "name": "defaultProps",
+    "memberof": "sweetiekit/components/SegmentedControl/component.js~SegmentedControl",
+    "static": true,
+    "longname": "sweetiekit/components/SegmentedControl/component.js~SegmentedControl.defaultProps",
     "access": "public",
     "description": null,
     "lineNumber": 27,
@@ -1505,17 +1697,17 @@
     }
   },
   {
-    "__docId__": 106,
+    "__docId__": 116,
     "kind": "method",
     "name": "render",
-    "memberof": "sweetiekit/components/ScrollView/component.js~ScrollView",
+    "memberof": "sweetiekit/components/SegmentedControl/component.js~SegmentedControl",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "sweetiekit/components/ScrollView/component.js~ScrollView#render",
+    "longname": "sweetiekit/components/SegmentedControl/component.js~SegmentedControl#render",
     "access": "public",
     "description": null,
-    "lineNumber": 35,
+    "lineNumber": 38,
     "undocument": true,
     "params": [],
     "return": {
@@ -1525,21 +1717,21 @@
     }
   },
   {
-    "__docId__": 107,
+    "__docId__": 117,
     "kind": "file",
-    "name": "sweetiekit/components/ScrollView/index.js",
+    "name": "sweetiekit/components/SegmentedControl/index.js",
     "content": "import component from './component';\n\n\nexport default component;\n",
     "static": true,
-    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/ScrollView/index.js",
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/SegmentedControl/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 108,
+    "__docId__": 118,
     "kind": "file",
     "name": "sweetiekit/components/Slider/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport Control from '../Control';\n\nclass Slider extends React.Component {\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    continuous: PropTypes.bool,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),\n    type: PropTypes.string,\n    value: PropTypes.number,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    continuous: false,\n    frame: undefined,\n    layer: undefined,\n    target: undefined,\n    type: 'ui-slider',\n    value: 0,\n  };\n\n  render() {\n    const {\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <Control\n        {...rest}\n        type={type}\n      />\n    )\n  }\n}\n\nexport default Slider;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport Control from '../Control';\n\nclass Slider extends React.Component {\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    continuous: PropTypes.bool,\n    currentThumbImage: PropTypes.any,\n    frame: propTypes.frameProp,\n    layer: propTypes.layerProp,\n    target: propTypes.targetActionEventsProp,\n    thumbTintColor: propTypes.colorProp,\n    value: PropTypes.number,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    continuous: false,\n    currentThumbImage: undefined,\n    frame: undefined,\n    layer: undefined,\n    target: undefined,\n    thumbTintColor: undefined,\n    value: 0,\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <Control\n        {...rest}\n        type={types.slider}\n      />\n    )\n  }\n}\n\nexport default Slider;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/Slider/component.js",
     "access": "public",
@@ -1547,7 +1739,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 109,
+    "__docId__": 119,
     "kind": "class",
     "name": "Slider",
     "memberof": "sweetiekit/components/Slider/component.js",
@@ -1566,7 +1758,7 @@
     ]
   },
   {
-    "__docId__": 110,
+    "__docId__": 120,
     "kind": "member",
     "name": "propTypes",
     "memberof": "sweetiekit/components/Slider/component.js~Slider",
@@ -1583,7 +1775,7 @@
     }
   },
   {
-    "__docId__": 111,
+    "__docId__": 121,
     "kind": "member",
     "name": "defaultProps",
     "memberof": "sweetiekit/components/Slider/component.js~Slider",
@@ -1591,7 +1783,7 @@
     "longname": "sweetiekit/components/Slider/component.js~Slider.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 29,
+    "lineNumber": 20,
     "undocument": true,
     "type": {
       "types": [
@@ -1600,7 +1792,7 @@
     }
   },
   {
-    "__docId__": 112,
+    "__docId__": 122,
     "kind": "method",
     "name": "render",
     "memberof": "sweetiekit/components/Slider/component.js~Slider",
@@ -1610,7 +1802,7 @@
     "longname": "sweetiekit/components/Slider/component.js~Slider#render",
     "access": "public",
     "description": null,
-    "lineNumber": 39,
+    "lineNumber": 31,
     "undocument": true,
     "params": [],
     "return": {
@@ -1620,7 +1812,7 @@
     }
   },
   {
-    "__docId__": 113,
+    "__docId__": 123,
     "kind": "file",
     "name": "sweetiekit/components/Slider/index.js",
     "content": "import component from './component';\n\n\nexport default component;\n",
@@ -1631,10 +1823,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 114,
+    "__docId__": 124,
     "kind": "file",
     "name": "sweetiekit/components/Switch/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport Control from '../Control';\n\nclass Switch extends React.Component {\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    on: PropTypes.bool,\n    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    frame: undefined,\n    layer: undefined,\n    on: false,\n    target: undefined,\n    type: 'ui-switch',\n  };\n\n  render() {\n    const {\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <Control\n        {...rest}\n        type={type}\n      />\n    )\n  }\n}\n\nexport default Switch;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport Control from '../Control';\n\nclass Switch extends React.Component {\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    frame: propTypes.frameProp,\n    layer: propTypes.layerProp,\n    on: PropTypes.bool,\n    onTintColor: propTypes.colorProp,\n    target: propTypes.targetActionEventsProp,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    frame: undefined,\n    layer: undefined,\n    on: false,\n    onTintColor: undefined,\n    target: undefined,\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <Control\n        {...rest}\n        type={types.uiSwitch}\n      />\n    )\n  }\n}\n\nexport default Switch;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/Switch/component.js",
     "access": "public",
@@ -1642,7 +1834,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 115,
+    "__docId__": 125,
     "kind": "class",
     "name": "Switch",
     "memberof": "sweetiekit/components/Switch/component.js",
@@ -1661,7 +1853,7 @@
     ]
   },
   {
-    "__docId__": 116,
+    "__docId__": 126,
     "kind": "member",
     "name": "propTypes",
     "memberof": "sweetiekit/components/Switch/component.js~Switch",
@@ -1678,7 +1870,7 @@
     }
   },
   {
-    "__docId__": 117,
+    "__docId__": 127,
     "kind": "member",
     "name": "defaultProps",
     "memberof": "sweetiekit/components/Switch/component.js~Switch",
@@ -1686,7 +1878,7 @@
     "longname": "sweetiekit/components/Switch/component.js~Switch.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 28,
+    "lineNumber": 18,
     "undocument": true,
     "type": {
       "types": [
@@ -1695,7 +1887,7 @@
     }
   },
   {
-    "__docId__": 118,
+    "__docId__": 128,
     "kind": "method",
     "name": "render",
     "memberof": "sweetiekit/components/Switch/component.js~Switch",
@@ -1705,7 +1897,7 @@
     "longname": "sweetiekit/components/Switch/component.js~Switch#render",
     "access": "public",
     "description": null,
-    "lineNumber": 37,
+    "lineNumber": 27,
     "undocument": true,
     "params": [],
     "return": {
@@ -1715,7 +1907,7 @@
     }
   },
   {
-    "__docId__": 119,
+    "__docId__": 129,
     "kind": "file",
     "name": "sweetiekit/components/Switch/index.js",
     "content": "import component from './component';\n\n\nexport default component;\n",
@@ -1726,10 +1918,220 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 120,
+    "__docId__": 130,
+    "kind": "file",
+    "name": "sweetiekit/components/TabBarController/component.js",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { propTypes, types } from '../../utils';\n\nimport ViewController from '../ViewController';\n\nclass TabBarController extends React.Component {\n  static propTypes = {\n    children: PropTypes.any,\n    selectedIndex: PropTypes.number,\n    tabBar: propTypes.tabBarProp,\n  };\n\n  static defaultProps = {\n    children: undefined,\n    selectedIndex: undefined,\n    tabBar: undefined,\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <ViewController\n        {...rest}\n        type={types.tabBarController}\n      >\n        {children}\n      </ViewController>\n    )\n  }\n}\n\nexport default TabBarController;\n",
+    "static": true,
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/TabBarController/component.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 131,
+    "kind": "class",
+    "name": "TabBarController",
+    "memberof": "sweetiekit/components/TabBarController/component.js",
+    "static": true,
+    "longname": "sweetiekit/components/TabBarController/component.js~TabBarController",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/components/TabBarController/component.js",
+    "importStyle": "TabBarController",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 132,
+    "kind": "member",
+    "name": "propTypes",
+    "memberof": "sweetiekit/components/TabBarController/component.js~TabBarController",
+    "static": true,
+    "longname": "sweetiekit/components/TabBarController/component.js~TabBarController.propTypes",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "member",
+    "name": "defaultProps",
+    "memberof": "sweetiekit/components/TabBarController/component.js~TabBarController",
+    "static": true,
+    "longname": "sweetiekit/components/TabBarController/component.js~TabBarController.defaultProps",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 134,
+    "kind": "method",
+    "name": "render",
+    "memberof": "sweetiekit/components/TabBarController/component.js~TabBarController",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "sweetiekit/components/TabBarController/component.js~TabBarController#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 135,
+    "kind": "file",
+    "name": "sweetiekit/components/TabBarController/index.js",
+    "content": "import component from './component';\n\n\nexport default component;\n",
+    "static": true,
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/TabBarController/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 136,
+    "kind": "file",
+    "name": "sweetiekit/components/TabBarItem.js",
+    "content": "const SweetieKit = Require('std:sweetiekit.node');\n\nconst { UITabBarItem } = SweetieKit;\n\n/**\n * @param {string} title\n * @param {?UIImage} image\n * @param {?UIImage} selectedImage\n * @returns {UITabBarItem}\n */\nexport default function makeTabBarItem(title, image, selectedImage) {\n  return UITabBarItem(title, image, selectedImage);\n}\n",
+    "static": true,
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/TabBarItem.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 137,
+    "kind": "variable",
+    "name": "SweetieKit",
+    "memberof": "sweetiekit/components/TabBarItem.js",
+    "static": true,
+    "longname": "sweetiekit/components/TabBarItem.js~SweetieKit",
+    "access": "public",
+    "export": false,
+    "importPath": "sweetie-react/sweetiekit/components/TabBarItem.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 138,
+    "kind": "variable",
+    "name": "UITabBarItem",
+    "memberof": "sweetiekit/components/TabBarItem.js",
+    "static": true,
+    "longname": "sweetiekit/components/TabBarItem.js~UITabBarItem",
+    "access": "public",
+    "export": false,
+    "importPath": "sweetie-react/sweetiekit/components/TabBarItem.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 139,
+    "kind": "function",
+    "name": "makeTabBarItem",
+    "memberof": "sweetiekit/components/TabBarItem.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/components/TabBarItem.js~makeTabBarItem",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/components/TabBarItem.js",
+    "importStyle": "makeTabBarItem",
+    "description": "",
+    "lineNumber": 11,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{UITabBarItem}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "title",
+        "description": ""
+      },
+      {
+        "nullable": true,
+        "types": [
+          "UIImage"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "image",
+        "description": ""
+      },
+      {
+        "nullable": true,
+        "types": [
+          "UIImage"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "selectedImage",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "UITabBarItem"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 140,
     "kind": "file",
     "name": "sweetiekit/components/TapGestureRecognizer/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport GestureRecognizer from '../GestureRecognizer';\n\nclass TapGestureRecognizer extends React.Component {\n  static propTypes = {\n    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    target: undefined,\n    type: 'ui-gesture-recognizer',\n  };\n\n  render() {\n    const {\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <GestureRecognizer\n        {...rest}\n        type={type}\n      />\n    )\n  }\n}\n\nexport default TapGestureRecognizer;\n",
+    "content": "import React from 'react';\n\nimport { propTypes, types } from '../../utils';\n\nimport GestureRecognizer from '../GestureRecognizer';\n\nclass TapGestureRecognizer extends React.Component {\n  static propTypes = {\n    target: propTypes.targetActionProp,\n  };\n\n  static defaultProps = {\n    target: undefined,\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <GestureRecognizer\n        {...rest}\n        type={types.tapGestureRecognizer}\n      />\n    )\n  }\n}\n\nexport default TapGestureRecognizer;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/TapGestureRecognizer/component.js",
     "access": "public",
@@ -1737,7 +2139,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 121,
+    "__docId__": 141,
     "kind": "class",
     "name": "TapGestureRecognizer",
     "memberof": "sweetiekit/components/TapGestureRecognizer/component.js",
@@ -1748,7 +2150,7 @@
     "importPath": "sweetie-react/sweetiekit/components/TapGestureRecognizer/component.js",
     "importStyle": "TapGestureRecognizer",
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 7,
     "undocument": true,
     "interface": false,
     "extends": [
@@ -1756,7 +2158,7 @@
     ]
   },
   {
-    "__docId__": 122,
+    "__docId__": 142,
     "kind": "member",
     "name": "propTypes",
     "memberof": "sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer",
@@ -1764,7 +2166,7 @@
     "longname": "sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer.propTypes",
     "access": "public",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 8,
     "undocument": true,
     "type": {
       "types": [
@@ -1773,7 +2175,7 @@
     }
   },
   {
-    "__docId__": 123,
+    "__docId__": 143,
     "kind": "member",
     "name": "defaultProps",
     "memberof": "sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer",
@@ -1790,7 +2192,7 @@
     }
   },
   {
-    "__docId__": 124,
+    "__docId__": 144,
     "kind": "method",
     "name": "render",
     "memberof": "sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer",
@@ -1800,7 +2202,7 @@
     "longname": "sweetiekit/components/TapGestureRecognizer/component.js~TapGestureRecognizer#render",
     "access": "public",
     "description": null,
-    "lineNumber": 17,
+    "lineNumber": 16,
     "undocument": true,
     "params": [],
     "return": {
@@ -1810,7 +2212,7 @@
     }
   },
   {
-    "__docId__": 125,
+    "__docId__": 145,
     "kind": "file",
     "name": "sweetiekit/components/TapGestureRecognizer/index.js",
     "content": "import component from './component';\n\n\nexport default component;\n",
@@ -1821,7 +2223,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 126,
+    "__docId__": 146,
     "kind": "file",
     "name": "sweetiekit/components/Text.js",
     "content": "import React from 'react';\n\n\nclass Text extends React.Component {\n  render() {\n    const { children, font, textColor } = this.props;\n\n    return (\n      <text font={font} textColor={textColor}>\n        {children}\n      </text>\n    )\n  }\n}\n\nexport default Text;\n",
@@ -1832,7 +2234,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 127,
+    "__docId__": 147,
     "kind": "class",
     "name": "Text",
     "memberof": "sweetiekit/components/Text.js",
@@ -1851,7 +2253,7 @@
     ]
   },
   {
-    "__docId__": 128,
+    "__docId__": 148,
     "kind": "method",
     "name": "render",
     "memberof": "sweetiekit/components/Text.js~Text",
@@ -1871,10 +2273,10 @@
     }
   },
   {
-    "__docId__": 129,
+    "__docId__": 149,
     "kind": "file",
     "name": "sweetiekit/components/TextField/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport Control from '../Control';\n\nclass TextField extends React.Component {\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    font: PropTypes.any,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    numberOfLines: PropTypes.number,\n    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),\n    text: PropTypes.string,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    frame: undefined,\n    layer: undefined,\n    numberOfLines: 1,\n    target: undefined,\n    text: '',\n    type: 'ui-text-field',\n  };\n\n  render() {\n    const {\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <Control\n        {...rest}\n        type={type}\n      />\n    )\n  }\n}\n\nexport default TextField;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport Control from '../Control';\n\nclass TextField extends React.Component {\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    font: PropTypes.any,\n    frame: propTypes.frameProp,\n    layer: propTypes.layerProp,\n    numberOfLines: PropTypes.number,\n    target: propTypes.targetActionEventsProp,\n    text: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.clear,\n    frame: undefined,\n    layer: undefined,\n    numberOfLines: 1,\n    target: undefined,\n    text: '',\n  };\n\n  render() {\n    const {\n      children,\n      ...rest\n    } = this.props;\n\n    return (\n      <Control\n        {...rest}\n        type={types.textField}\n      />\n    )\n  }\n}\n\nexport default TextField;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/TextField/component.js",
     "access": "public",
@@ -1882,7 +2284,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 130,
+    "__docId__": 150,
     "kind": "class",
     "name": "TextField",
     "memberof": "sweetiekit/components/TextField/component.js",
@@ -1901,7 +2303,7 @@
     ]
   },
   {
-    "__docId__": 131,
+    "__docId__": 151,
     "kind": "member",
     "name": "propTypes",
     "memberof": "sweetiekit/components/TextField/component.js~TextField",
@@ -1918,7 +2320,7 @@
     }
   },
   {
-    "__docId__": 132,
+    "__docId__": 152,
     "kind": "member",
     "name": "defaultProps",
     "memberof": "sweetiekit/components/TextField/component.js~TextField",
@@ -1926,7 +2328,7 @@
     "longname": "sweetiekit/components/TextField/component.js~TextField.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 30,
+    "lineNumber": 19,
     "undocument": true,
     "type": {
       "types": [
@@ -1935,7 +2337,7 @@
     }
   },
   {
-    "__docId__": 133,
+    "__docId__": 153,
     "kind": "method",
     "name": "render",
     "memberof": "sweetiekit/components/TextField/component.js~TextField",
@@ -1945,7 +2347,7 @@
     "longname": "sweetiekit/components/TextField/component.js~TextField#render",
     "access": "public",
     "description": null,
-    "lineNumber": 40,
+    "lineNumber": 28,
     "undocument": true,
     "params": [],
     "return": {
@@ -1955,7 +2357,7 @@
     }
   },
   {
-    "__docId__": 134,
+    "__docId__": 154,
     "kind": "file",
     "name": "sweetiekit/components/TextField/index.js",
     "content": "import component from './component';\n\n\nexport default component;\n",
@@ -1966,10 +2368,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 135,
+    "__docId__": 155,
     "kind": "file",
     "name": "sweetiekit/components/View/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors } from '../../utils';\n\nimport BaseView from '../BaseView';\n\n/**\n * View\n */\nclass View extends React.Component {\n  static propTypes = {\n    backgroundColor: PropTypes.shape({\n      red: PropTypes.number.isRequired,\n      green: PropTypes.number.isRequired,\n      blue: PropTypes.number.isRequired,\n      alpha: PropTypes.number,\n    }),\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    frame: PropTypes.shape({\n      x: PropTypes.number.isRequired,\n      y: PropTypes.number.isRequired,\n      width: PropTypes.number.isRequired,\n      height: PropTypes.number.isRequired,\n    }),\n    layer: PropTypes.shape(),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.white,\n    baseTypes: ['ui-view'],\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    type: 'ui-view',\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <BaseView\n        {...rest}\n        baseTypes={baseTypes || [type]}\n        type={type}\n      >\n        {children}\n      </BaseView>\n    )\n  }\n}\n\nexport default View;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { colors, propTypes, types } from '../../utils';\n\nimport BaseView from '../BaseView';\n\n/**\n * View\n */\nclass View extends React.Component {\n  static propTypes = {\n    backgroundColor: propTypes.colorProp,\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    frame: propTypes.frameProp,\n    layer: propTypes.layerProp,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    backgroundColor: colors.white,\n    baseTypes: [types.view],\n    children: undefined,\n    frame: undefined,\n    layer: undefined,\n    type: types.view,\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <BaseView\n        {...rest}\n        baseTypes={baseTypes}\n        type={type}\n      >\n        {children}\n      </BaseView>\n    )\n  }\n}\n\nexport default View;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/View/component.js",
     "access": "public",
@@ -1977,7 +2379,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 136,
+    "__docId__": 156,
     "kind": "class",
     "name": "View",
     "memberof": "sweetiekit/components/View/component.js",
@@ -1995,7 +2397,7 @@
     ]
   },
   {
-    "__docId__": 137,
+    "__docId__": 157,
     "kind": "member",
     "name": "propTypes",
     "memberof": "sweetiekit/components/View/component.js~View",
@@ -2012,7 +2414,7 @@
     }
   },
   {
-    "__docId__": 138,
+    "__docId__": 158,
     "kind": "member",
     "name": "defaultProps",
     "memberof": "sweetiekit/components/View/component.js~View",
@@ -2020,7 +2422,7 @@
     "longname": "sweetiekit/components/View/component.js~View.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 31,
+    "lineNumber": 21,
     "undocument": true,
     "type": {
       "types": [
@@ -2029,7 +2431,7 @@
     }
   },
   {
-    "__docId__": 139,
+    "__docId__": 159,
     "kind": "method",
     "name": "render",
     "memberof": "sweetiekit/components/View/component.js~View",
@@ -2039,7 +2441,7 @@
     "longname": "sweetiekit/components/View/component.js~View#render",
     "access": "public",
     "description": null,
-    "lineNumber": 40,
+    "lineNumber": 30,
     "undocument": true,
     "params": [],
     "return": {
@@ -2049,7 +2451,7 @@
     }
   },
   {
-    "__docId__": 140,
+    "__docId__": 160,
     "kind": "file",
     "name": "sweetiekit/components/View/index.js",
     "content": "import component from './component';\n\n\nexport default component;\n",
@@ -2060,10 +2462,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 141,
+    "__docId__": 161,
     "kind": "file",
     "name": "sweetiekit/components/ViewController/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport BaseViewController from '../BaseViewController';\n\nclass ViewController extends React.Component {\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: ['ui-view-controller'],\n    children: undefined,\n    type: 'ui-view-controller',\n  };\n\n  render() {\n    const {\n      children,\n      baseTypes,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <BaseViewController\n        {...rest}\n        baseType={baseTypes}\n        type={type}\n      >\n        {children}\n      </BaseViewController>\n    )\n  }\n}\n\nexport default ViewController;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport { types } from '../../utils';\n\nimport BaseViewController from '../BaseViewController';\n\nclass ViewController extends React.Component {\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.any,\n    tabBarItem: PropTypes.instanceOf(UITabBarItem),\n    type: PropTypes.string,\n  };\n\n  static defaultProps = {\n    baseTypes: [types.viewController],\n    children: undefined,\n    tabBarItem: undefined,\n    type: types.viewController,\n  };\n\n  render() {\n    const {\n      children,\n      baseTypes,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <BaseViewController\n        {...rest}\n        baseType={baseTypes}\n        type={type}\n      >\n        {children}\n      </BaseViewController>\n    )\n  }\n}\n\nexport default ViewController;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/ViewController/component.js",
     "access": "public",
@@ -2071,7 +2473,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 142,
+    "__docId__": 162,
     "kind": "class",
     "name": "ViewController",
     "memberof": "sweetiekit/components/ViewController/component.js",
@@ -2082,7 +2484,7 @@
     "importPath": "sweetie-react/sweetiekit/components/ViewController/component.js",
     "importStyle": "ViewController",
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 8,
     "undocument": true,
     "interface": false,
     "extends": [
@@ -2090,7 +2492,7 @@
     ]
   },
   {
-    "__docId__": 143,
+    "__docId__": 163,
     "kind": "member",
     "name": "propTypes",
     "memberof": "sweetiekit/components/ViewController/component.js~ViewController",
@@ -2098,7 +2500,7 @@
     "longname": "sweetiekit/components/ViewController/component.js~ViewController.propTypes",
     "access": "public",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 9,
     "undocument": true,
     "type": {
       "types": [
@@ -2107,7 +2509,7 @@
     }
   },
   {
-    "__docId__": 144,
+    "__docId__": 164,
     "kind": "member",
     "name": "defaultProps",
     "memberof": "sweetiekit/components/ViewController/component.js~ViewController",
@@ -2115,7 +2517,7 @@
     "longname": "sweetiekit/components/ViewController/component.js~ViewController.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 13,
+    "lineNumber": 16,
     "undocument": true,
     "type": {
       "types": [
@@ -2124,7 +2526,7 @@
     }
   },
   {
-    "__docId__": 145,
+    "__docId__": 165,
     "kind": "method",
     "name": "render",
     "memberof": "sweetiekit/components/ViewController/component.js~ViewController",
@@ -2134,7 +2536,7 @@
     "longname": "sweetiekit/components/ViewController/component.js~ViewController#render",
     "access": "public",
     "description": null,
-    "lineNumber": 19,
+    "lineNumber": 23,
     "undocument": true,
     "params": [],
     "return": {
@@ -2144,7 +2546,7 @@
     }
   },
   {
-    "__docId__": 146,
+    "__docId__": 166,
     "kind": "file",
     "name": "sweetiekit/components/ViewController/index.js",
     "content": "import component from './component';\n\n\nexport default component;\n",
@@ -2155,10 +2557,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 147,
+    "__docId__": 167,
     "kind": "file",
     "name": "sweetiekit/components/index.js",
-    "content": "export { default as BaseView } from './BaseView';\nexport { default as Button } from './Button';\nexport { default as ImageView } from './ImageView';\nexport { default as Label } from './Label';\nexport { default as ScrollView } from './ScrollView';\nexport { default as Slider } from './Slider';\nexport { default as Switch } from './Switch';\nexport { default as TapGestureRecognizer } from './TapGestureRecognizer';\nexport { default as Text } from './Text';\nexport { default as TextField } from './TextField';\nexport { default as ViewController } from './ViewController';\nexport { default as View } from './View';\n",
+    "content": "export { default as BaseView } from './BaseView';\nexport { default as Button } from './Button';\nexport { default as Image } from './Image';\nexport { default as ImageView } from './ImageView';\nexport { default as Label } from './Label';\nexport { default as ScrollView } from './ScrollView';\nexport { default as SegmentedControl } from './SegmentedControl';\nexport { default as Slider } from './Slider';\nexport { default as Switch } from './Switch';\nexport { default as TabBarController } from './TabBarController';\nexport { default as TabBarItem } from './TabBarItem';\nexport { default as TapGestureRecognizer } from './TapGestureRecognizer';\nexport { default as Text } from './Text';\nexport { default as TextField } from './TextField';\nexport { default as ViewController } from './ViewController';\nexport { default as View } from './View';\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/components/index.js",
     "access": "public",
@@ -2166,10 +2568,92 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 148,
+    "__docId__": 168,
+    "kind": "file",
+    "name": "sweetiekit/enums/index.js",
+    "content": "import * as UIKit from './uikit';\n\nexport {\n  UIKit,\n};\n",
+    "static": true,
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/enums/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 169,
+    "kind": "file",
+    "name": "sweetiekit/enums/uikit.js",
+    "content": "export const UIControlEvents = {\n  touchDown: UIControlEventTouchDown,\n  touchDownRepeat: UIControlEventTouchDownRepeat,\n  touchDragInside: UIControlEventTouchDragInside,\n  touchDragOutside: UIControlEventTouchDragOutside,\n  touchDragEnter: UIControlEventTouchDragEnter,\n  touchDragExit: UIControlEventTouchDragExit,\n  touchUpInside: UIControlEventTouchUpInside,\n  touchUpOutside: UIControlEventTouchUpOutside,\n  touchCancel: UIControlEventTouchCancel,\n  valueChanged: UIControlEventValueChanged,\n  primaryActionTriggered: UIControlEventPrimaryActionTriggered,\n  editingDidBegin: UIControlEventEditingDidBegin,\n  editingChanged: UIControlEventEditingChanged,\n  editingDidEnd: UIControlEventEditingDidEnd,\n  editingDidEndOnExit: UIControlEventEditingDidEndOnExit,\n  allEditingEvents: UIControlEventAllEditingEvents,\n};\n\nexport const UIControlState = {\n  normal: UIControlStateNormal,\n  highlighted: UIControlStateHighlighted,\n  disabled: UIControlStateDisabled,\n  selected: UIControlStateSelected,\n  focused: UIControlStateFocused,\n  application: UIControlStateApplication,\n};\n\nexport const NSTextAlignment = {\n  left: NSTextAlignmentLeft,\n  center: NSTextAlignmentCenter,\n  right: NSTextAlignmentRight,\n  justified: NSTextAlignmentJustified,\n  natural: NSTextAlignmentNatural,\n};\n",
+    "static": true,
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/enums/uikit.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 170,
+    "kind": "variable",
+    "name": "UIControlEvents",
+    "memberof": "sweetiekit/enums/uikit.js",
+    "static": true,
+    "longname": "sweetiekit/enums/uikit.js~UIControlEvents",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/enums/uikit.js",
+    "importStyle": "{UIControlEvents}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"touchDown\": *, \"touchDownRepeat\": *, \"touchDragInside\": *, \"touchDragOutside\": *, \"touchDragEnter\": *, \"touchDragExit\": *, \"touchUpInside\": *, \"touchUpOutside\": *, \"touchCancel\": *, \"valueChanged\": *, \"primaryActionTriggered\": *, \"editingDidBegin\": *, \"editingChanged\": *, \"editingDidEnd\": *, \"editingDidEndOnExit\": *, \"allEditingEvents\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 171,
+    "kind": "variable",
+    "name": "UIControlState",
+    "memberof": "sweetiekit/enums/uikit.js",
+    "static": true,
+    "longname": "sweetiekit/enums/uikit.js~UIControlState",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/enums/uikit.js",
+    "importStyle": "{UIControlState}",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"normal\": *, \"highlighted\": *, \"disabled\": *, \"selected\": *, \"focused\": *, \"application\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 172,
+    "kind": "variable",
+    "name": "NSTextAlignment",
+    "memberof": "sweetiekit/enums/uikit.js",
+    "static": true,
+    "longname": "sweetiekit/enums/uikit.js~NSTextAlignment",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/enums/uikit.js",
+    "importStyle": "{NSTextAlignment}",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"left\": *, \"center\": *, \"right\": *, \"justified\": *, \"natural\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 173,
     "kind": "file",
     "name": "sweetiekit/renderer.js",
-    "content": "import ReactReconciler from 'react-reconciler';\n\nimport {\n  appendChild,\n  commitUpdate,\n  createElement,\n  createInstance,\n  finalizeInitialChildren,\n  insertBefore,\n  prepareUpdate,\n  removeChild,\n} from './utils';\n\n\nlet listeners = {};\n\nconst hostConfig = {\n  getRootHostContext(rootContainerInstance) {\n    console.log('TODO: getRootHostContext');\n    return {};\n  },\n\n  getChildHostContext(parentHostContext, type, rootContainerInstance) {\n    return parentHostContext;\n  },\n\n  getPublicInstance(instance) {\n    console.log('TODO: getPublicInstance');\n  },\n\n  prepareForCommit(containerInfo) {\n    console.log('TODO: prepareForCommit');\n  },\n\n  resetAfterCommit(containerInfo) {\n    console.log('TODO: resetAfterCommit');\n  },\n\n  createInstance(\n    type,\n    props,\n    rootContainerInstance,\n    hostContext,\n    internalInstanceHandle\n  ) {\n    return createInstance(type, props, rootContainerInstance, hostContext, internalInstanceHandle);\n  },\n\n  appendInitialChild(parentInstance, child) {\n    appendChild(parentInstance, child);\n  },\n\n  finalizeInitialChildren(\n    view,\n    type,\n    props,\n    rootContainerInstance,\n    hostContext\n  ) {\n    listeners = finalizeInitialChildren(view, type, props, rootContainerInstance, hostContext, listeners);\n  },\n\n  prepareUpdate(\n    domElement,\n    type,\n    oldProps,\n    newProps,\n    rootContainerInstance,\n    hostContext\n  ) {\n    return prepareUpdate(domElement, type, oldProps, newProps, rootContainerInstance, hostContext);\n  },\n\n  shouldSetTextContent(type, props) {\n    return false;\n  },\n\n  shouldDeprioritizeSubtree(type, props) {\n    console.log('shouldDeprioritizeSubtree');\n  },\n\n  createTextInstance(\n    text,\n    rootContainerInstance,\n    hostContext,\n    internalInstanceHandle\n  ) {\n    return createElement.label({ text });\n  },\n\n  now: Date.now,\n\n  isPrimaryRenderer: true,\n  scheduleDeferredCallback() {},\n  cancelDeferredCallback() {},\n\n  // -------------------\n  //     Mutation\n  // -------------------\n\n  supportsMutation: true,\n\n  commitMount(domElement, type, newProps, internalInstanceHandle) {\n    console.log('commitMount');\n  },\n\n  commitUpdate(\n    view,\n    updatePayload,\n    type,\n    oldProps,\n    newProps,\n    internalInstanceHandle\n  ) {\n    listeners = commitUpdate(view, updatePayload, type, oldProps, newProps, internalInstanceHandle);\n  },\n\n  resetTextContent(domElement) {},\n\n  commitTextUpdate(textInstance, oldText, newText) {\n    textInstance.text = newText;\n  },\n\n  appendChild(parentInstance, child) {\n    appendChild(parentInstance, child);\n  },\n\n  appendChildToContainer(container, child) {\n    appendChild(container, child);\n  },\n\n  insertBefore(parentInstance, child, beforeChild) {\n    insertBefore(parentInstance, child, beforeChild);\n  },\n\n  insertInContainerBefore(container, child, beforeChild) {\n    console.log('insertInContainerBefore');\n  },\n\n  removeChild(parentInstance, child) {\n    listeners = removeChild(parentInstance, child, listeners);\n  },\n\n  removeChildFromContainer(container, child) {\n    listeners = removeChild(container, child, listeners);\n  }\n};\n\nconst SKRenderer = ReactReconciler(hostConfig);\n\nlet internalContainerStructure;\n\nexport default {\n  render(elements, containerNode, callback) {\n    if (!internalContainerStructure) {\n      internalContainerStructure = SKRenderer.createContainer(\n        containerNode,\n        false,\n        false,\n      );\n    }\n\n    SKRenderer.updateContainer(elements, internalContainerStructure, null, callback);\n  }\n};\n",
+    "content": "import ReactReconciler from 'react-reconciler';\n\nimport {\n  appendChild,\n  commitUpdate,\n  createElement,\n  createInstance,\n  finalizeInitialChildren,\n  insertBefore,\n  prepareUpdate,\n  removeChild,\n} from './utils';\n\n\nlet listeners = {};\n\nconst hostConfig = {\n  getRootHostContext(rootContainerInstance) {\n    console.log('TODO: getRootHostContext');\n    return {};\n  },\n\n  getChildHostContext(parentHostContext, type, rootContainerInstance) {\n    return parentHostContext;\n  },\n\n  getPublicInstance(instance) {\n    return instance;\n  },\n\n  prepareForCommit(containerInfo) {\n    console.log('TODO: prepareForCommit');\n  },\n\n  resetAfterCommit(containerInfo) {\n    console.log('TODO: resetAfterCommit');\n  },\n\n  createInstance(\n    type,\n    props,\n    rootContainerInstance,\n    hostContext,\n    internalInstanceHandle\n  ) {\n    return createInstance(type, props, rootContainerInstance, hostContext, internalInstanceHandle);\n  },\n\n  appendInitialChild(parentInstance, child) {\n    appendChild(parentInstance, child);\n  },\n\n  finalizeInitialChildren(\n    view,\n    type,\n    props,\n    rootContainerInstance,\n    hostContext\n  ) {\n    listeners = finalizeInitialChildren(view, type, props, rootContainerInstance, hostContext, listeners);\n  },\n\n  prepareUpdate(\n    domElement,\n    type,\n    oldProps,\n    newProps,\n    rootContainerInstance,\n    hostContext\n  ) {\n    return prepareUpdate(domElement, type, oldProps, newProps, rootContainerInstance, hostContext);\n  },\n\n  shouldSetTextContent(type, props) {\n    return false;\n  },\n\n  shouldDeprioritizeSubtree(type, props) {\n    console.log('shouldDeprioritizeSubtree');\n  },\n\n  createTextInstance(\n    text,\n    rootContainerInstance,\n    hostContext,\n    internalInstanceHandle\n  ) {\n    return createElement.label({ text });\n  },\n\n  now: Date.now,\n\n  isPrimaryRenderer: true,\n  scheduleDeferredCallback() {},\n  cancelDeferredCallback() {},\n\n  // -------------------\n  //     Mutation\n  // -------------------\n\n  supportsMutation: true,\n\n  commitMount(view, type, newProps, internalInstanceHandle) {\n    console.log('commitMount');\n  },\n\n  commitUpdate(\n    view,\n    updatePayload,\n    type,\n    oldProps,\n    newProps,\n    internalInstanceHandle\n  ) {\n    listeners = commitUpdate(view, updatePayload, type, oldProps, newProps, internalInstanceHandle);\n  },\n\n  resetTextContent(view) {},\n\n  commitTextUpdate(textInstance, oldText, newText) {\n    textInstance.text = newText;\n  },\n\n  appendChild(parentInstance, child) {\n    appendChild(parentInstance, child);\n  },\n\n  appendChildToContainer(container, child) {\n    appendChild(container, child);\n  },\n\n  insertBefore(parentInstance, child, beforeChild) {\n    insertBefore(parentInstance, child, beforeChild);\n  },\n\n  insertInContainerBefore(container, child, beforeChild) {\n    console.log('insertInContainerBefore');\n  },\n\n  removeChild(parentInstance, child) {\n    removeChild(parentInstance, child);\n  },\n\n  removeChildFromContainer(container, child) {\n    removeChild(container, child);\n  }\n};\n\nconst SKRenderer = ReactReconciler(hostConfig);\n\nlet internalContainerStructure;\n\nexport default {\n  render(elements, containerNode, callback) {\n    if (!internalContainerStructure) {\n      internalContainerStructure = SKRenderer.createContainer(\n        containerNode,\n        false,\n        false,\n      );\n    }\n\n    SKRenderer.updateContainer(elements, internalContainerStructure, null, callback);\n  }\n};\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/renderer.js",
     "access": "public",
@@ -2177,7 +2661,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 149,
+    "__docId__": 174,
     "kind": "variable",
     "name": "listeners",
     "memberof": "sweetiekit/renderer.js",
@@ -2198,7 +2682,7 @@
     "ignore": true
   },
   {
-    "__docId__": 150,
+    "__docId__": 175,
     "kind": "variable",
     "name": "hostConfig",
     "memberof": "sweetiekit/renderer.js",
@@ -2219,7 +2703,7 @@
     "ignore": true
   },
   {
-    "__docId__": 151,
+    "__docId__": 176,
     "kind": "variable",
     "name": "SKRenderer",
     "memberof": "sweetiekit/renderer.js",
@@ -2240,7 +2724,7 @@
     "ignore": true
   },
   {
-    "__docId__": 152,
+    "__docId__": 177,
     "kind": "file",
     "name": "sweetiekit/types.js",
     "content": "/**\n * @typedef {number} NSTextAlignment\n */\n\n/**\n * @typedef {number} UIControlEvent\n */\n\n/**\n * @typedef {number} UIControlState\n */\n\n/**\n * @typedef {{ borderWidth: number, borderColor: Color, cornerRadius: number, shadowColor: Color, shadowOpacity: number, shadowOffset: Size }} Layer\n */\n\n/**\n * @typedef {{ red: number, green: number, blue: number, alpha: ?number }} Color\n */\n\n/**\n * @typedef {{ x: number, y: number, width: number, height: number }} Frame\n */\n\n/**\n * @typedef {{ width: number, height: number }} Size\n */\n\n/**\n * @typedef {[Function, UIControlEvent]} Target\n */\n",
@@ -2251,7 +2735,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 153,
+    "__docId__": 178,
     "kind": "typedef",
     "name": "NSTextAlignment",
     "memberof": "sweetiekit/types.js",
@@ -2268,7 +2752,7 @@
     }
   },
   {
-    "__docId__": 154,
+    "__docId__": 179,
     "kind": "typedef",
     "name": "UIControlEvent",
     "memberof": "sweetiekit/types.js",
@@ -2285,7 +2769,7 @@
     }
   },
   {
-    "__docId__": 155,
+    "__docId__": 180,
     "kind": "typedef",
     "name": "UIControlState",
     "memberof": "sweetiekit/types.js",
@@ -2302,7 +2786,7 @@
     }
   },
   {
-    "__docId__": 156,
+    "__docId__": 181,
     "kind": "typedef",
     "name": "Layer",
     "memberof": "sweetiekit/types.js",
@@ -2319,7 +2803,7 @@
     }
   },
   {
-    "__docId__": 157,
+    "__docId__": 182,
     "kind": "typedef",
     "name": "Color",
     "memberof": "sweetiekit/types.js",
@@ -2336,7 +2820,7 @@
     }
   },
   {
-    "__docId__": 158,
+    "__docId__": 183,
     "kind": "typedef",
     "name": "Frame",
     "memberof": "sweetiekit/types.js",
@@ -2353,7 +2837,7 @@
     }
   },
   {
-    "__docId__": 159,
+    "__docId__": 184,
     "kind": "typedef",
     "name": "Size",
     "memberof": "sweetiekit/types.js",
@@ -2370,7 +2854,7 @@
     }
   },
   {
-    "__docId__": 160,
+    "__docId__": 185,
     "kind": "typedef",
     "name": "Target",
     "memberof": "sweetiekit/types.js",
@@ -2387,10 +2871,10 @@
     }
   },
   {
-    "__docId__": 161,
+    "__docId__": 186,
     "kind": "file",
     "name": "sweetiekit/utils/appendChild.js",
-    "content": "import * as is from './is';\n\n\nexport default (parent, child) => {\n  if (is.view(parent) && is.view(child)) {\n    parent.addSubview(child);\n  } else if (parent && is.view(parent.view) && is.view(child)) {\n    parent.view.addSubview(child);\n  } else if (is.viewController(parent) && is.viewController(child)) {\n    parent.presentViewControllerAnimatedCompletion(child, true, () => {});\n  } else if (is.view(parent) && is.tapRecognizer(child)) {\n    parent.addGestureRecognizer(child);\n  }\n};\n",
+    "content": "import * as is from './is';\n\n\nexport default (parent, child) => {\n  if (is.stackView(parent) && is.view(child)) {\n    parent.addArrangedSubview(child);\n  } if (is.view(parent) && is.view(child)) {\n    parent.addSubview(child);\n  } else if (parent && is.view(parent.view) && is.view(child)) {\n    parent.view.addSubview(child);\n  } else if (is.tabBarController(parent) && is.viewController(child)) {\n    const viewControllers = Array.from(parent.viewControllers || []);\n    console.log(viewControllers);\n    viewControllers.push(child);\n    parent.setViewControllers(viewControllers);\n  } else if (is.viewController(parent) && is.viewController(child)) {\n    parent.presentViewControllerAnimatedCompletion(child, true, () => {});\n  } else if (is.view(parent) && is.tapRecognizer(child)) {\n    parent.addGestureRecognizer(child);\n  }\n};\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/appendChild.js",
     "access": "public",
@@ -2398,7 +2882,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 162,
+    "__docId__": 187,
     "kind": "function",
     "name": "appendChild",
     "memberof": "sweetiekit/utils/appendChild.js",
@@ -2430,7 +2914,7 @@
     "return": null
   },
   {
-    "__docId__": 163,
+    "__docId__": 188,
     "kind": "file",
     "name": "sweetiekit/utils/colors.js",
     "content": "export const pink = { red: 238/255, green: 118/255, blue: 103/255 };\nexport const darkGrey = { red: 24/255, green: 26/255, blue: 27/255 };\nexport const medGrey = { red: 29/255, green: 31/255, blue: 32/255 };\nexport const lightGrey = { red: 59/255, green: 66/255, blue: 70/255 };\nexport const black = { red: 0, green: 0, blue: 0, alpha: 1 };\nexport const white = { red: 1, green: 1, blue: 1, alpha: 1 };\nexport const clear = { red: 0, green: 0, blue: 0, alpha: 0 };\n",
@@ -2441,7 +2925,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 164,
+    "__docId__": 189,
     "kind": "variable",
     "name": "pink",
     "memberof": "sweetiekit/utils/colors.js",
@@ -2461,7 +2945,7 @@
     }
   },
   {
-    "__docId__": 165,
+    "__docId__": 190,
     "kind": "variable",
     "name": "darkGrey",
     "memberof": "sweetiekit/utils/colors.js",
@@ -2481,7 +2965,7 @@
     }
   },
   {
-    "__docId__": 166,
+    "__docId__": 191,
     "kind": "variable",
     "name": "medGrey",
     "memberof": "sweetiekit/utils/colors.js",
@@ -2501,7 +2985,7 @@
     }
   },
   {
-    "__docId__": 167,
+    "__docId__": 192,
     "kind": "variable",
     "name": "lightGrey",
     "memberof": "sweetiekit/utils/colors.js",
@@ -2521,7 +3005,7 @@
     }
   },
   {
-    "__docId__": 168,
+    "__docId__": 193,
     "kind": "variable",
     "name": "black",
     "memberof": "sweetiekit/utils/colors.js",
@@ -2541,7 +3025,7 @@
     }
   },
   {
-    "__docId__": 169,
+    "__docId__": 194,
     "kind": "variable",
     "name": "white",
     "memberof": "sweetiekit/utils/colors.js",
@@ -2561,7 +3045,7 @@
     }
   },
   {
-    "__docId__": 170,
+    "__docId__": 195,
     "kind": "variable",
     "name": "clear",
     "memberof": "sweetiekit/utils/colors.js",
@@ -2581,10 +3065,10 @@
     }
   },
   {
-    "__docId__": 171,
+    "__docId__": 196,
     "kind": "file",
     "name": "sweetiekit/utils/commitUpdate.js",
-    "content": "import * as propKeys from './propKeys';\nimport * as types from './types';\n\n\nexport default (\n  view,\n  updatePayload,\n  type,\n  oldProps,\n  newProps,\n  internalInstanceHandle,\n  listeners,\n) => {\n  const { baseTypes, type: viewType } = newProps;\n\n  const newListeners = { ...listeners };\n\n  const baseTypesIsArray = Array.isArray(baseTypes);\n\n  updatePayload.forEach(update => {\n    Object.keys(update).forEach(key => {\n      const val = update[key];\n\n      if (val) {\n        switch (key) {\n          case propKeys.target:\n            if (baseTypesIsArray) {\n              if (baseTypes.includes(types.control)) {\n                const existingListener = newListeners[view.selfAddress];\n\n                if (Array.isArray(existingListener)) {\n                  view.removeTargetActionForControlEvents(existingListener[1]);\n                }\n\n                newListeners[view.selfAddress] = val;\n\n                view.addTargetActionForControlEvents(val[0], val[1]);\n              } else if (baseTypes.includes(types.gestureRecognizer)) {\n                // for now we only allow one target per recognizer\n                const existingListener = newListeners[view.selfAddress];\n\n                if (existingListener && existingListener.handle) {\n                  view.removeTargetAction(existingListener.handle);\n                }\n\n                const handle = view.addTargetAction(val);\n\n                newListeners[view.selfAddress] = {\n                  fn: val,\n                  handle,\n                };\n              }\n            }\n            break;\n\n          case propKeys.title:\n            if (viewType === types.button) {\n              view.setTitleForState(val, UIControlStateNormal);\n            }\n            break;\n\n          case propKeys.text:\n            if (viewType === types.textField || viewType === types.label) {\n              view.text = val;\n            }\n            break;\n\n          case propKeys.titleColor:\n            if (viewType === types.button) {\n              view.setTitleColorForState(val, UIControlStateNormal);\n            }\n            break;\n\n          case propKeys.layer:\n            if (baseTypesIsArray) {\n              if (baseTypes.includes(types.view)) {\n                const layerProps = val;\n                Object.keys(layerProps).forEach(p => view.layer[p] = layerProps[p]);\n              }\n            }\n            break;\n\n          case propKeys.titleLabel:\n            if (viewType === types.button) {\n              const labelProps = val;\n              Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);\n            }\n            break;\n\n          case propKeys.image:\n            if (viewType === types.imageView) {\n              if (val) view.image = val;\n            }\n            break;\n\n          default:\n            view[key] = val;\n            break;\n        }\n      }\n    });\n  });\n\n  return newListeners;\n};\n",
+    "content": "import _cloneDeep from 'lodash/cloneDeep'\n\nimport * as propKeys from './propKeys';\nimport * as types from './types';\n\nexport default (\n  view,\n  updatePayload,\n  type,\n  oldProps,\n  newProps,\n  internalInstanceHandle,\n  listeners,\n) => {\n  const { baseTypes, type: viewType } = newProps;\n\n  const newListeners = { ...listeners };\n\n  const baseTypesIsArray = Array.isArray(baseTypes);\n\n  if (view) {\n    updatePayload.forEach(update => {\n      Object.keys(update).forEach(key => {\n        const val = update[key];\n\n        if (val !== undefined && val !== null) {\n          switch (key) {\n            case propKeys.target:\n              if (baseTypesIsArray) {\n                if (baseTypes.includes(types.control)) {\n                  const existingListener = newListeners[view.selfAddress];\n\n                  if (Array.isArray(existingListener)) {\n                    delete newListeners[view.selfAddress];\n                    view.removeTargetActionForControlEvents(existingListener[1]);\n                  }\n\n                  view.addTargetActionForControlEvents(val[0], val[1]);\n\n                  newListeners[view.selfAddress] = val;\n                } else if (baseTypes.includes(types.gestureRecognizer)) {\n                  // for now we only allow one target per recognizer\n                  const existingListener = newListeners[view.selfAddress];\n\n                  if (existingListener && existingListener.handle) {\n                    delete newListeners[view.selfAddress];\n                    view.removeTargetAction(existingListener.handle);\n                  }\n\n                  const handle = view.addTargetAction(val);\n\n                  newListeners[view.selfAddress] = {\n                    fn: val,\n                    handle,\n                  };\n\n                  console.log(newListeners);\n                }\n              }\n              break;\n\n            case propKeys.title:\n              if (viewType === types.button) {\n                view.setTitleForState(val, UIControlStateNormal);\n              }\n              break;\n\n            case propKeys.text:\n              if (viewType === types.textField || viewType === types.label) {\n                view.text = val;\n              }\n              break;\n\n            case propKeys.titleColor:\n              if (viewType === types.button) {\n                view.setTitleColorForState(val, UIControlStateNormal);\n              }\n              break;\n\n            case propKeys.layer:\n              if (baseTypesIsArray) {\n                if (baseTypes.includes(types.view)) {\n                  Object.keys(val).forEach(p => view.layer[p] = val[p]);\n                }\n              }\n              break;\n\n            case propKeys.titleLabel:\n              if (viewType === types.button) {\n                Object.keys(val).forEach(p => view.titleLabel[p] = val[p]);\n              }\n              break;\n\n            case propKeys.image:\n              if (viewType === types.imageView) {\n                if (val) view.image = val;\n              }\n              break;\n\n            case propKeys.items:\n              if (viewType === types.segmentedControl) {\n                view.removeAllSegments();\n                if (val.length) {\n                  if (val[0].title) {\n                    val.forEach((item, idx) => {\n                      view.insertSegmentWithTitleAtIndexAnimated(item.title, idx, false);\n                    });\n                  } else if (val[0].image) {\n                    val.forEach((item, idx) => {\n                      view.insertSegmentWithImageAtIndexAnimated(item.image, idx, false);\n                    });\n                  }\n                }\n              }\n              break;\n\n            case propKeys.tabBar:\n              if (viewType === types.tabBarController) {\n                Object.keys(val).forEach(p => view.tabBar[p] = val[p]);\n              }\n              break;\n\n            case propKeys.selectedIndex:\n              if (viewType === types.tabBarController) {\n                console.log('tab bar controller setting selected view controller');\n                const ctrl = view.viewControllers[val];\n                if (ctrl) {\n                  view.selectedViewController = ctrl;\n                }\n              }\n              break;\n\n            default:\n              view[key] = val;\n              break;\n          }\n        }\n      });\n    });\n  }\n\n  return newListeners;\n};\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/commitUpdate.js",
     "access": "public",
@@ -2592,7 +3076,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 172,
+    "__docId__": 197,
     "kind": "function",
     "name": "commitUpdate",
     "memberof": "sweetiekit/utils/commitUpdate.js",
@@ -2605,7 +3089,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/commitUpdate.js",
     "importStyle": "commitUpdate",
     "description": null,
-    "lineNumber": 5,
+    "lineNumber": 6,
     "undocument": true,
     "params": [
       {
@@ -2658,10 +3142,10 @@
     }
   },
   {
-    "__docId__": 173,
+    "__docId__": 198,
     "kind": "file",
     "name": "sweetiekit/utils/createElement.js",
-    "content": "const SweetieKit = Require('std:sweetiekit.node');\n\nimport * as colors from './colors';\nimport {\n  viewAttrs,\n  viewDefaults,\n  layerDefaults,\n  layerAttrs,\n  textViewAttrs,\n  textViewDefaults,\n} from './properties';\n\nconst {\n  UIViewController,\n  UILabel,\n  UIView,\n  UIButton,\n  UITapGestureRecognizer,\n  UITextField,\n  UIScrollView,\n  UIImageView,\n  UISwitch,\n  UISlider,\n} = SweetieKit;\n\nfunction set(el, props, attr, def) {\n  if (el && props) {\n    if (props[attr] !== undefined) {\n      el[attr] = props[attr];\n    } else if (def) {\n      el[attr] = def;\n    }\n  }\n}\n\nfunction setTextViewBaseProps(el, props) {\n  textViewAttrs.forEach(a => set(el, props, a, textViewDefaults[a]));\n}\n\nfunction setViewBaseProps(el, props) {\n  viewAttrs.forEach(a => set(el, props, a, viewDefaults[a]));\n  if (props.layer) {\n    layerAttrs.forEach(a => set(el.layer, props.layer, a, layerDefaults[a]));\n  }\n}\n\nexport const viewController = (props) => {\n  return new UIViewController();\n};\n\nexport const view = (props) => {\n  const el = UIView();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const label = (props) => {\n  const el = UILabel();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n  el.text = props.children || '';\n  el.sizeToFit();\n\n  setViewBaseProps(el, props);\n  setTextViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const button = (props) => {\n  const el = UIButton();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  el.setTitleForState(props.title || '', UIControlStateNormal);\n  el.setTitleColorForState(props.titleColor || colors.black, UIControlStateNormal);\n\n  if (props.titleLabel) {\n    setTextViewBaseProps(el.titleLabel, props.titleLabel);\n  }\n\n  return el;\n};\n\nexport const textField = (props) => {\n  const el = UITextField();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  el.text = props.text || '';\n  el.placeholder = props.placeholder || '';\n\n  return el;\n};\n\nexport const scrollView = (props) => {\n  const el = UIScrollView();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const tapGestureRecognizer = (props) => {\n  return UITapGestureRecognizer();\n};\n\nexport const imageView = (props) => {\n  const { image, ...rest } = props;\n\n  const el = UIImageView();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, rest);\n\n  return el;\n};\n\nexport const uiSwitch = (props) => {\n  const el = UISwitch();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const slider = (props) => {\n  const el = UISlider();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\n\nexport const defaultType = () => undefined;\n",
+    "content": "const SweetieKit = Require('std:sweetiekit.node');\n\nimport * as colors from './colors';\nimport {\n  viewAttrs,\n  viewDefaults,\n  layerDefaults,\n  layerAttrs,\n  textViewAttrs,\n  textViewDefaults,\n} from './properties';\n\nconst {\n  UIButton,\n  UIImageView,\n  UILabel,\n  UIScrollView,\n  UISegmentedControl,\n  UISlider,\n  UIStackView,\n  UISwitch,\n  UITabBarController,\n  UITapGestureRecognizer,\n  UITextField,\n  UIView,\n  UIViewController,\n} = SweetieKit;\n\nfunction set(el, props, attr, def) {\n  if (el && props) {\n    if (props[attr] !== undefined) {\n      el[attr] = props[attr];\n    } else if (def) {\n      el[attr] = def;\n    }\n  }\n}\n\nfunction setTextViewBaseProps(el, props) {\n  textViewAttrs.forEach(a => set(el, props, a, textViewDefaults[a]));\n}\n\nfunction setViewBaseProps(el, props) {\n  viewAttrs.forEach(a => set(el, props, a, viewDefaults[a]));\n  if (props.layer) {\n    layerAttrs.forEach(a => set(el.layer, props.layer, a, layerDefaults[a]));\n  }\n}\n\nexport const viewController = (props) => {\n  return new UIViewController();\n};\n\nexport const view = (props) => {\n  const el = UIView();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const label = (props) => {\n  const el = UILabel();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n  el.text = props.children || '';\n  el.sizeToFit();\n\n  setViewBaseProps(el, props);\n  setTextViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const button = (props) => {\n  const el = UIButton();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  el.setTitleForState(props.title || '', UIControlStateNormal);\n  el.setTitleColorForState(props.titleColor || colors.black, UIControlStateNormal);\n\n  if (props.titleLabel) {\n    setTextViewBaseProps(el.titleLabel, props.titleLabel);\n  }\n\n  return el;\n};\n\nexport const textField = (props) => {\n  const el = UITextField();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  el.text = props.text || '';\n  el.placeholder = props.placeholder || '';\n\n  return el;\n};\n\nexport const scrollView = (props) => {\n  const el = UIScrollView();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const tapGestureRecognizer = (props) => {\n  return UITapGestureRecognizer();\n};\n\nexport const imageView = (props) => {\n  const { image, ...rest } = props;\n\n  const el = UIImageView();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, rest);\n\n  return el;\n};\n\nexport const uiSwitch = (props) => {\n  const el = UISwitch();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const slider = (props) => {\n  const el = UISlider();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const segmentedControl = (props) => {\n  let el = UISegmentedControl();\n\n  if (props.items && props.items.length) {\n    if (typeof props.items[0].title === 'string') {\n      const titles = props.items.map(item => item.title || '');\n      el = el.initWithItems(titles);\n    } else if (typeof props.items[0].image) {\n      const images = props.items.map(item => item.image);\n      el = el.initWithItems(images);\n    }\n    props.items.forEach((item, idx) => {\n      if (item.enabled !== undefined) {\n        el.setEnabledForSegmentAtIndex(item.enabled, idx);\n      }\n    });\n  }\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const stackView = (props) => {\n  const el = UIStackView();\n\n  el.translatesAutoresizingMaskIntoConstraints = false;\n\n  setViewBaseProps(el, props);\n\n  return el;\n};\n\nexport const tabBarController = (props) => {\n  return UITabBarController();\n};\n\n\nexport const defaultType = () => undefined;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/createElement.js",
     "access": "public",
@@ -2669,7 +3153,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 174,
+    "__docId__": 199,
     "kind": "variable",
     "name": "SweetieKit",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2690,12 +3174,12 @@
     "ignore": true
   },
   {
-    "__docId__": 175,
+    "__docId__": 200,
     "kind": "variable",
-    "name": "UIViewController",
+    "name": "UIButton",
     "memberof": "sweetiekit/utils/createElement.js",
     "static": true,
-    "longname": "sweetiekit/utils/createElement.js~UIViewController",
+    "longname": "sweetiekit/utils/createElement.js~UIButton",
     "access": "public",
     "export": false,
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
@@ -2711,7 +3195,7 @@
     "ignore": true
   },
   {
-    "__docId__": 176,
+    "__docId__": 201,
     "kind": "function",
     "name": "set",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2724,7 +3208,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 26,
+    "lineNumber": 29,
     "undocument": true,
     "params": [
       {
@@ -2756,7 +3240,7 @@
     "ignore": true
   },
   {
-    "__docId__": 177,
+    "__docId__": 202,
     "kind": "function",
     "name": "setTextViewBaseProps",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2769,7 +3253,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 36,
+    "lineNumber": 39,
     "undocument": true,
     "params": [
       {
@@ -2789,7 +3273,7 @@
     "ignore": true
   },
   {
-    "__docId__": 178,
+    "__docId__": 203,
     "kind": "function",
     "name": "setViewBaseProps",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2802,7 +3286,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 40,
+    "lineNumber": 43,
     "undocument": true,
     "params": [
       {
@@ -2822,7 +3306,7 @@
     "ignore": true
   },
   {
-    "__docId__": 179,
+    "__docId__": 204,
     "kind": "function",
     "name": "viewController",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2835,7 +3319,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{viewController}",
     "description": null,
-    "lineNumber": 47,
+    "lineNumber": 50,
     "undocument": true,
     "params": [
       {
@@ -2852,7 +3336,7 @@
     }
   },
   {
-    "__docId__": 180,
+    "__docId__": 205,
     "kind": "function",
     "name": "view",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2865,7 +3349,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{view}",
     "description": null,
-    "lineNumber": 51,
+    "lineNumber": 54,
     "undocument": true,
     "params": [
       {
@@ -2882,7 +3366,7 @@
     }
   },
   {
-    "__docId__": 181,
+    "__docId__": 206,
     "kind": "function",
     "name": "label",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2895,7 +3379,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{label}",
     "description": null,
-    "lineNumber": 61,
+    "lineNumber": 64,
     "undocument": true,
     "params": [
       {
@@ -2912,7 +3396,7 @@
     }
   },
   {
-    "__docId__": 182,
+    "__docId__": 207,
     "kind": "function",
     "name": "button",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2925,7 +3409,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{button}",
     "description": null,
-    "lineNumber": 74,
+    "lineNumber": 77,
     "undocument": true,
     "params": [
       {
@@ -2942,7 +3426,7 @@
     }
   },
   {
-    "__docId__": 183,
+    "__docId__": 208,
     "kind": "function",
     "name": "textField",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2955,7 +3439,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{textField}",
     "description": null,
-    "lineNumber": 91,
+    "lineNumber": 94,
     "undocument": true,
     "params": [
       {
@@ -2972,7 +3456,7 @@
     }
   },
   {
-    "__docId__": 184,
+    "__docId__": 209,
     "kind": "function",
     "name": "scrollView",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -2985,7 +3469,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{scrollView}",
     "description": null,
-    "lineNumber": 104,
+    "lineNumber": 107,
     "undocument": true,
     "params": [
       {
@@ -3002,7 +3486,7 @@
     }
   },
   {
-    "__docId__": 185,
+    "__docId__": 210,
     "kind": "function",
     "name": "tapGestureRecognizer",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -3015,7 +3499,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{tapGestureRecognizer}",
     "description": null,
-    "lineNumber": 114,
+    "lineNumber": 117,
     "undocument": true,
     "params": [
       {
@@ -3032,7 +3516,7 @@
     }
   },
   {
-    "__docId__": 186,
+    "__docId__": 211,
     "kind": "function",
     "name": "imageView",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -3045,7 +3529,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{imageView}",
     "description": null,
-    "lineNumber": 118,
+    "lineNumber": 121,
     "undocument": true,
     "params": [
       {
@@ -3062,7 +3546,7 @@
     }
   },
   {
-    "__docId__": 187,
+    "__docId__": 212,
     "kind": "function",
     "name": "uiSwitch",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -3075,7 +3559,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{uiSwitch}",
     "description": null,
-    "lineNumber": 130,
+    "lineNumber": 133,
     "undocument": true,
     "params": [
       {
@@ -3092,7 +3576,7 @@
     }
   },
   {
-    "__docId__": 188,
+    "__docId__": 213,
     "kind": "function",
     "name": "slider",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -3105,7 +3589,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{slider}",
     "description": null,
-    "lineNumber": 140,
+    "lineNumber": 143,
     "undocument": true,
     "params": [
       {
@@ -3122,7 +3606,97 @@
     }
   },
   {
-    "__docId__": 189,
+    "__docId__": 214,
+    "kind": "function",
+    "name": "segmentedControl",
+    "memberof": "sweetiekit/utils/createElement.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/createElement.js~segmentedControl",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
+    "importStyle": "{segmentedControl}",
+    "description": null,
+    "lineNumber": 153,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 215,
+    "kind": "function",
+    "name": "stackView",
+    "memberof": "sweetiekit/utils/createElement.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/createElement.js~stackView",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
+    "importStyle": "{stackView}",
+    "description": null,
+    "lineNumber": 178,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 216,
+    "kind": "function",
+    "name": "tabBarController",
+    "memberof": "sweetiekit/utils/createElement.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/createElement.js~tabBarController",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
+    "importStyle": "{tabBarController}",
+    "description": null,
+    "lineNumber": 188,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 217,
     "kind": "function",
     "name": "defaultType",
     "memberof": "sweetiekit/utils/createElement.js",
@@ -3135,16 +3709,16 @@
     "importPath": "sweetie-react/sweetiekit/utils/createElement.js",
     "importStyle": "{defaultType}",
     "description": null,
-    "lineNumber": 151,
+    "lineNumber": 193,
     "undocument": true,
     "params": [],
     "return": null
   },
   {
-    "__docId__": 190,
+    "__docId__": 218,
     "kind": "file",
     "name": "sweetiekit/utils/createInstance.js",
-    "content": "import * as createElement from './createElement';\nimport * as types from './types';\n\nconst createViewController = (\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  internalInstanceHandle,\n) => {\n  switch (props.type) {\n    case types.viewController:\n      return createElement.viewController(props);\n    default:\n      return createElement.viewController(props);\n  }\n};\n\nconst createView = (\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  internalInstanceHandle,\n) => {\n  switch (props.type) {\n    case types.button:\n      return createElement.button(props);\n    case types.imageView:\n      return createElement.imageView(props);\n    case types.label:\n      return createElement.label(props);\n    case types.scrollView:\n      return createElement.scrollView(props);\n    case types.textField:\n      return createElement.textField(props);\n    case types.uiSwitch:\n      return createElement.uiSwitch(props);\n    case types.slider:\n      return createElement.slider(props);\n    default:\n      return createElement.view(props);\n  }\n};\n\nconst createGestureRecognizer = (\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  internalInstanceHandle,\n) => {\n  switch (props.type) {\n    case types.tapGestureRecognizer:\n      return createElement.tapGestureRecognizer(props);\n    default:\n      return createElement.tapGestureRecognizer(props);\n  }\n};\n\nconst createInstance = (\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  internalInstanceHandle,\n) => {\n  switch (type) {\n    case types.viewController:\n      return createViewController(type, props, rootContainerInstance, hostContext, internalInstanceHandle);\n    case types.view:\n      return createView(type, props, rootContainerInstance, hostContext, internalInstanceHandle);\n    case types.gestureRecognizer:\n      return createGestureRecognizer(type, props, rootContainerInstance, hostContext, internalInstanceHandle);\n    default:\n      return createElement.defaultType();\n  }\n};\n\nexport default createInstance;\n",
+    "content": "import * as createElement from './createElement';\nimport * as types from './types';\n\nconst createViewController = (\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  internalInstanceHandle,\n) => {\n  switch (props.type) {\n    case types.viewController:\n      return createElement.viewController(props);\n    case types.tabBarController:\n      return createElement.tabBarController(props);\n    default:\n      return createElement.viewController(props);\n  }\n};\n\nconst createView = (\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  internalInstanceHandle,\n) => {\n  switch (props.type) {\n    case types.button:\n      return createElement.button(props);\n    case types.imageView:\n      return createElement.imageView(props);\n    case types.label:\n      return createElement.label(props);\n    case types.scrollView:\n      return createElement.scrollView(props);\n    case types.segmentedControl:\n      return createElement.segmentedControl(props);\n    case types.slider:\n      return createElement.slider(props);\n    case types.stackView:\n      return createElement.stackView(props);\n    case types.textField:\n      return createElement.textField(props);\n    case types.uiSwitch:\n      return createElement.uiSwitch(props);\n    default:\n      return createElement.view(props);\n  }\n};\n\nconst createGestureRecognizer = (\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  internalInstanceHandle,\n) => {\n  switch (props.type) {\n    case types.tapGestureRecognizer:\n      return createElement.tapGestureRecognizer(props);\n    default:\n      return createElement.tapGestureRecognizer(props);\n  }\n};\n\nconst createInstance = (\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  internalInstanceHandle,\n) => {\n  switch (type) {\n    case types.viewController:\n      return createViewController(type, props, rootContainerInstance, hostContext, internalInstanceHandle);\n    case types.view:\n      return createView(type, props, rootContainerInstance, hostContext, internalInstanceHandle);\n    case types.gestureRecognizer:\n      return createGestureRecognizer(type, props, rootContainerInstance, hostContext, internalInstanceHandle);\n    default:\n      return createElement.defaultType();\n  }\n};\n\nexport default createInstance;\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/createInstance.js",
     "access": "public",
@@ -3152,7 +3726,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 191,
+    "__docId__": 219,
     "kind": "function",
     "name": "createViewController",
     "memberof": "sweetiekit/utils/createInstance.js",
@@ -3207,7 +3781,7 @@
     "ignore": true
   },
   {
-    "__docId__": 192,
+    "__docId__": 220,
     "kind": "function",
     "name": "createView",
     "memberof": "sweetiekit/utils/createInstance.js",
@@ -3220,7 +3794,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createInstance.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 19,
+    "lineNumber": 21,
     "undocument": true,
     "params": [
       {
@@ -3262,7 +3836,7 @@
     "ignore": true
   },
   {
-    "__docId__": 193,
+    "__docId__": 221,
     "kind": "function",
     "name": "createGestureRecognizer",
     "memberof": "sweetiekit/utils/createInstance.js",
@@ -3275,7 +3849,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createInstance.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 46,
+    "lineNumber": 52,
     "undocument": true,
     "params": [
       {
@@ -3317,7 +3891,7 @@
     "ignore": true
   },
   {
-    "__docId__": 194,
+    "__docId__": 222,
     "kind": "function",
     "name": "createInstance",
     "memberof": "sweetiekit/utils/createInstance.js",
@@ -3330,7 +3904,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/createInstance.js",
     "importStyle": "createInstance",
     "description": null,
-    "lineNumber": 61,
+    "lineNumber": 67,
     "undocument": true,
     "params": [
       {
@@ -3371,10 +3945,10 @@
     }
   },
   {
-    "__docId__": 195,
+    "__docId__": 223,
     "kind": "file",
     "name": "sweetiekit/utils/finalizeInitialChildren.js",
-    "content": "import * as propKeys from './propKeys';\nimport * as types from './types';\n\n\nexport default (\n  view,\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  listeners,\n) => {\n  const { baseTypes, children, type: viewType, ...otherProps } = props;\n\n  const newListeners = { ...listeners };\n\n  const baseTypesIsArray = Array.isArray(baseTypes);\n\n  Object.keys(otherProps).forEach(attr => {\n    const val = otherProps[attr];\n\n    if (val) {\n      switch (attr) {\n        case propKeys.target:\n          if (baseTypesIsArray) {\n            if (baseTypes.includes(types.control)) {\n              const [fn, events] = val;\n\n              newListeners[view.selfAddress] = val;\n\n              view.addTargetActionForControlEvents(fn, events);\n            } else if (baseTypes.includes(types.gestureRecognizer)) {\n              const handle = view.addTargetAction(val);\n\n              newListeners[view.selfAddress] = {\n                handle,\n                fn: val,\n              };\n            }\n          }\n          break;\n\n        case propKeys.title:\n          view.title = val;\n          break;\n\n        case propKeys.image:\n          if (val) view.image = val;\n          break;\n\n        case propKeys.layer:\n          if (baseTypesIsArray) {\n            if (baseTypes.includes(types.view)) {\n              Object.keys(val).forEach(p => view.layer[p] = val[p]);\n            }\n          }\n          break;\n\n        case propKeys.text:\n          view.text = val;\n          break;\n\n        default:\n          view[attr] = val;\n          break;\n      }\n    }\n  });\n\n  return newListeners;\n};\n",
+    "content": "import _cloneDeep from 'lodash/cloneDeep';\n\nimport * as propKeys from './propKeys';\nimport * as types from './types';\n\n\nexport default (\n  view,\n  type,\n  props,\n  rootContainerInstance,\n  hostContext,\n  listeners,\n) => {\n  const { baseTypes, children, type: viewType, ...otherProps } = props;\n\n  const newListeners = { ...listeners };\n\n  const baseTypesIsArray = Array.isArray(baseTypes);\n\n  if (view) {\n    Object.keys(otherProps).forEach(attr => {\n      const val = otherProps[attr];\n\n      if (val !== undefined && val !== null) {\n        switch (attr) {\n          case propKeys.target:\n            if (baseTypesIsArray) {\n              if (baseTypes.includes(types.control)) {\n                const [fn, events] = val;\n\n                if (newListeners[view.selfAddress] && newListeners[view.selfAddress].length) {\n                  view.removeTargetActionForControlEvents(newListeners[view.selfAddress][1]);\n                  delete newListeners[view.selfAddress];\n                }\n\n                newListeners[view.selfAddress] = val;\n\n                view.addTargetActionForControlEvents(fn, events);\n              } else if (baseTypes.includes(types.gestureRecognizer)) {\n                if (newListeners[view.selfAddress] && newListeners[view.selfAddress].handle) {\n                  view.removeTargetAction(newListeners[view.selfAddress].handle);\n                  delete newListeners[selfAddress];\n                }\n\n                const handle = view.addTargetAction(val);\n\n                newListeners[view.selfAddress] = {\n                  handle,\n                  fn: val,\n                };\n              }\n            }\n            break;\n\n          case propKeys.title:\n            view.title = val;\n            break;\n\n          case propKeys.image:\n            if (val) view.image = val;\n            break;\n\n          case propKeys.layer:\n            if (baseTypesIsArray) {\n              if (baseTypes.includes(types.view)) {\n                Object.keys(val).forEach(p => view.layer[p] = val[p]);\n              }\n            }\n            break;\n\n          case propKeys.text:\n            view.text = val;\n            break;\n\n          case propKeys.tabBar:\n            if (viewType === types.tabBarController) {\n              Object.keys(val).forEach(p => view.tabBar[p] = val[p]);\n            }\n            break;\n\n          case propKeys.selectedIndex:\n            if (viewType === types.tabBarController) {\n              console.log('tab bar controller setting selected view controller');\n              const ctrl = view.viewControllers[val];\n              if (ctrl) {\n                view.selectedViewController = ctrl;\n              }\n            }\n            break;\n\n          default:\n            view[attr] = val;\n            break;\n        }\n      }\n    });\n  }\n\n  return newListeners;\n};\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/finalizeInitialChildren.js",
     "access": "public",
@@ -3382,7 +3956,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 196,
+    "__docId__": 224,
     "kind": "function",
     "name": "finalizeInitialChildren",
     "memberof": "sweetiekit/utils/finalizeInitialChildren.js",
@@ -3395,7 +3969,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/finalizeInitialChildren.js",
     "importStyle": "finalizeInitialChildren",
     "description": null,
-    "lineNumber": 5,
+    "lineNumber": 7,
     "undocument": true,
     "params": [
       {
@@ -3442,10 +4016,10 @@
     }
   },
   {
-    "__docId__": 197,
+    "__docId__": 225,
     "kind": "file",
     "name": "sweetiekit/utils/index.js",
-    "content": "import * as createElement from './createElement';\nimport * as colors from './colors';\nimport * as is from './is';\nimport * as propKeys from './propKeys';\nimport * as properties from './properties';\n\n\nexport { colors, createElement, is, propKeys, properties };\nexport { default as appendChild } from './appendChild';\nexport { default as commitUpdate } from './commitUpdate';\nexport { default as createInstance } from './createInstance';\nexport { default as finalizeInitialChildren } from './finalizeInitialChildren';\nexport { default as insertBefore } from './insertBefore';\nexport { default as prepareUpdate } from './prepareUpdate';\nexport { default as removeChild } from './removeChild';\n",
+    "content": "import * as createElement from './createElement';\nimport * as colors from './colors';\nimport * as is from './is';\nimport * as propKeys from './propKeys';\nimport * as propTypes from './propTypes';\nimport * as properties from './properties';\nimport * as types from './types';\n\n\nexport { colors, createElement, is, propKeys, propTypes, properties, types };\nexport { default as appendChild } from './appendChild';\nexport { default as commitUpdate } from './commitUpdate';\nexport { default as createInstance } from './createInstance';\nexport { default as finalizeInitialChildren } from './finalizeInitialChildren';\nexport { default as insertBefore } from './insertBefore';\nexport { default as prepareUpdate } from './prepareUpdate';\nexport { default as removeChild } from './removeChild';\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/index.js",
     "access": "public",
@@ -3453,10 +4027,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 198,
+    "__docId__": 226,
     "kind": "file",
     "name": "sweetiekit/utils/insertBefore.js",
-    "content": "import * as is from './is';\n\n\nexport default (parent, child, beforeChild) => {\n  if (is.view(parent)) {\n    if (is.view(child) && is.view(beforeChild)) {\n      parent.insertSubviewBelowSubview(child, beforeChild);\n    } else if (is.view(child)) {\n      parent.addSubview(child);\n    }\n  } else if (parent && is.view(parent.view)) {\n    if (is.view(child) && is.view(beforeChild)) {\n      parent.view.insertSubviewBelowSubview(child, beforeChild);\n    }\n  }\n};\n",
+    "content": "import * as is from './is';\n\n\nexport default (parent, child, beforeChild) => {\n  if (is.tabBarController(parent)) {\n    if (is.viewController(child) && is.viewController(beforeChild)) {\n      const ctrls = parent.viewControllers;\n      const idx = ctrls.indexOf(beforeChild);\n      const newCtrls = ctrls.splice(idx, 0, child);\n      parent.setViewControllers(newCtrls);\n    }\n  } else if (is.view(parent)) {\n    if (is.view(child) && is.view(beforeChild)) {\n      parent.insertSubviewBelowSubview(child, beforeChild);\n    } else if (is.view(child)) {\n      parent.addSubview(child);\n    } else if (is.tapRecognizer(child)) {\n      view.addGestureRecognizer(child);\n    }\n  } else if (parent && is.view(parent.view)) {\n    if (is.view(child) && is.view(beforeChild)) {\n      parent.view.insertSubviewBelowSubview(child, beforeChild);\n    }\n  }\n};\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/insertBefore.js",
     "access": "public",
@@ -3464,7 +4038,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 199,
+    "__docId__": 227,
     "kind": "function",
     "name": "insertBefore",
     "memberof": "sweetiekit/utils/insertBefore.js",
@@ -3502,10 +4076,10 @@
     "return": null
   },
   {
-    "__docId__": 200,
+    "__docId__": 228,
     "kind": "file",
     "name": "sweetiekit/utils/is.js",
-    "content": "export const view = el => el instanceof UIView;\nexport const textField = el => el instanceof UITextField;\nexport const viewController = el => el instanceof UIViewController;\nexport const navController = el => el instanceof UINavigationController;\nexport const tapRecognizer = el => el instanceof UITapGestureRecognizer;\nexport const imageView = el => el instanceof UIImageView;\n",
+    "content": "export const view = el => el instanceof UIView;\nexport const textField = el => el instanceof UITextField;\nexport const viewController = el => el instanceof UIViewController;\nexport const navController = el => el instanceof UINavigationController;\nexport const tapRecognizer = el => el instanceof UITapGestureRecognizer;\nexport const imageView = el => el instanceof UIImageView;\nexport const stackView = el => el instanceof UIStackView;\nexport const tabBarController = el => el instanceof UITabBarController;\n\n\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/is.js",
     "access": "public",
@@ -3513,7 +4087,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 201,
+    "__docId__": 229,
     "kind": "function",
     "name": "view",
     "memberof": "sweetiekit/utils/is.js",
@@ -3539,7 +4113,7 @@
     "return": null
   },
   {
-    "__docId__": 202,
+    "__docId__": 230,
     "kind": "function",
     "name": "textField",
     "memberof": "sweetiekit/utils/is.js",
@@ -3565,7 +4139,7 @@
     "return": null
   },
   {
-    "__docId__": 203,
+    "__docId__": 231,
     "kind": "function",
     "name": "viewController",
     "memberof": "sweetiekit/utils/is.js",
@@ -3591,7 +4165,7 @@
     "return": null
   },
   {
-    "__docId__": 204,
+    "__docId__": 232,
     "kind": "function",
     "name": "navController",
     "memberof": "sweetiekit/utils/is.js",
@@ -3617,7 +4191,7 @@
     "return": null
   },
   {
-    "__docId__": 205,
+    "__docId__": 233,
     "kind": "function",
     "name": "tapRecognizer",
     "memberof": "sweetiekit/utils/is.js",
@@ -3643,7 +4217,7 @@
     "return": null
   },
   {
-    "__docId__": 206,
+    "__docId__": 234,
     "kind": "function",
     "name": "imageView",
     "memberof": "sweetiekit/utils/is.js",
@@ -3669,10 +4243,62 @@
     "return": null
   },
   {
-    "__docId__": 207,
+    "__docId__": 235,
+    "kind": "function",
+    "name": "stackView",
+    "memberof": "sweetiekit/utils/is.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/is.js~stackView",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/is.js",
+    "importStyle": "{stackView}",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [
+      {
+        "name": "el",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 236,
+    "kind": "function",
+    "name": "tabBarController",
+    "memberof": "sweetiekit/utils/is.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/is.js~tabBarController",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/is.js",
+    "importStyle": "{tabBarController}",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "params": [
+      {
+        "name": "el",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 237,
     "kind": "file",
     "name": "sweetiekit/utils/prepareUpdate.js",
-    "content": "import * as props from './propKeys';\n\n\nexport default (\n  domElement,\n  type,\n  oldProps,\n  newProps,\n  rootContainerInstance,\n  hostContext,\n) => {\n  const propKeys = new Set(\n    Object.keys(newProps).concat(\n      Object.keys(oldProps)\n    )\n  ).values();\n\n  const payload = [];\n\n  for (let key of propKeys) {\n    if (\n      // text children are already handled\n      key !== props.children &&\n      oldProps[key] !== newProps[key]\n    ) {\n      payload.push({ [key]: newProps[key] })\n    }\n  }\n\n  return payload;\n};\n",
+    "content": "import * as props from './propKeys';\n\n\nexport default (\n  domElement,\n  type,\n  oldProps,\n  newProps,\n  rootContainerInstance,\n  hostContext,\n) => {\n  const propKeys = new Set(\n    Object.keys(newProps).concat(\n      Object.keys(oldProps)\n    )\n  ).values();\n\n  const payload = [];\n\n  for (let key of propKeys) {\n    if (\n      // text children are already handled\n      key !== props.children\n      && oldProps[key] !== newProps[key]\n    ) {\n      payload.push({ [key]: newProps[key] })\n    }\n  }\n\n  return payload;\n};\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/prepareUpdate.js",
     "access": "public",
@@ -3680,7 +4306,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 208,
+    "__docId__": 238,
     "kind": "function",
     "name": "prepareUpdate",
     "memberof": "sweetiekit/utils/prepareUpdate.js",
@@ -3740,10 +4366,10 @@
     }
   },
   {
-    "__docId__": 209,
+    "__docId__": 239,
     "kind": "file",
     "name": "sweetiekit/utils/propKeys.js",
-    "content": "export const children = 'children';\n\nexport const image = 'image';\n\nexport const layer = 'layer';\n\nexport const target = 'target';\n\nexport const text = 'text';\n\nexport const title = 'title';\nexport const titleColor = 'titleColor';\nexport const titleLabel = 'titleLabel';\n",
+    "content": "export const children = 'children';\n\nexport const image = 'image';\n\nexport const layer = 'layer';\n\nexport const target = 'target';\n\nexport const text = 'text';\n\nexport const title = 'title';\nexport const titleColor = 'titleColor';\nexport const titleLabel = 'titleLabel';\n\nexport const items = 'items';\n\nexport const tabBarItem = 'tabBarItem';\nexport const tabBar = 'tabBar';\n\nexport const selectedIndex = 'selectedIndex';\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/propKeys.js",
     "access": "public",
@@ -3751,7 +4377,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 210,
+    "__docId__": 240,
     "kind": "variable",
     "name": "children",
     "memberof": "sweetiekit/utils/propKeys.js",
@@ -3771,7 +4397,7 @@
     }
   },
   {
-    "__docId__": 211,
+    "__docId__": 241,
     "kind": "variable",
     "name": "image",
     "memberof": "sweetiekit/utils/propKeys.js",
@@ -3791,7 +4417,7 @@
     }
   },
   {
-    "__docId__": 212,
+    "__docId__": 242,
     "kind": "variable",
     "name": "layer",
     "memberof": "sweetiekit/utils/propKeys.js",
@@ -3811,7 +4437,7 @@
     }
   },
   {
-    "__docId__": 213,
+    "__docId__": 243,
     "kind": "variable",
     "name": "target",
     "memberof": "sweetiekit/utils/propKeys.js",
@@ -3831,7 +4457,7 @@
     }
   },
   {
-    "__docId__": 214,
+    "__docId__": 244,
     "kind": "variable",
     "name": "text",
     "memberof": "sweetiekit/utils/propKeys.js",
@@ -3851,7 +4477,7 @@
     }
   },
   {
-    "__docId__": 215,
+    "__docId__": 245,
     "kind": "variable",
     "name": "title",
     "memberof": "sweetiekit/utils/propKeys.js",
@@ -3871,7 +4497,7 @@
     }
   },
   {
-    "__docId__": 216,
+    "__docId__": 246,
     "kind": "variable",
     "name": "titleColor",
     "memberof": "sweetiekit/utils/propKeys.js",
@@ -3891,7 +4517,7 @@
     }
   },
   {
-    "__docId__": 217,
+    "__docId__": 247,
     "kind": "variable",
     "name": "titleLabel",
     "memberof": "sweetiekit/utils/propKeys.js",
@@ -3911,7 +4537,392 @@
     }
   },
   {
-    "__docId__": 218,
+    "__docId__": 248,
+    "kind": "variable",
+    "name": "items",
+    "memberof": "sweetiekit/utils/propKeys.js",
+    "static": true,
+    "longname": "sweetiekit/utils/propKeys.js~items",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propKeys.js",
+    "importStyle": "{items}",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 249,
+    "kind": "variable",
+    "name": "tabBarItem",
+    "memberof": "sweetiekit/utils/propKeys.js",
+    "static": true,
+    "longname": "sweetiekit/utils/propKeys.js~tabBarItem",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propKeys.js",
+    "importStyle": "{tabBarItem}",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 250,
+    "kind": "variable",
+    "name": "tabBar",
+    "memberof": "sweetiekit/utils/propKeys.js",
+    "static": true,
+    "longname": "sweetiekit/utils/propKeys.js~tabBar",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propKeys.js",
+    "importStyle": "{tabBar}",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 251,
+    "kind": "variable",
+    "name": "selectedIndex",
+    "memberof": "sweetiekit/utils/propKeys.js",
+    "static": true,
+    "longname": "sweetiekit/utils/propKeys.js~selectedIndex",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propKeys.js",
+    "importStyle": "{selectedIndex}",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 252,
+    "kind": "file",
+    "name": "sweetiekit/utils/propTypes.js",
+    "content": "export const colorProp = (props, propName, componentName) => {\n  const compName = componentName || 'ANONYMOUS';\n\n  const propVal = props[propName];\n\n  if (propVal) {\n    if (typeof propVal !== 'object') {\n      return new Error(`${propName} in ${compName} expected type object, received ${typeof propVal}`);\n    } else {\n      const { red, green, blue } = propVal;\n      if (\n        typeof red !== 'number'\n        || typeof green !== 'number'\n        || typeof blue !== 'number') {\n        return new Error(`${propName} in ${compName} expected properties red, green, and blue to be numbers`);\n      }\n    }\n  }\n\n  return null;\n};\n\nexport const frameProp = (props, propName, componentName) => {\n  const compName = componentName || 'ANONYMOUS';\n\n  const propVal = props[propName];\n\n  if (propVal) {\n    if (typeof propVal !== 'object') {\n      return new Error(`${propName} in ${compName} expected type object, received ${typeof propVal}`);\n    } else {\n      const { x, y, width, height } = propVal;\n      if (\n        typeof x !== 'number'\n        || typeof y !== 'number'\n        || typeof width !== 'number'\n        || typeof height !== 'number'\n      ) {\n        return new Error(`${propName} in ${compName} expected properties x, y, width, and height to be numbers`);\n      }\n    }\n  }\n\n  return null;\n};\n\nexport const layerProp = (props, propName, componentName) => {\n  const compName = componentName || 'ANONYMOUS';\n  const allowedKeys = [\n    'borderColor',\n    'borderWidth',\n    'cornerRadius',\n    'shadowColor',\n    'shadowOpacity',\n    'shadowOffset',\n    'shadowRadius',\n  ];\n\n  const propVal = props[propName];\n\n  if (propVal) {\n    if (typeof propVal !== 'object') {\n      return new Error(`${propName} in ${compName} expected type object, received ${typeof propVal}`);\n    } else {\n      const keys = Object.keys(propVal);\n      const disallowed = keys.filter(key => !allowedKeys.includes(key));\n      if (disallowed.length) {\n        return new Error(`${propName} in ${compName} received unexpected keys in ${propName} prop`);\n      }\n    }\n  }\n\n  return null;\n};\n\nexport const segmentItemsProp = (props, propName, componentName) => {\n  const compName = componentName || 'ANONYMOUS';\n  const allowedKeys = [\n    'title',\n    'image',\n    'enabled',\n  ];\n\n  const propVal = props[propName];\n\n  if (propVal) {\n    if (!Array.isArray(propVal)) {\n      return new Error(`${propName} in ${compName} expected type array, received ${typeof propVal}`);\n    } else if (typeof propVal[0] !== 'object') {\n      return new Error(`${propName} in ${compName} expected array elements to be objects, received ${typeof propVal[0]}`);\n    } else {\n      const keys = Object.keys(propVal);\n      const disallowed = keys.filter(key => !allowedKeys.includes(key));\n      if (disallowed.length) {\n        return new Error(`${propName} in ${compName} received unexpected keys in ${propName} prop`);\n      }\n    }\n  }\n\n  return null;\n};\n\nexport const targetActionEventsProp = (props, propName, componentName) => {\n  const compName = componentName || 'ANONYMOUS';\n\n  const propVal = props[propName];\n\n  if (propVal) {\n    if (!Array.isArray(propVal)) {\n      return new Error(`${propName} in ${compName} expected type array, received ${typeof propVal}`);\n    } else if (propVal.length !== 2) {\n      return new Error(`${propName} in ${compName} expected length of ${propName} to be 2, received ${propVal.length}`);\n    } else if (typeof propVal[0] !== 'function') {\n      return new Error(`${propName} in ${compName} expected first element of ${propName} to be a function, received ${typeof propVal[0]}`);\n    } else if (typeof propVal[1] !== 'number') {\n      return new Error(`${propName} in ${compName} expected first element of ${propName} to be a UIControlEvent, received ${typeof propVal[1]}`);\n    }\n  }\n\n  return null;\n};\n\nexport const targetActionProp = (props, propName, componentName) => {\n  const compName = componentName || 'ANONYMOUS';\n\n  const propVal = props[propName];\n\n  if (propVal) {\n    if (typeof propVal !== 'function') {\n      return new Error(`${propName} in ${compName} expected type function, received ${typeof propVal}`);\n    }\n  }\n\n  return null;\n};\n\nexport const tabBarProp = (props, propName, componentName) => {\n  const compName = componentName || 'ANONYMOUS';\n  const allowedKeys = [\n    'backgroundColor',\n    'barTintColor',\n    'tintColor',\n    'unselectedItemTintColor',\n  ];\n\n  const propVal = props[propName];\n\n  if (propVal) {\n    if (typeof propVal !== 'object') {\n      return new Error(`${propName} in ${compName} expected type object, received ${typeof propVal}`);\n    } else {\n      const keys = Object.keys(propVal);\n      const disallowed = keys.filter(key => !allowedKeys.includes(key));\n      if (disallowed.length) {\n        return new Error(`${propName} in ${compName} received unexpected keys in ${propName} prop`);\n      }\n    }\n  }\n\n  return null;\n};\n",
+    "static": true,
+    "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/propTypes.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 253,
+    "kind": "function",
+    "name": "colorProp",
+    "memberof": "sweetiekit/utils/propTypes.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/propTypes.js~colorProp",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propTypes.js",
+    "importStyle": "{colorProp}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "propName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "componentName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 254,
+    "kind": "function",
+    "name": "frameProp",
+    "memberof": "sweetiekit/utils/propTypes.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/propTypes.js~frameProp",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propTypes.js",
+    "importStyle": "{frameProp}",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "propName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "componentName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 255,
+    "kind": "function",
+    "name": "layerProp",
+    "memberof": "sweetiekit/utils/propTypes.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/propTypes.js~layerProp",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propTypes.js",
+    "importStyle": "{layerProp}",
+    "description": null,
+    "lineNumber": 47,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "propName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "componentName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 256,
+    "kind": "function",
+    "name": "segmentItemsProp",
+    "memberof": "sweetiekit/utils/propTypes.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/propTypes.js~segmentItemsProp",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propTypes.js",
+    "importStyle": "{segmentItemsProp}",
+    "description": null,
+    "lineNumber": 76,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "propName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "componentName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 257,
+    "kind": "function",
+    "name": "targetActionEventsProp",
+    "memberof": "sweetiekit/utils/propTypes.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/propTypes.js~targetActionEventsProp",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propTypes.js",
+    "importStyle": "{targetActionEventsProp}",
+    "description": null,
+    "lineNumber": 103,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "propName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "componentName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 258,
+    "kind": "function",
+    "name": "targetActionProp",
+    "memberof": "sweetiekit/utils/propTypes.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/propTypes.js~targetActionProp",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propTypes.js",
+    "importStyle": "{targetActionProp}",
+    "description": null,
+    "lineNumber": 123,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "propName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "componentName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 259,
+    "kind": "function",
+    "name": "tabBarProp",
+    "memberof": "sweetiekit/utils/propTypes.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "sweetiekit/utils/propTypes.js~tabBarProp",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/propTypes.js",
+    "importStyle": "{tabBarProp}",
+    "description": null,
+    "lineNumber": 137,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "propName",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "componentName",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 260,
     "kind": "file",
     "name": "sweetiekit/utils/properties.js",
     "content": "import * as colors from \"./colors\";\n\nexport const viewAttrs = ['frame', 'backgroundColor'];\nexport const viewDefaults = {\n  backgroundColor: colors.clear,\n};\n\nexport const textViewAttrs = [...viewAttrs, 'font', 'textAlignment', 'textColor'];\nexport const textViewDefaults = {\n  ...viewDefaults,\n  backgroundColor: colors.clear,\n  textAlignment: NSTextAlignmentLeft,\n  textColor: colors.black,\n};\n\nexport const layerAttrs = ['cornerRadius', 'shadowOffset', 'shadowColor', 'borderWidth', 'borderColor'];\nexport const layerDefaults = {};\n",
@@ -3922,7 +4933,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 219,
+    "__docId__": 261,
     "kind": "variable",
     "name": "viewAttrs",
     "memberof": "sweetiekit/utils/properties.js",
@@ -3942,7 +4953,7 @@
     }
   },
   {
-    "__docId__": 220,
+    "__docId__": 262,
     "kind": "variable",
     "name": "viewDefaults",
     "memberof": "sweetiekit/utils/properties.js",
@@ -3962,7 +4973,7 @@
     }
   },
   {
-    "__docId__": 221,
+    "__docId__": 263,
     "kind": "variable",
     "name": "textViewAttrs",
     "memberof": "sweetiekit/utils/properties.js",
@@ -3982,7 +4993,7 @@
     }
   },
   {
-    "__docId__": 222,
+    "__docId__": 264,
     "kind": "variable",
     "name": "textViewDefaults",
     "memberof": "sweetiekit/utils/properties.js",
@@ -4002,7 +5013,7 @@
     }
   },
   {
-    "__docId__": 223,
+    "__docId__": 265,
     "kind": "variable",
     "name": "layerAttrs",
     "memberof": "sweetiekit/utils/properties.js",
@@ -4022,7 +5033,7 @@
     }
   },
   {
-    "__docId__": 224,
+    "__docId__": 266,
     "kind": "variable",
     "name": "layerDefaults",
     "memberof": "sweetiekit/utils/properties.js",
@@ -4042,10 +5053,10 @@
     }
   },
   {
-    "__docId__": 225,
+    "__docId__": 267,
     "kind": "file",
     "name": "sweetiekit/utils/removeChild.js",
-    "content": "import * as is from './is';\n\n\nexport default (parent, child, listeners) => {\n  let removed = true;\n\n  if (is.view(child)) {\n    child.removeFromSuperview();\n  } else if (is.viewController(child)) {\n    child.dismissViewControllerAnimatedCompletion(true, () => {});\n  } else if (is.view(parent) && is.tapRecognizer(child)) {\n    parent.removeGestureRecognizer(child);\n  } else {\n    removed = false;\n  }\n\n  if (removed) {\n    const newListeners = { ...listeners };\n    delete newListeners[child.selfAddress];\n    return newListeners;\n  }\n\n  return listeners;\n};\n",
+    "content": "import * as is from './is';\n\nexport default (parent, child) => {\n  if (is.tabBarController(parent) && is.viewController(child)) {\n    const ctrls = Array.from(parent.viewControllers || []);\n    const idx = ctrls.indexOf(child);\n    const newCtrls = ctrls.splice(idx, 1);\n\n    let newSelectedIndex = parent.selectedIndex;\n    if (parent.selectedIndex > newCtrls.length - 1) {\n      newSelectedIndex = newCtrls.length - 1;\n    }\n    parent.selectedIndex = newSelectedIndex;\n\n    parent.setViewControllers(newCtrls);\n  } else if (is.view(parent) && is.tapRecognizer(child)) {\n    parent.removeGestureRecognizer(child);\n  } else if (is.stackView(parent) && is.view(child)) {\n    parent.removeArrangedSubview(child);\n  } if (is.view(child)) {\n    child.removeFromSuperview();\n  } else if (is.viewController(child)) {\n    child.dismissViewControllerAnimatedCompletion(true, () => {});\n  }\n};\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/removeChild.js",
     "access": "public",
@@ -4053,7 +5064,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 226,
+    "__docId__": 268,
     "kind": "function",
     "name": "removeChild",
     "memberof": "sweetiekit/utils/removeChild.js",
@@ -4066,7 +5077,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/removeChild.js",
     "importStyle": "removeChild",
     "description": null,
-    "lineNumber": 4,
+    "lineNumber": 3,
     "undocument": true,
     "params": [
       {
@@ -4080,25 +5091,15 @@
         "types": [
           "*"
         ]
-      },
-      {
-        "name": "listeners",
-        "types": [
-          "*"
-        ]
       }
     ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
+    "return": null
   },
   {
-    "__docId__": 227,
+    "__docId__": 269,
     "kind": "file",
     "name": "sweetiekit/utils/types.js",
-    "content": "export const view = 'ui-view';\nexport const imageView = 'ui-image-view';\nexport const label = 'ui-label';\nexport const scrollView = 'ui-scroll-view';\n\nexport const textField = 'ui-text-field';\nexport const control = 'ui-control';\nexport const button = 'ui-button';\nexport const uiSwitch = 'ui-switch';\nexport const slider = 'ui-slider';\n\nexport const gestureRecognizer = 'ui-gesture-recognizer';\nexport const tapGestureRecognizer = 'ui-tap-gesture-recognizer';\n\nexport const viewController = 'ui-view-controller';\n",
+    "content": "export const button = 'ui-button';\nexport const control = 'ui-control';\nexport const imageView = 'ui-image-view';\nexport const label = 'ui-label';\nexport const scrollView = 'ui-scroll-view';\nexport const slider = 'ui-slider';\nexport const segmentedControl = 'ui-segmented-control';\nexport const stackView = 'ui-stack-view';\nexport const textField = 'ui-text-field';\nexport const uiSwitch = 'ui-switch';\nexport const view = 'ui-view';\n\nexport const gestureRecognizer = 'ui-gesture-recognizer';\nexport const tapGestureRecognizer = 'ui-tap-gesture-recognizer';\n\nexport const viewController = 'ui-view-controller';\nexport const tabBarController = 'ui-tab-bar-controller';\n",
     "static": true,
     "longname": "/Users/emily/Downloads/sweetie-react/src/sweetiekit/utils/types.js",
     "access": "public",
@@ -4106,127 +5107,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 228,
-    "kind": "variable",
-    "name": "view",
-    "memberof": "sweetiekit/utils/types.js",
-    "static": true,
-    "longname": "sweetiekit/utils/types.js~view",
-    "access": "public",
-    "export": true,
-    "importPath": "sweetie-react/sweetiekit/utils/types.js",
-    "importStyle": "{view}",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 229,
-    "kind": "variable",
-    "name": "imageView",
-    "memberof": "sweetiekit/utils/types.js",
-    "static": true,
-    "longname": "sweetiekit/utils/types.js~imageView",
-    "access": "public",
-    "export": true,
-    "importPath": "sweetie-react/sweetiekit/utils/types.js",
-    "importStyle": "{imageView}",
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 230,
-    "kind": "variable",
-    "name": "label",
-    "memberof": "sweetiekit/utils/types.js",
-    "static": true,
-    "longname": "sweetiekit/utils/types.js~label",
-    "access": "public",
-    "export": true,
-    "importPath": "sweetie-react/sweetiekit/utils/types.js",
-    "importStyle": "{label}",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 231,
-    "kind": "variable",
-    "name": "scrollView",
-    "memberof": "sweetiekit/utils/types.js",
-    "static": true,
-    "longname": "sweetiekit/utils/types.js~scrollView",
-    "access": "public",
-    "export": true,
-    "importPath": "sweetie-react/sweetiekit/utils/types.js",
-    "importStyle": "{scrollView}",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 232,
-    "kind": "variable",
-    "name": "textField",
-    "memberof": "sweetiekit/utils/types.js",
-    "static": true,
-    "longname": "sweetiekit/utils/types.js~textField",
-    "access": "public",
-    "export": true,
-    "importPath": "sweetie-react/sweetiekit/utils/types.js",
-    "importStyle": "{textField}",
-    "description": null,
-    "lineNumber": 6,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 233,
-    "kind": "variable",
-    "name": "control",
-    "memberof": "sweetiekit/utils/types.js",
-    "static": true,
-    "longname": "sweetiekit/utils/types.js~control",
-    "access": "public",
-    "export": true,
-    "importPath": "sweetie-react/sweetiekit/utils/types.js",
-    "importStyle": "{control}",
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
-    "type": {
-      "types": [
-        "string"
-      ]
-    }
-  },
-  {
-    "__docId__": 234,
+    "__docId__": 270,
     "kind": "variable",
     "name": "button",
     "memberof": "sweetiekit/utils/types.js",
@@ -4237,7 +5118,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/types.js",
     "importStyle": "{button}",
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 1,
     "undocument": true,
     "type": {
       "types": [
@@ -4246,18 +5127,18 @@
     }
   },
   {
-    "__docId__": 235,
+    "__docId__": 271,
     "kind": "variable",
-    "name": "uiSwitch",
+    "name": "control",
     "memberof": "sweetiekit/utils/types.js",
     "static": true,
-    "longname": "sweetiekit/utils/types.js~uiSwitch",
+    "longname": "sweetiekit/utils/types.js~control",
     "access": "public",
     "export": true,
     "importPath": "sweetie-react/sweetiekit/utils/types.js",
-    "importStyle": "{uiSwitch}",
+    "importStyle": "{control}",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 2,
     "undocument": true,
     "type": {
       "types": [
@@ -4266,7 +5147,67 @@
     }
   },
   {
-    "__docId__": 236,
+    "__docId__": 272,
+    "kind": "variable",
+    "name": "imageView",
+    "memberof": "sweetiekit/utils/types.js",
+    "static": true,
+    "longname": "sweetiekit/utils/types.js~imageView",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/types.js",
+    "importStyle": "{imageView}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 273,
+    "kind": "variable",
+    "name": "label",
+    "memberof": "sweetiekit/utils/types.js",
+    "static": true,
+    "longname": "sweetiekit/utils/types.js~label",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/types.js",
+    "importStyle": "{label}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 274,
+    "kind": "variable",
+    "name": "scrollView",
+    "memberof": "sweetiekit/utils/types.js",
+    "static": true,
+    "longname": "sweetiekit/utils/types.js~scrollView",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/types.js",
+    "importStyle": "{scrollView}",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 275,
     "kind": "variable",
     "name": "slider",
     "memberof": "sweetiekit/utils/types.js",
@@ -4277,6 +5218,86 @@
     "importPath": "sweetie-react/sweetiekit/utils/types.js",
     "importStyle": "{slider}",
     "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 276,
+    "kind": "variable",
+    "name": "segmentedControl",
+    "memberof": "sweetiekit/utils/types.js",
+    "static": true,
+    "longname": "sweetiekit/utils/types.js~segmentedControl",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/types.js",
+    "importStyle": "{segmentedControl}",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 277,
+    "kind": "variable",
+    "name": "stackView",
+    "memberof": "sweetiekit/utils/types.js",
+    "static": true,
+    "longname": "sweetiekit/utils/types.js~stackView",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/types.js",
+    "importStyle": "{stackView}",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 278,
+    "kind": "variable",
+    "name": "textField",
+    "memberof": "sweetiekit/utils/types.js",
+    "static": true,
+    "longname": "sweetiekit/utils/types.js~textField",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/types.js",
+    "importStyle": "{textField}",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 279,
+    "kind": "variable",
+    "name": "uiSwitch",
+    "memberof": "sweetiekit/utils/types.js",
+    "static": true,
+    "longname": "sweetiekit/utils/types.js~uiSwitch",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/types.js",
+    "importStyle": "{uiSwitch}",
+    "description": null,
     "lineNumber": 10,
     "undocument": true,
     "type": {
@@ -4286,7 +5307,27 @@
     }
   },
   {
-    "__docId__": 237,
+    "__docId__": 280,
+    "kind": "variable",
+    "name": "view",
+    "memberof": "sweetiekit/utils/types.js",
+    "static": true,
+    "longname": "sweetiekit/utils/types.js~view",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/types.js",
+    "importStyle": "{view}",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 281,
     "kind": "variable",
     "name": "gestureRecognizer",
     "memberof": "sweetiekit/utils/types.js",
@@ -4297,7 +5338,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/types.js",
     "importStyle": "{gestureRecognizer}",
     "description": null,
-    "lineNumber": 12,
+    "lineNumber": 13,
     "undocument": true,
     "type": {
       "types": [
@@ -4306,7 +5347,7 @@
     }
   },
   {
-    "__docId__": 238,
+    "__docId__": 282,
     "kind": "variable",
     "name": "tapGestureRecognizer",
     "memberof": "sweetiekit/utils/types.js",
@@ -4317,7 +5358,7 @@
     "importPath": "sweetie-react/sweetiekit/utils/types.js",
     "importStyle": "{tapGestureRecognizer}",
     "description": null,
-    "lineNumber": 13,
+    "lineNumber": 14,
     "undocument": true,
     "type": {
       "types": [
@@ -4326,7 +5367,7 @@
     }
   },
   {
-    "__docId__": 239,
+    "__docId__": 283,
     "kind": "variable",
     "name": "viewController",
     "memberof": "sweetiekit/utils/types.js",
@@ -4337,7 +5378,27 @@
     "importPath": "sweetie-react/sweetiekit/utils/types.js",
     "importStyle": "{viewController}",
     "description": null,
-    "lineNumber": 15,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 284,
+    "kind": "variable",
+    "name": "tabBarController",
+    "memberof": "sweetiekit/utils/types.js",
+    "static": true,
+    "longname": "sweetiekit/utils/types.js~tabBarController",
+    "access": "public",
+    "export": true,
+    "importPath": "sweetie-react/sweetiekit/utils/types.js",
+    "importStyle": "{tabBarController}",
+    "description": null,
+    "lineNumber": 17,
     "undocument": true,
     "type": {
       "types": [
@@ -4355,7 +5416,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"sweetie-react\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"keywords\": [],\n  \"author\": \"Emily Kolar <emkolar@gmail.com>\",\n  \"license\": \"\",\n  \"scripts\": {\n    \"clean\": \"rm dist/bundle.js\",\n    \"build-dev\": \"webpack -d --mode development\",\n    \"build-prod\": \"webpack -p --mode production\",\n    \"start\": \"webpack-dev-server --hot --mode development\",\n    \"docs\": \"./node_modules/.bin/esdoc\"\n  },\n  \"dependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"prop-types\": \"^15.7.2\",\n    \"react\": \"^16.8.6\",\n    \"react-dom\": \"^16.8.6\",\n    \"react-reconciler\": \"^0.20.4\"\n  },\n  \"devDependencies\": {\n    \"@babel/core\": \"^7.4.0\",\n    \"@babel/plugin-proposal-class-properties\": \"^7.4.4\",\n    \"@babel/preset-env\": \"^7.4.2\",\n    \"@babel/preset-react\": \"^7.0.0\",\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-loader\": \"^8.0.5\",\n    \"react-hot-loader\": \"^4.8.2\",\n    \"react-styleguidist\": \"^9.1.8\",\n    \"webpack\": \"^4.29.6\",\n    \"webpack-cli\": \"^3.3.0\",\n    \"webpack-dev-server\": \"^3.2.1\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"sweetie-react\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"keywords\": [],\n  \"author\": \"Emily Kolar <emkolar@gmail.com>\",\n  \"license\": \"\",\n  \"scripts\": {\n    \"clean\": \"rm dist/bundle.js\",\n    \"build-dev\": \"webpack -d --mode development\",\n    \"build-prod\": \"webpack -p --mode production\",\n    \"start\": \"webpack-dev-server --hot --mode development\",\n    \"docs\": \"./node_modules/.bin/esdoc\"\n  },\n  \"dependencies\": {\n    \"lodash\": \"^4.17.11\",\n    \"prop-types\": \"^15.7.2\",\n    \"react\": \"^16.8.6\",\n    \"react-dom\": \"^16.8.6\",\n    \"react-reconciler\": \"^0.20.4\"\n  },\n  \"devDependencies\": {\n    \"@babel/core\": \"^7.4.0\",\n    \"@babel/plugin-proposal-class-properties\": \"^7.4.4\",\n    \"@babel/preset-env\": \"^7.4.2\",\n    \"@babel/preset-react\": \"^7.0.0\",\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-loader\": \"^8.0.5\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"react-hot-loader\": \"^4.8.2\",\n    \"webpack\": \"^4.29.6\",\n    \"webpack-cli\": \"^3.3.0\",\n    \"webpack-dev-server\": \"^3.2.1\"\n  }\n}\n",
     "longname": "/Users/emily/Downloads/sweetie-react/package.json",
     "name": "package.json",
     "static": true,

@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 514,
+  "end": 668,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 16,
+      "line": 18,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 514,
+    "end": 668,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 16,
+        "line": 18,
         "column": 0
       }
     },
@@ -31,7 +31,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 0,
-        "end": 30,
+        "end": 34,
         "loc": {
           "start": {
             "line": 1,
@@ -39,540 +39,6 @@
           },
           "end": {
             "line": 1,
-            "column": 30
-          }
-        },
-        "specifiers": [],
-        "source": null,
-        "declaration": {
-          "type": "VariableDeclaration",
-          "start": 7,
-          "end": 30,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 7
-            },
-            "end": {
-              "line": 1,
-              "column": 30
-            }
-          },
-          "declarations": [
-            {
-              "type": "VariableDeclarator",
-              "start": 13,
-              "end": 29,
-              "loc": {
-                "start": {
-                  "line": 1,
-                  "column": 13
-                },
-                "end": {
-                  "line": 1,
-                  "column": 29
-                }
-              },
-              "id": {
-                "type": "Identifier",
-                "start": 13,
-                "end": 17,
-                "loc": {
-                  "start": {
-                    "line": 1,
-                    "column": 13
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 17
-                  },
-                  "identifierName": "view"
-                },
-                "name": "view"
-              },
-              "init": {
-                "type": "StringLiteral",
-                "start": 20,
-                "end": 29,
-                "loc": {
-                  "start": {
-                    "line": 1,
-                    "column": 20
-                  },
-                  "end": {
-                    "line": 1,
-                    "column": 29
-                  }
-                },
-                "extra": {
-                  "rawValue": "ui-view",
-                  "raw": "'ui-view'"
-                },
-                "value": "ui-view"
-              }
-            }
-          ],
-          "kind": "const",
-          "leadingComments": [],
-          "trailingComments": []
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 31,
-        "end": 72,
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 0
-          },
-          "end": {
-            "line": 2,
-            "column": 41
-          }
-        },
-        "specifiers": [],
-        "source": null,
-        "declaration": {
-          "type": "VariableDeclaration",
-          "start": 38,
-          "end": 72,
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 7
-            },
-            "end": {
-              "line": 2,
-              "column": 41
-            }
-          },
-          "declarations": [
-            {
-              "type": "VariableDeclarator",
-              "start": 44,
-              "end": 71,
-              "loc": {
-                "start": {
-                  "line": 2,
-                  "column": 13
-                },
-                "end": {
-                  "line": 2,
-                  "column": 40
-                }
-              },
-              "id": {
-                "type": "Identifier",
-                "start": 44,
-                "end": 53,
-                "loc": {
-                  "start": {
-                    "line": 2,
-                    "column": 13
-                  },
-                  "end": {
-                    "line": 2,
-                    "column": 22
-                  },
-                  "identifierName": "imageView"
-                },
-                "name": "imageView"
-              },
-              "init": {
-                "type": "StringLiteral",
-                "start": 56,
-                "end": 71,
-                "loc": {
-                  "start": {
-                    "line": 2,
-                    "column": 25
-                  },
-                  "end": {
-                    "line": 2,
-                    "column": 40
-                  }
-                },
-                "extra": {
-                  "rawValue": "ui-image-view",
-                  "raw": "'ui-image-view'"
-                },
-                "value": "ui-image-view"
-              }
-            }
-          ],
-          "kind": "const",
-          "leadingComments": [],
-          "trailingComments": []
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 73,
-        "end": 105,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 32
-          }
-        },
-        "specifiers": [],
-        "source": null,
-        "declaration": {
-          "type": "VariableDeclaration",
-          "start": 80,
-          "end": 105,
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 7
-            },
-            "end": {
-              "line": 3,
-              "column": 32
-            }
-          },
-          "declarations": [
-            {
-              "type": "VariableDeclarator",
-              "start": 86,
-              "end": 104,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 13
-                },
-                "end": {
-                  "line": 3,
-                  "column": 31
-                }
-              },
-              "id": {
-                "type": "Identifier",
-                "start": 86,
-                "end": 91,
-                "loc": {
-                  "start": {
-                    "line": 3,
-                    "column": 13
-                  },
-                  "end": {
-                    "line": 3,
-                    "column": 18
-                  },
-                  "identifierName": "label"
-                },
-                "name": "label"
-              },
-              "init": {
-                "type": "StringLiteral",
-                "start": 94,
-                "end": 104,
-                "loc": {
-                  "start": {
-                    "line": 3,
-                    "column": 21
-                  },
-                  "end": {
-                    "line": 3,
-                    "column": 31
-                  }
-                },
-                "extra": {
-                  "rawValue": "ui-label",
-                  "raw": "'ui-label'"
-                },
-                "value": "ui-label"
-              }
-            }
-          ],
-          "kind": "const",
-          "leadingComments": [],
-          "trailingComments": []
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 106,
-        "end": 149,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 43
-          }
-        },
-        "specifiers": [],
-        "source": null,
-        "declaration": {
-          "type": "VariableDeclaration",
-          "start": 113,
-          "end": 149,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 7
-            },
-            "end": {
-              "line": 4,
-              "column": 43
-            }
-          },
-          "declarations": [
-            {
-              "type": "VariableDeclarator",
-              "start": 119,
-              "end": 148,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 13
-                },
-                "end": {
-                  "line": 4,
-                  "column": 42
-                }
-              },
-              "id": {
-                "type": "Identifier",
-                "start": 119,
-                "end": 129,
-                "loc": {
-                  "start": {
-                    "line": 4,
-                    "column": 13
-                  },
-                  "end": {
-                    "line": 4,
-                    "column": 23
-                  },
-                  "identifierName": "scrollView"
-                },
-                "name": "scrollView"
-              },
-              "init": {
-                "type": "StringLiteral",
-                "start": 132,
-                "end": 148,
-                "loc": {
-                  "start": {
-                    "line": 4,
-                    "column": 26
-                  },
-                  "end": {
-                    "line": 4,
-                    "column": 42
-                  }
-                },
-                "extra": {
-                  "rawValue": "ui-scroll-view",
-                  "raw": "'ui-scroll-view'"
-                },
-                "value": "ui-scroll-view"
-              }
-            }
-          ],
-          "kind": "const",
-          "leadingComments": [],
-          "trailingComments": []
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 151,
-        "end": 192,
-        "loc": {
-          "start": {
-            "line": 6,
-            "column": 0
-          },
-          "end": {
-            "line": 6,
-            "column": 41
-          }
-        },
-        "specifiers": [],
-        "source": null,
-        "declaration": {
-          "type": "VariableDeclaration",
-          "start": 158,
-          "end": 192,
-          "loc": {
-            "start": {
-              "line": 6,
-              "column": 7
-            },
-            "end": {
-              "line": 6,
-              "column": 41
-            }
-          },
-          "declarations": [
-            {
-              "type": "VariableDeclarator",
-              "start": 164,
-              "end": 191,
-              "loc": {
-                "start": {
-                  "line": 6,
-                  "column": 13
-                },
-                "end": {
-                  "line": 6,
-                  "column": 40
-                }
-              },
-              "id": {
-                "type": "Identifier",
-                "start": 164,
-                "end": 173,
-                "loc": {
-                  "start": {
-                    "line": 6,
-                    "column": 13
-                  },
-                  "end": {
-                    "line": 6,
-                    "column": 22
-                  },
-                  "identifierName": "textField"
-                },
-                "name": "textField"
-              },
-              "init": {
-                "type": "StringLiteral",
-                "start": 176,
-                "end": 191,
-                "loc": {
-                  "start": {
-                    "line": 6,
-                    "column": 25
-                  },
-                  "end": {
-                    "line": 6,
-                    "column": 40
-                  }
-                },
-                "extra": {
-                  "rawValue": "ui-text-field",
-                  "raw": "'ui-text-field'"
-                },
-                "value": "ui-text-field"
-              }
-            }
-          ],
-          "kind": "const",
-          "leadingComments": [],
-          "trailingComments": []
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 193,
-        "end": 229,
-        "loc": {
-          "start": {
-            "line": 7,
-            "column": 0
-          },
-          "end": {
-            "line": 7,
-            "column": 36
-          }
-        },
-        "specifiers": [],
-        "source": null,
-        "declaration": {
-          "type": "VariableDeclaration",
-          "start": 200,
-          "end": 229,
-          "loc": {
-            "start": {
-              "line": 7,
-              "column": 7
-            },
-            "end": {
-              "line": 7,
-              "column": 36
-            }
-          },
-          "declarations": [
-            {
-              "type": "VariableDeclarator",
-              "start": 206,
-              "end": 228,
-              "loc": {
-                "start": {
-                  "line": 7,
-                  "column": 13
-                },
-                "end": {
-                  "line": 7,
-                  "column": 35
-                }
-              },
-              "id": {
-                "type": "Identifier",
-                "start": 206,
-                "end": 213,
-                "loc": {
-                  "start": {
-                    "line": 7,
-                    "column": 13
-                  },
-                  "end": {
-                    "line": 7,
-                    "column": 20
-                  },
-                  "identifierName": "control"
-                },
-                "name": "control"
-              },
-              "init": {
-                "type": "StringLiteral",
-                "start": 216,
-                "end": 228,
-                "loc": {
-                  "start": {
-                    "line": 7,
-                    "column": 23
-                  },
-                  "end": {
-                    "line": 7,
-                    "column": 35
-                  }
-                },
-                "extra": {
-                  "rawValue": "ui-control",
-                  "raw": "'ui-control'"
-                },
-                "value": "ui-control"
-              }
-            }
-          ],
-          "kind": "const",
-          "leadingComments": [],
-          "trailingComments": []
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 230,
-        "end": 264,
-        "loc": {
-          "start": {
-            "line": 8,
-            "column": 0
-          },
-          "end": {
-            "line": 8,
             "column": 34
           }
         },
@@ -580,44 +46,44 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 237,
-          "end": 264,
+          "start": 7,
+          "end": 34,
           "loc": {
             "start": {
-              "line": 8,
+              "line": 1,
               "column": 7
             },
             "end": {
-              "line": 8,
+              "line": 1,
               "column": 34
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 243,
-              "end": 263,
+              "start": 13,
+              "end": 33,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 1,
                   "column": 13
                 },
                 "end": {
-                  "line": 8,
+                  "line": 1,
                   "column": 33
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 243,
-                "end": 249,
+                "start": 13,
+                "end": 19,
                 "loc": {
                   "start": {
-                    "line": 8,
+                    "line": 1,
                     "column": 13
                   },
                   "end": {
-                    "line": 8,
+                    "line": 1,
                     "column": 19
                   },
                   "identifierName": "button"
@@ -626,15 +92,15 @@
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 252,
-                "end": 263,
+                "start": 22,
+                "end": 33,
                 "loc": {
                   "start": {
-                    "line": 8,
+                    "line": 1,
                     "column": 22
                   },
                   "end": {
-                    "line": 8,
+                    "line": 1,
                     "column": 33
                   }
                 },
@@ -653,15 +119,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 265,
-        "end": 301,
+        "start": 35,
+        "end": 71,
         "loc": {
           "start": {
-            "line": 9,
+            "line": 2,
             "column": 0
           },
           "end": {
-            "line": 9,
+            "line": 2,
             "column": 36
           }
         },
@@ -669,69 +135,69 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 272,
-          "end": 301,
+          "start": 42,
+          "end": 71,
           "loc": {
             "start": {
-              "line": 9,
+              "line": 2,
               "column": 7
             },
             "end": {
-              "line": 9,
+              "line": 2,
               "column": 36
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 278,
-              "end": 300,
+              "start": 48,
+              "end": 70,
               "loc": {
                 "start": {
-                  "line": 9,
+                  "line": 2,
                   "column": 13
                 },
                 "end": {
-                  "line": 9,
+                  "line": 2,
                   "column": 35
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 278,
-                "end": 286,
+                "start": 48,
+                "end": 55,
                 "loc": {
                   "start": {
-                    "line": 9,
+                    "line": 2,
                     "column": 13
                   },
                   "end": {
-                    "line": 9,
-                    "column": 21
+                    "line": 2,
+                    "column": 20
                   },
-                  "identifierName": "uiSwitch"
+                  "identifierName": "control"
                 },
-                "name": "uiSwitch"
+                "name": "control"
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 289,
-                "end": 300,
+                "start": 58,
+                "end": 70,
                 "loc": {
                   "start": {
-                    "line": 9,
-                    "column": 24
+                    "line": 2,
+                    "column": 23
                   },
                   "end": {
-                    "line": 9,
+                    "line": 2,
                     "column": 35
                   }
                 },
                 "extra": {
-                  "rawValue": "ui-switch",
-                  "raw": "'ui-switch'"
+                  "rawValue": "ui-control",
+                  "raw": "'ui-control'"
                 },
-                "value": "ui-switch"
+                "value": "ui-control"
               }
             }
           ],
@@ -742,15 +208,282 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 302,
-        "end": 336,
+        "start": 72,
+        "end": 113,
         "loc": {
           "start": {
-            "line": 10,
+            "line": 3,
             "column": 0
           },
           "end": {
-            "line": 10,
+            "line": 3,
+            "column": 41
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 79,
+          "end": 113,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 7
+            },
+            "end": {
+              "line": 3,
+              "column": 41
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 85,
+              "end": 112,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 13
+                },
+                "end": {
+                  "line": 3,
+                  "column": 40
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 85,
+                "end": 94,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 22
+                  },
+                  "identifierName": "imageView"
+                },
+                "name": "imageView"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 97,
+                "end": 112,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 40
+                  }
+                },
+                "extra": {
+                  "rawValue": "ui-image-view",
+                  "raw": "'ui-image-view'"
+                },
+                "value": "ui-image-view"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 114,
+        "end": 146,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 32
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 121,
+          "end": 146,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 7
+            },
+            "end": {
+              "line": 4,
+              "column": 32
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 127,
+              "end": 145,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 13
+                },
+                "end": {
+                  "line": 4,
+                  "column": 31
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 127,
+                "end": 132,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 18
+                  },
+                  "identifierName": "label"
+                },
+                "name": "label"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 135,
+                "end": 145,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 21
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 31
+                  }
+                },
+                "extra": {
+                  "rawValue": "ui-label",
+                  "raw": "'ui-label'"
+                },
+                "value": "ui-label"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 147,
+        "end": 190,
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 0
+          },
+          "end": {
+            "line": 5,
+            "column": 43
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 154,
+          "end": 190,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 7
+            },
+            "end": {
+              "line": 5,
+              "column": 43
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 160,
+              "end": 189,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 13
+                },
+                "end": {
+                  "line": 5,
+                  "column": 42
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 160,
+                "end": 170,
+                "loc": {
+                  "start": {
+                    "line": 5,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 23
+                  },
+                  "identifierName": "scrollView"
+                },
+                "name": "scrollView"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 173,
+                "end": 189,
+                "loc": {
+                  "start": {
+                    "line": 5,
+                    "column": 26
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 42
+                  }
+                },
+                "extra": {
+                  "rawValue": "ui-scroll-view",
+                  "raw": "'ui-scroll-view'"
+                },
+                "value": "ui-scroll-view"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 191,
+        "end": 225,
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 0
+          },
+          "end": {
+            "line": 6,
             "column": 34
           }
         },
@@ -758,44 +491,44 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 309,
-          "end": 336,
+          "start": 198,
+          "end": 225,
           "loc": {
             "start": {
-              "line": 10,
+              "line": 6,
               "column": 7
             },
             "end": {
-              "line": 10,
+              "line": 6,
               "column": 34
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 315,
-              "end": 335,
+              "start": 204,
+              "end": 224,
               "loc": {
                 "start": {
-                  "line": 10,
+                  "line": 6,
                   "column": 13
                 },
                 "end": {
-                  "line": 10,
+                  "line": 6,
                   "column": 33
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 315,
-                "end": 321,
+                "start": 204,
+                "end": 210,
                 "loc": {
                   "start": {
-                    "line": 10,
+                    "line": 6,
                     "column": 13
                   },
                   "end": {
-                    "line": 10,
+                    "line": 6,
                     "column": 19
                   },
                   "identifierName": "slider"
@@ -804,15 +537,15 @@
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 324,
-                "end": 335,
+                "start": 213,
+                "end": 224,
                 "loc": {
                   "start": {
-                    "line": 10,
+                    "line": 6,
                     "column": 22
                   },
                   "end": {
-                    "line": 10,
+                    "line": 6,
                     "column": 33
                   }
                 },
@@ -831,15 +564,460 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 338,
-        "end": 395,
+        "start": 226,
+        "end": 281,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 7,
             "column": 0
           },
           "end": {
-            "line": 12,
+            "line": 7,
+            "column": 55
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 233,
+          "end": 281,
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 7
+            },
+            "end": {
+              "line": 7,
+              "column": 55
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 239,
+              "end": 280,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 13
+                },
+                "end": {
+                  "line": 7,
+                  "column": 54
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 239,
+                "end": 255,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 29
+                  },
+                  "identifierName": "segmentedControl"
+                },
+                "name": "segmentedControl"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 258,
+                "end": 280,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 32
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 54
+                  }
+                },
+                "extra": {
+                  "rawValue": "ui-segmented-control",
+                  "raw": "'ui-segmented-control'"
+                },
+                "value": "ui-segmented-control"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 282,
+        "end": 323,
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 0
+          },
+          "end": {
+            "line": 8,
+            "column": 41
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 289,
+          "end": 323,
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 7
+            },
+            "end": {
+              "line": 8,
+              "column": 41
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 295,
+              "end": 322,
+              "loc": {
+                "start": {
+                  "line": 8,
+                  "column": 13
+                },
+                "end": {
+                  "line": 8,
+                  "column": 40
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 295,
+                "end": 304,
+                "loc": {
+                  "start": {
+                    "line": 8,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 22
+                  },
+                  "identifierName": "stackView"
+                },
+                "name": "stackView"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 307,
+                "end": 322,
+                "loc": {
+                  "start": {
+                    "line": 8,
+                    "column": 25
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 40
+                  }
+                },
+                "extra": {
+                  "rawValue": "ui-stack-view",
+                  "raw": "'ui-stack-view'"
+                },
+                "value": "ui-stack-view"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 324,
+        "end": 365,
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 0
+          },
+          "end": {
+            "line": 9,
+            "column": 41
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 331,
+          "end": 365,
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 7
+            },
+            "end": {
+              "line": 9,
+              "column": 41
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 337,
+              "end": 364,
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 13
+                },
+                "end": {
+                  "line": 9,
+                  "column": 40
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 337,
+                "end": 346,
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 22
+                  },
+                  "identifierName": "textField"
+                },
+                "name": "textField"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 349,
+                "end": 364,
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 25
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 40
+                  }
+                },
+                "extra": {
+                  "rawValue": "ui-text-field",
+                  "raw": "'ui-text-field'"
+                },
+                "value": "ui-text-field"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 366,
+        "end": 402,
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 0
+          },
+          "end": {
+            "line": 10,
+            "column": 36
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 373,
+          "end": 402,
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 7
+            },
+            "end": {
+              "line": 10,
+              "column": 36
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 379,
+              "end": 401,
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 13
+                },
+                "end": {
+                  "line": 10,
+                  "column": 35
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 379,
+                "end": 387,
+                "loc": {
+                  "start": {
+                    "line": 10,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 21
+                  },
+                  "identifierName": "uiSwitch"
+                },
+                "name": "uiSwitch"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 390,
+                "end": 401,
+                "loc": {
+                  "start": {
+                    "line": 10,
+                    "column": 24
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 35
+                  }
+                },
+                "extra": {
+                  "rawValue": "ui-switch",
+                  "raw": "'ui-switch'"
+                },
+                "value": "ui-switch"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 403,
+        "end": 433,
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 0
+          },
+          "end": {
+            "line": 11,
+            "column": 30
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 410,
+          "end": 433,
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 7
+            },
+            "end": {
+              "line": 11,
+              "column": 30
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 416,
+              "end": 432,
+              "loc": {
+                "start": {
+                  "line": 11,
+                  "column": 13
+                },
+                "end": {
+                  "line": 11,
+                  "column": 29
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 416,
+                "end": 420,
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 17
+                  },
+                  "identifierName": "view"
+                },
+                "name": "view"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 423,
+                "end": 432,
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 20
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 29
+                  }
+                },
+                "extra": {
+                  "rawValue": "ui-view",
+                  "raw": "'ui-view'"
+                },
+                "value": "ui-view"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 435,
+        "end": 492,
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 0
+          },
+          "end": {
+            "line": 13,
             "column": 57
           }
         },
@@ -847,44 +1025,44 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 345,
-          "end": 395,
+          "start": 442,
+          "end": 492,
           "loc": {
             "start": {
-              "line": 12,
+              "line": 13,
               "column": 7
             },
             "end": {
-              "line": 12,
+              "line": 13,
               "column": 57
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 351,
-              "end": 394,
+              "start": 448,
+              "end": 491,
               "loc": {
                 "start": {
-                  "line": 12,
+                  "line": 13,
                   "column": 13
                 },
                 "end": {
-                  "line": 12,
+                  "line": 13,
                   "column": 56
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 351,
-                "end": 368,
+                "start": 448,
+                "end": 465,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 13,
                     "column": 13
                   },
                   "end": {
-                    "line": 12,
+                    "line": 13,
                     "column": 30
                   },
                   "identifierName": "gestureRecognizer"
@@ -893,15 +1071,15 @@
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 371,
-                "end": 394,
+                "start": 468,
+                "end": 491,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 13,
                     "column": 33
                   },
                   "end": {
-                    "line": 12,
+                    "line": 13,
                     "column": 56
                   }
                 },
@@ -920,15 +1098,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 396,
-        "end": 460,
+        "start": 493,
+        "end": 557,
         "loc": {
           "start": {
-            "line": 13,
+            "line": 14,
             "column": 0
           },
           "end": {
-            "line": 13,
+            "line": 14,
             "column": 64
           }
         },
@@ -936,44 +1114,44 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 403,
-          "end": 460,
+          "start": 500,
+          "end": 557,
           "loc": {
             "start": {
-              "line": 13,
+              "line": 14,
               "column": 7
             },
             "end": {
-              "line": 13,
+              "line": 14,
               "column": 64
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 409,
-              "end": 459,
+              "start": 506,
+              "end": 556,
               "loc": {
                 "start": {
-                  "line": 13,
+                  "line": 14,
                   "column": 13
                 },
                 "end": {
-                  "line": 13,
+                  "line": 14,
                   "column": 63
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 409,
-                "end": 429,
+                "start": 506,
+                "end": 526,
                 "loc": {
                   "start": {
-                    "line": 13,
+                    "line": 14,
                     "column": 13
                   },
                   "end": {
-                    "line": 13,
+                    "line": 14,
                     "column": 33
                   },
                   "identifierName": "tapGestureRecognizer"
@@ -982,15 +1160,15 @@
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 432,
-                "end": 459,
+                "start": 529,
+                "end": 556,
                 "loc": {
                   "start": {
-                    "line": 13,
+                    "line": 14,
                     "column": 36
                   },
                   "end": {
-                    "line": 13,
+                    "line": 14,
                     "column": 63
                   }
                 },
@@ -1009,15 +1187,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 462,
-        "end": 513,
+        "start": 559,
+        "end": 610,
         "loc": {
           "start": {
-            "line": 15,
+            "line": 16,
             "column": 0
           },
           "end": {
-            "line": 15,
+            "line": 16,
             "column": 51
           }
         },
@@ -1025,44 +1203,44 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 469,
-          "end": 513,
+          "start": 566,
+          "end": 610,
           "loc": {
             "start": {
-              "line": 15,
+              "line": 16,
               "column": 7
             },
             "end": {
-              "line": 15,
+              "line": 16,
               "column": 51
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 475,
-              "end": 512,
+              "start": 572,
+              "end": 609,
               "loc": {
                 "start": {
-                  "line": 15,
+                  "line": 16,
                   "column": 13
                 },
                 "end": {
-                  "line": 15,
+                  "line": 16,
                   "column": 50
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 475,
-                "end": 489,
+                "start": 572,
+                "end": 586,
                 "loc": {
                   "start": {
-                    "line": 15,
+                    "line": 16,
                     "column": 13
                   },
                   "end": {
-                    "line": 15,
+                    "line": 16,
                     "column": 27
                   },
                   "identifierName": "viewController"
@@ -1071,15 +1249,15 @@
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 492,
-                "end": 512,
+                "start": 589,
+                "end": 609,
                 "loc": {
                   "start": {
-                    "line": 15,
+                    "line": 16,
                     "column": 30
                   },
                   "end": {
-                    "line": 15,
+                    "line": 16,
                     "column": 50
                   }
                 },
@@ -1088,6 +1266,95 @@
                   "raw": "'ui-view-controller'"
                 },
                 "value": "ui-view-controller"
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 611,
+        "end": 667,
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 0
+          },
+          "end": {
+            "line": 17,
+            "column": 56
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 618,
+          "end": 667,
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 7
+            },
+            "end": {
+              "line": 17,
+              "column": 56
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 624,
+              "end": 666,
+              "loc": {
+                "start": {
+                  "line": 17,
+                  "column": 13
+                },
+                "end": {
+                  "line": 17,
+                  "column": 55
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 624,
+                "end": 640,
+                "loc": {
+                  "start": {
+                    "line": 17,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 29
+                  },
+                  "identifierName": "tabBarController"
+                },
+                "name": "tabBarController"
+              },
+              "init": {
+                "type": "StringLiteral",
+                "start": 643,
+                "end": 666,
+                "loc": {
+                  "start": {
+                    "line": 17,
+                    "column": 32
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 55
+                  }
+                },
+                "extra": {
+                  "rawValue": "ui-tab-bar-controller",
+                  "raw": "'ui-tab-bar-controller'"
+                },
+                "value": "ui-tab-bar-controller"
               }
             }
           ],
@@ -1169,9 +1436,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "view",
+      "value": "button",
       "start": 13,
-      "end": 17,
+      "end": 19,
       "loc": {
         "start": {
           "line": 1,
@@ -1179,7 +1446,7 @@
         },
         "end": {
           "line": 1,
-          "column": 17
+          "column": 19
         }
       }
     },
@@ -1197,16 +1464,16 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 18,
-      "end": 19,
+      "start": 20,
+      "end": 21,
       "loc": {
         "start": {
           "line": 1,
-          "column": 18
+          "column": 20
         },
         "end": {
           "line": 1,
-          "column": 19
+          "column": 21
         }
       }
     },
@@ -1223,17 +1490,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "ui-view",
-      "start": 20,
-      "end": 29,
+      "value": "ui-button",
+      "start": 22,
+      "end": 33,
       "loc": {
         "start": {
           "line": 1,
-          "column": 20
+          "column": 22
         },
         "end": {
           "line": 1,
-          "column": 29
+          "column": 33
         }
       }
     },
@@ -1250,16 +1517,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 29,
-      "end": 30,
+      "start": 33,
+      "end": 34,
       "loc": {
         "start": {
           "line": 1,
-          "column": 29
+          "column": 33
         },
         "end": {
           "line": 1,
-          "column": 30
+          "column": 34
         }
       }
     },
@@ -1278,8 +1545,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 31,
-      "end": 37,
+      "start": 35,
+      "end": 41,
       "loc": {
         "start": {
           "line": 2,
@@ -1306,8 +1573,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 38,
-      "end": 43,
+      "start": 42,
+      "end": 47,
       "loc": {
         "start": {
           "line": 2,
@@ -1331,9 +1598,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "imageView",
-      "start": 44,
-      "end": 53,
+      "value": "control",
+      "start": 48,
+      "end": 55,
       "loc": {
         "start": {
           "line": 2,
@@ -1341,6 +1608,168 @@
         },
         "end": {
           "line": 2,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 56,
+      "end": 57,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 21
+        },
+        "end": {
+          "line": 2,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "ui-control",
+      "start": 58,
+      "end": 70,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 23
+        },
+        "end": {
+          "line": 2,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 70,
+      "end": 71,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 35
+        },
+        "end": {
+          "line": 2,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 72,
+      "end": 78,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 79,
+      "end": 84,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 7
+        },
+        "end": {
+          "line": 3,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "imageView",
+      "start": 85,
+      "end": 94,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 13
+        },
+        "end": {
+          "line": 3,
           "column": 22
         }
       }
@@ -1359,15 +1788,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 54,
-      "end": 55,
+      "start": 95,
+      "end": 96,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 3,
           "column": 23
         },
         "end": {
-          "line": 2,
+          "line": 3,
           "column": 24
         }
       }
@@ -1386,15 +1815,15 @@
         "updateContext": null
       },
       "value": "ui-image-view",
-      "start": 56,
-      "end": 71,
+      "start": 97,
+      "end": 112,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 3,
           "column": 25
         },
         "end": {
-          "line": 2,
+          "line": 3,
           "column": 40
         }
       }
@@ -1412,15 +1841,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 71,
-      "end": 72,
+      "start": 112,
+      "end": 113,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 3,
           "column": 40
         },
         "end": {
-          "line": 2,
+          "line": 3,
           "column": 41
         }
       }
@@ -1440,15 +1869,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 73,
-      "end": 79,
+      "start": 114,
+      "end": 120,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 4,
           "column": 6
         }
       }
@@ -1468,15 +1897,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 80,
-      "end": 85,
+      "start": 121,
+      "end": 126,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 4,
           "column": 7
         },
         "end": {
-          "line": 3,
+          "line": 4,
           "column": 12
         }
       }
@@ -1494,15 +1923,15 @@
         "binop": null
       },
       "value": "label",
-      "start": 86,
-      "end": 91,
+      "start": 127,
+      "end": 132,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 4,
           "column": 13
         },
         "end": {
-          "line": 3,
+          "line": 4,
           "column": 18
         }
       }
@@ -1521,15 +1950,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 92,
-      "end": 93,
+      "start": 133,
+      "end": 134,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 4,
           "column": 19
         },
         "end": {
-          "line": 3,
+          "line": 4,
           "column": 20
         }
       }
@@ -1548,15 +1977,15 @@
         "updateContext": null
       },
       "value": "ui-label",
-      "start": 94,
-      "end": 104,
+      "start": 135,
+      "end": 145,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 4,
           "column": 21
         },
         "end": {
-          "line": 3,
+          "line": 4,
           "column": 31
         }
       }
@@ -1574,15 +2003,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 104,
-      "end": 105,
+      "start": 145,
+      "end": 146,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 4,
           "column": 31
         },
         "end": {
-          "line": 3,
+          "line": 4,
           "column": 32
         }
       }
@@ -1602,15 +2031,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 106,
-      "end": 112,
+      "start": 147,
+      "end": 153,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 6
         }
       }
@@ -1630,15 +2059,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 113,
-      "end": 118,
+      "start": 154,
+      "end": 159,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 5,
           "column": 7
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 12
         }
       }
@@ -1656,15 +2085,15 @@
         "binop": null
       },
       "value": "scrollView",
-      "start": 119,
-      "end": 129,
+      "start": 160,
+      "end": 170,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 5,
           "column": 13
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 23
         }
       }
@@ -1683,15 +2112,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 130,
-      "end": 131,
+      "start": 171,
+      "end": 172,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 5,
           "column": 24
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 25
         }
       }
@@ -1710,15 +2139,15 @@
         "updateContext": null
       },
       "value": "ui-scroll-view",
-      "start": 132,
-      "end": 148,
+      "start": 173,
+      "end": 189,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 5,
           "column": 26
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 42
         }
       }
@@ -1736,15 +2165,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 148,
-      "end": 149,
+      "start": 189,
+      "end": 190,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 5,
           "column": 42
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 43
         }
       }
@@ -1764,8 +2193,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 151,
-      "end": 157,
+      "start": 191,
+      "end": 197,
       "loc": {
         "start": {
           "line": 6,
@@ -1792,8 +2221,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 158,
-      "end": 163,
+      "start": 198,
+      "end": 203,
       "loc": {
         "start": {
           "line": 6,
@@ -1817,9 +2246,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "textField",
-      "start": 164,
-      "end": 173,
+      "value": "slider",
+      "start": 204,
+      "end": 210,
       "loc": {
         "start": {
           "line": 6,
@@ -1827,6 +2256,330 @@
         },
         "end": {
           "line": 6,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 211,
+      "end": 212,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 20
+        },
+        "end": {
+          "line": 6,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "ui-slider",
+      "start": 213,
+      "end": 224,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 22
+        },
+        "end": {
+          "line": 6,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 224,
+      "end": 225,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 33
+        },
+        "end": {
+          "line": 6,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 226,
+      "end": 232,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 233,
+      "end": 238,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 7
+        },
+        "end": {
+          "line": 7,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "segmentedControl",
+      "start": 239,
+      "end": 255,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 13
+        },
+        "end": {
+          "line": 7,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 256,
+      "end": 257,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 30
+        },
+        "end": {
+          "line": 7,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "ui-segmented-control",
+      "start": 258,
+      "end": 280,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 32
+        },
+        "end": {
+          "line": 7,
+          "column": 54
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 280,
+      "end": 281,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 54
+        },
+        "end": {
+          "line": 7,
+          "column": 55
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 282,
+      "end": 288,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 289,
+      "end": 294,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 7
+        },
+        "end": {
+          "line": 8,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "stackView",
+      "start": 295,
+      "end": 304,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 13
+        },
+        "end": {
+          "line": 8,
           "column": 22
         }
       }
@@ -1845,15 +2598,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 174,
-      "end": 175,
+      "start": 305,
+      "end": 306,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 8,
           "column": 23
         },
         "end": {
-          "line": 6,
+          "line": 8,
           "column": 24
         }
       }
@@ -1871,16 +2624,16 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "ui-text-field",
-      "start": 176,
-      "end": 191,
+      "value": "ui-stack-view",
+      "start": 307,
+      "end": 322,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 8,
           "column": 25
         },
         "end": {
-          "line": 6,
+          "line": 8,
           "column": 40
         }
       }
@@ -1898,15 +2651,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 191,
-      "end": 192,
+      "start": 322,
+      "end": 323,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 8,
           "column": 40
         },
         "end": {
-          "line": 6,
+          "line": 8,
           "column": 41
         }
       }
@@ -1926,15 +2679,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 193,
-      "end": 199,
+      "start": 324,
+      "end": 330,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 6
         }
       }
@@ -1954,15 +2707,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 200,
-      "end": 205,
+      "start": 331,
+      "end": 336,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 7
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 12
         }
       }
@@ -1979,17 +2732,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "control",
-      "start": 206,
-      "end": 213,
+      "value": "textField",
+      "start": 337,
+      "end": 346,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 13
         },
         "end": {
-          "line": 7,
-          "column": 20
+          "line": 9,
+          "column": 22
         }
       }
     },
@@ -2007,178 +2760,16 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 214,
-      "end": 215,
+      "start": 347,
+      "end": 348,
       "loc": {
         "start": {
-          "line": 7,
-          "column": 21
-        },
-        "end": {
-          "line": 7,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "ui-control",
-      "start": 216,
-      "end": 228,
-      "loc": {
-        "start": {
-          "line": 7,
+          "line": 9,
           "column": 23
         },
         "end": {
-          "line": 7,
-          "column": 35
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ";",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 228,
-      "end": 229,
-      "loc": {
-        "start": {
-          "line": 7,
-          "column": 35
-        },
-        "end": {
-          "line": 7,
-          "column": 36
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "export",
-        "keyword": "export",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "export",
-      "start": 230,
-      "end": 236,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 0
-        },
-        "end": {
-          "line": 8,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "const",
-        "keyword": "const",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "const",
-      "start": 237,
-      "end": 242,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 7
-        },
-        "end": {
-          "line": 8,
-          "column": 12
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "button",
-      "start": 243,
-      "end": 249,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 13
-        },
-        "end": {
-          "line": 8,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "=",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": true,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "=",
-      "start": 250,
-      "end": 251,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 20
-        },
-        "end": {
-          "line": 8,
-          "column": 21
+          "line": 9,
+          "column": 24
         }
       }
     },
@@ -2195,17 +2786,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "ui-button",
-      "start": 252,
-      "end": 263,
+      "value": "ui-text-field",
+      "start": 349,
+      "end": 364,
       "loc": {
         "start": {
-          "line": 8,
-          "column": 22
+          "line": 9,
+          "column": 25
         },
         "end": {
-          "line": 8,
-          "column": 33
+          "line": 9,
+          "column": 40
         }
       }
     },
@@ -2222,16 +2813,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 263,
-      "end": 264,
+      "start": 364,
+      "end": 365,
       "loc": {
         "start": {
-          "line": 8,
-          "column": 33
+          "line": 9,
+          "column": 40
         },
         "end": {
-          "line": 8,
-          "column": 34
+          "line": 9,
+          "column": 41
         }
       }
     },
@@ -2250,15 +2841,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 265,
-      "end": 271,
+      "start": 366,
+      "end": 372,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 10,
           "column": 6
         }
       }
@@ -2278,15 +2869,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 272,
-      "end": 277,
+      "start": 373,
+      "end": 378,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 10,
           "column": 7
         },
         "end": {
-          "line": 9,
+          "line": 10,
           "column": 12
         }
       }
@@ -2304,15 +2895,15 @@
         "binop": null
       },
       "value": "uiSwitch",
-      "start": 278,
-      "end": 286,
+      "start": 379,
+      "end": 387,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 10,
           "column": 13
         },
         "end": {
-          "line": 9,
+          "line": 10,
           "column": 21
         }
       }
@@ -2331,15 +2922,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 287,
-      "end": 288,
+      "start": 388,
+      "end": 389,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 10,
           "column": 22
         },
         "end": {
-          "line": 9,
+          "line": 10,
           "column": 23
         }
       }
@@ -2358,15 +2949,15 @@
         "updateContext": null
       },
       "value": "ui-switch",
-      "start": 289,
-      "end": 300,
+      "start": 390,
+      "end": 401,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 10,
           "column": 24
         },
         "end": {
-          "line": 9,
+          "line": 10,
           "column": 35
         }
       }
@@ -2384,15 +2975,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 300,
-      "end": 301,
+      "start": 401,
+      "end": 402,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 10,
           "column": 35
         },
         "end": {
-          "line": 9,
+          "line": 10,
           "column": 36
         }
       }
@@ -2412,15 +3003,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 302,
-      "end": 308,
+      "start": 403,
+      "end": 409,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 11,
           "column": 6
         }
       }
@@ -2440,15 +3031,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 309,
-      "end": 314,
+      "start": 410,
+      "end": 415,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 11,
           "column": 7
         },
         "end": {
-          "line": 10,
+          "line": 11,
           "column": 12
         }
       }
@@ -2465,17 +3056,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "slider",
-      "start": 315,
-      "end": 321,
+      "value": "view",
+      "start": 416,
+      "end": 420,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 11,
           "column": 13
         },
         "end": {
-          "line": 10,
-          "column": 19
+          "line": 11,
+          "column": 17
         }
       }
     },
@@ -2493,16 +3084,16 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 322,
-      "end": 323,
+      "start": 421,
+      "end": 422,
       "loc": {
         "start": {
-          "line": 10,
-          "column": 20
+          "line": 11,
+          "column": 18
         },
         "end": {
-          "line": 10,
-          "column": 21
+          "line": 11,
+          "column": 19
         }
       }
     },
@@ -2519,17 +3110,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "ui-slider",
-      "start": 324,
-      "end": 335,
+      "value": "ui-view",
+      "start": 423,
+      "end": 432,
       "loc": {
         "start": {
-          "line": 10,
-          "column": 22
+          "line": 11,
+          "column": 20
         },
         "end": {
-          "line": 10,
-          "column": 33
+          "line": 11,
+          "column": 29
         }
       }
     },
@@ -2546,16 +3137,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 335,
-      "end": 336,
+      "start": 432,
+      "end": 433,
       "loc": {
         "start": {
-          "line": 10,
-          "column": 33
+          "line": 11,
+          "column": 29
         },
         "end": {
-          "line": 10,
-          "column": 34
+          "line": 11,
+          "column": 30
         }
       }
     },
@@ -2574,15 +3165,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 338,
-      "end": 344,
+      "start": 435,
+      "end": 441,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 13,
           "column": 6
         }
       }
@@ -2602,15 +3193,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 345,
-      "end": 350,
+      "start": 442,
+      "end": 447,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 12,
+          "line": 13,
           "column": 12
         }
       }
@@ -2628,15 +3219,15 @@
         "binop": null
       },
       "value": "gestureRecognizer",
-      "start": 351,
-      "end": 368,
+      "start": 448,
+      "end": 465,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 13,
           "column": 13
         },
         "end": {
-          "line": 12,
+          "line": 13,
           "column": 30
         }
       }
@@ -2655,15 +3246,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 369,
-      "end": 370,
+      "start": 466,
+      "end": 467,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 13,
           "column": 31
         },
         "end": {
-          "line": 12,
+          "line": 13,
           "column": 32
         }
       }
@@ -2682,15 +3273,15 @@
         "updateContext": null
       },
       "value": "ui-gesture-recognizer",
-      "start": 371,
-      "end": 394,
+      "start": 468,
+      "end": 491,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 13,
           "column": 33
         },
         "end": {
-          "line": 12,
+          "line": 13,
           "column": 56
         }
       }
@@ -2708,15 +3299,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 394,
-      "end": 395,
+      "start": 491,
+      "end": 492,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 13,
           "column": 56
         },
         "end": {
-          "line": 12,
+          "line": 13,
           "column": 57
         }
       }
@@ -2736,15 +3327,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 396,
-      "end": 402,
+      "start": 493,
+      "end": 499,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 6
         }
       }
@@ -2764,15 +3355,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 403,
-      "end": 408,
+      "start": 500,
+      "end": 505,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 7
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 12
         }
       }
@@ -2790,15 +3381,15 @@
         "binop": null
       },
       "value": "tapGestureRecognizer",
-      "start": 409,
-      "end": 429,
+      "start": 506,
+      "end": 526,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 13
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 33
         }
       }
@@ -2817,15 +3408,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 430,
-      "end": 431,
+      "start": 527,
+      "end": 528,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 34
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 35
         }
       }
@@ -2844,15 +3435,15 @@
         "updateContext": null
       },
       "value": "ui-tap-gesture-recognizer",
-      "start": 432,
-      "end": 459,
+      "start": 529,
+      "end": 556,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 36
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 63
         }
       }
@@ -2870,15 +3461,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 459,
-      "end": 460,
+      "start": 556,
+      "end": 557,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 63
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 64
         }
       }
@@ -2898,15 +3489,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 462,
-      "end": 468,
+      "start": 559,
+      "end": 565,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 0
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 6
         }
       }
@@ -2926,15 +3517,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 469,
-      "end": 474,
+      "start": 566,
+      "end": 571,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 7
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 12
         }
       }
@@ -2952,15 +3543,15 @@
         "binop": null
       },
       "value": "viewController",
-      "start": 475,
-      "end": 489,
+      "start": 572,
+      "end": 586,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 13
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 27
         }
       }
@@ -2979,15 +3570,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 490,
-      "end": 491,
+      "start": 587,
+      "end": 588,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 28
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 29
         }
       }
@@ -3006,15 +3597,15 @@
         "updateContext": null
       },
       "value": "ui-view-controller",
-      "start": 492,
-      "end": 512,
+      "start": 589,
+      "end": 609,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 30
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 50
         }
       }
@@ -3032,16 +3623,178 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 512,
-      "end": 513,
+      "start": 609,
+      "end": 610,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 50
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 51
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 611,
+      "end": 617,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 17,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 618,
+      "end": 623,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 7
+        },
+        "end": {
+          "line": 17,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "tabBarController",
+      "start": 624,
+      "end": 640,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 13
+        },
+        "end": {
+          "line": 17,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 641,
+      "end": 642,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 30
+        },
+        "end": {
+          "line": 17,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "ui-tab-bar-controller",
+      "start": 643,
+      "end": 666,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 32
+        },
+        "end": {
+          "line": 17,
+          "column": 55
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 666,
+      "end": 667,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 55
+        },
+        "end": {
+          "line": 17,
+          "column": 56
         }
       }
     },
@@ -3058,15 +3811,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 514,
-      "end": 514,
+      "start": 668,
+      "end": 668,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 18,
           "column": 0
         },
         "end": {
-          "line": 16,
+          "line": 18,
           "column": 0
         }
       }

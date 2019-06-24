@@ -54,9 +54,21 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "sweetie-react/sweetiekit/enums/uikit.js~nstextalignment",
+    "variable/index.html#static-variable-NSTextAlignment",
+    "<span>NSTextAlignment</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/enums/uikit.js</span>",
+    "variable"
+  ],
+  [
     "sweetie-react/sweetiekit/components/scrollview/component.js~scrollview",
     "class/sweetiekit/components/ScrollView/component.js~ScrollView.html",
     "<span>ScrollView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/ScrollView/component.js</span>",
+    "class"
+  ],
+  [
+    "sweetie-react/sweetiekit/components/segmentedcontrol/component.js~segmentedcontrol",
+    "class/sweetiekit/components/SegmentedControl/component.js~SegmentedControl.html",
+    "<span>SegmentedControl</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/SegmentedControl/component.js</span>",
     "class"
   ],
   [
@@ -69,6 +81,12 @@ window.esdocSearchIndex = [
     "sweetie-react/sweetiekit/components/switch/component.js~switch",
     "class/sweetiekit/components/Switch/component.js~Switch.html",
     "<span>Switch</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/Switch/component.js</span>",
+    "class"
+  ],
+  [
+    "sweetie-react/sweetiekit/components/tabbarcontroller/component.js~tabbarcontroller",
+    "class/sweetiekit/components/TabBarController/component.js~TabBarController.html",
+    "<span>TabBarController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/TabBarController/component.js</span>",
     "class"
   ],
   [
@@ -88,6 +106,18 @@ window.esdocSearchIndex = [
     "class/sweetiekit/components/TextField/component.js~TextField.html",
     "<span>TextField</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/TextField/component.js</span>",
     "class"
+  ],
+  [
+    "sweetie-react/sweetiekit/enums/uikit.js~uicontrolevents",
+    "variable/index.html#static-variable-UIControlEvents",
+    "<span>UIControlEvents</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/enums/uikit.js</span>",
+    "variable"
+  ],
+  [
+    "sweetie-react/sweetiekit/enums/uikit.js~uicontrolstate",
+    "variable/index.html#static-variable-UIControlState",
+    "<span>UIControlState</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/enums/uikit.js</span>",
+    "variable"
   ],
   [
     "sweetie-react/sweetiekit/components/view/component.js~view",
@@ -138,6 +168,12 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "sweetie-react/sweetiekit/utils/proptypes.js~colorprop",
+    "function/index.html#static-function-colorProp",
+    "<span>colorProp</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propTypes.js</span>",
+    "function"
+  ],
+  [
     "sweetie-react/sweetiekit/utils/commitupdate.js~commitupdate",
     "function/index.html#static-function-commitUpdate",
     "<span>commitUpdate</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/commitUpdate.js</span>",
@@ -171,6 +207,12 @@ window.esdocSearchIndex = [
     "sweetie-react/sweetiekit/utils/finalizeinitialchildren.js~finalizeinitialchildren",
     "function/index.html#static-function-finalizeInitialChildren",
     "<span>finalizeInitialChildren</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/finalizeInitialChildren.js</span>",
+    "function"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/proptypes.js~frameprop",
+    "function/index.html#static-function-frameProp",
+    "<span>frameProp</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propTypes.js</span>",
     "function"
   ],
   [
@@ -210,6 +252,12 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "sweetie-react/sweetiekit/utils/propkeys.js~items",
+    "variable/index.html#static-variable-items",
+    "<span>items</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
+    "variable"
+  ],
+  [
     "sweetie-react/sweetiekit/utils/createelement.js~label",
     "function/index.html#static-function-label",
     "<span>label</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
@@ -240,10 +288,28 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "sweetie-react/sweetiekit/utils/proptypes.js~layerprop",
+    "function/index.html#static-function-layerProp",
+    "<span>layerProp</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propTypes.js</span>",
+    "function"
+  ],
+  [
     "sweetie-react/sweetiekit/utils/colors.js~lightgrey",
     "variable/index.html#static-variable-lightGrey",
     "<span>lightGrey</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/colors.js</span>",
     "variable"
+  ],
+  [
+    "sweetie-react/sweetiekit/components/image.js~makeimage",
+    "function/index.html#static-function-makeImage",
+    "<span>makeImage</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/Image.js</span>",
+    "function"
+  ],
+  [
+    "sweetie-react/sweetiekit/components/tabbaritem.js~maketabbaritem",
+    "function/index.html#static-function-makeTabBarItem",
+    "<span>makeTabBarItem</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/components/TabBarItem.js</span>",
+    "function"
   ],
   [
     "sweetie-react/sweetiekit/utils/colors.js~medgrey",
@@ -288,6 +354,30 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "sweetie-react/sweetiekit/utils/proptypes.js~segmentitemsprop",
+    "function/index.html#static-function-segmentItemsProp",
+    "<span>segmentItemsProp</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propTypes.js</span>",
+    "function"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/createelement.js~segmentedcontrol",
+    "function/index.html#static-function-segmentedControl",
+    "<span>segmentedControl</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
+    "function"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/types.js~segmentedcontrol",
+    "variable/index.html#static-variable-segmentedControl",
+    "<span>segmentedControl</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
+    "variable"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/propkeys.js~selectedindex",
+    "variable/index.html#static-variable-selectedIndex",
+    "<span>selectedIndex</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
+    "variable"
+  ],
+  [
     "sweetie-react/sweetiekit/utils/createelement.js~slider",
     "function/index.html#static-function-slider",
     "<span>slider</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
@@ -298,6 +388,60 @@ window.esdocSearchIndex = [
     "variable/index.html#static-variable-slider",
     "<span>slider</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
     "variable"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/createelement.js~stackview",
+    "function/index.html#static-function-stackView",
+    "<span>stackView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
+    "function"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/is.js~stackview",
+    "function/index.html#static-function-stackView",
+    "<span>stackView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/is.js</span>",
+    "function"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/types.js~stackview",
+    "variable/index.html#static-variable-stackView",
+    "<span>stackView</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
+    "variable"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/propkeys.js~tabbar",
+    "variable/index.html#static-variable-tabBar",
+    "<span>tabBar</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
+    "variable"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/createelement.js~tabbarcontroller",
+    "function/index.html#static-function-tabBarController",
+    "<span>tabBarController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/createElement.js</span>",
+    "function"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/is.js~tabbarcontroller",
+    "function/index.html#static-function-tabBarController",
+    "<span>tabBarController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/is.js</span>",
+    "function"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/types.js~tabbarcontroller",
+    "variable/index.html#static-variable-tabBarController",
+    "<span>tabBarController</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/types.js</span>",
+    "variable"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/propkeys.js~tabbaritem",
+    "variable/index.html#static-variable-tabBarItem",
+    "<span>tabBarItem</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
+    "variable"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/proptypes.js~tabbarprop",
+    "function/index.html#static-function-tabBarProp",
+    "<span>tabBarProp</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propTypes.js</span>",
+    "function"
   ],
   [
     "sweetie-react/sweetiekit/utils/createelement.js~tapgesturerecognizer",
@@ -322,6 +466,18 @@ window.esdocSearchIndex = [
     "variable/index.html#static-variable-target",
     "<span>target</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propKeys.js</span>",
     "variable"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/proptypes.js~targetactioneventsprop",
+    "function/index.html#static-function-targetActionEventsProp",
+    "<span>targetActionEventsProp</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propTypes.js</span>",
+    "function"
+  ],
+  [
+    "sweetie-react/sweetiekit/utils/proptypes.js~targetactionprop",
+    "function/index.html#static-function-targetActionProp",
+    "<span>targetActionProp</span> <span class=\"search-result-import-path\">sweetie-react/sweetiekit/utils/propTypes.js</span>",
+    "function"
   ],
   [
     "sweetie-react/sweetiekit/utils/propkeys.js~text",
@@ -936,6 +1092,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "sweetiekit/components/image.js",
+    "file/sweetiekit/components/Image.js.html",
+    "sweetiekit/components/Image.js",
+    "file"
+  ],
+  [
     "sweetiekit/components/imageview/component.js",
     "file/sweetiekit/components/ImageView/component.js.html",
     "sweetiekit/components/ImageView/component.js",
@@ -1026,6 +1188,36 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "sweetiekit/components/segmentedcontrol/component.js",
+    "file/sweetiekit/components/SegmentedControl/component.js.html",
+    "sweetiekit/components/SegmentedControl/component.js",
+    "file"
+  ],
+  [
+    "sweetiekit/components/segmentedcontrol/component.js~segmentedcontrol#render",
+    "class/sweetiekit/components/SegmentedControl/component.js~SegmentedControl.html#instance-method-render",
+    "sweetiekit/components/SegmentedControl/component.js~SegmentedControl#render",
+    "method"
+  ],
+  [
+    "sweetiekit/components/segmentedcontrol/component.js~segmentedcontrol.defaultprops",
+    "class/sweetiekit/components/SegmentedControl/component.js~SegmentedControl.html#static-member-defaultProps",
+    "sweetiekit/components/SegmentedControl/component.js~SegmentedControl.defaultProps",
+    "member"
+  ],
+  [
+    "sweetiekit/components/segmentedcontrol/component.js~segmentedcontrol.proptypes",
+    "class/sweetiekit/components/SegmentedControl/component.js~SegmentedControl.html#static-member-propTypes",
+    "sweetiekit/components/SegmentedControl/component.js~SegmentedControl.propTypes",
+    "member"
+  ],
+  [
+    "sweetiekit/components/segmentedcontrol/index.js",
+    "file/sweetiekit/components/SegmentedControl/index.js.html",
+    "sweetiekit/components/SegmentedControl/index.js",
+    "file"
+  ],
+  [
     "sweetiekit/components/slider/component.js",
     "file/sweetiekit/components/Slider/component.js.html",
     "sweetiekit/components/Slider/component.js",
@@ -1083,6 +1275,42 @@ window.esdocSearchIndex = [
     "sweetiekit/components/switch/index.js",
     "file/sweetiekit/components/Switch/index.js.html",
     "sweetiekit/components/Switch/index.js",
+    "file"
+  ],
+  [
+    "sweetiekit/components/tabbarcontroller/component.js",
+    "file/sweetiekit/components/TabBarController/component.js.html",
+    "sweetiekit/components/TabBarController/component.js",
+    "file"
+  ],
+  [
+    "sweetiekit/components/tabbarcontroller/component.js~tabbarcontroller#render",
+    "class/sweetiekit/components/TabBarController/component.js~TabBarController.html#instance-method-render",
+    "sweetiekit/components/TabBarController/component.js~TabBarController#render",
+    "method"
+  ],
+  [
+    "sweetiekit/components/tabbarcontroller/component.js~tabbarcontroller.defaultprops",
+    "class/sweetiekit/components/TabBarController/component.js~TabBarController.html#static-member-defaultProps",
+    "sweetiekit/components/TabBarController/component.js~TabBarController.defaultProps",
+    "member"
+  ],
+  [
+    "sweetiekit/components/tabbarcontroller/component.js~tabbarcontroller.proptypes",
+    "class/sweetiekit/components/TabBarController/component.js~TabBarController.html#static-member-propTypes",
+    "sweetiekit/components/TabBarController/component.js~TabBarController.propTypes",
+    "member"
+  ],
+  [
+    "sweetiekit/components/tabbarcontroller/index.js",
+    "file/sweetiekit/components/TabBarController/index.js.html",
+    "sweetiekit/components/TabBarController/index.js",
+    "file"
+  ],
+  [
+    "sweetiekit/components/tabbaritem.js",
+    "file/sweetiekit/components/TabBarItem.js.html",
+    "sweetiekit/components/TabBarItem.js",
     "file"
   ],
   [
@@ -1224,6 +1452,18 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "sweetiekit/enums/index.js",
+    "file/sweetiekit/enums/index.js.html",
+    "sweetiekit/enums/index.js",
+    "file"
+  ],
+  [
+    "sweetiekit/enums/uikit.js",
+    "file/sweetiekit/enums/uikit.js.html",
+    "sweetiekit/enums/uikit.js",
+    "file"
+  ],
+  [
     "sweetiekit/renderer.js",
     "file/sweetiekit/renderer.js.html",
     "sweetiekit/renderer.js",
@@ -1347,6 +1587,12 @@ window.esdocSearchIndex = [
     "sweetiekit/utils/propkeys.js",
     "file/sweetiekit/utils/propKeys.js.html",
     "sweetiekit/utils/propKeys.js",
+    "file"
+  ],
+  [
+    "sweetiekit/utils/proptypes.js",
+    "file/sweetiekit/utils/propTypes.js.html",
+    "sweetiekit/utils/propTypes.js",
     "file"
   ],
   [

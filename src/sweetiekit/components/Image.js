@@ -2,6 +2,10 @@ const SweetieKit = Require('std:sweetiekit.node');
 
 const { UIImage } = SweetieKit;
 
-export default function makeImage(named) {
-  return UIImage(named);
+/**
+ * @param {string} name
+ * @returns {UIImage}
+ */
+export default function makeImage(name) {
+  return UIImage(name);
 }

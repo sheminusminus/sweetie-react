@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 378,
+  "end": 510,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 7,
+      "line": 11,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 378,
+    "end": 510,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 7,
+        "line": 11,
         "column": 0
       }
     },
@@ -1056,6 +1056,352 @@
                       "identifierName": "UIImageView"
                     },
                     "name": "UIImageView"
+                  }
+                }
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 378,
+        "end": 435,
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 0
+          },
+          "end": {
+            "line": 7,
+            "column": 57
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 385,
+          "end": 435,
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 7
+            },
+            "end": {
+              "line": 7,
+              "column": 57
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 391,
+              "end": 434,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 13
+                },
+                "end": {
+                  "line": 7,
+                  "column": 56
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 391,
+                "end": 400,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 22
+                  },
+                  "identifierName": "stackView"
+                },
+                "name": "stackView"
+              },
+              "init": {
+                "type": "ArrowFunctionExpression",
+                "start": 403,
+                "end": 434,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 25
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 56
+                  }
+                },
+                "id": {
+                  "type": "Identifier",
+                  "start": 391,
+                  "end": 400,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 22
+                    },
+                    "identifierName": "stackView"
+                  },
+                  "name": "stackView"
+                },
+                "generator": false,
+                "expression": true,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 403,
+                    "end": 405,
+                    "loc": {
+                      "start": {
+                        "line": 7,
+                        "column": 25
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 27
+                      },
+                      "identifierName": "el"
+                    },
+                    "name": "el"
+                  }
+                ],
+                "body": {
+                  "type": "BinaryExpression",
+                  "start": 409,
+                  "end": 434,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 31
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 56
+                    }
+                  },
+                  "left": {
+                    "type": "Identifier",
+                    "start": 409,
+                    "end": 411,
+                    "loc": {
+                      "start": {
+                        "line": 7,
+                        "column": 31
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 33
+                      },
+                      "identifierName": "el"
+                    },
+                    "name": "el"
+                  },
+                  "operator": "instanceof",
+                  "right": {
+                    "type": "Identifier",
+                    "start": 423,
+                    "end": 434,
+                    "loc": {
+                      "start": {
+                        "line": 7,
+                        "column": 45
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 56
+                      },
+                      "identifierName": "UIStackView"
+                    },
+                    "name": "UIStackView"
+                  }
+                }
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 436,
+        "end": 507,
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 0
+          },
+          "end": {
+            "line": 8,
+            "column": 71
+          }
+        },
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 443,
+          "end": 507,
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 7
+            },
+            "end": {
+              "line": 8,
+              "column": 71
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 449,
+              "end": 506,
+              "loc": {
+                "start": {
+                  "line": 8,
+                  "column": 13
+                },
+                "end": {
+                  "line": 8,
+                  "column": 70
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 449,
+                "end": 465,
+                "loc": {
+                  "start": {
+                    "line": 8,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 29
+                  },
+                  "identifierName": "tabBarController"
+                },
+                "name": "tabBarController"
+              },
+              "init": {
+                "type": "ArrowFunctionExpression",
+                "start": 468,
+                "end": 506,
+                "loc": {
+                  "start": {
+                    "line": 8,
+                    "column": 32
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 70
+                  }
+                },
+                "id": {
+                  "type": "Identifier",
+                  "start": 449,
+                  "end": 465,
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 8,
+                      "column": 29
+                    },
+                    "identifierName": "tabBarController"
+                  },
+                  "name": "tabBarController"
+                },
+                "generator": false,
+                "expression": true,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 468,
+                    "end": 470,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 32
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 34
+                      },
+                      "identifierName": "el"
+                    },
+                    "name": "el"
+                  }
+                ],
+                "body": {
+                  "type": "BinaryExpression",
+                  "start": 474,
+                  "end": 506,
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 38
+                    },
+                    "end": {
+                      "line": 8,
+                      "column": 70
+                    }
+                  },
+                  "left": {
+                    "type": "Identifier",
+                    "start": 474,
+                    "end": 476,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 38
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 40
+                      },
+                      "identifierName": "el"
+                    },
+                    "name": "el"
+                  },
+                  "operator": "instanceof",
+                  "right": {
+                    "type": "Identifier",
+                    "start": 488,
+                    "end": 506,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 52
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 70
+                      },
+                      "identifierName": "UITabBarController"
+                    },
+                    "name": "UITabBarController"
                   }
                 }
               }
@@ -2675,6 +3021,540 @@
     },
     {
       "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 378,
+      "end": 384,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 385,
+      "end": 390,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 7
+        },
+        "end": {
+          "line": 7,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "stackView",
+      "start": 391,
+      "end": 400,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 13
+        },
+        "end": {
+          "line": 7,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 401,
+      "end": 402,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 23
+        },
+        "end": {
+          "line": 7,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "el",
+      "start": 403,
+      "end": 405,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 25
+        },
+        "end": {
+          "line": 7,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=>",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 406,
+      "end": 408,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 28
+        },
+        "end": {
+          "line": 7,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "el",
+      "start": 409,
+      "end": 411,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 31
+        },
+        "end": {
+          "line": 7,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "instanceof",
+        "keyword": "instanceof",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": 7,
+        "updateContext": null
+      },
+      "value": "instanceof",
+      "start": 412,
+      "end": 422,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 34
+        },
+        "end": {
+          "line": 7,
+          "column": 44
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "UIStackView",
+      "start": 423,
+      "end": 434,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 45
+        },
+        "end": {
+          "line": 7,
+          "column": 56
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 434,
+      "end": 435,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 56
+        },
+        "end": {
+          "line": 7,
+          "column": 57
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 436,
+      "end": 442,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 443,
+      "end": 448,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 7
+        },
+        "end": {
+          "line": 8,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "tabBarController",
+      "start": 449,
+      "end": 465,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 13
+        },
+        "end": {
+          "line": 8,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 466,
+      "end": 467,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 30
+        },
+        "end": {
+          "line": 8,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "el",
+      "start": 468,
+      "end": 470,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 32
+        },
+        "end": {
+          "line": 8,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=>",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 471,
+      "end": 473,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 35
+        },
+        "end": {
+          "line": 8,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "el",
+      "start": 474,
+      "end": 476,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 38
+        },
+        "end": {
+          "line": 8,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "instanceof",
+        "keyword": "instanceof",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": 7,
+        "updateContext": null
+      },
+      "value": "instanceof",
+      "start": 477,
+      "end": 487,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 41
+        },
+        "end": {
+          "line": 8,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "UITabBarController",
+      "start": 488,
+      "end": 506,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 52
+        },
+        "end": {
+          "line": 8,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 506,
+      "end": 507,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 70
+        },
+        "end": {
+          "line": 8,
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": {
         "label": "eof",
         "beforeExpr": false,
         "startsExpr": false,
@@ -2686,15 +3566,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 378,
-      "end": 378,
+      "start": 510,
+      "end": 510,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 11,
           "column": 0
         }
       }

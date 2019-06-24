@@ -14,10 +14,6 @@
     "docs": "./node_modules/.bin/esdoc"
   },
   "dependencies": {
-    "esdoc": "^1.1.0",
-    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
-    "esdoc-jsx-plugin": "^1.0.0",
-    "esdoc-standard-plugin": "^1.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -30,8 +26,11 @@
     "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.5",
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-jsx-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
     "react-hot-loader": "^4.8.2",
-    "react-styleguidist": "^9.1.8",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"

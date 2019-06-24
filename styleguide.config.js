@@ -11,42 +11,4 @@ module.exports = {
     parts.pop();
     return `import { ${componentName} } from '${parts.join('/')}';`;
   },
-  webpackConfig: {
-    entry: './src/index.js',
-    output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js'
-    },
-    module: {
-      rules: [
-        {
-          test: /\.(js|jsx)$/,
-          loader: 'babel-loader',
-          options: {
-            plugins: [
-              '@babel/plugin-proposal-class-properties'
-            ],
-            presets: [
-              [
-                "@babel/preset-env",
-                {
-                  "modules": false
-                }
-              ],
-              "@babel/preset-react",
-              "@babel/preset-flow"
-            ],
-            babelrc: false,
-          },
-          exclude: [/node_modules/],
-        }
-      ]
-    },
-    resolve: {
-      extensions: [
-        '.js',
-        '.jsx'
-      ]
-    },
-  },
 };

@@ -1,4 +1,7 @@
 import React from 'react';
+// noinspection JSUnresolvedVariable
+global.Require = global.Require || (() => {});
+// noinspection JSUnresolvedFunction
 const SweetieKit = Require('std:sweetiekit.node');
 
 import ReactDOM from './sweetiekit/renderer';

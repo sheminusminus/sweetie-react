@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   title: 'SweetieKit React',
@@ -42,5 +43,10 @@ module.exports = {
         '.jsx'
       ]
     },
+    plugins: [
+      new webpack.DefinePlugin({
+        NSTextAlignmentLeft: JSON.stringify(0),
+      }),
+    ],
   },
 };

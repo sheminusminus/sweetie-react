@@ -56,6 +56,7 @@ class App extends React.Component {
     name: '',
     hasChildController: false,
     sliderValue: 0,
+    selectedSegmentIndex: 1,
   };
 
   handleButtonClick = () => {
@@ -86,10 +87,11 @@ class App extends React.Component {
 
   handleSegmentChanged = (sender) => {
     console.log(sender.selectedSegmentIndex);
+    this.setState({ selectedSegmentIndex: sender.selectedSegmentIndex });
   };
 
   render() {
-    const { hasChildController, name, theme, sliderValue } = this.state;
+    const { hasChildController, name, theme, selectedSegmentIndex } = this.state;
     const { frame } = this.props;
 
     if (hasChildController) {
@@ -188,6 +190,7 @@ class App extends React.Component {
               { title: 'Segment B' },
               { title: 'Segment C' },
             ]}
+            selectedSegmentIndex={selectedSegmentIndex}
             target={[this.handleSegmentChanged, UIControlEventValueChanged]}
             tintColor={colors.pink}
           />

@@ -19,7 +19,7 @@ export default (
   Object.keys(otherProps).forEach(attr => {
     const val = otherProps[attr];
 
-    if (val) {
+    if (val !== undefined && val !== null) {
       switch (attr) {
         case propKeys.target:
           if (baseTypesIsArray) {

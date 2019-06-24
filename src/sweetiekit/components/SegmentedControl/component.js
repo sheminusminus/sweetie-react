@@ -19,6 +19,7 @@ class SegmentedControl extends React.Component {
     frame: propTypes.frameProp,
     items: propTypes.segmentItemsProp,
     layer: propTypes.layerProp,
+    selectedSegmentIndex: PropTypes.number,
     target: propTypes.targetActionEventsProp,
     tintColor: propTypes.colorProp,
   };
@@ -30,6 +31,7 @@ class SegmentedControl extends React.Component {
     items: [],
     layer: undefined,
     target: undefined,
+    selectedSegmentIndex: undefined,
     tintColor: undefined,
   };
 

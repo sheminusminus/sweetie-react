@@ -21,7 +21,7 @@ export default (
     Object.keys(update).forEach(key => {
       const val = update[key];
 
-      if (val) {
+      if (val !== undefined && val !== null) {
         switch (key) {
           case propKeys.target:
             if (baseTypesIsArray) {
@@ -90,6 +90,23 @@ export default (
           case propKeys.image:
             if (viewType === types.imageView) {
               if (val) view.image = val;
+            }
+            break;
+
+          case propKeys.items:
+            if (viewType === types.segmentedControl) {
+              view.removeAllSegments();
+              if (val.length) {
+                if (val[0].title) {
+                  val.forEach((item, idx) => {
+                    view.insertSegmentWithTitleAtIndexAnimated(item.title, idx, false);
+                  });
+                } else if (val[0].image) {
+                  val.forEach((item, idx) => {
+                    view.insertSegmentWithImageAtIndexAnimated(item.image, idx, false);
+                  });
+                }
+              }
             }
             break;
 

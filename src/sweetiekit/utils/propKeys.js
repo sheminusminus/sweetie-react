@@ -11,3 +11,5 @@ export const text = 'text';
 export const title = 'title';
 export const titleColor = 'titleColor';
 export const titleLabel = 'titleLabel';
+
+export const items = 'items';

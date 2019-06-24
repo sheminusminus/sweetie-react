@@ -1,26 +1,39 @@
-// @flow
-
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import { colors } from '../../utils';
 
 import BaseView from '../BaseView';
-
-import type { Color, Frame, Layer } from '../sharedTypes';
-
-type ViewProps = {
-  baseTypes?: string[],
-  children?: any,
-  type?: string,
-  backgroundColor?: Color,
-  frame?: Frame,
-  layer?: Layer,
-};
 
 /**
  * View
  */
-class View extends React.Component<ViewProps> {
-  static defaultProps: ViewProps = {
+class View extends React.Component {
+  static propTypes = {
+    backgroundColor: PropTypes.shape({
+      red: PropTypes.number.isRequired,
+      green: PropTypes.number.isRequired,
+      blue: PropTypes.number.isRequired,
+      alpha: PropTypes.number,
+    }),
+    baseTypes: PropTypes.arrayOf(PropTypes.string),
+    children: PropTypes.any,
+    frame: PropTypes.shape({
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
+      width: PropTypes.number.isRequired,
+      height: PropTypes.number.isRequired,
+    }),
+    layer: PropTypes.shape(),
+    type: PropTypes.string,
+  };
+
+  static defaultProps = {
+    backgroundColor: colors.white,
     baseTypes: ['ui-view'],
+    children: undefined,
+    frame: undefined,
+    layer: undefined,
     type: 'ui-view',
   };
 

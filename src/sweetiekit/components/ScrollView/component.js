@@ -1,21 +1,34 @@
-// @flow
-
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import { colors } from '../../utils';
 
 import View from '../View';
 
-import type { Color, Frame, Layer } from '../sharedTypes';
+class ScrollView extends React.Component {
+  static propTypes = {
+    backgroundColor: PropTypes.shape({
+      red: PropTypes.number.isRequired,
+      green: PropTypes.number.isRequired,
+      blue: PropTypes.number.isRequired,
+      alpha: PropTypes.number,
+    }),
+    children: PropTypes.any,
+    frame: PropTypes.shape({
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
+      width: PropTypes.number.isRequired,
+      height: PropTypes.number.isRequired,
+    }),
+    layer: PropTypes.shape(),
+    type: PropTypes.string,
+  };
 
-type ScrollViewProps = {
-  children?: any,
-  backgroundColor?: Color,
-  frame?: Frame,
-  layer?: Layer,
-  type?: string,
-};
-
-class ScrollView extends React.Component<ScrollViewProps> {
-  static defaultProps: ScrollViewProps = {
+  static defaultProps = {
+    backgroundColor: colors.clear,
+    children: undefined,
+    frame: undefined,
+    layer: undefined,
     type: 'ui-scroll-view',
   };
 

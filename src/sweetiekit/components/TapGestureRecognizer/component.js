@@ -1,15 +1,16 @@
-// @flow
-
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import GestureRecognizer from '../GestureRecognizer';
 
-type TapGestureRecognizerProps = {
-  type?: string,
-};
+class TapGestureRecognizer extends React.Component {
+  static propTypes = {
+    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),
+    type: PropTypes.string,
+  };
 
-class TapGestureRecognizer extends React.Component<TapGestureRecognizerProps> {
-  static defaultProps: TapGestureRecognizerProps = {
+  static defaultProps = {
+    target: undefined,
     type: 'ui-gesture-recognizer',
   };
 

@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import BaseViewController from '../BaseViewController';
-
-class ViewController extends React.Component {
+class BaseViewController extends React.Component {
   static propTypes = {
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
@@ -25,15 +23,15 @@ class ViewController extends React.Component {
     } = this.props;
 
     return (
-      <BaseViewController
+      <ui-view-controller
         {...rest}
         baseType={baseTypes}
         type={type}
       >
         {children}
-      </BaseViewController>
+      </ui-view-controller>
     )
   }
 }
 
-export default ViewController;
+export default BaseViewController;

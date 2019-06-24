@@ -1,16 +1,15 @@
-// @flow
-
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BaseGestureRecognizer from '../BaseGestureRecognizer';
 
-type GestureRecognizerProps = {
-  baseTypes?: string[],
-  type?: string,
-};
+class GestureRecognizer extends React.Component {
+  static propTypes = {
+    baseTypes: PropTypes.arrayOf(PropTypes.string),
+    type: PropTypes.string,
+  };
 
-class GestureRecognizer extends React.Component<GestureRecognizerProps> {
-  static defaultProps: GestureRecognizerProps = {
+  static defaultProps = {
     baseTypes: ['ui-gesture-recognizer'],
     type: 'ui-gesture-recognizer',
   };

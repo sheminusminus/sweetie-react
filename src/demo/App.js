@@ -56,6 +56,7 @@ class App extends React.Component {
     theme: 'dark',
     name: '',
     hasChildController: false,
+    sliderValue: 0,
   };
 
   handleButtonClick = () => {
@@ -63,8 +64,12 @@ class App extends React.Component {
     this.setState({ theme: theme === 'dark' ? 'light' : 'dark' });
   };
 
-  handleFieldChange = (evt) => {
-    console.log(evt);
+  handleFieldChange = (sender) => {
+    if (sender.text) {
+      this.setState({ name: sender.text });
+    } else {
+      this.setState({ name: '' });
+    }
   };
 
   toggleHasChild = () => {
@@ -72,12 +77,16 @@ class App extends React.Component {
     this.setState({ hasChildController: !hasChildController });
   };
 
-  handleSwitchChange = (evt) => {
-    console.log('switch changed', evt);
+  handleSliderChange = (sender) => {
+    if (sender.value) {
+      this.setState({ sliderValue: sender.value });
+    } else {
+      this.setState({ sliderValue: 0 });
+    }
   };
 
   render() {
-    const { hasChildController, name, theme } = this.state;
+    const { hasChildController, name, theme, sliderValue } = this.state;
     const { frame } = this.props;
 
     if (hasChildController) {
@@ -165,13 +174,15 @@ class App extends React.Component {
           />
 
           <Slider
+            continuous={false}
             frame={{
               x: 12,
               y: ((frame.height - 50) / 2) + 160,
               width: frame.width - 24,
               height: 50,
             }}
-            target={[this.handleSwitchChange, UIControlEventValueChanged]}
+            target={[this.handleSliderChange, UIControlEventValueChanged]}
+            value={sliderValue}
           />
         </MainView>
       </ThemeContext.Provider>

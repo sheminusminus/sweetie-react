@@ -1,25 +1,39 @@
-// @flow
-
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import { colors } from '../../utils';
 
 import Control from '../Control';
-
-import type { Color, Frame, Layer, TargetTuple } from '../sharedTypes';
-
-type ButtonProps = {
-  backgroundColor?: Color,
-  children?: any,
-  frame?: Frame,
-  layer?: Layer,
-  target?: TargetTuple,
-  type?: string,
-};
 
 /**
  * Renders a Control.
  */
-class Button extends React.Component<ButtonProps> {
-  static defaultProps: ButtonProps = {
+class Button extends React.Component {
+  static propTypes = {
+    backgroundColor: PropTypes.shape({
+      red: PropTypes.number.isRequired,
+      green: PropTypes.number.isRequired,
+      blue: PropTypes.number.isRequired,
+      alpha: PropTypes.number,
+    }),
+    children: PropTypes.any,
+    frame: PropTypes.shape({
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
+      width: PropTypes.number.isRequired,
+      height: PropTypes.number.isRequired,
+    }),
+    layer: PropTypes.shape(),
+    target: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.any])),
+    type: PropTypes.string,
+  };
+
+  static defaultProps = {
+    backgroundColor: colors.white,
+    children: undefined,
+    frame: undefined,
+    layer: undefined,
+    target: undefined,
     type: 'ui-button',
   };
 

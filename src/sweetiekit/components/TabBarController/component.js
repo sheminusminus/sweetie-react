@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { types } from '../../utils';
+import { propTypes, types } from '../../utils';
 
 import ViewController from '../ViewController';
 
 class TabBarController extends React.Component {
   static propTypes = {
     children: PropTypes.any,
+    selectedIndex: PropTypes.number,
+    tabBar: propTypes.tabBarProp,
   };
 
   static defaultProps = {
     children: undefined,
+    selectedIndex: undefined,
+    tabBar: undefined,
   };
 
   render() {

@@ -60,6 +60,18 @@ export default (
           view.text = val;
           break;
 
+        case propKeys.tabBar:
+          if (viewType === types.tabBarController) {
+            Object.keys(val).forEach(p => view.tabBar[p] = val[p]);
+          }
+          break;
+
+        case propKeys.selectedIndex:
+          if (viewType === types.tabBarController) {
+            view.selectedIndex = val;
+          }
+          break;
+
         default:
           view[attr] = val;
           break;

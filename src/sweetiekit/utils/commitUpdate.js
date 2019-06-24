@@ -1,6 +1,7 @@
+import _cloneDeep from 'lodash/cloneDeep'
+
 import * as propKeys from './propKeys';
 import * as types from './types';
-
 
 export default (
   view,
@@ -13,7 +14,7 @@ export default (
 ) => {
   const { baseTypes, type: viewType } = newProps;
 
-  const newListeners = { ...listeners };
+  const newListeners = _cloneDeep(listeners);
 
   const baseTypesIsArray = Array.isArray(baseTypes);
 
@@ -29,17 +30,19 @@ export default (
                 const existingListener = newListeners[view.selfAddress];
 
                 if (Array.isArray(existingListener)) {
+                  delete newListeners[view.selfAddress];
                   view.removeTargetActionForControlEvents(existingListener[1]);
                 }
 
-                newListeners[view.selfAddress] = val;
-
                 view.addTargetActionForControlEvents(val[0], val[1]);
+
+                newListeners[view.selfAddress] = val;
               } else if (baseTypes.includes(types.gestureRecognizer)) {
                 // for now we only allow one target per recognizer
                 const existingListener = newListeners[view.selfAddress];
 
                 if (existingListener && existingListener.handle) {
+                  delete newListeners[view.selfAddress];
                   view.removeTargetAction(existingListener.handle);
                 }
 
@@ -74,16 +77,14 @@ export default (
           case propKeys.layer:
             if (baseTypesIsArray) {
               if (baseTypes.includes(types.view)) {
-                const layerProps = val;
-                Object.keys(layerProps).forEach(p => view.layer[p] = layerProps[p]);
+                Object.keys(val).forEach(p => view.layer[p] = val[p]);
               }
             }
             break;
 
           case propKeys.titleLabel:
             if (viewType === types.button) {
-              const labelProps = val;
-              Object.keys(labelProps).forEach(p => view.titleLabel[p] = labelProps[p]);
+              Object.keys(val).forEach(p => view.titleLabel[p] = val[p]);
             }
             break;
 
@@ -107,6 +108,18 @@ export default (
                   });
                 }
               }
+            }
+            break;
+
+          case propKeys.tabBar:
+            if (viewType === types.tabBarController) {
+              Object.keys(val).forEach(p => view.tabBar[p] = val[p]);
+            }
+            break;
+
+          case propKeys.selectedIndex:
+            if (viewType === types.tabBarController) {
+              view.selectedIndex = val;
             }
             break;
 

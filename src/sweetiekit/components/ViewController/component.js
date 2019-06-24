@@ -9,12 +9,14 @@ class ViewController extends React.Component {
   static propTypes = {
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
+    tabBarItem: PropTypes.instanceOf(UITabBarItem),
     type: PropTypes.string,
   };
 
   static defaultProps = {
     baseTypes: [types.viewController],
     children: undefined,
+    tabBarItem: undefined,
     type: types.viewController,
   };
 

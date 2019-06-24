@@ -8,7 +8,7 @@ import MainView from './MainView';
 import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
-import { ImageView, ViewController, TapGestureRecognizer, TabBarController } from '../sweetiekit/components';
+import { ImageView, ViewController, TapGestureRecognizer, TabBarController, TabBarItem } from '../sweetiekit/components';
 
 import ThemeContext from './context';
 
@@ -50,6 +50,9 @@ const themes = {
   },
 };
 
+const barItem0 = TabBarItem('Bar Item 0');
+const barItem1 = TabBarItem('Bar Item 1');
+
 class App extends React.Component {
   state = {
     theme: 'dark',
@@ -57,6 +60,7 @@ class App extends React.Component {
     hasChildController: false,
     sliderValue: 0,
     selectedSegmentIndex: 1,
+    tabIndex: 1,
   };
 
   handleButtonClick = () => {
@@ -86,18 +90,23 @@ class App extends React.Component {
   };
 
   handleSegmentChanged = (sender) => {
-    console.log(sender.selectedSegmentIndex);
     this.setState({ selectedSegmentIndex: sender.selectedSegmentIndex });
   };
 
+  handleTabChanged = (sender) => {
+    console.log(sender);
+  };
+
   render() {
-    const { hasChildController, name, theme, selectedSegmentIndex } = this.state;
+    const { hasChildController, name, theme, tabIndex } = this.state;
     const { frame } = this.props;
 
     if (hasChildController) {
       return (
-        <TabBarController>
-          <ViewController key="view-controller-0">
+        <TabBarController selectedIndex={tabIndex}>
+          <ViewController
+            tabBarItem={barItem0}
+          >
             <MainView frame={frame} theme={theme}>
               <Title
                 frame={{
@@ -123,6 +132,26 @@ class App extends React.Component {
                   cornerRadius: 12,
                 }}
               />
+
+              <TapGestureRecognizer
+                target={this.toggleHasChild}
+              />
+            </MainView>
+          </ViewController>
+          <ViewController
+            tabBarItem={barItem1}
+          >
+            <MainView frame={frame} theme={theme}>
+              <Title
+                frame={{
+                  x: 12,
+                  y: 90,
+                  width: frame.width - 24,
+                  height: 20,
+                }}
+              >
+                WELCOME
+              </Title>
 
               <TapGestureRecognizer
                 target={this.toggleHasChild}

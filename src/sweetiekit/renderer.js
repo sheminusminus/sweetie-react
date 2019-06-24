@@ -25,7 +25,7 @@ const hostConfig = {
   },
 
   getPublicInstance(instance) {
-    console.log('TODO: getPublicInstance');
+    return instance;
   },
 
   prepareForCommit(containerInfo) {
@@ -100,7 +100,7 @@ const hostConfig = {
 
   supportsMutation: true,
 
-  commitMount(domElement, type, newProps, internalInstanceHandle) {
+  commitMount(view, type, newProps, internalInstanceHandle) {
     console.log('commitMount');
   },
 
@@ -115,7 +115,7 @@ const hostConfig = {
     listeners = commitUpdate(view, updatePayload, type, oldProps, newProps, internalInstanceHandle);
   },
 
-  resetTextContent(domElement) {},
+  resetTextContent(view) {},
 
   commitTextUpdate(textInstance, oldText, newText) {
     textInstance.text = newText;

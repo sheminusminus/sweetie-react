@@ -7,6 +7,7 @@ export { default as SegmentedControl } from './SegmentedControl';
 export { default as Slider } from './Slider';
 export { default as Switch } from './Switch';
 export { default as TabBarController } from './TabBarController';
+export { default as TabBarItem } from './TabBarItem';
 export { default as TapGestureRecognizer } from './TapGestureRecognizer';
 export { default as Text } from './Text';
 export { default as TextField } from './TextField';

@@ -133,3 +133,29 @@ export const targetActionProp = (props, propName, componentName) => {
 
   return null;
 };
+
+export const tabBarProp = (props, propName, componentName) => {
+  const compName = componentName || 'ANONYMOUS';
+  const allowedKeys = [
+    'backgroundColor',
+    'barTintColor',
+    'tintColor',
+    'unselectedItemTintColor',
+  ];
+
+  const propVal = props[propName];
+
+  if (propVal) {
+    if (typeof propVal !== 'object') {
+      return new Error(`${propName} in ${compName} expected type object, received ${typeof propVal}`);
+    } else {
+      const keys = Object.keys(propVal);
+      const disallowed = keys.filter(key => !allowedKeys.includes(key));
+      if (disallowed.length) {
+        return new Error(`${propName} in ${compName} received unexpected keys in ${propName} prop`);
+      }
+    }
+  }
+
+  return null;
+};

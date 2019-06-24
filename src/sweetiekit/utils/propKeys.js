@@ -13,3 +13,8 @@ export const titleColor = 'titleColor';
 export const titleLabel = 'titleLabel';
 
 export const items = 'items';
+
+export const tabBarItem = 'tabBarItem';
+export const tabBar = 'tabBar';
+
+export const selectedIndex = 'selectedIndex';

@@ -9,7 +9,8 @@ export default (parent, child) => {
   } else if (parent && is.view(parent.view) && is.view(child)) {
     parent.view.addSubview(child);
   } else if (is.tabBarController(parent) && is.viewController(child)) {
-    const viewControllers = parent.viewControllers || [];
+    const viewControllers = Array.from(parent.viewControllers || []);
+    console.log(viewControllers);
     viewControllers.push(child);
     parent.setViewControllers(viewControllers);
   } else if (is.viewController(parent) && is.viewController(child)) {

@@ -1,3 +1,3 @@
-import component from './BaseViewController';
+import component from './component';
 
 export default component;

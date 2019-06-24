@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
+import { UIKit } from '../../enums';
 
 import View from '../View';
 
@@ -23,7 +24,7 @@ class Label extends React.Component {
     frame: undefined,
     layer: undefined,
     text: '',
-    textAlignment: NSTextAlignmentLeft,
+    textAlignment: UIKit.NSTextAlignment.left,
   };
 
   render() {

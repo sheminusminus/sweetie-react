@@ -4,8 +4,11 @@ const SweetieKit = Require('std:sweetiekit.node');
 const { UIFont } = SweetieKit;
 
 import { Button } from '../sweetiekit/components';
+import { UIKit } from '../sweetiekit/enums';
 
 import withTheme from './withTheme';
+
+const { UIControlEvents } = UIKit;
 
 const btnFont = new UIFont('Lato-Black', 17);
 
@@ -30,7 +33,7 @@ class ThemeToggle extends React.Component {
         titleLabel={{
           font: btnFont,
         }}
-        target={[onClick, UIControlEventTouchUpInside]}
+        target={[onClick, UIControlEvents.touchUpInside]}
       />
     );
   }

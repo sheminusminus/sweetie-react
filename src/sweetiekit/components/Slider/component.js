@@ -27,7 +27,7 @@ class Slider extends React.Component {
   };
 
   static defaultProps = {
-    backgroundColor: colors.white,
+    backgroundColor: colors.clear,
     continuous: false,
     frame: undefined,
     layer: undefined,

@@ -27,7 +27,7 @@ class Control extends React.Component {
 
   static defaultProps = {
     baseTypes: ['ui-control', 'ui-view'],
-    backgroundColor: colors.white,
+    backgroundColor: colors.clear,
     children: undefined,
     frame: undefined,
     layer: undefined,

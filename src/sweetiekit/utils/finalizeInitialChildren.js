@@ -19,49 +19,51 @@ export default (
   Object.keys(otherProps).forEach(attr => {
     const val = otherProps[attr];
 
-    switch (attr) {
-      case propKeys.target:
-        if (baseTypesIsArray) {
-          if (baseTypes.includes(types.control)) {
-            const [fn, events] = val;
+    if (val) {
+      switch (attr) {
+        case propKeys.target:
+          if (baseTypesIsArray) {
+            if (baseTypes.includes(types.control)) {
+              const [fn, events] = val;
 
-            newListeners[view.selfAddress] = val;
+              newListeners[view.selfAddress] = val;
 
-            view.addTargetActionForControlEvents(fn, events);
-          } else if (baseTypes.includes(types.gestureRecognizer)) {
-            const handle = view.addTargetAction(val);
+              view.addTargetActionForControlEvents(fn, events);
+            } else if (baseTypes.includes(types.gestureRecognizer)) {
+              const handle = view.addTargetAction(val);
 
-            newListeners[view.selfAddress] = {
-              handle,
-              fn: val,
-            };
+              newListeners[view.selfAddress] = {
+                handle,
+                fn: val,
+              };
+            }
           }
-        }
-        break;
+          break;
 
-      case propKeys.title:
-        view.title = val;
-        break;
+        case propKeys.title:
+          view.title = val;
+          break;
 
-      case propKeys.image:
-        if (val) view.image = val;
-        break;
+        case propKeys.image:
+          if (val) view.image = val;
+          break;
 
-      case propKeys.layer:
-        if (baseTypesIsArray) {
-          if (baseTypes.includes(types.view)) {
-            Object.keys(val).forEach(p => view.layer[p] = val[p]);
+        case propKeys.layer:
+          if (baseTypesIsArray) {
+            if (baseTypes.includes(types.view)) {
+              Object.keys(val).forEach(p => view.layer[p] = val[p]);
+            }
           }
-        }
-        break;
+          break;
 
-      case propKeys.text:
-        view.text = val;
-        break;
+        case propKeys.text:
+          view.text = val;
+          break;
 
-      default:
-        view[attr] = val;
-        break;
+        default:
+          view[attr] = val;
+          break;
+      }
     }
   });
 

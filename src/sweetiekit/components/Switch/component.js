@@ -26,7 +26,7 @@ class Switch extends React.Component {
   };
 
   static defaultProps = {
-    backgroundColor: colors.white,
+    backgroundColor: colors.clear,
     frame: undefined,
     layer: undefined,
     on: false,

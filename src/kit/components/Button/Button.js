@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors } from '../../utils';
+import { mergeProps } from '../../utils';
 
-import Control from '../Control';
+import { colors } from '../../../sweetiekit/utils';
+
+import { Button as Button_ } from '../../../sweetiekit/components';
 
 /**
- * Renders a Control of type ui-button.
  * @see https://developer.apple.com/documentation/uikit/uibutton?language=swift
  */
 class Button extends React.Component {
@@ -20,7 +21,6 @@ class Button extends React.Component {
       blue: PropTypes.number.isRequired,
       alpha: PropTypes.number,
     }),
-    children: PropTypes.any,
     frame: PropTypes.shape({
       x: PropTypes.number.isRequired,
       y: PropTypes.number.isRequired,
@@ -37,33 +37,27 @@ class Button extends React.Component {
       alpha: PropTypes.number,
     }),
     titleLabel: PropTypes.any,
-    type: PropTypes.string,
   };
 
   static defaultProps = {
     backgroundColor: colors.white,
-    children: undefined,
     frame: undefined,
-    layer: undefined,
+    layer: {
+      cornerRadius: 12,
+      borderWidth: 1,
+      borderColor: colors.black,
+    },
     target: undefined,
     title: 'Press Me',
     titleColor: colors.black,
     titleLabel: undefined,
-    type: 'ui-button',
   };
 
   render() {
-    const {
-      children,
-      type,
-      ...rest
-    } = this.props;
+    const props = mergeProps(Button.defaultProps, this.props);
 
     return (
-      <Control
-        {...rest}
-        type={type}
-      />
+      <Button_ {...props} />
     )
   }
 }

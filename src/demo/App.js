@@ -3,6 +3,7 @@ import React from 'react';
 import { colors } from '../sweetiekit/utils';
 
 import {
+  ArSkView,
   SkScene,
   SkView,
   SkSpriteNode,
@@ -140,7 +141,7 @@ class App extends React.Component {
 
     return (
       <ThemeContext.Provider value={themes[theme]}>
-        <SkView
+        <ArSkView
           ref={this.skView}
           backgroundColor={colors.medGrey}
           frame={frame}
@@ -155,7 +156,7 @@ class App extends React.Component {
               size={{ width: 54, height: 80 }}
             />
           </SkScene>
-        </SkView>
+        </ArSkView>
       </ThemeContext.Provider>
     );
   }

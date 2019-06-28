@@ -25,3 +25,9 @@ export { default as SkNode } from './SkNode';
 export { default as SkScene } from './SkScene';
 export { default as SkSpriteNode } from './SkSpriteNode';
 export { default as SkView } from './SkView';
+
+// ===============
+// ARKit
+// ===============
+export { default as ArSkView } from './ArSkView';
+export { ArConfiguration } from './ArSubcomponents';

@@ -43,6 +43,8 @@ const themes = {
 };
 
 const monster = Image('monster');
+const monsterWidth = 54;
+const monsterHeight = 80;
 
 class App extends React.Component {
   state = {
@@ -52,27 +54,46 @@ class App extends React.Component {
     sliderValue: 0,
     selectedSegmentIndex: 1,
     tabIndex: 0,
-    spriteX: 100,
     spriteY: 100,
+    spriteX: 100,
+    directionY: 1,
+    directionX: 1,
   };
 
   interval = null;
 
   componentDidMount() {
-    const { frame } = this.props;
-    console.log('componentDidMount', this.state.spriteX, this.state.spriteY);
     this.interval = setInterval(() => {
-      this.setState(state => ({
-        spriteX: state.spriteX >= frame.width ? 100 : state.spriteX + 0.5,
-        spriteY: state.spriteY >= frame.height ? 100 : state.spriteY + 1,
-      }));
+      this.setState(state => this.getNextSpriteState(state));
     }, 10);
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount', this.state.spriteX, this.state.spriteY);
     clearInterval(this.interval);
   }
+
+  getNextSpriteState = (state) => {
+    const { frame: { height, width } } = this.props;
+
+    const halfW = monsterWidth * 0.5;
+    const halfH = monsterHeight * 0.5;
+    const maxX = width - halfW;
+    const maxY = height - halfH;
+
+    const nextDirY = state.spriteY >= maxY || state.spriteY <= halfW
+      ? state.directionY * -1 : state.directionY;
+    const nextDirX = state.spriteX >= maxX || state.spriteX <= halfH
+      ? state.directionX * -1 : state.directionX;
+    const nextY = state.spriteY + (nextDirY);
+    const nextX =  state.spriteX + (nextDirX);
+
+    return {
+      directionY: nextDirY,
+      directionX: nextDirX,
+      spriteY: nextY,
+      spriteX: nextX,
+    };
+  };
 
   handleButtonClick = () => {
     const { theme } = this.state;
@@ -134,7 +155,7 @@ class App extends React.Component {
             <SpriteKitSpriteNode
               image={monster}
               position={{ x: spriteX, y: spriteY }}
-              size={{ width: 80, height: 80 }}
+              size={{ width: 54, height: 80 }}
             />
           </SpriteKitScene>
         </SpriteKitView>

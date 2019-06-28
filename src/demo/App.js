@@ -80,9 +80,9 @@ class App extends React.Component {
     const maxX = width - halfW;
     const maxY = height - halfH;
 
-    const nextDirY = state.spriteY >= maxY || state.spriteY <= halfW
+    const nextDirY = state.spriteY >= maxY || state.spriteY <= halfH
       ? state.directionY * -1 : state.directionY;
-    const nextDirX = state.spriteX >= maxX || state.spriteX <= halfH
+    const nextDirX = state.spriteX >= maxX || state.spriteX <= halfW
       ? state.directionX * -1 : state.directionX;
     const nextY = state.spriteY + (nextDirY);
     const nextX =  state.spriteX + (nextDirX);

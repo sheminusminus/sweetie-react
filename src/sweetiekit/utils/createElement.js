@@ -11,9 +11,13 @@ import {
 } from './properties';
 
 const {
+  SKNode,
+  SKScene,
+  SKView,
   UIButton,
   UIImageView,
   UILabel,
+  UIResponder,
   UIScrollView,
   UISegmentedControl,
   UISlider,
@@ -187,6 +191,28 @@ export const stackView = (props) => {
 
 export const tabBarController = (props) => {
   return UITabBarController();
+};
+
+export const responder = (props) => {
+  return UIResponder();
+};
+
+export const skNode = (props) => {
+  return SKNode();
+};
+
+export const skScene = (props) => {
+  return SKScene();
+};
+
+export const skView = (props) => {
+  const el = SKView();
+
+  el.translatesAutoresizingMaskIntoConstraints = false;
+
+  setViewBaseProps(el, props);
+
+  return el;
 };
 
 

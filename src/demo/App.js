@@ -1,25 +1,12 @@
-const SweetieKit = Require('std:sweetiekit.node');
-
 import React from 'react';
 
 import { colors } from '../sweetiekit/utils';
-import { UIKit } from '../sweetiekit/enums';
 
-import MainView from './MainView';
-import NameBox from './NameBox';
-import ThemeToggle from './ThemeToggle';
-import Title from './Title';
-import { Image, ImageView, ViewController, TapGestureRecognizer, TabBarController, TabBarItem, SegmentedControl } from '../sweetiekit/components';
+import {
+  SpriteKitView,
+} from '../sweetiekit/components';
 
 import ThemeContext from './context';
-
-const { UIControlEvents } = UIKit;
-
-const {
-  UIImage,
-} = SweetieKit;
-
-const image = Image('logo');
 
 const themes = {
   dark: {
@@ -51,9 +38,6 @@ const themes = {
     },
   },
 };
-
-const barItem0 = TabBarItem('Bar Item 0');
-const barItem1 = TabBarItem('Bar Item 1');
 
 class App extends React.Component {
   state = {
@@ -100,133 +84,22 @@ class App extends React.Component {
   };
 
   render() {
-    const { hasChildController, name, theme, tabIndex, selectedSegmentIndex } = this.state;
+    const {
+      hasChildController,
+      name,
+      tabIndex,
+      theme,
+      selectedSegmentIndex,
+    } = this.state;
+
     const { frame } = this.props;
-
-    if (hasChildController) {
-      return (
-        <TabBarController selectedIndex={tabIndex}>
-          <ViewController
-            tabBarItem={barItem0}
-          >
-            <MainView frame={frame} theme={theme}>
-              <Title
-                frame={{
-                  x: 12,
-                  y: 90,
-                  width: frame.width - 24,
-                  height: 20,
-                }}
-              >
-                WELCOME
-              </Title>
-
-              <ImageView
-                backgroundColor={colors.medGrey}
-                frame={{
-                  x: 12,
-                  y: 130,
-                  width: frame.width - 24,
-                  height: frame.width - 24,
-                }}
-                image={image}
-                layer={{
-                  cornerRadius: 12,
-                }}
-              />
-
-              <TapGestureRecognizer
-                target={this.toggleHasChild}
-              />
-            </MainView>
-          </ViewController>
-          <ViewController
-            tabBarItem={barItem1}
-          >
-            <MainView frame={frame} theme={theme}>
-              <Title
-                frame={{
-                  x: 12,
-                  y: 90,
-                  width: frame.width - 24,
-                  height: 20,
-                }}
-              >
-                WELCOME
-              </Title>
-
-              <SegmentedControl
-                frame={{
-                  x: 12,
-                  y: 140,
-                  width: frame.width - 24,
-                  height: 20,
-                }}
-                items={[
-                  { title: 'Item A' },
-                  { title: 'Item B' },
-                  { title: 'Item C' },
-                ]}
-                selectedSegmentIndex={selectedSegmentIndex}
-                target={[this.handleSegmentChanged, UIControlEvents.valueChanged]}
-              />
-
-              <TapGestureRecognizer
-                target={this.toggleHasChild}
-              />
-            </MainView>
-          </ViewController>
-        </TabBarController>
-      );
-    }
 
     return (
       <ThemeContext.Provider value={themes[theme]}>
-        <MainView frame={frame} theme={theme}>
-          <Title
-            frame={{
-              x: 12,
-              y: 90,
-              width: frame.width - 24,
-              height: 20,
-            }}
-          >
-            WELCOME
-          </Title>
-
-          <ThemeToggle
-            frame={{
-              x: 12,
-              y: (frame.height - 50) / 2,
-              width: frame.width - 24,
-              height: 50,
-            }}
-            onClick={this.handleButtonClick}
-            theme={theme}
-          />
-
-          <ThemeToggle
-            frame={{
-              x: 12,
-              y: ((frame.height - 50) / 2) + 100,
-              width: frame.width - 24,
-              height: 50,
-            }}
-            onClick={this.toggleHasChild}
-            theme={theme}
-          />
-
-          <NameBox
-            frame={{
-              x: 12,
-              y: (frame.height - 50) / 2 - 120,
-              width: frame.width - 24,
-              height: 50,
-            }}
-            onChange={this.handleFieldChange}
-            value={name}
-          />
-        </MainView>
+        <SpriteKitView
+          backgroundColor={colors.medGrey}
+          frame={frame}
+        />
       </ThemeContext.Provider>
     );
   }

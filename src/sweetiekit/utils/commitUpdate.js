@@ -53,8 +53,6 @@ export default (
                     fn: val,
                     handle,
                   };
-
-                  console.log(newListeners);
                 }
               }
               break;
@@ -122,8 +120,8 @@ export default (
 
             case propKeys.selectedIndex:
               if (viewType === types.tabBarController) {
-                console.log('tab bar controller setting selected view controller');
                 const ctrl = view.viewControllers[val];
+
                 if (ctrl) {
                   view.selectedViewController = ctrl;
                 }

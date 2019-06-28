@@ -1,32 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors, propTypes, types } from '../../utils';
+import { types } from '../../utils';
 
 /**
- * Internal component that renders a UIView.
- * @see https://developer.apple.com/documentation/uikit/uiview?language=swift
+ * Internal component that creates a UIResponder.
+ * @see https://developer.apple.com/documentation/uikit/uiresponder?language=swift
  */
-class BaseView extends React.Component {
+class BaseResponder extends React.Component {
   /**
-   * @type {{backgroundColor: Color, children: *, baseTypes: string[], type: string, layer: Layer, frame: Frame}}
+   * @type {{children: *, baseTypes: string[]}}
    */
   static propTypes = {
-    backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
-    frame: propTypes.frameProp,
-    layer: propTypes.layerProp,
     type: PropTypes.string,
   };
 
   static defaultProps = {
-    backgroundColor: colors.clear,
-    baseTypes: [types.view],
+    baseTypes: [types.responder],
     children: undefined,
-    frame: undefined,
-    layer: undefined,
-    type: types.view,
+    type: types.responder,
   };
 
   render() {
@@ -38,15 +32,15 @@ class BaseView extends React.Component {
     } = this.props;
 
     return (
-      <ui-view
+      <ui-responder
         {...rest}
-        baseTypes={baseTypes || [type]}
+        baseTypes={baseTypes}
         type={type}
       >
         {children}
-      </ui-view>
+      </ui-responder>
     )
   }
 }
 
-export default BaseView;
+export default BaseResponder;

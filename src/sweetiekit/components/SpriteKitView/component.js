@@ -3,28 +3,30 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
-import BaseView from '../BaseView';
+import View from '../View';
 
 /**
- * View
+ * SpriteKitView
  */
-class View extends React.Component {
+class SpriteKitView extends React.Component {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     frame: propTypes.frameProp,
     layer: propTypes.layerProp,
+    showsFPS: PropTypes.bool,
     type: PropTypes.string,
   };
 
   static defaultProps = {
     backgroundColor: colors.white,
-    baseTypes: [types.view],
+    baseTypes: [types.skView, types.view],
     children: undefined,
     frame: undefined,
     layer: undefined,
-    type: types.view,
+    showsFPS: false,
+    type: types.skView,
   };
 
   render() {
@@ -36,15 +38,15 @@ class View extends React.Component {
     } = this.props;
 
     return (
-      <BaseView
+      <View
         {...rest}
         baseTypes={baseTypes}
         type={type}
       >
         {children}
-      </BaseView>
+      </View>
     )
   }
 }
 
-export default View;
+export default SpriteKitView;

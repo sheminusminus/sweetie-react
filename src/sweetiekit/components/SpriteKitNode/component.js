@@ -6,12 +6,11 @@ import { types } from '../../utils';
 import BaseResponder from '../BaseResponder';
 
 /**
- * Component that creates a BaseResponder.
- * @see https://developer.apple.com/documentation/spritekit/sknode?language=swift
+ * SpriteKitNode
  */
-class SKNode extends React.Component {
+class SpriteKitNode extends React.Component {
   /**
-   * @type {{children: *, baseTypes: string[]}}
+   * @type {{baseTypes: string[], children: *, type: string}}
    */
   static propTypes = {
     baseTypes: PropTypes.arrayOf(PropTypes.string),
@@ -45,4 +44,4 @@ class SKNode extends React.Component {
   }
 }
 
-export default SKNode;
+export default SpriteKitNode;

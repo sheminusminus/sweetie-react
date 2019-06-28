@@ -12,7 +12,7 @@ export default (parent, child) => {
     }
     parent.selectedIndex = newSelectedIndex;
 
-    parent.setViewControllers(newCtrls);
+    parent.setViewControllersAnimated(newCtrls);
   } else if (is.view(parent) && is.tapRecognizer(child)) {
     parent.removeGestureRecognizer(child);
   } else if (is.stackView(parent) && is.view(child)) {

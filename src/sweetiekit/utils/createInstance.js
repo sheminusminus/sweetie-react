@@ -1,6 +1,23 @@
 import * as createElement from './createElement';
 import * as types from './types';
 
+const createResponder = (
+  type,
+  props,
+  rootContainerInstance,
+  hostContext,
+  internalInstanceHandle,
+) => {
+  switch (props.type) {
+    case types.skNode:
+      return createElement.skNode(props);
+    case types.skScene:
+      return createElement.skScene(props);
+    default:
+      return createElement.responder(props);
+  }
+};
+
 const createViewController = (
   type,
   props,
@@ -9,10 +26,10 @@ const createViewController = (
   internalInstanceHandle,
 ) => {
   switch (props.type) {
-    case types.viewController:
-      return createElement.viewController(props);
     case types.tabBarController:
       return createElement.tabBarController(props);
+    case types.viewController:
+      return createElement.viewController(props);
     default:
       return createElement.viewController(props);
   }
@@ -36,6 +53,8 @@ const createView = (
       return createElement.scrollView(props);
     case types.segmentedControl:
       return createElement.segmentedControl(props);
+    case types.skView:
+      return createElement.skView(props);
     case types.slider:
       return createElement.slider(props);
     case types.stackView:
@@ -72,12 +91,14 @@ const createInstance = (
   internalInstanceHandle,
 ) => {
   switch (type) {
+    case types.gestureRecognizer:
+      return createGestureRecognizer(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
+    case types.responder:
+      return createResponder(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
     case types.viewController:
       return createViewController(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
     case types.view:
       return createView(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
-    case types.gestureRecognizer:
-      return createGestureRecognizer(type, props, rootContainerInstance, hostContext, internalInstanceHandle);
     default:
       return createElement.defaultType();
   }

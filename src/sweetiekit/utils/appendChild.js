@@ -10,9 +10,8 @@ export default (parent, child) => {
     parent.view.addSubview(child);
   } else if (is.tabBarController(parent) && is.viewController(child)) {
     const viewControllers = Array.from(parent.viewControllers || []);
-    console.log(viewControllers);
     viewControllers.push(child);
-    parent.setViewControllers(viewControllers);
+    parent.setViewControllersAnimated(viewControllers, false);
   } else if (is.viewController(parent) && is.viewController(child)) {
     parent.presentViewControllerAnimatedCompletion(child, true, () => {});
   } else if (is.view(parent) && is.tapRecognizer(child)) {

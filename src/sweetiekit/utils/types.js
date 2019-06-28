@@ -15,3 +15,9 @@ export const tapGestureRecognizer = 'ui-tap-gesture-recognizer';
 
 export const viewController = 'ui-view-controller';
 export const tabBarController = 'ui-tab-bar-controller';
+
+export const responder = 'ui-responder';
+
+export const skNode = 'sk-node';
+export const skScene = 'sk-scene';
+export const skView = 'sk-view';

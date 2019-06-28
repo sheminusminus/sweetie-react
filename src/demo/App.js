@@ -3,9 +3,9 @@ import React from 'react';
 import { colors } from '../sweetiekit/utils';
 
 import {
-  SpriteKitScene,
-  SpriteKitView,
-  SpriteKitSpriteNode,
+  SkScene,
+  SkView,
+  SkSpriteNode,
   Image,
 } from '../sweetiekit/components';
 
@@ -140,22 +140,22 @@ class App extends React.Component {
 
     return (
       <ThemeContext.Provider value={themes[theme]}>
-        <SpriteKitView
+        <SkView
           ref={this.skView}
           backgroundColor={colors.medGrey}
           frame={frame}
         >
-          <SpriteKitScene
+          <SkScene
             backgroundColor={colors.pink}
             size={frame}
           >
-            <SpriteKitSpriteNode
+            <SkSpriteNode
               image={monster}
               position={{ x: spriteX, y: spriteY }}
               size={{ width: 54, height: 80 }}
             />
-          </SpriteKitScene>
-        </SpriteKitView>
+          </SkScene>
+        </SkView>
       </ThemeContext.Provider>
     );
   }

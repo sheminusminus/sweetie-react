@@ -25,9 +25,9 @@ class Control extends React.Component {
     type: types.control,
   };
 
-  _ref = React.createRef();
+  #ref = React.createRef();
 
-  get api() { return this._ref.current; }
+  get api() { return this.#ref.current; }
 
   render() {
     const {
@@ -42,7 +42,7 @@ class Control extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
-        ref={this._ref}
+        ref={this.#ref}
       >
         {children}
       </BaseControl>

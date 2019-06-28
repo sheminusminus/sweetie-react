@@ -1,40 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors, propTypes, types } from '../../utils';
+import { types } from '../../utils';
 
-import SpriteKitNode from '../SpriteKitNode';
+import BaseResponder from '../BaseResponder';
 
 /**
- * SpriteKitNode
+ * SkNode
  */
-class SpriteKitSpriteNode extends React.Component {
+class SpriteKitNode extends React.Component {
   /**
    * @type {{baseTypes: string[], children: *, type: string}}
    */
   static propTypes = {
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
-    color: propTypes.colorProp,
-    image: PropTypes.shape(),
-    position: propTypes.pointProp,
-    size: propTypes.sizeProp,
     type: PropTypes.string,
   };
 
   static defaultProps = {
     baseTypes: [types.skNode, types.responder],
     children: undefined,
-    color: colors.white,
-    image: undefined,
-    position: undefined,
-    size: undefined,
-    type: types.skSpriteNode,
+    type: types.skNode,
   };
 
-  _ref = React.createRef();
+  #ref = React.createRef();
 
-  get api() { return this._ref.current; }
+  get api() { return this.#ref.current; }
 
   render() {
     const {
@@ -45,16 +37,16 @@ class SpriteKitSpriteNode extends React.Component {
     } = this.props;
 
     return (
-      <SpriteKitNode
+      <BaseResponder
         {...rest}
         baseTypes={baseTypes}
-        ref={this._ref}
         type={type}
+        ref={this.#ref}
       >
         {children}
-      </SpriteKitNode>
+      </BaseResponder>
     )
   }
 }
 
-export default SpriteKitSpriteNode;
+export default SpriteKitNode;

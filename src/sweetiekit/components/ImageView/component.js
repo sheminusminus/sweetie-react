@@ -22,9 +22,9 @@ class ImageView extends React.Component {
     layer: undefined,
   };
 
-  _ref = React.createRef();
+  #ref = React.createRef();
 
-  get api() { return this._ref.current; }
+  get api() { return this.#ref.current; }
 
   render() {
     const {
@@ -36,7 +36,7 @@ class ImageView extends React.Component {
       <View
         {...rest}
         type={types.imageView}
-        ref={this._ref}
+        ref={this.#ref}
       >
         {children}
       </View>

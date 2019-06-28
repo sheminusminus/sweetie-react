@@ -6,9 +6,9 @@ import { colors, propTypes, types } from '../../utils';
 import View from '../View';
 
 /**
- * SpriteKitView
+ * SkView
  */
-class SpriteKitView extends React.Component {
+class SkView extends React.Component {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
@@ -29,9 +29,9 @@ class SpriteKitView extends React.Component {
     type: types.skView,
   };
 
-  _ref = React.createRef();
+  #ref = React.createRef();
 
-  get api() { return this._ref.current; }
+  get api() { return this.#ref.current; }
 
   render() {
     const {
@@ -44,7 +44,7 @@ class SpriteKitView extends React.Component {
     return (
       <View
         {...rest}
-        ref={this._ref}
+        ref={this.#ref}
         baseTypes={baseTypes}
         type={type}
       >
@@ -54,4 +54,4 @@ class SpriteKitView extends React.Component {
   }
 }
 
-export default SpriteKitView;
+export default SkView;

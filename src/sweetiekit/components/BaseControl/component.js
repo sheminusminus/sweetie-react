@@ -11,7 +11,7 @@ import View from '../View';
  */
 class BaseControl extends React.Component {
   /**
-   * @type {{backgroundColor: Color, children: *, baseTypes: string[], type: string, layer: Layer, frame: Frame, target: Target}}
+   * @type {{backgroundColor: Color, baseTypes: string[], children: *, type: string, layer: Layer, frame: Frame, target: Target}}
    */
   static propTypes = {
     backgroundColor: propTypes.colorProp,
@@ -32,9 +32,9 @@ class BaseControl extends React.Component {
     type: types.control,
   };
 
-  _ref = React.createRef();
+  #ref = React.createRef();
 
-  get api() { return this._ref.current; }
+  get api() { return this.#ref.current; }
 
   render() {
     const {
@@ -49,7 +49,7 @@ class BaseControl extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
-        ref={this._ref}
+        ref={this.#ref}
       >
         {children}
       </View>

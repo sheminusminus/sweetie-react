@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
-import SpriteKitNode from '../SpriteKitNode';
+import SkNode from '../SkNode';
 
 /**
- * SpriteKitScene
+ * SkScene
  */
-class SpriteKitScene extends React.Component {
+class SkScene extends React.Component {
   /**
    * @type {{children: *}}
    */
@@ -24,9 +24,9 @@ class SpriteKitScene extends React.Component {
     size: undefined,
   };
 
-  _ref = React.createRef();
+  #ref = React.createRef();
 
-  get api() { return this._ref.current; }
+  get api() { return this.#ref.current; }
 
   render() {
     const {
@@ -35,15 +35,15 @@ class SpriteKitScene extends React.Component {
     } = this.props;
 
     return (
-      <SpriteKitNode
+      <SkNode
         {...rest}
-        ref={this._ref}
+        ref={this.#ref}
         type={types.skScene}
       >
         {children}
-      </SpriteKitNode>
+      </SkNode>
     )
   }
 }
 
-export default SpriteKitScene;
+export default SkScene;

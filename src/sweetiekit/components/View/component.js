@@ -29,9 +29,9 @@ class View extends React.Component {
     type: types.view,
   };
 
-  _ref = React.createRef();
+  #ref = React.createRef();
 
-  get api() { return this._ref.current; }
+  get api() { return this.#ref.current; }
 
   render() {
     const {
@@ -44,7 +44,7 @@ class View extends React.Component {
     return (
       <BaseView
         {...rest}
-        ref={this._ref}
+        ref={this.#ref}
         baseTypes={baseTypes}
         type={type}
       >

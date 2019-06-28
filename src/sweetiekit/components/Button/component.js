@@ -35,9 +35,9 @@ class Button extends React.Component {
     titleLabel: undefined,
   };
 
-  _ref = React.createRef();
+  #ref = React.createRef();
 
-  get api() { return this._ref.current; }
+  get api() { return this.#ref.current; }
 
   render() {
     const {
@@ -49,7 +49,7 @@ class Button extends React.Component {
       <Control
         {...rest}
         type={types.button}
-        ref={this._ref}
+        ref={this.#ref}
       />
     )
   }

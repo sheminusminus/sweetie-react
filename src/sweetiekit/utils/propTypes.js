@@ -20,6 +20,48 @@ export const colorProp = (props, propName, componentName) => {
   return null;
 };
 
+export const sizeProp = (props, propName, componentName) => {
+  const compName = componentName || 'ANONYMOUS';
+
+  const propVal = props[propName];
+
+  if (propVal) {
+    if (typeof propVal !== 'object') {
+      return new Error(`${propName} in ${compName} expected type object, received ${typeof propVal}`);
+    } else {
+      const { width, height } = propVal;
+      if (
+        typeof width !== 'number'
+        || typeof height !== 'number') {
+        return new Error(`${propName} in ${compName} expected properties width and height to be numbers`);
+      }
+    }
+  }
+
+  return null;
+};
+
+export const pointProp = (props, propName, componentName) => {
+  const compName = componentName || 'ANONYMOUS';
+
+  const propVal = props[propName];
+
+  if (propVal) {
+    if (typeof propVal !== 'object') {
+      return new Error(`${propName} in ${compName} expected type object, received ${typeof propVal}`);
+    } else {
+      const { x, y } = propVal;
+      if (
+        typeof x !== 'number'
+        || typeof y !== 'number') {
+        return new Error(`${propName} in ${compName} expected properties x and y to be numbers`);
+      }
+    }
+  }
+
+  return null;
+};
+
 export const frameProp = (props, propName, componentName) => {
   const compName = componentName || 'ANONYMOUS';
 

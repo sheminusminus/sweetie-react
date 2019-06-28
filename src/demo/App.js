@@ -3,7 +3,10 @@ import React from 'react';
 import { colors } from '../sweetiekit/utils';
 
 import {
+  SpriteKitScene,
   SpriteKitView,
+  SpriteKitSpriteNode,
+  Image,
 } from '../sweetiekit/components';
 
 import ThemeContext from './context';
@@ -39,6 +42,8 @@ const themes = {
   },
 };
 
+const monster = Image('monster');
+
 class App extends React.Component {
   state = {
     theme: 'dark',
@@ -47,7 +52,27 @@ class App extends React.Component {
     sliderValue: 0,
     selectedSegmentIndex: 1,
     tabIndex: 0,
+    spriteX: 100,
+    spriteY: 100,
   };
+
+  interval = null;
+
+  componentDidMount() {
+    const { frame } = this.props;
+    console.log('componentDidMount', this.state.spriteX, this.state.spriteY);
+    this.interval = setInterval(() => {
+      this.setState(state => ({
+        spriteX: state.spriteX >= frame.width ? 100 : state.spriteX + 0.5,
+        spriteY: state.spriteY >= frame.height ? 100 : state.spriteY + 1,
+      }));
+    }, 10);
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount', this.state.spriteX, this.state.spriteY);
+    clearInterval(this.interval);
+  }
 
   handleButtonClick = () => {
     const { theme } = this.state;
@@ -90,6 +115,8 @@ class App extends React.Component {
       tabIndex,
       theme,
       selectedSegmentIndex,
+      spriteX,
+      spriteY,
     } = this.state;
 
     const { frame } = this.props;
@@ -99,7 +126,18 @@ class App extends React.Component {
         <SpriteKitView
           backgroundColor={colors.medGrey}
           frame={frame}
-        />
+        >
+          <SpriteKitScene
+            backgroundColor={colors.pink}
+            size={frame}
+          >
+            <SpriteKitSpriteNode
+              image={monster}
+              position={{ x: spriteX, y: spriteY }}
+              size={{ width: 80, height: 80 }}
+            />
+          </SpriteKitScene>
+        </SpriteKitView>
       </ThemeContext.Provider>
     );
   }

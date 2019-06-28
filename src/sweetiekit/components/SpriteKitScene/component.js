@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { types } from '../../utils';
+import { colors, propTypes, types } from '../../utils';
 
 import SpriteKitNode from '../SpriteKitNode';
 
@@ -13,11 +13,15 @@ class SpriteKitScene extends React.Component {
    * @type {{children: *}}
    */
   static propTypes = {
+    backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
+    size: propTypes.sizeProp,
   };
 
   static defaultProps = {
+    backgroundColor: colors.white,
     children: undefined,
+    size: undefined,
   };
 
   render() {

@@ -7,4 +7,7 @@ export const imageView = el => el instanceof UIImageView;
 export const stackView = el => el instanceof UIStackView;
 export const tabBarController = el => el instanceof UITabBarController;
 
+export const skNode = el => el instanceof SKNode;
+export const skScene = el => el instanceof SKScene;
+export const skSpriteNode = el => el instanceof SKSPriteNode;
 export const skView = el => el instanceof SKView;

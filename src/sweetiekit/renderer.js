@@ -16,7 +16,7 @@ let listeners = {};
 
 const hostConfig = {
   getRootHostContext(rootContainerInstance) {
-    console.log('TODO: getRootHostContext');
+    // console.log('TODO: getRootHostContext');
     return {};
   },
 
@@ -29,11 +29,11 @@ const hostConfig = {
   },
 
   prepareForCommit(containerInfo) {
-    console.log('TODO: prepareForCommit');
+    // console.log('TODO: prepareForCommit');
   },
 
   resetAfterCommit(containerInfo) {
-    console.log('TODO: resetAfterCommit');
+    // console.log('TODO: resetAfterCommit');
   },
 
   createInstance(

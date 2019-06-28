@@ -18,3 +18,7 @@ export const tabBarItem = 'tabBarItem';
 export const tabBar = 'tabBar';
 
 export const selectedIndex = 'selectedIndex';
+
+export const size = 'size';
+export const color = 'color';
+export const position = 'position';

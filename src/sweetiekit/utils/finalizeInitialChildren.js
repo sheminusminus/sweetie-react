@@ -53,24 +53,12 @@ export default (
             }
             break;
 
-          case propKeys.title:
-            view.title = val;
-            break;
-
-          case propKeys.image:
-            if (val) view.image = val;
-            break;
-
           case propKeys.layer:
             if (baseTypesIsArray) {
               if (baseTypes.includes(types.view)) {
                 Object.keys(val).forEach(p => view.layer[p] = val[p]);
               }
             }
-            break;
-
-          case propKeys.text:
-            view.text = val;
             break;
 
           case propKeys.tabBar:

@@ -7,6 +7,7 @@ export { default as ScrollView } from './ScrollView';
 export { default as SegmentedControl } from './SegmentedControl';
 export { default as SpriteKitNode } from './SpriteKitNode';
 export { default as SpriteKitScene } from './SpriteKitScene';
+export { default as SpriteKitSpriteNode } from './SpriteKitSpriteNode';
 export { default as SpriteKitView } from './SpriteKitView';
 export { default as Slider } from './Slider';
 export { default as Switch } from './Switch';

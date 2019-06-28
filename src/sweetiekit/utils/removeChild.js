@@ -21,5 +21,14 @@ export default (parent, child) => {
     child.removeFromSuperview();
   } else if (is.viewController(child)) {
     child.dismissViewControllerAnimatedCompletion(true, () => {});
+  }  else if (is.skView(parent)) {
+    if (is.skScene(child)) {
+      child.removeFromParent();
+      parent.presentScene(undefined);
+    }
+  } else if (is.skNode(parent) || is.skScene(parent) || is.skSpriteNode(parent)) {
+    if (is.skNode(child) || is.skSpriteNode(child)) {
+      child.removeFromParent();
+    }
   }
 };

@@ -1,5 +1,3 @@
-import _cloneDeep from 'lodash/cloneDeep'
-
 import * as propKeys from './propKeys';
 import * as types from './types';
 
@@ -63,12 +61,6 @@ export default (
               }
               break;
 
-            case propKeys.text:
-              if (viewType === types.textField || viewType === types.label) {
-                view.text = val;
-              }
-              break;
-
             case propKeys.titleColor:
               if (viewType === types.button) {
                 view.setTitleColorForState(val, UIControlStateNormal);
@@ -86,12 +78,6 @@ export default (
             case propKeys.titleLabel:
               if (viewType === types.button) {
                 Object.keys(val).forEach(p => view.titleLabel[p] = val[p]);
-              }
-              break;
-
-            case propKeys.image:
-              if (viewType === types.imageView) {
-                if (val) view.image = val;
               }
               break;
 

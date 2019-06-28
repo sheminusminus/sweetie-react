@@ -20,4 +20,5 @@ export const responder = 'ui-responder';
 
 export const skNode = 'sk-node';
 export const skScene = 'sk-scene';
+export const skSpriteNode = 'sk-sprite-node';
 export const skView = 'sk-view';

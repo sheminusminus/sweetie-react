@@ -21,5 +21,13 @@ export default (parent, child, beforeChild) => {
     if (is.view(child) && is.view(beforeChild)) {
       parent.view.insertSubviewBelowSubview(child, beforeChild);
     }
+  } else if (is.skView(parent)) {
+    if (is.skScene(child)) {
+      parent.presentScene(child);
+    }
+  } else if (is.skNode(parent) || is.skScene(parent) || is.skSpriteNode(parent)) {
+    if (is.skNode(child) || is.skSpriteNode(child)) {
+      parent.addChild(child);
+    }
   }
 };

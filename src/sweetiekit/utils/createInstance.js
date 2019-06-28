@@ -13,6 +13,8 @@ const createResponder = (
       return createElement.skNode(props);
     case types.skScene:
       return createElement.skScene(props);
+    case types.skSpriteNode:
+      return createElement.skSpriteNode(props);
     default:
       return createElement.responder(props);
   }

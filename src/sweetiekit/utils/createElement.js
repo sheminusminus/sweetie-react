@@ -13,6 +13,7 @@ import {
 const {
   SKNode,
   SKScene,
+  SKSpriteNode,
   SKView,
   UIButton,
   UIImageView,
@@ -215,5 +216,12 @@ export const skView = (props) => {
   return el;
 };
 
+export const skSpriteNode = (props) => {
+  if (props.image) {
+    return SKSpriteNode(props.image);
+  }
+
+  return SKSpriteNode();
+};
 
 export const defaultType = () => undefined;

@@ -33,6 +33,7 @@ const config = {
       '.shawwn.com'
     ],
   },
+  devtool: 'source-map',
   plugins: [
     new webpack.DefinePlugin({
       NSTextAlignmentLeft: JSON.stringify(0),

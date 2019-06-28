@@ -5,8 +5,6 @@ import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
 
-import { UITabBarItem } from '../TabBarItem';
-
 /**
  * Renders a Control of type ui-segmented-control.
  * @see https://developer.apple.com/documentation/uikit/uisegmentedcontrol?language=swift
@@ -19,7 +17,7 @@ class SegmentedControl extends React.Component {
     backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
     frame: propTypes.frameProp,
-    items: PropTypes.arrayOf(PropTypes.shape()),
+    items: PropTypes.arrayOf(UITabBarItem),
     layer: propTypes.layerProp,
     selectedSegmentIndex: PropTypes.number,
     target: propTypes.targetActionEventsProp,

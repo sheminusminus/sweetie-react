@@ -6,9 +6,14 @@ const cache = {};
 
 /**
  * @param {string} name
+ * @param {boolean} useCache
  * @returns {UIImage}
  */
-export default function makeImage(name) {
+export default function makeImage(name, useCache = true) {
+  if (!useCache) {
+    return UIImage(name);
+  }
+
   if (cache[name]) {
     return cache[name];
   }

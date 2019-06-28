@@ -37,6 +37,10 @@ class SegmentedControl extends React.Component {
     tintColor: undefined,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -46,6 +50,7 @@ class SegmentedControl extends React.Component {
     return (
       <Control
         {...rest}
+        ref={this._ref}
         type={types.segmentedControl}
       />
     )

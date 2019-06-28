@@ -20,6 +20,10 @@ class ViewController extends React.Component {
     type: types.viewController,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -33,6 +37,7 @@ class ViewController extends React.Component {
         {...rest}
         baseType={baseTypes}
         type={type}
+        ref={this._ref}
       >
         {children}
       </BaseViewController>

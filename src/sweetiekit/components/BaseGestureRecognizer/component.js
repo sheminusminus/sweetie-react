@@ -23,6 +23,10 @@ class BaseGestureRecognizer extends React.Component {
     type: types.gestureRecognizer,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       baseTypes,
@@ -35,6 +39,7 @@ class BaseGestureRecognizer extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
+        ref={this._ref}
       />
     )
   }

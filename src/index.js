@@ -15,9 +15,11 @@ const app = new UIApplication();
 const rootVC = UIViewController();
 app.keyWindow.rootViewController = rootVC;
 
+const myApp = <App frame={rootVC.view.frame} />;
+
 function render() {
   // var mountNode = document.getElementById('app');
-  ReactDOM.render(<App frame={rootVC.view.frame} />, rootVC);
+  ReactDOM.render(myApp, rootVC);
 }
 
 render();

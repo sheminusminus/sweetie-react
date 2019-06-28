@@ -62,15 +62,7 @@ class App extends React.Component {
 
   interval = null;
 
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState(state => this.getNextSpriteState(state));
-    }, 10);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
+  skView = React.createRef();
 
   getNextSpriteState = (state) => {
     const { frame: { height, width } } = this.props;
@@ -145,6 +137,7 @@ class App extends React.Component {
     return (
       <ThemeContext.Provider value={themes[theme]}>
         <SpriteKitView
+          ref={this.skView}
           backgroundColor={colors.medGrey}
           frame={frame}
         >

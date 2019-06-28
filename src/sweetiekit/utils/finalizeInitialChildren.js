@@ -22,6 +22,10 @@ export default (
     Object.keys(otherProps).forEach(attr => {
       const val = otherProps[attr];
 
+      if (attr === 'ref') {
+
+      }
+
       if (val !== undefined && val !== null) {
         switch (attr) {
           case propKeys.target:

@@ -20,6 +20,10 @@ class ScrollView extends React.Component {
     layer: undefined,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -29,6 +33,7 @@ class ScrollView extends React.Component {
     return (
       <View
         {...rest}
+        ref={this._ref}
         type={types.scrollView}
       >
         {children}

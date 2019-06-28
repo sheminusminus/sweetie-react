@@ -29,6 +29,10 @@ class SpriteKitView extends React.Component {
     type: types.skView,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       baseTypes,
@@ -40,6 +44,7 @@ class SpriteKitView extends React.Component {
     return (
       <View
         {...rest}
+        ref={this._ref}
         baseTypes={baseTypes}
         type={type}
       >

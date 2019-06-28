@@ -24,6 +24,10 @@ class SpriteKitScene extends React.Component {
     size: undefined,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -33,6 +37,7 @@ class SpriteKitScene extends React.Component {
     return (
       <SpriteKitNode
         {...rest}
+        ref={this._ref}
         type={types.skScene}
       >
         {children}

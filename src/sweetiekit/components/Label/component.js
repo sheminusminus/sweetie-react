@@ -27,6 +27,10 @@ class Label extends React.Component {
     textAlignment: UIKit.NSTextAlignment.left,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -36,6 +40,7 @@ class Label extends React.Component {
     return (
       <View
         {...rest}
+        ref={this._ref}
         type={types.label}
       >
         {children}

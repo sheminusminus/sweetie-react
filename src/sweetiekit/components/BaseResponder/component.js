@@ -23,6 +23,10 @@ class BaseResponder extends React.Component {
     type: types.responder,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       baseTypes,
@@ -36,6 +40,7 @@ class BaseResponder extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
+        ref={this._ref}
       >
         {children}
       </ui-responder>

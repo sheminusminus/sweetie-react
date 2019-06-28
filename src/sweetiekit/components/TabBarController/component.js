@@ -18,6 +18,10 @@ class TabBarController extends React.Component {
     tabBar: undefined,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -27,6 +31,7 @@ class TabBarController extends React.Component {
     return (
       <ViewController
         {...rest}
+        ref={this._ref}
         type={types.tabBarController}
       >
         {children}

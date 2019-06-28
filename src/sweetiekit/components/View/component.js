@@ -10,6 +10,7 @@ import BaseView from '../BaseView';
  */
 class View extends React.Component {
   static propTypes = {
+    alpha: PropTypes.number,
     backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
@@ -19,6 +20,7 @@ class View extends React.Component {
   };
 
   static defaultProps = {
+    alpha: 1,
     backgroundColor: colors.white,
     baseTypes: [types.view],
     children: undefined,
@@ -26,6 +28,10 @@ class View extends React.Component {
     layer: undefined,
     type: types.view,
   };
+
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
 
   render() {
     const {
@@ -38,6 +44,7 @@ class View extends React.Component {
     return (
       <BaseView
         {...rest}
+        ref={this._ref}
         baseTypes={baseTypes}
         type={type}
       >

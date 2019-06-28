@@ -25,6 +25,10 @@ class TextField extends React.Component {
     text: '',
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -34,6 +38,7 @@ class TextField extends React.Component {
     return (
       <Control
         {...rest}
+        ref={this._ref}
         type={types.textField}
       />
     )

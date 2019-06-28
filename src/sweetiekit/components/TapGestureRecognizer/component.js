@@ -13,6 +13,10 @@ class TapGestureRecognizer extends React.Component {
     target: undefined,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -23,6 +27,7 @@ class TapGestureRecognizer extends React.Component {
       <GestureRecognizer
         {...rest}
         type={types.tapGestureRecognizer}
+        ref={this._ref}
       />
     )
   }

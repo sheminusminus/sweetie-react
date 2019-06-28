@@ -12,6 +12,7 @@ class BaseView extends React.Component {
    * @type {{backgroundColor: Color, children: *, baseTypes: string[], type: string, layer: Layer, frame: Frame}}
    */
   static propTypes = {
+    alpha: PropTypes.number,
     backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
@@ -21,6 +22,7 @@ class BaseView extends React.Component {
   };
 
   static defaultProps = {
+    alpha: 1,
     backgroundColor: colors.clear,
     baseTypes: [types.view],
     children: undefined,
@@ -28,6 +30,10 @@ class BaseView extends React.Component {
     layer: undefined,
     type: types.view,
   };
+
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
 
   render() {
     const {
@@ -42,6 +48,7 @@ class BaseView extends React.Component {
         {...rest}
         baseTypes={baseTypes || [type]}
         type={type}
+        ref={this._ref}
       >
         {children}
       </ui-view>

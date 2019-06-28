@@ -24,6 +24,10 @@ class Switch extends React.Component {
     target: undefined,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -33,6 +37,7 @@ class Switch extends React.Component {
     return (
       <Control
         {...rest}
+        ref={this._ref}
         type={types.uiSwitch}
       />
     )

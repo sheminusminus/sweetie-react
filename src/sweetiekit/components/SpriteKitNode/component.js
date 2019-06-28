@@ -24,6 +24,10 @@ class SpriteKitNode extends React.Component {
     type: types.skNode,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       baseTypes,
@@ -37,6 +41,7 @@ class SpriteKitNode extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
+        ref={this._ref}
       >
         {children}
       </BaseResponder>

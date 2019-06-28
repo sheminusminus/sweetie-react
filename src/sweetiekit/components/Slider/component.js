@@ -28,6 +28,10 @@ class Slider extends React.Component {
     value: 0,
   };
 
+  _ref = React.createRef();
+
+  api = () => this._ref.current;
+
   render() {
     const {
       children,
@@ -37,6 +41,7 @@ class Slider extends React.Component {
     return (
       <Control
         {...rest}
+        ref={this._ref}
         type={types.slider}
       />
     )

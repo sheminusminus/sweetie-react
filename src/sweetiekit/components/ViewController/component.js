@@ -22,7 +22,7 @@ class ViewController extends React.Component {
 
   _ref = React.createRef();
 
-  api = () => this._ref.current;
+  get api() { return this._ref.current; }
 
   render() {
     const {

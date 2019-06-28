@@ -64,6 +64,10 @@ class App extends React.Component {
 
   skView = React.createRef();
 
+  componentDidMount() {
+    console.log(this.skView.current.api);
+  }
+
   getNextSpriteState = (state) => {
     const { frame: { height, width } } = this.props;
 

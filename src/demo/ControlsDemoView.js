@@ -66,7 +66,7 @@ class EntityLabel extends React.Component {
         baseTypes={['ui-label', 'ui-view']}
         frame={{ x: 0, y: 100, width: 100, height: 50 }}
         text="Sweet Entity"
-        type="ui-label"
+        type="UILabel"
       />
     );
   }
@@ -212,7 +212,7 @@ class ControlsDemoView extends React.Component {
             }}
             placeholder="Dynamic field"
             text={name}
-            type="ui-text-field"
+            type="UITextField"
           />
         </MainView>
       </ThemeContext.Provider>

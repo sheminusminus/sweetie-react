@@ -1,25 +1,6 @@
 import * as createElement from './createElement';
 import * as types from './types';
 
-const iosPrefixes = [
-  'ar',
-  'au',
-  'av',
-  'ca',
-  'cg',
-  'ci',
-  'cl',
-  'mk',
-  'mp',
-  'mtl',
-  'mdl',
-  'ns',
-  'scn',
-  'sk',
-  'ui',
-  'wk',
-];
-
 const createEntity = (
   type,
   props,
@@ -27,28 +8,15 @@ const createEntity = (
   hostContext,
   internalInstanceHandle,
 ) => {
-  const _type = props.type;
+  const _t = props.type;
 
-  const parts = _type.split('-');
+  const _class = NSClassFromString(_t);
 
-  let iosType = '';
-
-  parts.forEach((part, idx) => {
-    if (iosPrefixes.includes(part)) {
-      iosType = `${iosType}${part.toUpperCase()}`;
-    } else {
-      const firstChar = part[0].toUpperCase();
-      const rest = part.substring(1).toLowerCase();
-      iosType = `${iosType}${firstChar}${rest}`;
-    }
-  });
-
-  const _class = NSClassFromString(iosType);
-
-  console.log(_class);
   if (_class) {
     return _class.invoke(['@', 'new'])
   }
+
+  return createElement.defaultType();
 };
 
 const createResponder = (

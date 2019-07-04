@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
+import SweetComponent from '../SweetComponent';
 
-class Slider extends React.Component {
+class Slider extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     continuous: PropTypes.bool,
@@ -28,10 +29,6 @@ class Slider extends React.Component {
     value: 0,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -41,7 +38,7 @@ class Slider extends React.Component {
     return (
       <Control
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         type={types.slider}
       />
     )

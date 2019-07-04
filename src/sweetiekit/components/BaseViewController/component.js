@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import { types } from '../../utils';
 
+import SweetComponent from '../SweetComponent';
+
 /**
  * Internal component that renders a ui-view-controller
  * @see https://developer.apple.com/documentation/uikit/uiviewcontroller?language=swift
  */
-class BaseViewController extends React.Component {
+class BaseViewController extends SweetComponent {
   /**
    * @type {{children: *, baseTypes: string[], type: string}}
    */
@@ -23,10 +25,6 @@ class BaseViewController extends React.Component {
     type: types.viewController,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -40,7 +38,7 @@ class BaseViewController extends React.Component {
         {...rest}
         baseType={baseTypes}
         type={type}
-        ref={this.#ref}
+        ref={this.ref}
       >
         {children}
       </ui-view-controller>

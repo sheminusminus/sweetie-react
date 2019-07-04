@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { types } from '../../utils';
 
 import BaseViewController from '../BaseViewController';
+import SweetComponent from '../SweetComponent';
 
-class ViewController extends React.Component {
+class ViewController extends SweetComponent {
   static propTypes = {
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
@@ -20,10 +21,6 @@ class ViewController extends React.Component {
     type: types.viewController,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -37,7 +34,7 @@ class ViewController extends React.Component {
         {...rest}
         baseType={baseTypes}
         type={type}
-        ref={this.#ref}
+        ref={this.ref}
       >
         {children}
       </BaseViewController>

@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import SkView from '../SkView';
+import SweetComponent from '../SweetComponent';
 
 /**
  * ARSKView
  */
-class ArSkView extends React.Component {
+class ArSkView extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     configuration: PropTypes.oneOfType([
       PropTypes.instanceOf(ARWorldTrackingConfiguration),
-      PropTypes.instanceOf(ARBodyTrackingConfiguration),
       PropTypes.instanceOf(AROrientationTrackingConfiguration),
       PropTypes.instanceOf(ARImageTrackingConfiguration),
       PropTypes.instanceOf(ARFaceTrackingConfiguration),
@@ -40,13 +40,9 @@ class ArSkView extends React.Component {
     type: types.arSkView,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   get session() {
-    return this.#ref.current
-      ? this.#ref.current.session : undefined;
+    return this.ref.current
+      ? this.ref.current.session : undefined;
   };
 
   render() {
@@ -60,7 +56,7 @@ class ArSkView extends React.Component {
     return (
       <SkView
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         baseTypes={baseTypes}
         type={type}
       >

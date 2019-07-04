@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import SkNode from '../SkNode';
+import SweetComponent from '../SweetComponent';
 
 /**
  * SkScene
  */
-class SkScene extends React.Component {
+class SkScene extends SweetComponent {
   /**
    * @type {{children: *}}
    */
@@ -24,10 +25,6 @@ class SkScene extends React.Component {
     size: undefined,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -37,7 +34,7 @@ class SkScene extends React.Component {
     return (
       <SkNode
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         type={types.skScene}
       >
         {children}

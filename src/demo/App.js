@@ -12,6 +12,8 @@ import {
 
 import ThemeContext from './context';
 
+import ControlsDemoView from './ControlsDemoView';
+
 const themes = {
   dark: {
     view: {
@@ -62,12 +64,6 @@ class App extends React.Component {
   };
 
   interval = null;
-
-  skView = React.createRef();
-
-  componentDidMount() {
-    console.log(this.skView.current.api);
-  }
 
   getNextSpriteState = (state) => {
     const { frame: { height, width } } = this.props;
@@ -140,25 +136,39 @@ class App extends React.Component {
     const { frame } = this.props;
 
     return (
-      <ThemeContext.Provider value={themes[theme]}>
-        <ArSkView
-          ref={this.skView}
-          backgroundColor={colors.medGrey}
-          frame={frame}
-        >
-          <SkScene
-            backgroundColor={colors.pink}
-            size={frame}
-          >
-            <SkSpriteNode
-              image={monster}
-              position={{ x: spriteX, y: spriteY }}
-              size={{ width: 54, height: 80 }}
-            />
-          </SkScene>
-        </ArSkView>
-      </ThemeContext.Provider>
+      <ControlsDemoView
+        onButtonClick={this.handleButtonClick}
+        onFieldChange={this.handleFieldChange}
+        onSegmentChange={this.handleSegmentChanged}
+        hasChildController={hasChildController}
+        frame={frame}
+        name={name}
+        tabIndex={tabIndex}
+        theme={theme}
+        toggleHasChild={this.toggleHasChild}
+        selectedSegmentIndex={selectedSegmentIndex}
+      />
     );
+    // return (
+    //   <ThemeContext.Provider value={themes[theme]}>
+    //     <ArSkView
+    //       ref={this.skView}
+    //       backgroundColor={colors.medGrey}
+    //       frame={frame}
+    //     >
+    //       <SkScene
+    //         backgroundColor={colors.pink}
+    //         size={frame}
+    //       >
+    //         <SkSpriteNode
+    //           image={monster}
+    //           position={{ x: spriteX, y: spriteY }}
+    //           size={{ width: 54, height: 80 }}
+    //         />
+    //       </SkScene>
+    //     </ArSkView>
+    //   </ThemeContext.Provider>
+    // );
   }
 }
 

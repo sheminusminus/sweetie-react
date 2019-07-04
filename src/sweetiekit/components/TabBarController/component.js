@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 import { propTypes, types } from '../../utils';
 
+import SweetComponent from '../SweetComponent';
 import ViewController from '../ViewController';
 
-class TabBarController extends React.Component {
+class TabBarController extends SweetComponent {
   static propTypes = {
     children: PropTypes.any,
     selectedIndex: PropTypes.number,
@@ -18,10 +19,6 @@ class TabBarController extends React.Component {
     tabBar: undefined,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -31,7 +28,7 @@ class TabBarController extends React.Component {
     return (
       <ViewController
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         type={types.tabBarController}
       >
         {children}

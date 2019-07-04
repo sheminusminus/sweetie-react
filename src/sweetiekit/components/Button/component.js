@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
+import SweetComponent from '../SweetComponent';
 
 /**
  * Renders a Control of type ui-button.
  * @see https://developer.apple.com/documentation/uikit/uibutton?language=swift
  */
-class Button extends React.Component {
+class Button extends SweetComponent {
   /**
    * @type {{backgroundColor: Color, children: *, type: string, layer: Layer, frame: Frame, target: Target, title: string, titleColor: Color, titleLabel: Object}}
    */
@@ -35,10 +36,6 @@ class Button extends React.Component {
     titleLabel: undefined,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -49,7 +46,7 @@ class Button extends React.Component {
       <Control
         {...rest}
         type={types.button}
-        ref={this.#ref}
+        ref={this.ref}
       />
     )
   }

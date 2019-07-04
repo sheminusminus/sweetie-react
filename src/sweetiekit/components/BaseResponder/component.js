@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import { types } from '../../utils';
 
+import SweetComponent from '../SweetComponent';
+
 /**
  * Internal component that creates a UIResponder.
  * @see https://developer.apple.com/documentation/uikit/uiresponder?language=swift
  */
-class BaseResponder extends React.Component {
+class BaseResponder extends SweetComponent {
   /**
    * @type {{children: *, baseTypes: string[]}}
    */
@@ -23,10 +25,6 @@ class BaseResponder extends React.Component {
     type: types.responder,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       baseTypes,
@@ -40,7 +38,7 @@ class BaseResponder extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
-        ref={this.#ref}
+        ref={this.ref}
       >
         {children}
       </ui-responder>

@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
+import SweetComponent from '../SweetComponent';
 
-class Switch extends React.Component {
+class Switch extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     frame: propTypes.frameProp,
@@ -24,10 +25,6 @@ class Switch extends React.Component {
     target: undefined,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -37,7 +34,7 @@ class Switch extends React.Component {
     return (
       <Control
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         type={types.uiSwitch}
       />
     )

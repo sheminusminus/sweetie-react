@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 import { types } from '../../utils';
 
 import BaseResponder from '../BaseResponder';
+import SweetComponent from '../SweetComponent';
 
 /**
  * SkNode
  */
-class SpriteKitNode extends React.Component {
+class SpriteKitNode extends SweetComponent {
   /**
    * @type {{baseTypes: string[], children: *, type: string}}
    */
@@ -24,10 +25,6 @@ class SpriteKitNode extends React.Component {
     type: types.skNode,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       baseTypes,
@@ -41,7 +38,7 @@ class SpriteKitNode extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
-        ref={this.#ref}
+        ref={this.ref}
       >
         {children}
       </BaseResponder>

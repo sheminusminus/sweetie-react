@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
+import SweetComponent from '../SweetComponent';
 
 /**
  * Renders a Control of type ui-segmented-control.
  * @see https://developer.apple.com/documentation/uikit/uisegmentedcontrol?language=swift
  */
-class SegmentedControl extends React.Component {
+class SegmentedControl extends SweetComponent {
   /**
    * @type {{backgroundColor: Color, children: *, layer: Layer, frame: Frame, target: Target}}
    */
@@ -35,10 +36,6 @@ class SegmentedControl extends React.Component {
     tintColor: undefined,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -48,7 +45,7 @@ class SegmentedControl extends React.Component {
     return (
       <Control
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         type={types.segmentedControl}
       />
     )

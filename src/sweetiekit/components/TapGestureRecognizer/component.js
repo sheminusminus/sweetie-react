@@ -3,8 +3,9 @@ import React from 'react';
 import { propTypes, types } from '../../utils';
 
 import GestureRecognizer from '../GestureRecognizer';
+import SweetComponent from '../SweetComponent';
 
-class TapGestureRecognizer extends React.Component {
+class TapGestureRecognizer extends SweetComponent {
   static propTypes = {
     target: propTypes.targetActionProp,
   };
@@ -12,10 +13,6 @@ class TapGestureRecognizer extends React.Component {
   static defaultProps = {
     target: undefined,
   };
-
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
 
   render() {
     const {
@@ -27,7 +24,7 @@ class TapGestureRecognizer extends React.Component {
       <GestureRecognizer
         {...rest}
         type={types.tapGestureRecognizer}
-        ref={this.#ref}
+        ref={this.ref}
       />
     )
   }

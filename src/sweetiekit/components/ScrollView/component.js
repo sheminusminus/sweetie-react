@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
+import SweetComponent from '../SweetComponent';
 import View from '../View';
 
-class ScrollView extends React.Component {
+class ScrollView extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
@@ -20,10 +21,6 @@ class ScrollView extends React.Component {
     layer: undefined,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -33,7 +30,7 @@ class ScrollView extends React.Component {
     return (
       <View
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         type={types.scrollView}
       >
         {children}

@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
+import SweetComponent from '../SweetComponent';
+
+
 /**
  * Internal component that renders a UIView.
  * @see https://developer.apple.com/documentation/uikit/uiview?language=swift
  */
-class BaseView extends React.Component {
+class BaseView extends SweetComponent {
   /**
    * @type {{backgroundColor: Color, children: *, baseTypes: string[], type: string, layer: Layer, frame: Frame}}
    */
@@ -31,10 +34,6 @@ class BaseView extends React.Component {
     type: types.view,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       baseTypes,
@@ -48,7 +47,7 @@ class BaseView extends React.Component {
         {...rest}
         baseTypes={baseTypes || [type]}
         type={type}
-        ref={this.#ref}
+        ref={this.ref}
       >
         {children}
       </ui-view>

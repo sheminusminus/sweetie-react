@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import BaseView from '../BaseView';
+import SweetComponent from '../SweetComponent';
 
 /**
  * View
  */
-class View extends React.Component {
+class View extends SweetComponent {
   static propTypes = {
     alpha: PropTypes.number,
     backgroundColor: propTypes.colorProp,
@@ -29,10 +30,6 @@ class View extends React.Component {
     type: types.view,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       baseTypes,
@@ -44,7 +41,7 @@ class View extends React.Component {
     return (
       <BaseView
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         baseTypes={baseTypes}
         type={type}
       >

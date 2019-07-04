@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import Control from '../Control';
+import SweetComponent from '../SweetComponent';
 
-class TextField extends React.Component {
+class TextField extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     font: PropTypes.any,
@@ -25,10 +26,6 @@ class TextField extends React.Component {
     text: '',
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -38,7 +35,7 @@ class TextField extends React.Component {
     return (
       <Control
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         type={types.textField}
       />
     )

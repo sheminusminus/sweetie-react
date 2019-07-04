@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
+import SweetComponent from '../SweetComponent';
 import View from '../View';
 
 /**
  * Internal component that renders a View of type ui-control.
  * @see https://developer.apple.com/documentation/uikit/uicontrol?language=swift
  */
-class BaseControl extends React.Component {
+class BaseControl extends SweetComponent {
   /**
    * @type {{backgroundColor: Color, baseTypes: string[], children: *, type: string, layer: Layer, frame: Frame, target: Target}}
    */
@@ -32,10 +33,6 @@ class BaseControl extends React.Component {
     type: types.control,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       baseTypes,
@@ -49,7 +46,7 @@ class BaseControl extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
-        ref={this.#ref}
+        ref={this.ref}
       >
         {children}
       </View>

@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 import { UIKit } from '../../enums';
 
+import SweetComponent from '../SweetComponent';
 import View from '../View';
 
-class Label extends React.Component {
+class Label extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
@@ -27,10 +28,6 @@ class Label extends React.Component {
     textAlignment: UIKit.NSTextAlignment.left,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       children,
@@ -40,7 +37,7 @@ class Label extends React.Component {
     return (
       <View
         {...rest}
-        ref={this.#ref}
+        ref={this.ref}
         type={types.label}
       >
         {children}

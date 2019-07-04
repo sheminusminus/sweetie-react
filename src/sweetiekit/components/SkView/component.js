@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
+import SweetComponent from '../SweetComponent';
 import View from '../View';
 
 /**
  * SkView
  */
-class SkView extends React.Component {
+class SkView extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
@@ -29,10 +30,6 @@ class SkView extends React.Component {
     type: types.skView,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       baseTypes,
@@ -44,8 +41,8 @@ class SkView extends React.Component {
     return (
       <View
         {...rest}
-        ref={this.#ref}
         baseTypes={baseTypes}
+        ref={this.ref}
         type={type}
       >
         {children}

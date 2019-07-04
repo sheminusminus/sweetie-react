@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import { propTypes, types } from '../../utils';
 
+import SweetComponent from '../SweetComponent';
+
 /**
  * Internal component that renders a ui-gesture-recognizer.
  * @see https://developer.apple.com/documentation/uikit/uigesturerecognizer?language=swift
  */
-class BaseGestureRecognizer extends React.Component {
+class BaseGestureRecognizer extends SweetComponent {
   /**
    * @type {{baseTypes: string[], target: Target, type: string}}
    */
@@ -23,10 +25,6 @@ class BaseGestureRecognizer extends React.Component {
     type: types.gestureRecognizer,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       baseTypes,
@@ -39,7 +37,7 @@ class BaseGestureRecognizer extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
-        ref={this.#ref}
+        ref={this.ref}
       />
     )
   }

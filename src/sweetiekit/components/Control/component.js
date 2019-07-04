@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import BaseControl from '../BaseControl';
+import SweetComponent from '../SweetComponent';
 
-class Control extends React.Component {
+class Control extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
@@ -25,10 +26,6 @@ class Control extends React.Component {
     type: types.control,
   };
 
-  #ref = React.createRef();
-
-  get api() { return this.#ref.current; }
-
   render() {
     const {
       baseTypes,
@@ -42,7 +39,7 @@ class Control extends React.Component {
         {...rest}
         baseTypes={baseTypes}
         type={type}
-        ref={this.#ref}
+        ref={this.ref}
       >
         {children}
       </BaseControl>

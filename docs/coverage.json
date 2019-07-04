@@ -1,160 +1,123 @@
 {
-  "coverage": "8.82%",
-  "expectCount": 170,
-  "actualCount": 15,
+  "coverage": "12.59%",
+  "expectCount": 262,
+  "actualCount": 33,
   "files": {
+    "sweetiekit/components/ArSkView/component.js": {
+      "expectCount": 5,
+      "actualCount": 1,
+      "undocumentLines": [
+        13,
+        31,
+        43,
+        48
+      ]
+    },
+    "sweetiekit/components/ArSubcomponents/ArConfiguration.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        1,
+        3
+      ]
+    },
+    "sweetiekit/components/ArSubcomponents/ArSkViewDelegate.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        1,
+        3
+      ]
+    },
     "sweetiekit/components/BaseControl/component.js": {
       "expectCount": 4,
       "actualCount": 2,
       "undocumentLines": [
-        26,
-        35
+        27,
+        36
       ]
     },
     "sweetiekit/components/BaseGestureRecognizer/component.js": {
       "expectCount": 4,
       "actualCount": 2,
       "undocumentLines": [
-        20,
-        26
+        22,
+        28
+      ]
+    },
+    "sweetiekit/components/BaseResponder/component.js": {
+      "expectCount": 4,
+      "actualCount": 2,
+      "undocumentLines": [
+        22,
+        28
       ]
     },
     "sweetiekit/components/BaseView/component.js": {
       "expectCount": 4,
       "actualCount": 2,
       "undocumentLines": [
-        23,
-        32
+        26,
+        36
       ]
     },
     "sweetiekit/components/BaseViewController/component.js": {
       "expectCount": 4,
       "actualCount": 2,
       "undocumentLines": [
-        20,
-        26
-      ]
-    },
-    "sweetiekit/components/Button/component.js": {
-      "expectCount": 4,
-      "actualCount": 2,
-      "undocumentLines": [
-        27,
-        38
-      ]
-    },
-    "sweetiekit/components/Control/component.js": {
-      "expectCount": 4,
-      "actualCount": 0,
-      "undocumentLines": [
-        8,
-        9,
-        18,
+        22,
         28
       ]
     },
-    "sweetiekit/components/GestureRecognizer/component.js": {
-      "expectCount": 4,
-      "actualCount": 0,
-      "undocumentLines": [
-        8,
-        9,
-        15,
-        21
-      ]
-    },
-    "sweetiekit/components/Image.js": {
-      "expectCount": 3,
-      "actualCount": 1,
-      "undocumentLines": [
-        1,
-        3
-      ]
-    },
-    "sweetiekit/components/ImageView/component.js": {
-      "expectCount": 4,
-      "actualCount": 0,
-      "undocumentLines": [
-        8,
-        9,
-        17,
-        25
-      ]
-    },
-    "sweetiekit/components/Label/component.js": {
-      "expectCount": 4,
-      "actualCount": 0,
-      "undocumentLines": [
-        9,
-        10,
-        21,
-        30
-      ]
-    },
-    "sweetiekit/components/ScrollView/component.js": {
-      "expectCount": 4,
-      "actualCount": 0,
-      "undocumentLines": [
-        8,
-        9,
-        16,
-        23
-      ]
-    },
-    "sweetiekit/components/SegmentedControl/component.js": {
+    "sweetiekit/components/SkNode/component.js": {
       "expectCount": 4,
       "actualCount": 2,
       "undocumentLines": [
-        27,
-        38
+        22,
+        28
       ]
     },
-    "sweetiekit/components/Slider/component.js": {
+    "sweetiekit/components/SkScene/component.js": {
       "expectCount": 4,
-      "actualCount": 0,
+      "actualCount": 2,
       "undocumentLines": [
-        8,
-        9,
-        20,
-        31
+        24,
+        32
       ]
     },
-    "sweetiekit/components/Switch/component.js": {
+    "sweetiekit/components/SkSpriteNode/component.js": {
       "expectCount": 4,
-      "actualCount": 0,
+      "actualCount": 2,
       "undocumentLines": [
-        8,
-        9,
-        18,
-        27
+        26,
+        36
       ]
     },
-    "sweetiekit/components/TabBarController/component.js": {
+    "sweetiekit/components/SkView/component.js": {
       "expectCount": 4,
-      "actualCount": 0,
+      "actualCount": 1,
       "undocumentLines": [
-        8,
+        13,
+        23,
+        33
+      ]
+    },
+    "sweetiekit/components/SweetComponent/component.js": {
+      "expectCount": 4,
+      "actualCount": 1,
+      "undocumentLines": [
+        7,
         9,
-        15,
         21
       ]
     },
-    "sweetiekit/components/TabBarItem.js": {
-      "expectCount": 3,
+    "sweetiekit/components/SweetEntity/component.js": {
+      "expectCount": 4,
       "actualCount": 1,
       "undocumentLines": [
-        1,
-        3
-      ]
-    },
-    "sweetiekit/components/TapGestureRecognizer/component.js": {
-      "expectCount": 4,
-      "actualCount": 0,
-      "undocumentLines": [
-        7,
-        8,
-        12,
-        16
+        10,
+        16,
+        21
       ]
     },
     "sweetiekit/components/Text.js": {
@@ -165,33 +128,225 @@
         5
       ]
     },
-    "sweetiekit/components/TextField/component.js": {
+    "sweetiekit/components/UiButton/component.js": {
+      "expectCount": 4,
+      "actualCount": 2,
+      "undocumentLines": [
+        30,
+        43
+      ]
+    },
+    "sweetiekit/components/UiControl/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
-        8,
         9,
+        10,
+        20,
+        30
+      ]
+    },
+    "sweetiekit/components/UiGestureRecognizer/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        16,
+        22
+      ]
+    },
+    "sweetiekit/components/UiImage.js": {
+      "expectCount": 4,
+      "actualCount": 1,
+      "undocumentLines": [
+        1,
+        3,
+        5
+      ]
+    },
+    "sweetiekit/components/UiImageView/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        20,
+        30
+      ]
+    },
+    "sweetiekit/components/UiLabel/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        10,
+        11,
+        24,
+        35
+      ]
+    },
+    "sweetiekit/components/UiPickerView/component.js": {
+      "expectCount": 4,
+      "actualCount": 1,
+      "undocumentLines": [
+        13,
+        25,
+        37
+      ]
+    },
+    "sweetiekit/components/UiPickerView/components/UiPickerViewDataSource.js": {
+      "expectCount": 3,
+      "actualCount": 1,
+      "undocumentLines": [
+        1,
+        3
+      ]
+    },
+    "sweetiekit/components/UiPickerView/components/UiPickerViewDelegate.js": {
+      "expectCount": 3,
+      "actualCount": 1,
+      "undocumentLines": [
+        1,
+        3
+      ]
+    },
+    "sweetiekit/components/UiScrollView/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
         19,
         28
       ]
     },
-    "sweetiekit/components/View/component.js": {
+    "sweetiekit/components/UiSegmentedControl/component.js": {
       "expectCount": 4,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        12,
-        21,
-        30
+        30,
+        43
       ]
     },
-    "sweetiekit/components/ViewController/component.js": {
+    "sweetiekit/components/UiSlider/component.js": {
       "expectCount": 4,
       "actualCount": 0,
       "undocumentLines": [
-        8,
         9,
+        10,
+        23,
+        36
+      ]
+    },
+    "sweetiekit/components/UiSwitch/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        21,
+        32
+      ]
+    },
+    "sweetiekit/components/UiTabBarController/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        19,
+        28
+      ]
+    },
+    "sweetiekit/components/UiTabBarController/components/UiTabBarControllerDelegate.js": {
+      "expectCount": 3,
+      "actualCount": 1,
+      "undocumentLines": [
+        1,
+        3
+      ]
+    },
+    "sweetiekit/components/UiTableView/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        21,
+        32
+      ]
+    },
+    "sweetiekit/components/UiTableView/components/UiTableViewDataSource.js": {
+      "expectCount": 3,
+      "actualCount": 1,
+      "undocumentLines": [
+        1,
+        3
+      ]
+    },
+    "sweetiekit/components/UiTableView/components/UiTableViewDelegate.js": {
+      "expectCount": 3,
+      "actualCount": 1,
+      "undocumentLines": [
+        1,
+        3
+      ]
+    },
+    "sweetiekit/components/UiTableViewCell/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        20,
+        30
+      ]
+    },
+    "sweetiekit/components/UiTapGestureRecognizer/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
         16,
-        23
+        22
+      ]
+    },
+    "sweetiekit/components/UiTextField/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        22,
+        33
+      ]
+    },
+    "sweetiekit/components/UiView/component.js": {
+      "expectCount": 4,
+      "actualCount": 1,
+      "undocumentLines": [
+        13,
+        23,
+        33
+      ]
+    },
+    "sweetiekit/components/UiViewController/component.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        17,
+        24
+      ]
+    },
+    "sweetiekit/components/UiViewController/components/UiTabBarItem.js": {
+      "expectCount": 3,
+      "actualCount": 1,
+      "undocumentLines": [
+        1,
+        3
       ]
     },
     "sweetiekit/enums/uikit.js": {
@@ -236,42 +391,49 @@
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        6
+        4
       ]
     },
     "sweetiekit/utils/createElement.js": {
-      "expectCount": 19,
+      "expectCount": 24,
       "actualCount": 0,
       "undocumentLines": [
         1,
         13,
-        29,
-        39,
-        43,
-        50,
-        54,
-        64,
-        77,
-        94,
-        107,
-        117,
-        121,
-        133,
-        143,
-        153,
-        178,
-        188,
-        193
+        34,
+        44,
+        48,
+        55,
+        59,
+        69,
+        82,
+        99,
+        112,
+        122,
+        126,
+        138,
+        148,
+        158,
+        183,
+        193,
+        197,
+        201,
+        205,
+        209,
+        219,
+        227
       ]
     },
     "sweetiekit/utils/createInstance.js": {
-      "expectCount": 4,
+      "expectCount": 6,
       "actualCount": 0,
       "undocumentLines": [
         4,
-        21,
-        52,
-        67
+        22,
+        41,
+        58,
+        91,
+        106
       ]
     },
     "sweetiekit/utils/finalizeInitialChildren.js": {
@@ -289,7 +451,7 @@
       ]
     },
     "sweetiekit/utils/is.js": {
-      "expectCount": 8,
+      "expectCount": 12,
       "actualCount": 0,
       "undocumentLines": [
         1,
@@ -299,7 +461,11 @@
         5,
         6,
         7,
-        8
+        8,
+        10,
+        11,
+        12,
+        13
       ]
     },
     "sweetiekit/utils/prepareUpdate.js": {
@@ -310,7 +476,7 @@
       ]
     },
     "sweetiekit/utils/propKeys.js": {
-      "expectCount": 12,
+      "expectCount": 16,
       "actualCount": 0,
       "undocumentLines": [
         1,
@@ -324,20 +490,26 @@
         15,
         17,
         18,
-        20
+        20,
+        22,
+        23,
+        24,
+        26
       ]
     },
     "sweetiekit/utils/propTypes.js": {
-      "expectCount": 7,
+      "expectCount": 9,
       "actualCount": 0,
       "undocumentLines": [
         1,
         23,
-        47,
-        76,
-        103,
-        123,
-        137
+        44,
+        65,
+        89,
+        118,
+        145,
+        165,
+        179
       ]
     },
     "sweetiekit/utils/properties.js": {
@@ -360,11 +532,10 @@
       ]
     },
     "sweetiekit/utils/types.js": {
-      "expectCount": 15,
+      "expectCount": 25,
       "actualCount": 0,
       "undocumentLines": [
         1,
-        2,
         3,
         4,
         5,
@@ -374,10 +545,21 @@
         9,
         10,
         11,
+        12,
         13,
         14,
+        15,
         16,
-        17
+        18,
+        19,
+        21,
+        22,
+        24,
+        26,
+        27,
+        28,
+        29,
+        31
       ]
     }
   }

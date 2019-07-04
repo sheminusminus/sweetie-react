@@ -44,7 +44,7 @@ class BaseView extends SweetComponent {
     return (
       <ui-view
         {...rest}
-        baseTypes={baseTypes || [type]}
+        baseTypes={baseTypes}
         type={type}
         ref={this.ref}
       >

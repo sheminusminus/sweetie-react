@@ -6,7 +6,7 @@ import { propTypes, types } from '../../utils';
 import BaseGestureRecognizer from '../BaseGestureRecognizer';
 import SweetComponent from '../SweetComponent';
 
-class GestureRecognizer extends SweetComponent {
+class UiGestureRecognizer extends SweetComponent {
   static propTypes = {
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     target: propTypes.targetActionProp,
@@ -37,4 +37,4 @@ class GestureRecognizer extends SweetComponent {
   }
 }
 
-export default GestureRecognizer;
+export default UiGestureRecognizer;

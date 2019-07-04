@@ -3,30 +3,26 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
-import Control from '../Control';
+import UiControl from '../UiControl';
 import SweetComponent from '../SweetComponent';
 
-class Slider extends SweetComponent {
+class UiSwitch extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
-    continuous: PropTypes.bool,
-    currentThumbImage: PropTypes.any,
     frame: propTypes.frameProp,
     layer: propTypes.layerProp,
+    on: PropTypes.bool,
+    onTintColor: propTypes.colorProp,
     target: propTypes.targetActionEventsProp,
-    thumbTintColor: propTypes.colorProp,
-    value: PropTypes.number,
   };
 
   static defaultProps = {
     backgroundColor: colors.clear,
-    continuous: false,
-    currentThumbImage: undefined,
     frame: undefined,
     layer: undefined,
+    on: false,
+    onTintColor: undefined,
     target: undefined,
-    thumbTintColor: undefined,
-    value: 0,
   };
 
   render() {
@@ -36,13 +32,13 @@ class Slider extends SweetComponent {
     } = this.props;
 
     return (
-      <Control
+      <UiControl
         {...rest}
         ref={this.ref}
-        type={types.slider}
+        type={types.uiSwitch}
       />
     )
   }
 }
 
-export default Slider;
+export default UiSwitch;

@@ -8,13 +8,13 @@ import NameBox from './NameBox';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
 import {
-  Image,
-  ImageView,
-  ViewController,
-  TapGestureRecognizer,
-  TabBarController,
-  TabBarItem,
-  SegmentedControl,
+  UiImage,
+  UiImageView,
+  UiViewController,
+  UiTapGestureRecognizer,
+  UiTabBarController,
+  UiTabBarItem,
+  UiSegmentedControl,
   UiTabBarControllerDelegate,
 } from '../sweetiekit/components';
 
@@ -22,7 +22,7 @@ import ThemeContext from './context';
 
 const { UIControlEvents } = UIKit;
 
-const image = Image('logo');
+const image = UiImage('logo');
 
 const themes = {
   dark: {
@@ -55,8 +55,8 @@ const themes = {
   },
 };
 
-const barItem0 = TabBarItem('Bar Item 0');
-const barItem1 = TabBarItem('Bar Item 1');
+const barItem0 = UiTabBarItem('Bar Item 0');
+const barItem1 = UiTabBarItem('Bar Item 1');
 
 class ControlsDemoView extends React.Component {
   tabCtrlDel = UiTabBarControllerDelegate({
@@ -80,11 +80,11 @@ class ControlsDemoView extends React.Component {
 
     if (hasChildController) {
       return (
-        <TabBarController
+        <UiTabBarController
           delegate={this.tabCtrlDel}
           selectedIndex={tabIndex}
         >
-          <ViewController
+          <UiViewController
             tabBarItem={barItem0}
           >
             <MainView frame={frame} theme={theme}>
@@ -99,7 +99,7 @@ class ControlsDemoView extends React.Component {
                 WELCOME
               </Title>
 
-              <ImageView
+              <UiImageView
                 backgroundColor={colors.medGrey}
                 frame={{
                   x: 12,
@@ -113,12 +113,12 @@ class ControlsDemoView extends React.Component {
                 }}
               />
 
-              <TapGestureRecognizer
+              <UiTapGestureRecognizer
                 target={toggleHasChild}
               />
             </MainView>
-          </ViewController>
-          <ViewController
+          </UiViewController>
+          <UiViewController
             tabBarItem={barItem1}
           >
             <MainView frame={frame} theme={theme}>
@@ -133,7 +133,7 @@ class ControlsDemoView extends React.Component {
                 WELCOME
               </Title>
 
-              <SegmentedControl
+              <UiSegmentedControl
                 frame={{
                   x: 12,
                   y: 140,
@@ -149,12 +149,12 @@ class ControlsDemoView extends React.Component {
                 target={[onSegmentChanged, UIControlEvents.valueChanged]}
               />
 
-              <TapGestureRecognizer
+              <UiTapGestureRecognizer
                 target={toggleHasChild}
               />
             </MainView>
-          </ViewController>
-        </TabBarController>
+          </UiViewController>
+        </UiTabBarController>
       );
     }
 

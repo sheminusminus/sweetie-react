@@ -5,7 +5,7 @@ import { mergeProps } from '../../utils';
 
 import { colors } from '../../../sweetiekit/utils';
 
-import { Button as Button_ } from '../../../sweetiekit/components';
+import { UiButton as Button_ } from '../../../sweetiekit/components';
 
 /**
  * @see https://developer.apple.com/documentation/uikit/uibutton?language=swift
@@ -57,7 +57,7 @@ class Button extends React.Component {
     const props = mergeProps(Button.defaultProps, this.props);
 
     return (
-      <Button_ {...props} />
+      <UiButton {...props} />
     )
   }
 }

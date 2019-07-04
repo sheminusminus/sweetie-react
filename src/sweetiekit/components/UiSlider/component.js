@@ -3,48 +3,46 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
-import BaseControl from '../BaseControl';
+import UiControl from '../UiControl';
 import SweetComponent from '../SweetComponent';
 
-class Control extends SweetComponent {
+class UiSlider extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
-    children: PropTypes.any,
+    continuous: PropTypes.bool,
+    currentThumbImage: PropTypes.any,
     frame: propTypes.frameProp,
     layer: propTypes.layerProp,
     target: propTypes.targetActionEventsProp,
-    type: PropTypes.string,
+    thumbTintColor: propTypes.colorProp,
+    value: PropTypes.number,
   };
 
   static defaultProps = {
-    baseTypes: [types.control, types.view],
     backgroundColor: colors.clear,
-    children: undefined,
+    continuous: false,
+    currentThumbImage: undefined,
     frame: undefined,
     layer: undefined,
     target: undefined,
-    type: types.control,
+    thumbTintColor: undefined,
+    value: 0,
   };
 
   render() {
     const {
-      baseTypes,
       children,
-      type,
       ...rest
     } = this.props;
 
     return (
-      <BaseControl
+      <UiControl
         {...rest}
-        baseTypes={baseTypes}
-        type={type}
         ref={this.ref}
-      >
-        {children}
-      </BaseControl>
+        type={types.slider}
+      />
     )
   }
 }
 
-export default Control;
+export default UiSlider;

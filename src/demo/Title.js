@@ -5,7 +5,7 @@ const { UIFont } = SweetieKit;
 
 import { colors } from '../sweetiekit/utils';
 import { UIKit } from '../sweetiekit/enums';
-import { Label } from '../sweetiekit/components';
+import { UiLabel } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
 
@@ -22,7 +22,7 @@ class Title extends React.Component {
     const { color = colors.darkGrey } = title;
 
     return (
-      <Label
+      <UiLabel
         backgroundColor={colors.clear}
         font={font}
         frame={frame}
@@ -30,7 +30,7 @@ class Title extends React.Component {
         textColor={color}
       >
         {children}
-      </Label>
+      </UiLabel>
     );
   }
 }

@@ -3,7 +3,7 @@ const SweetieKit = Require('std:sweetiekit.node');
 
 const { UIFont } = SweetieKit;
 
-import { Button } from '../sweetiekit/components';
+import { UiButton } from '../sweetiekit/components';
 import { UIKit } from '../sweetiekit/enums';
 
 import withTheme from './withTheme';
@@ -18,7 +18,7 @@ class ThemeToggle extends React.Component {
     const { frame, onClick, theme } = this.props;
 
     return (
-      <Button
+      <UiButton
         backgroundColor={theme.button.backgroundColor}
         frame={frame}
         layer={{

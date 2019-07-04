@@ -1,23 +1,22 @@
 // ===============
 // UIKit
 // ===============
-export { default as BaseView } from './BaseView';
-export { default as Button } from './Button';
-export { default as Image } from './Image';
-export { default as ImageView } from './ImageView';
-export { default as Label } from './Label';
-export { default as ScrollView } from './ScrollView';
-export { default as SegmentedControl } from './SegmentedControl';
-export { default as Slider } from './Slider';
-export { default as Switch } from './Switch';
-export { default as TabBarController } from './TabBarController';
-export { UiTabBarControllerDelegate } from './TabBarController/components';
-export { default as TapGestureRecognizer } from './TapGestureRecognizer';
+export { default as UiButton } from './UiButton';
+export { default as UiImage } from './UiImage';
+export { default as UiImageView } from './UiImageView';
+export { default as UiLabel } from './UiLabel';
+export { default as UiScrollView } from './UiScrollView';
+export { default as UiSegmentedControl } from './UiSegmentedControl';
+export { default as UiSlider } from './UiSlider';
+export { default as UiSwitch } from './UiSwitch';
+export { default as UiTabBarController } from './UiTabBarController';
+export { UiTabBarControllerDelegate } from './UiTabBarController/components';
+export { default as UiTapGestureRecognizer } from './UiTapGestureRecognizer';
 export { default as Text } from './Text';
-export { default as TextField } from './TextField';
-export { default as View } from './View';
-export { default as ViewController } from './ViewController';
-export { TabBarItem } from './ViewController/components';
+export { default as UiTextField } from './UiTextField';
+export { default as UiView } from './UiView';
+export { default as UiViewController } from './UiViewController';
+export { UiTabBarItem } from './UiViewController/components';
 
 // ===============
 // SpriteKit

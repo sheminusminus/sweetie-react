@@ -3,52 +3,43 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
-import BaseView from '../BaseView';
+import UiControl from '../UiControl';
 import SweetComponent from '../SweetComponent';
 
-/**
- * View
- */
-class View extends SweetComponent {
+class UiTextField extends SweetComponent {
   static propTypes = {
-    alpha: PropTypes.number,
     backgroundColor: propTypes.colorProp,
-    baseTypes: PropTypes.arrayOf(PropTypes.string),
-    children: PropTypes.any,
+    font: PropTypes.any,
     frame: propTypes.frameProp,
     layer: propTypes.layerProp,
-    type: PropTypes.string,
+    numberOfLines: PropTypes.number,
+    target: propTypes.targetActionEventsProp,
+    text: PropTypes.string,
   };
 
   static defaultProps = {
-    alpha: 1,
-    backgroundColor: colors.white,
-    baseTypes: [types.view],
-    children: undefined,
+    backgroundColor: colors.clear,
     frame: undefined,
     layer: undefined,
-    type: types.view,
+    numberOfLines: 1,
+    target: undefined,
+    text: '',
   };
 
   render() {
     const {
-      baseTypes,
       children,
-      type,
       ...rest
     } = this.props;
 
     return (
-      <BaseView
+      <UiControl
         {...rest}
         ref={this.ref}
-        baseTypes={baseTypes}
-        type={type}
-      >
-        {children}
-      </BaseView>
+        type={types.textField}
+      />
     )
   }
 }
 
-export default View;
+export default UiTextField;

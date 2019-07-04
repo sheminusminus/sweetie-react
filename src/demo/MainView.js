@@ -2,7 +2,7 @@ import React from 'react';
 
 import { colors } from '../sweetiekit/utils';
 
-import { View } from '../sweetiekit/components';
+import { UiView } from '../sweetiekit/components';
 
 import withTheme from './withTheme';
 
@@ -15,12 +15,12 @@ class MainView extends React.Component {
     const { backgroundColor = colors.pink } = view;
 
     return (
-      <View
+      <UiView
         backgroundColor={backgroundColor}
         frame={frame}
       >
         {children}
-      </View>
+      </UiView>
     )
   }
 }

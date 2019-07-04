@@ -3,53 +3,48 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
-import Control from '../Control';
+import BaseControl from '../BaseControl';
 import SweetComponent from '../SweetComponent';
 
-/**
- * Renders a Control of type ui-segmented-control.
- * @see https://developer.apple.com/documentation/uikit/uisegmentedcontrol?language=swift
- */
-class SegmentedControl extends SweetComponent {
-  /**
-   * @type {{backgroundColor: Color, children: *, layer: Layer, frame: Frame, target: Target}}
-   */
+class UiControl extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
     frame: propTypes.frameProp,
-    items: PropTypes.arrayOf(UITabBarItem),
     layer: propTypes.layerProp,
-    selectedSegmentIndex: PropTypes.number,
     target: propTypes.targetActionEventsProp,
-    tintColor: propTypes.colorProp,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
+    baseTypes: [types.control, types.view],
     backgroundColor: colors.clear,
     children: undefined,
     frame: undefined,
-    items: [],
     layer: undefined,
     target: undefined,
-    selectedSegmentIndex: undefined,
-    tintColor: undefined,
+    type: types.control,
   };
 
   render() {
     const {
+      baseTypes,
       children,
+      type,
       ...rest
     } = this.props;
 
     return (
-      <Control
+      <BaseControl
         {...rest}
+        baseTypes={baseTypes}
+        type={type}
         ref={this.ref}
-        type={types.segmentedControl}
-      />
+      >
+        {children}
+      </BaseControl>
     )
   }
 }
 
-export default SegmentedControl;
+export default UiControl;

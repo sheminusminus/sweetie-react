@@ -5,7 +5,6 @@ import { colors, propTypes, types } from '../../utils';
 
 import SweetComponent from '../SweetComponent';
 
-
 /**
  * Internal component that renders a UIView.
  * @see https://developer.apple.com/documentation/uikit/uiview?language=swift

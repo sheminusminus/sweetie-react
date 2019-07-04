@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import SweetComponent from '../SweetComponent';
-import View from '../View';
+import UiView from '../UiView';
 
-class ImageView extends SweetComponent {
+class UiImageView extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
@@ -30,15 +30,15 @@ class ImageView extends SweetComponent {
     } = this.props;
 
     return (
-      <View
+      <UiView
         {...rest}
         type={types.imageView}
         ref={this.ref}
       >
         {children}
-      </View>
+      </UiView>
     )
   }
 }
 
-export default ImageView;
+export default UiImageView;

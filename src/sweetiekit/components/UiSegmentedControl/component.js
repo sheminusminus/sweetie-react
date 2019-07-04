@@ -3,55 +3,53 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
+import UiControl from '../UiControl';
 import SweetComponent from '../SweetComponent';
-import UiView from '../UiView';
 
 /**
- * Internal component that renders a UiView of type ui-control.
- * @see https://developer.apple.com/documentation/uikit/uicontrol?language=swift
+ * Renders a Control of type ui-segmented-control.
+ * @see https://developer.apple.com/documentation/uikit/uisegmentedcontrol?language=swift
  */
-class BaseControl extends SweetComponent {
+class UiSegmentedControl extends SweetComponent {
   /**
-   * @type {{backgroundColor: Color, baseTypes: string[], children: *, type: string, layer: Layer, frame: Frame, target: Target}}
+   * @type {{backgroundColor: Color, children: *, layer: Layer, frame: Frame, target: Target}}
    */
   static propTypes = {
     backgroundColor: propTypes.colorProp,
-    baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     frame: propTypes.frameProp,
+    items: PropTypes.arrayOf(UITabBarItem),
     layer: propTypes.layerProp,
+    selectedSegmentIndex: PropTypes.number,
     target: propTypes.targetActionEventsProp,
-    type: PropTypes.string,
+    tintColor: propTypes.colorProp,
   };
 
   static defaultProps = {
     backgroundColor: colors.clear,
-    baseTypes: [types.control, types.view],
     children: undefined,
     frame: undefined,
+    items: [],
     layer: undefined,
-    type: types.control,
+    target: undefined,
+    selectedSegmentIndex: undefined,
+    tintColor: undefined,
   };
 
   render() {
     const {
-      baseTypes,
       children,
-      type,
       ...rest
     } = this.props;
 
     return (
-      <UiView
+      <UiControl
         {...rest}
-        baseTypes={baseTypes}
-        type={type}
         ref={this.ref}
-      >
-        {children}
-      </UiView>
+        type={types.segmentedControl}
+      />
     )
   }
 }
 
-export default BaseControl;
+export default UiSegmentedControl;

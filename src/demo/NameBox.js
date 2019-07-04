@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TextField } from '../sweetiekit/components';
+import { UiTextField } from '../sweetiekit/components';
 import { colors } from '../sweetiekit/utils';
 import { UIKit } from '../sweetiekit/enums';
 
@@ -11,7 +11,7 @@ class NameBox extends React.Component {
     const { frame, onChange, value } = this.props;
 
     return (
-      <TextField
+      <UiTextField
         backgroundColor={colors.white}
         frame={frame}
         layer={{

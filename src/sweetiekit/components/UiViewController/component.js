@@ -6,7 +6,7 @@ import { types } from '../../utils';
 import BaseViewController from '../BaseViewController';
 import SweetComponent from '../SweetComponent';
 
-class ViewController extends SweetComponent {
+class UiViewController extends SweetComponent {
   static propTypes = {
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
@@ -42,4 +42,4 @@ class ViewController extends SweetComponent {
   }
 }
 
-export default ViewController;
+export default UiViewController;

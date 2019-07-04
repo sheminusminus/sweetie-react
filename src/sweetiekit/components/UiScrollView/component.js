@@ -3,26 +3,22 @@ import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
 
-import Control from '../Control';
 import SweetComponent from '../SweetComponent';
+import UiView from '../UiView';
 
-class Switch extends SweetComponent {
+class UiScrollView extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
+    children: PropTypes.any,
     frame: propTypes.frameProp,
     layer: propTypes.layerProp,
-    on: PropTypes.bool,
-    onTintColor: propTypes.colorProp,
-    target: propTypes.targetActionEventsProp,
   };
 
   static defaultProps = {
     backgroundColor: colors.clear,
+    children: undefined,
     frame: undefined,
     layer: undefined,
-    on: false,
-    onTintColor: undefined,
-    target: undefined,
   };
 
   render() {
@@ -32,13 +28,15 @@ class Switch extends SweetComponent {
     } = this.props;
 
     return (
-      <Control
+      <UiView
         {...rest}
         ref={this.ref}
-        type={types.uiSwitch}
-      />
+        type={types.scrollView}
+      >
+        {children}
+      </UiView>
     )
   }
 }
 
-export default Switch;
+export default UiScrollView;

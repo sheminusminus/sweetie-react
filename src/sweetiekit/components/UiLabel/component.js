@@ -5,9 +5,9 @@ import { colors, propTypes, types } from '../../utils';
 import { UIKit } from '../../enums';
 
 import SweetComponent from '../SweetComponent';
-import View from '../View';
+import UiView from '../UiView';
 
-class Label extends SweetComponent {
+class UiLabel extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     children: PropTypes.any,
@@ -35,15 +35,15 @@ class Label extends SweetComponent {
     } = this.props;
 
     return (
-      <View
+      <UiView
         {...rest}
         ref={this.ref}
         type={types.label}
       >
         {children}
-      </View>
+      </UiView>
     )
   }
 }
 
-export default Label;
+export default UiLabel;

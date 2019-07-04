@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import SweetComponent from '../SweetComponent';
-import View from '../View';
+import UiView from '../UiView';
 
 /**
  * SkView
@@ -39,14 +39,14 @@ class SkView extends SweetComponent {
     } = this.props;
 
     return (
-      <View
+      <UiView
         {...rest}
         baseTypes={baseTypes}
         ref={this.ref}
         type={type}
       >
         {children}
-      </View>
+      </UiView>
     )
   }
 }

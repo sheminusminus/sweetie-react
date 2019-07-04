@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { propTypes, types } from '../../utils';
 
 import SweetComponent from '../SweetComponent';
-import ViewController from '../ViewController';
+import UiViewController from '../UiViewController';
 
-class TabBarController extends SweetComponent {
+class UiTabBarController extends SweetComponent {
   static propTypes = {
     children: PropTypes.any,
     delegate: PropTypes.any,
@@ -29,7 +29,7 @@ class TabBarController extends SweetComponent {
     } = this.props;
 
     return (
-      <ViewController
+      <UiViewController
         {...rest}
         baseTypes={[types.tabBarController, types.viewController]}
         delegate={delegate}
@@ -37,9 +37,9 @@ class TabBarController extends SweetComponent {
         type={types.tabBarController}
       >
         {children}
-      </ViewController>
+      </UiViewController>
     )
   }
 }
 
-export default TabBarController;
+export default UiTabBarController;

@@ -18,20 +18,6 @@ class SweetEntity extends SweetComponent {
     children: undefined,
   };
 
-  ref = React.createRef();
-
-  api = () => {
-    if (this.ref.current) {
-      if (typeof this.ref.current.api === 'function') {
-        return this.ref.current.api();
-      }
-
-      return this.ref.current;
-    }
-
-    return undefined;
-  };
-
   render() {
     const {
       baseTypes,
@@ -44,6 +30,7 @@ class SweetEntity extends SweetComponent {
       <sweet-entity
         {...rest}
         baseTypes={baseTypes || [type]}
+        ref={this.ref}
         type={type}
       >
         {children}

@@ -16,6 +16,7 @@ import {
   UiTabBarItem,
   UiSegmentedControl,
   UiTabBarControllerDelegate,
+  SweetEntity,
 } from '../sweetiekit/components';
 
 import ThemeContext from './context';
@@ -57,6 +58,19 @@ const themes = {
 
 const barItem0 = UiTabBarItem('Bar Item 0');
 const barItem1 = UiTabBarItem('Bar Item 1');
+
+class EntityLabel extends React.Component {
+  render() {
+    return (
+      <SweetEntity
+        baseTypes={['ui-label', 'ui-view']}
+        frame={{ x: 0, y: 100, width: 100, height: 50 }}
+        text="Sweet Entity"
+        type="ui-label"
+      />
+    );
+  }
+}
 
 class ControlsDemoView extends React.Component {
   tabCtrlDel = UiTabBarControllerDelegate({
@@ -161,16 +175,7 @@ class ControlsDemoView extends React.Component {
     return (
       <ThemeContext.Provider value={themes[theme]}>
         <MainView frame={frame} theme={theme}>
-          <Title
-            frame={{
-              x: 12,
-              y: 90,
-              width: frame.width - 24,
-              height: 20,
-            }}
-          >
-            WELCOME
-          </Title>
+          <EntityLabel />
 
           <ThemeToggle
             frame={{
@@ -194,15 +199,20 @@ class ControlsDemoView extends React.Component {
             theme={theme}
           />
 
-          <NameBox
+          <SweetEntity
+            backgroundColor={colors.white}
             frame={{
               x: 12,
               y: (frame.height - 50) / 2 - 120,
               width: frame.width - 24,
               height: 50,
             }}
-            onChange={onFieldChange}
-            value={name}
+            layer={{
+              cornerRadius: 20,
+            }}
+            placeholder="Dynamic field"
+            text={name}
+            type="ui-text-field"
           />
         </MainView>
       </ThemeContext.Provider>

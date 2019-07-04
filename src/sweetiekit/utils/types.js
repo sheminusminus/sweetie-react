@@ -1,3 +1,5 @@
+export const sweetEntity = 'sweet-entity';
+
 export const button = 'ui-button';
 export const control = 'ui-control';
 export const imageView = 'ui-image-view';

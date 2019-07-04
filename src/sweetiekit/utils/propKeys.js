@@ -22,3 +22,9 @@ export const selectedIndex = 'selectedIndex';
 export const size = 'size';
 export const color = 'color';
 export const position = 'position';
+
+export const objectProps = [
+  layer,
+  tabBar,
+  titleLabel,
+];

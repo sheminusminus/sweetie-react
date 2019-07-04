@@ -2,6 +2,8 @@
 // UIKit
 // ===============
 
+export { default as SweetEntity } from './SweetEntity';
+
 export { default as Text } from './Text';
 
 // UIKit

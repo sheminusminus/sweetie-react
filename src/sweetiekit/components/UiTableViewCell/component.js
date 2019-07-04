@@ -4,15 +4,14 @@ import PropTypes from 'prop-types';
 import { colors, propTypes, types } from '../../utils';
 
 import SweetComponent from '../SweetComponent';
-import UiScrollView from '../UiScrollView';
+import UiView from '../UiView';
 
-class UiTableView extends SweetComponent {
+class UiTableViewCell extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
-    children: PropTypes.any,
-    dataSource: PropTypes.any,
-    delegate: PropTypes.any,
+    children: PropTypes.node,
+    contentView: PropTypes.node,
     frame: propTypes.frameProp,
     layer: propTypes.layerProp,
     type: PropTypes.string,
@@ -20,27 +19,30 @@ class UiTableView extends SweetComponent {
 
   static defaultProps = {
     backgroundColor: colors.clear,
-    baseTypes: [types.tableView, types.scrollView, types.view],
+    baseTypes: [types.tableViewCell, types.view],
     children: undefined,
-    dataSource: undefined,
-    delegate: undefined,
+    contentView: undefined,
     frame: undefined,
     layer: undefined,
-    type: types.tableView,
+    type: types.tableViewCell,
   };
 
   render() {
     const {
       baseTypes,
       children,
+      contentView,
       type,
       ...rest
     } = this.props;
 
+    const childCount = React.Children.count(children);
+
     return (
-      <UiScrollView
+      <UiView
         {...rest}
         baseTypes={baseTypes}
+        contentView={contentView || childCount === 1 ? children : undefined}
         ref={this.ref}
         type={type}
       />
@@ -48,4 +50,4 @@ class UiTableView extends SweetComponent {
   }
 }
 
-export default UiTableView;
+export default UiTableViewCell;

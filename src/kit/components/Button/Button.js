@@ -5,7 +5,7 @@ import { mergeProps } from '../../utils';
 
 import { colors } from '../../../sweetiekit/utils';
 
-import { UiButton as Button_ } from '../../../sweetiekit/components';
+import { UiButton } from '../../../sweetiekit/components';
 
 /**
  * @see https://developer.apple.com/documentation/uikit/uibutton?language=swift

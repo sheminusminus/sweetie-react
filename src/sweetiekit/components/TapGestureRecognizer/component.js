@@ -23,8 +23,8 @@ class TapGestureRecognizer extends SweetComponent {
     return (
       <GestureRecognizer
         {...rest}
-        type={types.tapGestureRecognizer}
         ref={this.ref}
+        type={types.tapGestureRecognizer}
       />
     )
   }

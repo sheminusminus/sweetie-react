@@ -22,34 +22,39 @@ export default (
     Object.keys(otherProps).forEach(attr => {
       const val = otherProps[attr];
 
-      if (attr === 'ref') {
-
+      if (attr === 'selectedIndex') {
+        console.log('selected index props', val);
       }
-
       if (val !== undefined && val !== null) {
         switch (attr) {
           case propKeys.target:
             if (baseTypesIsArray) {
               if (baseTypes.includes(types.control)) {
+                const memKey = JSON.stringify(view.selfAddress);
+
                 const [fn, events] = val;
 
-                if (newListeners[view.selfAddress] && newListeners[view.selfAddress].length) {
-                  view.removeTargetActionForControlEvents(newListeners[view.selfAddress][1]);
-                  delete newListeners[view.selfAddress];
+                if (newListeners[memKey] && newListeners[memKey].length) {
+                  view.removeTargetActionForControlEvents(newListeners[memKey][1]);
+                  delete newListeners[memKey];
                 }
 
-                newListeners[view.selfAddress] = val;
+                newListeners[memKey] = val;
 
                 view.addTargetActionForControlEvents(fn, events);
               } else if (baseTypes.includes(types.gestureRecognizer)) {
-                if (newListeners[view.selfAddress] && newListeners[view.selfAddress].handle) {
-                  view.removeTargetAction(newListeners[view.selfAddress].handle);
-                  delete newListeners[selfAddress];
+                const memKey = JSON.stringify(view.selfAddress);
+
+                console.log('finalize initial children, set gest recog target', memKey);
+
+                if (newListeners[memKey] && newListeners[memKey].handle) {
+                  view.removeTargetAction(newListeners[memKey].handle);
+                  delete newListeners[memKey];
                 }
 
                 const handle = view.addTargetAction(val);
 
-                newListeners[view.selfAddress] = {
+                newListeners[memKey] = {
                   handle,
                   fn: val,
                 };
@@ -71,13 +76,12 @@ export default (
             }
             break;
 
+          // for some reason, if the initial selectedIndex on a UITabBarController
+          // is 0, the result is that no bar items show as selected. this seems to
+          // work fine on a props update.
           case propKeys.selectedIndex:
-            if (viewType === types.tabBarController) {
-              console.log('tab bar controller setting selected view controller');
-              const ctrl = view.viewControllers[val];
-              if (ctrl) {
-                view.selectedViewController = ctrl;
-              }
+            if (val !== 0) {
+              view[attr] = val;
             }
             break;
 

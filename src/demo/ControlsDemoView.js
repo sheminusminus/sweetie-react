@@ -15,6 +15,7 @@ import {
   TabBarController,
   TabBarItem,
   SegmentedControl,
+  UiTabBarControllerDelegate,
 } from '../sweetiekit/components';
 
 import ThemeContext from './context';
@@ -58,6 +59,10 @@ const barItem0 = TabBarItem('Bar Item 0');
 const barItem1 = TabBarItem('Bar Item 1');
 
 class ControlsDemoView extends React.Component {
+  tabCtrlDel = UiTabBarControllerDelegate({
+    tabBarControllerDidSelectViewController: this.props.onTabChanged,
+  });
+
   render() {
     const {
       onButtonClick,
@@ -75,7 +80,10 @@ class ControlsDemoView extends React.Component {
 
     if (hasChildController) {
       return (
-        <TabBarController selectedIndex={tabIndex}>
+        <TabBarController
+          delegate={this.tabCtrlDel}
+          selectedIndex={tabIndex}
+        >
           <ViewController
             tabBarItem={barItem0}
           >

@@ -33,8 +33,8 @@ class ViewController extends SweetComponent {
       <BaseViewController
         {...rest}
         baseType={baseTypes}
-        type={type}
         ref={this.ref}
+        type={type}
       >
         {children}
       </BaseViewController>

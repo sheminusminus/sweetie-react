@@ -119,7 +119,9 @@ class App extends React.Component {
   };
 
   handleTabChanged = (sender) => {
-    console.log(sender);
+    if (sender) {
+      this.setState({ tabIndex: sender.selectedIndex });
+    }
   };
 
   render() {
@@ -139,7 +141,8 @@ class App extends React.Component {
       <ControlsDemoView
         onButtonClick={this.handleButtonClick}
         onFieldChange={this.handleFieldChange}
-        onSegmentChange={this.handleSegmentChanged}
+        onTabChanged={this.handleTabChanged}
+        onSegmentChanged={this.handleSegmentChanged}
         hasChildController={hasChildController}
         frame={frame}
         name={name}

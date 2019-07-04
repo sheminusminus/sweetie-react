@@ -76,7 +76,7 @@ const hostConfig = {
   },
 
   shouldDeprioritizeSubtree(type, props) {
-    console.log('shouldDeprioritizeSubtree');
+    // console.log('shouldDeprioritizeSubtree');
   },
 
   createTextInstance(
@@ -101,7 +101,7 @@ const hostConfig = {
   supportsMutation: true,
 
   commitMount(view, type, newProps, internalInstanceHandle) {
-    console.log('commitMount');
+    // console.log('commitMount');
   },
 
   commitUpdate(
@@ -134,7 +134,7 @@ const hostConfig = {
   },
 
   insertInContainerBefore(container, child, beforeChild) {
-    console.log('insertInContainerBefore');
+    // insertBefore(container, child, beforeChild);
   },
 
   removeChild(parentInstance, child) {

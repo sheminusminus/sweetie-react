@@ -14,6 +14,7 @@ export default (parent, child) => {
 
     parent.setViewControllersAnimated(newCtrls);
   } else if (is.view(parent) && is.tapRecognizer(child)) {
+    console.log('removing tap gesture recognizer from parent view');
     parent.removeGestureRecognizer(child);
   } else if (is.stackView(parent) && is.view(child)) {
     parent.removeArrangedSubview(child);

@@ -26,28 +26,32 @@ export default (
             case propKeys.target:
               if (baseTypesIsArray) {
                 if (baseTypes.includes(types.control)) {
-                  const existingListener = newListeners[view.selfAddress];
+                  const memKey = JSON.stringify(view.selfAddress);
+
+                  const existingListener = newListeners[memKey];
 
                   if (Array.isArray(existingListener)) {
-                    delete newListeners[view.selfAddress];
+                    delete newListeners[memKey];
                     view.removeTargetActionForControlEvents(existingListener[1]);
                   }
 
                   view.addTargetActionForControlEvents(val[0], val[1]);
 
-                  newListeners[view.selfAddress] = val;
+                  newListeners[memKey] = val;
                 } else if (baseTypes.includes(types.gestureRecognizer)) {
+                  const memKey = JSON.stringify(view.selfAddress);
+
                   // for now we only allow one target per recognizer
-                  const existingListener = newListeners[view.selfAddress];
+                  const existingListener = newListeners[memKey];
 
                   if (existingListener && existingListener.handle) {
-                    delete newListeners[view.selfAddress];
                     view.removeTargetAction(existingListener.handle);
+                    delete newListeners[memKey];
                   }
 
                   const handle = view.addTargetAction(val);
 
-                  newListeners[view.selfAddress] = {
+                  newListeners[memKey] = {
                     fn: val,
                     handle,
                   };

@@ -106,18 +106,18 @@
       "expectCount": 4,
       "actualCount": 1,
       "undocumentLines": [
-        7,
         9,
-        21
+        11,
+        23
       ]
     },
     "sweetiekit/components/SweetEntity/component.js": {
       "expectCount": 4,
       "actualCount": 1,
       "undocumentLines": [
-        10,
-        16,
-        21
+        12,
+        18,
+        23
       ]
     },
     "sweetiekit/components/Text.js": {

@@ -2,6 +2,8 @@ import React from 'react';
 
 /**
  * Base internal component.
+ * @class
+ * @augments React.Component
  */
 class SweetComponent extends React.Component {
   ref = React.createRef();

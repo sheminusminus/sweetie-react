@@ -5,6 +5,8 @@ import SweetComponent from '../SweetComponent';
 
 /**
  * Base internal component.
+ * @class
+ * @augments SweetComponent
  */
 class SweetEntity extends SweetComponent {
   static propTypes = {

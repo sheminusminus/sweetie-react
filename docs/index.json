@@ -1674,7 +1674,7 @@
     "__docId__": 116,
     "kind": "file",
     "name": "sweetiekit/components/SweetComponent/component.js",
-    "content": "import React from 'react';\n\n/**\n * Base internal component.\n */\nclass SweetComponent extends React.Component {\n  ref = React.createRef();\n\n  api = () => {\n    if (this.ref.current) {\n      if (typeof this.ref.current.api === 'function') {\n        return this.ref.current.api();\n      }\n\n      return this.ref.current;\n    }\n\n    return undefined;\n  };\n\n  render() {\n    throw new Error('Classes extending SweetComponent must override render()');\n  }\n}\n\nexport default SweetComponent;\n",
+    "content": "import React from 'react';\n\n/**\n * Base internal component.\n * @class\n * @augments React.Component\n */\nclass SweetComponent extends React.Component {\n  ref = React.createRef();\n\n  api = () => {\n    if (this.ref.current) {\n      if (typeof this.ref.current.api === 'function') {\n        return this.ref.current.api();\n      }\n\n      return this.ref.current;\n    }\n\n    return undefined;\n  };\n\n  render() {\n    throw new Error('Classes extending SweetComponent must override render()');\n  }\n}\n\nexport default SweetComponent;\n",
     "static": true,
     "longname": "/Users/emily/sweetie-react/src/sweetiekit/components/SweetComponent/component.js",
     "access": "public",
@@ -1693,7 +1693,17 @@
     "importPath": "sweetie-react/sweetiekit/components/SweetComponent/component.js",
     "importStyle": "SweetComponent",
     "description": "Base internal component.",
-    "lineNumber": 6,
+    "lineNumber": 8,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@augments",
+        "tagValue": "React.Component"
+      }
+    ],
     "interface": false,
     "extends": [
       "react~React.Component"
@@ -1708,7 +1718,7 @@
     "longname": "sweetiekit/components/SweetComponent/component.js~SweetComponent#ref",
     "access": "public",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 9,
     "undocument": true,
     "type": {
       "types": [
@@ -1725,7 +1735,7 @@
     "longname": "sweetiekit/components/SweetComponent/component.js~SweetComponent#api",
     "access": "public",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 11,
     "undocument": true,
     "type": {
       "types": [
@@ -1744,7 +1754,7 @@
     "longname": "sweetiekit/components/SweetComponent/component.js~SweetComponent#render",
     "access": "public",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 23,
     "undocument": true,
     "params": [],
     "return": null
@@ -1764,7 +1774,7 @@
     "__docId__": 122,
     "kind": "file",
     "name": "sweetiekit/components/SweetEntity/component.js",
-    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport SweetComponent from '../SweetComponent';\n\n/**\n * Base internal component.\n */\nclass SweetEntity extends SweetComponent {\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.node,\n    type: PropTypes.string.isRequired,\n  };\n\n  static defaultProps = {\n    baseTypes: undefined,\n    children: undefined,\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <sweet-entity\n        {...rest}\n        baseTypes={baseTypes || [type]}\n        ref={this.ref}\n        type={type}\n      >\n        {children}\n      </sweet-entity>\n    );\n  }\n}\n\nexport default SweetEntity;\n",
+    "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nimport SweetComponent from '../SweetComponent';\n\n/**\n * Base internal component.\n * @class\n * @augments SweetComponent\n */\nclass SweetEntity extends SweetComponent {\n  static propTypes = {\n    baseTypes: PropTypes.arrayOf(PropTypes.string),\n    children: PropTypes.node,\n    type: PropTypes.string.isRequired,\n  };\n\n  static defaultProps = {\n    baseTypes: undefined,\n    children: undefined,\n  };\n\n  render() {\n    const {\n      baseTypes,\n      children,\n      type,\n      ...rest\n    } = this.props;\n\n    return (\n      <sweet-entity\n        {...rest}\n        baseTypes={baseTypes || [type]}\n        ref={this.ref}\n        type={type}\n      >\n        {children}\n      </sweet-entity>\n    );\n  }\n}\n\nexport default SweetEntity;\n",
     "static": true,
     "longname": "/Users/emily/sweetie-react/src/sweetiekit/components/SweetEntity/component.js",
     "access": "public",
@@ -1783,7 +1793,17 @@
     "importPath": "sweetie-react/sweetiekit/components/SweetEntity/component.js",
     "importStyle": "SweetEntity",
     "description": "Base internal component.",
-    "lineNumber": 9,
+    "lineNumber": 11,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@augments",
+        "tagValue": "SweetComponent"
+      }
+    ],
     "interface": false,
     "extends": [
       "sweetiekit/components/SweetComponent.js~SweetComponent"
@@ -1798,7 +1818,7 @@
     "longname": "sweetiekit/components/SweetEntity/component.js~SweetEntity.propTypes",
     "access": "public",
     "description": null,
-    "lineNumber": 10,
+    "lineNumber": 12,
     "undocument": true,
     "type": {
       "types": [
@@ -1815,7 +1835,7 @@
     "longname": "sweetiekit/components/SweetEntity/component.js~SweetEntity.defaultProps",
     "access": "public",
     "description": null,
-    "lineNumber": 16,
+    "lineNumber": 18,
     "undocument": true,
     "type": {
       "types": [
@@ -1834,7 +1854,7 @@
     "longname": "sweetiekit/components/SweetEntity/component.js~SweetEntity#render",
     "access": "public",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 23,
     "undocument": true,
     "params": [],
     "return": {

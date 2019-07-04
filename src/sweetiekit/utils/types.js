@@ -2,6 +2,7 @@ export const button = 'ui-button';
 export const control = 'ui-control';
 export const imageView = 'ui-image-view';
 export const label = 'ui-label';
+export const pickerView = 'ui-picker-view';
 export const scrollView = 'ui-scroll-view';
 export const tableView = 'ui-table-view';
 export const tableViewCell = 'ui-table-view-cell';

@@ -9,6 +9,11 @@ export { default as UiButton } from './UiButton';
 export { default as UiImage } from './UiImage';
 export { default as UiImageView } from './UiImageView';
 export { default as UiLabel } from './UiLabel';
+
+// UIPickerView related
+export { default as UiPickerView } from './UiPickerView';
+export { UiPickerViewDataSource, UiPickerViewDelegate } from './UiPickerView/components';
+
 export { default as UiScrollView } from './UiScrollView';
 export { default as UiSegmentedControl } from './UiSegmentedControl';
 export { default as UiSlider } from './UiSlider';

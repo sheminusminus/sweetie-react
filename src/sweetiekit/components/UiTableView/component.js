@@ -2,34 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { colors, propTypes, types } from '../../utils';
-import { UIKit } from '../../enums';
 
 import SweetComponent from '../SweetComponent';
-import UiView from '../UiView';
+import UiScrollView from '../UiScrollView';
 
-class UiLabel extends SweetComponent {
+class UiTableView extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
     baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
-    font: PropTypes.any,
     frame: propTypes.frameProp,
     layer: propTypes.layerProp,
-    text: PropTypes.string,
-    textAlignment: PropTypes.any,
-    textColor: propTypes.colorProp,
     type: PropTypes.string,
   };
 
   static defaultProps = {
     backgroundColor: colors.clear,
-    baseTypes: [types.label, types.view],
+    baseTypes: [types.tableView, types.scrollView],
     children: undefined,
     frame: undefined,
     layer: undefined,
-    text: '',
-    textAlignment: UIKit.NSTextAlignment.left,
-    type: types.label,
+    type: types.tableView,
+
   };
 
   render() {
@@ -41,16 +35,16 @@ class UiLabel extends SweetComponent {
     } = this.props;
 
     return (
-      <UiView
+      <UiScrollView
         {...rest}
         baseTypes={baseTypes}
         ref={this.ref}
         type={type}
       >
         {children}
-      </UiView>
+      </UiScrollView>
     )
   }
 }
 
-export default UiLabel;
+export default UiTableView;

@@ -3,6 +3,7 @@ export const control = 'ui-control';
 export const imageView = 'ui-image-view';
 export const label = 'ui-label';
 export const scrollView = 'ui-scroll-view';
+export const tableView = 'ui-table-view';
 export const slider = 'ui-slider';
 export const segmentedControl = 'ui-segmented-control';
 export const stackView = 'ui-stack-view';

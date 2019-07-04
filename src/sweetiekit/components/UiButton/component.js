@@ -16,6 +16,7 @@ class UiButton extends SweetComponent {
    */
   static propTypes = {
     backgroundColor: propTypes.colorProp,
+    baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     frame: propTypes.frameProp,
     layer:propTypes.layerProp,
@@ -23,10 +24,12 @@ class UiButton extends SweetComponent {
     title: PropTypes.string,
     titleColor: propTypes.colorProp,
     titleLabel: PropTypes.any,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
     backgroundColor: colors.white,
+    baseTypes: [types.button, types.control, types.view],
     children: undefined,
     frame: undefined,
     layer: undefined,
@@ -34,18 +37,22 @@ class UiButton extends SweetComponent {
     title: 'Press Me',
     titleColor: colors.black,
     titleLabel: undefined,
+    type: types.button,
   };
 
   render() {
     const {
+      baseTypes,
       children,
+      type,
       ...rest
     } = this.props;
 
     return (
       <UiControl
         {...rest}
-        type={types.button}
+        baseTypes={baseTypes}
+        type={type}
         ref={this.ref}
       />
     )

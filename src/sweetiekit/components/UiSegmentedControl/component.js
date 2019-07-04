@@ -16,6 +16,7 @@ class UiSegmentedControl extends SweetComponent {
    */
   static propTypes = {
     backgroundColor: propTypes.colorProp,
+    baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     frame: propTypes.frameProp,
     items: PropTypes.arrayOf(UITabBarItem),
@@ -23,10 +24,12 @@ class UiSegmentedControl extends SweetComponent {
     selectedSegmentIndex: PropTypes.number,
     target: propTypes.targetActionEventsProp,
     tintColor: propTypes.colorProp,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
     backgroundColor: colors.clear,
+    baseTypes: [types.segmentedControl, types.control, types.view],
     children: undefined,
     frame: undefined,
     items: [],
@@ -34,19 +37,23 @@ class UiSegmentedControl extends SweetComponent {
     target: undefined,
     selectedSegmentIndex: undefined,
     tintColor: undefined,
+    type: types.segmentedControl,
   };
 
   render() {
     const {
+      baseTypes,
       children,
+      type,
       ...rest
     } = this.props;
 
     return (
       <UiControl
         {...rest}
+        baseTypes={baseTypes}
         ref={this.ref}
-        type={types.segmentedControl}
+        type={type}
       />
     )
   }

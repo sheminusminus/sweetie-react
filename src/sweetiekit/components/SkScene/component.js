@@ -15,27 +15,34 @@ class SkScene extends SweetComponent {
    */
   static propTypes = {
     backgroundColor: propTypes.colorProp,
+    baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     size: propTypes.sizeProp,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
     backgroundColor: colors.white,
+    baseTypes: [types.skScene, types.skNode, types.responder],
     children: undefined,
     size: undefined,
+    type: types.skScene,
   };
 
   render() {
     const {
+      baseTypes,
       children,
+      type,
       ...rest
     } = this.props;
 
     return (
       <SkNode
         {...rest}
+        baseTypes={baseTypes}
         ref={this.ref}
-        type={types.skScene}
+        type={type}
       >
         {children}
       </SkNode>

@@ -9,30 +9,37 @@ import UiView from '../UiView';
 class UiImageView extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
+    baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     frame: propTypes.frameProp,
     image: PropTypes.instanceOf(UIImage),
     layer: propTypes.layerProp,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
     backgroundColor: colors.clear,
+    baseTypes: [types.imageView, types.view],
     children: undefined,
     frame: undefined,
     image: undefined,
     layer: undefined,
+    type: types.imageView,
   };
 
   render() {
     const {
+      baseTypes,
       children,
+      type,
       ...rest
     } = this.props;
 
     return (
       <UiView
         {...rest}
-        type={types.imageView}
+        baseTypes={baseTypes}
+        type={type}
         ref={this.ref}
       >
         {children}

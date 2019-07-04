@@ -9,29 +9,36 @@ import UiView from '../UiView';
 class UiScrollView extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
+    baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     frame: propTypes.frameProp,
     layer: propTypes.layerProp,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
     backgroundColor: colors.clear,
+    baseTypes: [types.scrollView, types.view],
     children: undefined,
     frame: undefined,
     layer: undefined,
+    type: types.scrollView,
   };
 
   render() {
     const {
+      baseTypes,
       children,
+      type,
       ...rest
     } = this.props;
 
     return (
       <UiView
         {...rest}
+        baseTypes={baseTypes}
         ref={this.ref}
-        type={types.scrollView}
+        type={type}
       >
         {children}
       </UiView>

@@ -8,33 +8,39 @@ import UiViewController from '../UiViewController';
 
 class UiTabBarController extends SweetComponent {
   static propTypes = {
+    baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     delegate: PropTypes.any,
     selectedIndex: PropTypes.number,
     tabBar: propTypes.tabBarProp,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
+    baseTypes: [types.tabBarController, types.viewController],
     children: undefined,
     delegate: undefined,
     selectedIndex: undefined,
     tabBar: undefined,
+    type: types.tabBarController,
   };
 
   render() {
     const {
+      baseTypes,
       children,
       delegate,
+      type,
       ...rest
     } = this.props;
 
     return (
       <UiViewController
         {...rest}
-        baseTypes={[types.tabBarController, types.viewController]}
+        baseTypes={baseTypes}
         delegate={delegate}
         ref={this.ref}
-        type={types.tabBarController}
+        type={type}
       >
         {children}
       </UiViewController>

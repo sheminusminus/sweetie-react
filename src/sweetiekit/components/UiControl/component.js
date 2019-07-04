@@ -9,6 +9,7 @@ import SweetComponent from '../SweetComponent';
 class UiControl extends SweetComponent {
   static propTypes = {
     backgroundColor: propTypes.colorProp,
+    baseTypes: PropTypes.arrayOf(PropTypes.string),
     children: PropTypes.any,
     frame: propTypes.frameProp,
     layer: propTypes.layerProp,
@@ -17,8 +18,8 @@ class UiControl extends SweetComponent {
   };
 
   static defaultProps = {
-    baseTypes: [types.control, types.view],
     backgroundColor: colors.clear,
+    baseTypes: [types.control, types.view],
     children: undefined,
     frame: undefined,
     layer: undefined,
